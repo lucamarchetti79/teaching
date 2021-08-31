@@ -1,0 +1,677 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lezione 12 - Python: Funzioni &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 12 - Soluzioni" href="python_functions_sol.html" />
+    <link rel="prev" title="Lezione 11 - Soluzioni" href="python_complex_statements_2_sol.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Laboratorio di Informatica
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a.a. 2021/2022
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv_sol.html">Lezione 6 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Lezione 7 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries_sol.html">Lezione 7 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Lezione 8.1 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets_sol.html">Lezione 8.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples.html">Lezione 8.2 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples_sol.html">Lezione 8.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Lezione 9 - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io_sol.html">Lezione 9 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1.html">Lezione 10 - Python: Statement Complessi (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1_sol.html">Lezione 10 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2.html">Lezione 11 - Python: Statement Complessi (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 12 - Python: Funzioni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#esercizi">Esercizi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 12 - Soluzioni</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Lezione 12 - Python: Funzioni</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/python_functions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lezione-12-python-funzioni">
+<h1>Lezione 12 - Python: Funzioni<a class="headerlink" href="#lezione-12-python-funzioni" title="Permalink to this headline">¶</a></h1>
+<p>Le funzioni sono <em>blocchi di codice</em> a cui associamo un <em>nome</em>.</p>
+<p>Per definire una nuova funzione, scrivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nome_funzione</span><span class="p">(</span><span class="n">argomento_1</span><span class="p">,</span> <span class="n">argomento_2</span><span class="p">,</span> <span class="o">...</span><span class="p">):</span>
+
+    <span class="c1"># qui metto il codice che usa argomento_1, argomento_2,</span>
+    <span class="c1"># etc. per calcolare il valore della variabile risultato</span>
+
+    <span class="k">return</span> <span class="n">risultato</span>
+</pre></div>
+</div>
+<p>Una volta definita la funzione, la posso chiamare/invocare dal resto
+del codice, cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">valore_ritornato</span> <span class="o">=</span> <span class="n">nome_funzione</span><span class="p">(</span><span class="n">valore_1</span><span class="p">,</span> <span class="n">valore_2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+
+<span class="c1"># qui uso valore_ritornato</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Definisco una funzione che prende due argomenti (che chiamo
+arbitrariamente <code class="docutils literal notranslate"><span class="pre">numero1</span></code> e <code class="docutils literal notranslate"><span class="pre">numero2</span></code>) e ne <strong>stampa</strong> la somma:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stampa_somma</span><span class="p">(</span><span class="n">numero1</span><span class="p">,</span> <span class="n">numero2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la somma e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>che uso cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># stampa: la somma e&#39; 10</span>
+<span class="n">stampa_somma</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="c1"># stampa: la somma e&#39; 17</span>
+<span class="n">stampa_somma</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># stampa: la somma e&#39; 20</span>
+<span class="n">stampa_somma</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Il codice qui sopra e’ del tutto equivalente a questo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero1</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la somma e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span><span class="p">)</span>
+
+<span class="n">numero1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la somma e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span><span class="p">)</span>
+
+<span class="n">numero1</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la somma e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">stampa_somma()</span></code> non c’e’ un <code class="docutils literal notranslate"><span class="pre">return</span></code>. Quando manca il <code class="docutils literal notranslate"><span class="pre">return</span></code>,
+il risultato della funzione e’ sempre <code class="docutils literal notranslate"><span class="pre">None</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risultato</span> <span class="o">=</span> <span class="n">stampa_somma</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># stampa: la somma e&#39; 20</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>                 <span class="c1"># stampa: None</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Riscrivo la funzione <code class="docutils literal notranslate"><span class="pre">stampa_somma()</span></code>, che <em>stampava</em> la somma
+dei suoi argomenti, in modo che invece <strong>restituisca</strong> (con <code class="docutils literal notranslate"><span class="pre">return</span></code>) la
+somma come risultato:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcola_somma</span><span class="p">(</span><span class="n">numero1</span><span class="p">,</span> <span class="n">numero2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span>
+</pre></div>
+</div>
+<p>Quando la chiamo succede questo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># non stampa niente</span>
+<span class="n">calcola_somma</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="c1"># non stampa niente</span>
+<span class="n">calcola_somma</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># non stampa niente</span>
+<span class="n">calcola_somma</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Perche’? Proviamo a riscrivere quest’ultimo codice per esteso:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero1</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span>
+
+<span class="n">numero1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span>
+
+<span class="n">numero1</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span>
+</pre></div>
+</div>
+<p>Qui e’ vero che effettivamente <em>calcolo</em> le varie somme, ma e’ anche vero
+che non le <em>stampo</em> mai: non c’e’ nessun <code class="docutils literal notranslate"><span class="pre">print</span></code>!</p>
+<p>Quello che devo fare e’ mettere il risultato di <code class="docutils literal notranslate"><span class="pre">calcola_somma()</span></code> in una
+variabile, e poi stamparlo a parte, cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># non stampa niente</span>
+<span class="n">risultato</span> <span class="o">=</span> <span class="n">calcola_somma</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># stampa 20</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>(Oppure, abbreviando: <code class="docutils literal notranslate"><span class="pre">print(calcola_somma(19,</span> <span class="pre">1))</span></code>). Scritto per esteso,
+questo codice e’ equivalente a:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero1</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">risultato</span> <span class="o">=</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ora tutto torna: faccio la somma e ne stampo il risultato.</p>
+<hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Il codice “contenuto” in una funzione non fa <em>niente</em> finche’ la funzione
+non viene chiamata!</p>
+<p>Se scrivo un modulo <code class="docutils literal notranslate"><span class="pre">esempio.py</span></code> con questo codice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funzione</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sto eseguendo la funzione!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>e lo eseguo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">esempio</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Python non stampera’ <em>niente</em>, perche’ la funzione non viene mai chiamata.
+Se voglio che venga eseguita, devo modificare il modulo <code class="docutils literal notranslate"><span class="pre">esempio.py</span></code> cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funzione</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sto eseguendo la funzione!&quot;</span><span class="p">)</span>
+
+<span class="n">funzione</span><span class="p">()</span>  <span class="c1"># &lt;-- qui chiamo la funzione</span>
+</pre></div>
+</div>
+<p>Quano lo eseguo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">esempio</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Python trova la chiamata alla funzione (l’ultima riga del modulo) ed
+esegue la funzione: di conseguenza, stampera’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sto eseguendo la funzione!
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Creo una funzione <code class="docutils literal notranslate"><span class="pre">fattoriale()</span></code> che prende un intero <code class="docutils literal notranslate"><span class="pre">n</span></code>
+e ne calcola il fattoriale <img class="math" src="_images/math/a0ddbb94aa7b2c35447fa1353061b63cbf21808e.png" alt="n!"/>, definito cosi’:</p>
+<div class="math">
+<p><img src="_images/math/b8d7e952eb1c79601ee43df5ae92133a79408b46.png" alt="n! = 1 \times 2 \times 3 \times \ldots (n - 2) \times (n - 1) \times n"/></p>
+</div><p>So farlo senza una funzione? Certo. Assumiamo di avere gia’ la variabile <code class="docutils literal notranslate"><span class="pre">n</span></code>.
+Scrivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fattoriale</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">fattoriale</span> <span class="o">=</span> <span class="n">fattoriale</span> <span class="o">*</span> <span class="n">k</span>
+</pre></div>
+</div>
+<p>Bene. Come faccio a convertire questo codice in una funzione? Semplice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcola_fattoriale</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># n contiene il valore di cui voglio calcolare il fattoriale</span>
+
+    <span class="c1"># qui inserisco il codice sopra</span>
+    <span class="n">fattoriale</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">fattoriale</span> <span class="o">=</span> <span class="n">fattoriale</span> <span class="o">*</span> <span class="n">k</span>
+
+    <span class="c1"># a questo punto ho calcolato il fattoriale, e lo</span>
+    <span class="c1"># posso restituire</span>
+    <span class="k">return</span> <span class="n">fattoriale</span>
+</pre></div>
+</div>
+<p>Ora sono libero di chiamare la funzione quante volte mi pare:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">calcola_fattoriale</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>     <span class="c1"># 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calcola_fattoriale</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>     <span class="c1"># 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calcola_fattoriale</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>     <span class="c1"># 6</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calcola_fattoriale</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>     <span class="c1"># 24</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calcola_fattoriale</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>     <span class="c1"># 120</span>
+</pre></div>
+</div>
+<p>o anche in modi piu’ complessi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="n">calcola_fattoriale</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>Il nome della funzione ed il nome degli argomenti li scegliamo noi!</p></li>
+</ul>
+</div>
+<p><strong>Quiz</strong>. Che differenza c’e’ tra questo frammento di codice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcola</span><span class="p">(</span><span class="n">somma_o_prodotto</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">somma_o_prodotto</span> <span class="o">==</span> <span class="s2">&quot;somma&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">elif</span> <span class="n">somma_o_prodotto</span> <span class="o">==</span> <span class="s2">&quot;prodotto&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">calcola</span><span class="p">(</span><span class="s2">&quot;somma&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">calcola</span><span class="p">(</span><span class="s2">&quot;prodotto&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>e questo?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">operation</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">operation</span> <span class="o">==</span> <span class="s2">&quot;sum&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+    <span class="k">elif</span> <span class="n">operation</span> <span class="o">==</span> <span class="s2">&quot;product&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="s2">&quot;product&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>Il codice della funzione non vede le variabili <em>esterne</em> alla funzione:
+vede solo gli argomenti!</p></li>
+<li><p>Il codice della funzione puo’ restituire un risultato solo attraverso
+<code class="docutils literal notranslate"><span class="pre">return</span></code>!</p></li>
+</ul>
+</div>
+<p><strong>Quiz</strong>. Consideriamo questo codice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">una_funzione</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="n">somma</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">somma</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">somma</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="n">una_funzione</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">somma</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Cosa viene stampato a schermo?</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Definisco due funzioni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">leggi_fasta</span><span class="p">(</span><span class="n">percorso</span><span class="p">):</span>
+    <span class="n">righe</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">percorso</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+    <span class="n">dizionario</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">righe</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">riga</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">:</span>
+            <span class="n">intestazione</span> <span class="o">=</span> <span class="n">riga</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">sequenza</span> <span class="o">=</span> <span class="n">riga</span>
+            <span class="n">dizionario</span><span class="p">[</span><span class="n">intestazione</span><span class="p">]</span> <span class="o">=</span> <span class="n">sequenza</span>
+
+    <span class="k">return</span> <span class="n">dizionario</span>
+
+<span class="k">def</span> <span class="nf">calcola_istogramma</span><span class="p">(</span><span class="n">sequenza</span><span class="p">):</span>
+    <span class="n">istogramma</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">carattere</span> <span class="ow">in</span> <span class="n">sequenza</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">carattere</span> <span class="ow">in</span>  <span class="n">istogramma</span><span class="p">:</span>
+            <span class="n">istogramma</span><span class="p">[</span><span class="n">carattere</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">istogramma</span><span class="p">[</span><span class="n">carattere</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">istogramma</span>
+</pre></div>
+</div>
+<p>Date le due funzioni, posso implementare un programma complesso che (1) legge
+un file fasta in un dizionario, (2) per ciascuna sequenza nel file fasta
+calcola l’istogramma dei nucleotidi, e (3) stampa ciascun istogramma a
+schermo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dizionario_fasta</span> <span class="o">=</span> <span class="n">leggi_fasta</span><span class="p">(</span><span class="n">percorso</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">intestazione</span><span class="p">,</span> <span class="n">sequenza</span> <span class="ow">in</span> <span class="n">dizionario_fasta</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">istogramma</span> <span class="o">=</span> <span class="n">calcola_istogramma</span><span class="p">(</span><span class="n">sequenza</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">istogramma</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="section" id="esercizi">
+<h2>Esercizi<a class="headerlink" href="#esercizi" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Data la funzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funzione</span><span class="p">(</span><span class="n">arg</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">arg</span>
+</pre></div>
+</div>
+<p>di che tipo e’ il risultato delle seguenti chiamate?</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">funzione(1)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">funzione({&quot;1A3A&quot;:</span> <span class="pre">123,</span> <span class="pre">&quot;2B1F&quot;:</span> <span class="pre">66})</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">funzione([2*x</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">range(10)])</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">funzione(2**-2)</span></code></p></li>
+</ol>
+</li>
+<li><p>Data la funzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">addizione</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</pre></div>
+</div>
+<p>di che tipo e’ il risultato delle seguenti chiamate?</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">addizione(2,</span> <span class="pre">2)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">addizione([1,2,3],</span> <span class="pre">[True,</span> <span class="pre">False])</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">addizione(&quot;sono</span> <span class="pre">una&quot;,</span> <span class="pre">&quot;stringa&quot;)</span></code></p></li>
+</ol>
+</li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">stampa_pari_dispari()</span></code> che prende un intero e <strong>stampa a
+schermo</strong> <code class="docutils literal notranslate"><span class="pre">&quot;pari&quot;</span></code> se il numero e’ pari e <code class="docutils literal notranslate"><span class="pre">&quot;dispari&quot;</span></code> altrimenti.</p>
+<p>Cosa succede se scrivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risultato</span> <span class="o">=</span> <span class="n">stampa_pari_dispari</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">calcola_pari_dispari()</span></code> che prende un intero e <strong>restituisce</strong>
+la stringa <code class="docutils literal notranslate"><span class="pre">&quot;pari&quot;</span></code> se il numero e’ pari e la stringa <code class="docutils literal notranslate"><span class="pre">&quot;dispari&quot;</span></code> altrimenti.</p>
+<p>Cosa succede se scrivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">calcola_pari_dispari</span><span class="p">(</span><span class="mi">99</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">controlla_alfanumerico()</span></code> che prende una stringa e
+<strong>restituisce</strong> <code class="docutils literal notranslate"><span class="pre">True</span></code> se la stringa e’ alfanumerica (contiene solo
+caratteri alfabetici o numerici) e <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti.</p>
+<p>Per controllare se un carattere e’ alfanumerico, usare <code class="docutils literal notranslate"><span class="pre">in</span></code> e la
+stringa:: <code class="docutils literal notranslate"><span class="pre">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&quot;</span></code>.</p>
+<p><em>Hint</em>. Anche i caratteri minuscoli possono essere alfanumerici!</p>
+</li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">domanda()</span></code> che non prende nessun argomento,
+chiede all’utente un percorso ad un file e <strong>stampa a schermo</strong> i contenuti
+del file. (Testarla ad esempio con il file <code class="docutils literal notranslate"><span class="pre">data/aatable</span></code>.)</p></li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">wc()</span></code> che prende una stringa e <strong>restituisce</strong> una
+tripla (<code class="docutils literal notranslate"><span class="pre">tuple</span></code>) di tre valori:</p>
+<ol class="arabic simple">
+<li><p>Il primo elemento della coppia deve essere la lunghezza della stringa.</p></li>
+<li><p>Il secondo elemento deve essere il numero di <em>a capo</em> nella stringa.</p></li>
+<li><p>Il terzo elemento deve essere il numero di parole (separate da spazi o <em>a capo</em>) nella stringa.</p></li>
+</ol>
+</li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">stampa_dizionario()</span></code> che prende un dizionario e
+<strong>stampa a schermo</strong> le coppie chiave-valore del dizionario formattate come
+da esempio sotto.</p>
+<p>Esempio: quando applico <code class="docutils literal notranslate"><span class="pre">stampa_dizionario()</span></code> a:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dizionario</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;arginina&quot;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
+    <span class="s2">&quot;lisina&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="s2">&quot;cisteina&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+    <span class="s2">&quot;istidina&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>che e’ un istogramma di frequenze, il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stampa_dizionario</span><span class="p">(</span><span class="n">dizionario</span><span class="p">)</span>
+<span class="go">istidina -&gt; 10.0%</span>
+<span class="go">cisteina -&gt; 10.0%</span>
+<span class="go">arginina -&gt; 70.0%</span>
+<span class="go">lisina -&gt; 10.0%</span>
+</pre></div>
+</div>
+<p>Qui l’ordine in cui vengono stampate le righe non importa.</p>
+</li>
+<li><p>Come sopra, ma le chiavi devono essere ordinate <em>alfanumericamente</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stampa_dizionario_ordinato</span><span class="p">(</span><span class="n">dizionario</span><span class="p">)</span>
+<span class="go">arginina -&gt; 70%</span>
+<span class="go">cisteina -&gt; 10%</span>
+<span class="go">istidina -&gt; 10%</span>
+<span class="go">lisina -&gt; 10%</span>
+</pre></div>
+</div>
+<p><em>Hint</em>: conviene estrarre le chiavi del dizionario, ordinarle a parte,
+scorrere le chiavi ordinate e di volta in volta stampare la riga
+corrispondente.</p>
+</li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">crea_lista_di_fattoriali()</span></code> che prende un intero
+<code class="docutils literal notranslate"><span class="pre">n</span></code>, e <strong>restituisce</strong> una lista di <code class="docutils literal notranslate"><span class="pre">n</span></code> elementi.</p>
+<p>L’<code class="docutils literal notranslate"><span class="pre">i</span></code>-esimo elemento deve essere il fattoriale di <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+<p>Ad esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lista</span> <span class="o">=</span> <span class="n">crea_lista_di_fattoriali</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>
+<span class="go">5                                       # 5 elementi, come richiesto</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">1                                       # e&#39; il fattoriale di 0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="go">1                                       # e&#39; il fattoriale di 1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="go">2                                       # e&#39; il fattoriale di 2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="go">6                                       # e&#39; il fattoriale di 3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="go">24                                      # e&#39; il fattoriale di 4</span>
+</pre></div>
+</div>
+<p><em>Hint</em>: conviene usare la funzione <code class="docutils literal notranslate"><span class="pre">fattoriale()</span></code> definita in uno
+degli esempi precedenti per calcolare i valori della lista.</p>
+</li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">conta_carattere()</span></code> che prende due stringhe, la
+prima che rappresenta testo e la seconda che rappresenta un carattere.</p>
+<p>La funzione deve <strong>restituire</strong> il numero di ripetizioni del carattere
+nel testo.</p>
+<p>Ad esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">conta_carattere</span><span class="p">(</span><span class="s2">&quot;abbaa&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">))</span>
+<span class="go">3                                           # &quot;a&quot; compare 3 volte</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">conta_carattere</span><span class="p">(</span><span class="s2">&quot;abbaa&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">))</span>
+<span class="go">2                                           # &quot;b&quot; compare 2 volte</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">conta_carattere</span><span class="p">(</span><span class="s2">&quot;abbaa&quot;</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">))</span>
+<span class="go">0                                           # &quot;?&quot; non compare mai</span>
+</pre></div>
+</div>
+</li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">conta_caratteri()</span></code> che prende due stringhe, la
+prima che rappresenta testo e la seconda che rappresenta un tot di
+caratteri.</p>
+<p>La funzione deve <strong>restituire</strong> un dizionario, in cui le chiavi sono
+i caratteri da cercare, e il valore associato il loro numero di
+ripetizioni.</p>
+<p>Ad esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">conta_caratteri</span><span class="p">(</span><span class="s2">&quot;abbaa&quot;</span><span class="p">,</span> <span class="s2">&quot;ab?&quot;</span><span class="p">))</span>
+<span class="go">{&quot;a&quot;: 3, &quot;b&quot;: 2, &quot;?&quot;: 0}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">distanza()</span></code> che prende due coppie <code class="docutils literal notranslate"><span class="pre">(x1,y1)</span></code> e
+<code class="docutils literal notranslate"><span class="pre">(x2,y2)</span></code> di punto bidimensionali e ne restituisce la distanza Euclidea.</p>
+<p><em>Hint</em>. La distanza Euclidea e’ <img class="math" src="_images/math/f9969325c34f7bf8bfeb7c703a48619faebe9bb2.png" alt="\sqrt{(x1-x2)^2 + (y1-y2)^2}"/></p>
+</li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">sottostringa()</span></code> che date due stringhe ritorna <code class="docutils literal notranslate"><span class="pre">True</span></code>
+se la seconda e’ sottostringa della prima.</p></li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">sottostringhe_non_vuote()</span></code> che data una stringa,
+restituisca la lista delle sue sottostringhe non vuote.</p></li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">conta_sottostringhe()</span></code> che, date due stringhe <code class="docutils literal notranslate"><span class="pre">pagliaio</span></code>
+ed <code class="docutils literal notranslate"><span class="pre">ago</span></code>, ritorni il numero di ripetizioni di <code class="docutils literal notranslate"><span class="pre">ago</span></code> in <code class="docutils literal notranslate"><span class="pre">pagliaio</span></code>.</p></li>
+<li><p>Creare una funzione <code class="docutils literal notranslate"><span class="pre">sottostringa_piu_lunga()</span></code> che date due stringhe
+restituisca la loro sottostringa comune piu’ lunga.</p>
+<p><em>Hint</em>. Si puo’ risolvere usando l’esercizio precedente!</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_functions_sol.html" class="btn btn-neutral float-right" title="Lezione 12 - Soluzioni" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_complex_statements_2_sol.html" class="btn btn-neutral float-left" title="Lezione 11 - Soluzioni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lezione 9 - Python: Input-Output &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 9 - Soluzioni" href="python_io_sol.html" />
+    <link rel="prev" title="Lezione 8.2 - Soluzioni" href="python_tuples_sol.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Laboratorio di Informatica
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a.a. 2021/2022
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv_sol.html">Lezione 6 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Lezione 7 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries_sol.html">Lezione 7 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Lezione 8.1 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets_sol.html">Lezione 8.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples.html">Lezione 8.2 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples_sol.html">Lezione 8.2 - Soluzioni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 9 - Python: Input-Output</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#interfaccia-utente">Interfaccia Utente</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esercizi">Esercizi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interfaccia-filesystem">Interfaccia Filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Esercizi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_io_sol.html">Lezione 9 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1.html">Lezione 10 - Python: Statement Complessi (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1_sol.html">Lezione 10 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2.html">Lezione 11 - Python: Statement Complessi (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 12 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 12 - Soluzioni</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Lezione 9 - Python: Input-Output</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/python_io.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lezione-9-python-input-output">
+<h1>Lezione 9 - Python: Input-Output<a class="headerlink" href="#lezione-9-python-input-output" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="interfaccia-utente">
+<h2>Interfaccia Utente<a class="headerlink" href="#interfaccia-utente" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 26%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ritorna</p></th>
+<th class="head"><p>Operatore</p></th>
+<th class="head"><p>Significato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">input([str])</span></code></p></td>
+<td><p>Fa una domanda all’utente e restituisce la risposta</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Faccio una domanda all’utente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi tre parole separate da spazi: &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">risposta</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">risposta</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Ho messo nella variabile <code class="docutils literal notranslate"><span class="pre">risposta</span></code> la risposta dell’utente (che e’ sempre
+una stringa). Il contenuto di <code class="docutils literal notranslate"><span class="pre">risposta</span></code> dipende dall’utente, che potrebbe
+aver dato una risposta qualunque.</p>
+<p>Voglio controllare che abbia effettivamente risposto con tre parole separate da
+spazi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parti</span> <span class="o">=</span> <span class="n">parole</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hai scritto&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">parti</span><span class="p">),</span> <span class="s2">&quot;parole&quot;</span><span class="p">)</span>
+
+<span class="n">reazione_a</span> <span class="o">=</span> <span class="p">{</span><span class="kc">True</span><span class="p">:</span> <span class="s2">&quot;bravo!&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s2">&quot;impegnati di piu&#39;&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reazione_a</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">parti</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Faccio una domanda all’utente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi due numeri: &quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">risposta</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">risposta</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Voglio stampare la somma dei numeri dati dall’utente. Prima estraggo le varie
+parole, poi le converto in <code class="docutils literal notranslate"><span class="pre">float</span></code>, poi eseguo la somma e la stampo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parti</span> <span class="o">=</span> <span class="n">risposta</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="n">numero_1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parti</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">numero_2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parti</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la loro somma e&#39;&quot;</span><span class="p">,</span> <span class="n">numero_1</span> <span class="o">+</span> <span class="n">numero_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="esercizi">
+<h2>Esercizi<a class="headerlink" href="#esercizi" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Usando <code class="docutils literal notranslate"><span class="pre">input()</span></code>, chiedere all’utente il suo piatto preferito, mettere
+il risultato in una variabile <code class="docutils literal notranslate"><span class="pre">cibo</span></code>, poi stampare a schermo:
+<code class="docutils literal notranslate"><span class="pre">anche</span> <span class="pre">a</span> <span class="pre">me</span> <span class="pre">piace</span></code> ed il piatto preferito.</p></li>
+<li><p>Chiedere all’utente due interi, diciamo <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code>, poi un terzo
+intero, diciamo <code class="docutils literal notranslate"><span class="pre">risultato</span></code>.</p>
+<p>Controllare se la somma di <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code> e’ uguale a <code class="docutils literal notranslate"><span class="pre">risultato</span></code>: in
+tale caso stampare a schermo <code class="docutils literal notranslate"><span class="pre">True</span></code>, altrimenti <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+</li>
+<li><p>Chiedere all’utente una chiave ed un valore, e costruire un dizionario
+che include (solo) quella coppia chiave-valore. Stampare a schermo il
+risultato.</p></li>
+<li><p>Chiedere all’utente il suo nome, metterlo nella variabile <code class="docutils literal notranslate"><span class="pre">nome</span></code>, poi
+stampare a schermo il nome assicurandosi che le prime lettere di tutte
+le parole del nome siano maiuscole e le altre minuscole.</p>
+<p>Infine stampare a schermo il risultato.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="interfaccia-filesystem">
+<h2>Interfaccia Filesystem<a class="headerlink" href="#interfaccia-filesystem" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 26%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ritorna</p></th>
+<th class="head"><p>Operatore</p></th>
+<th class="head"><p>Significato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">open(str,</span> <span class="pre">[str])</span></code></p></td>
+<td><p>Restituisce un riferimento ad un <code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">file.read()</span></code></p></td>
+<td><p>Legge i contenuti del file</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">file.readline()</span></code></p></td>
+<td><p>Legge una riga dal file</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">list-of-str</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">file.readlines()</span></code></p></td>
+<td><p>Legge tutte le righe del file</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">file.write(str)</span></code></p></td>
+<td><p>Scrive una stringa nel file</p></td>
+</tr>
+<tr class="row-odd"><td><p>–</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">file.close()</span></code></p></td>
+<td><p>Chiude il riferimento ad un <code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Ci sono diverse modalita’ di accesso usabili con <code class="docutils literal notranslate"><span class="pre">open()</span></code>:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code>: modalita’ di sola lettura (non posso scrivere nel file). Questo e’ il <em>default</em>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code>: modalita’ di sola scrittura (non posso leggere dal file), sovrascrivendo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code>: modalita’ di sola scrittura (non posso leggere dal file), appendendo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;+&quot;</span></code>: modificatore per update (lettura/scrittura).</p></li>
+</ol>
+<p><strong>Esempio</strong>. Apro un file in modalita’ di lettura:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">un_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data/aatable&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">un_file</span><span class="p">))</span>                 <span class="c1"># file</span>
+</pre></div>
+</div>
+<p>Il primo argomento e’ il percorso al file che voglio aprire (in questo caso
+un percorso relativo alla directory da cui ho fatto partire <code class="docutils literal notranslate"><span class="pre">python</span></code>), il
+secondo <code class="docutils literal notranslate"><span class="pre">&quot;r&quot;&quot;</span></code> specifica in che modalita’ aprire il file.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Non potete usare directory speciali, ad esempio <code class="docutils literal notranslate"><span class="pre">&quot;~&quot;</span></code> (la vostra home)
+nel percorso che date a <code class="docutils literal notranslate"><span class="pre">open()</span></code>.</p>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Una volta aperto un file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">un_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data/aatable&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>leggo i contenuti o per intero, in un’unica stringa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">contenuti</span> <span class="o">=</span> <span class="n">un_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">contenuti</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">contenuti</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>oppure per intero ma spezzati in una lista di righe:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">righe</span> <span class="o">=</span> <span class="n">un_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">righe</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>oppure una sola riga alla volta, dalla prima in giu’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">riga_1</span> <span class="o">=</span> <span class="n">un_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">riga_2</span> <span class="o">=</span> <span class="n">un_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="n">riga_3</span> <span class="o">=</span> <span class="n">un_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">riga_1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">riga_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">riga_3</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Una volta aperto un file, non posso leggere due volte la stessa riga.</p>
+<p>Questo vuol dire che una volta che ho letto tutto il file, ad esempio
+usando <code class="docutils literal notranslate"><span class="pre">readlines()</span></code> (che legge tutto il contenuto), se uso una
+seconda volta <code class="docutils literal notranslate"><span class="pre">readlines()</span></code> o qualunque altro metodo di lettura,
+questa mi restituira’ una riga vuota.</p>
+<p>Ad esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">un_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data/aatable&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="c1"># non ho ancora letto niente, quindi readlines() mi</span>
+<span class="c1"># restituisce tutti i contenuti del file</span>
+
+<span class="n">contenuti</span> <span class="o">=</span> <span class="n">un_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">contenuti</span><span class="p">))</span>
+
+<span class="c1"># ora che ho letto tutti i contenuti, non resta piu&#39; niente</span>
+<span class="c1"># da leggere, e infatti...</span>
+<span class="n">contenuti_2</span> <span class="o">=</span> <span class="n">un_file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">contenuti_2</span><span class="p">))</span>
+
+<span class="c1"># qui contenuti_2 ha ZERO righe</span>
+</pre></div>
+</div>
+</div>
+<p>Visto che il file e’ stato aperto con <code class="docutils literal notranslate"><span class="pre">open()</span></code> in modalita’ di sola lettura,
+non posso scriverci dentro:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">un_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;del testo</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>perche’ Python mi da’ errore:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">IOError</span><span class="p">:</span> <span class="n">File</span> <span class="ow">not</span> <span class="nb">open</span> <span class="k">for</span> <span class="n">writing</span>
+<span class="c1">#        ^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+<span class="c1">#         il file non e&#39; aperto in modalita&#39; di scrittura!</span>
+</pre></div>
+</div>
+<p>La stessa cosa accade se provo a leggere da un file aperto in modalita’ di
+sola scrittura (sia con <code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code> che con <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code>).</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Per aprire un file in cui mettere i risultati di un lunghissimo
+calcolo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file_dei_risultati</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;risultati&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+
+<span class="c1"># blah blah blah</span>
+<span class="c1"># blah blah blah</span>
+<span class="c1"># blah blah blah</span>
+
+<span class="n">file_dei_risultati</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Una volta finito di leggere o scrivere, chiamo <code class="docutils literal notranslate"><span class="pre">close()</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Per i file aperti in modalita’ di scrittura (con <code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;r+&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code>, …), <code class="docutils literal notranslate"><span class="pre">close()</span></code> si assicura che tutto cio’ che avete detto a
+Python di scriverci effettivamente finisca per essere scritto nel file.</p>
+<p>Se dimendicate di chiamare <code class="docutils literal notranslate"><span class="pre">close()</span></code> la scrittura nel file <em>potrebbe</em>
+non accadere.</p>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Chiedo all’utente il nome di un file (che puo’ esistere o meno),
+e poi cosa vuole scriverci:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">percorso</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;dove vuoi scrivere? &quot;</span><span class="p">)</span>
+<span class="n">testo</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;cosa vuoi scrivere? &quot;</span><span class="p">)</span>
+
+<span class="n">il_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">percorso</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+<span class="n">il_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;l&#39;utente ha scritto:</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">testo</span><span class="p">)</span>
+<span class="n">il_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Ora riapro lo stesso file, ma in modalita’ di lettura, ne leggo i contenuti
+e li stampo a schermo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stesso_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">percroso</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+<span class="n">contenuti</span> <span class="o">=</span> <span class="n">stesso_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">stesso_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nel file &quot;</span><span class="p">,</span> <span class="n">percorso</span><span class="p">,</span> <span class="s2">&quot; hai scritto:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">contenuti</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h2>Esercizi<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Se <code class="docutils literal notranslate"><span class="pre">open()</span></code> vi da’ errore, puo’ darsi che vi troviate nella directory
+sbagliata. Aggiustate il percorso di conseguenza.</p>
+</div>
+<ol class="arabic">
+<li><p>Usate <code class="docutils literal notranslate"><span class="pre">open()</span></code> per aprire il file <code class="docutils literal notranslate"><span class="pre">&quot;data/aatable&quot;</span></code> in modalita’ di sola
+lettura, mettendo il risultato di <code class="docutils literal notranslate"><span class="pre">open()</span></code> nella variabile <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<p>Poi usate <code class="docutils literal notranslate"><span class="pre">readlines()</span></code> per leggere il contenuto del file, mettendo il
+risultato in <code class="docutils literal notranslate"><span class="pre">righe</span></code>.</p>
+<p>Di che tipo e’ <code class="docutils literal notranslate"><span class="pre">righe</span></code>? Di che tipo e’ il primo elemento di <code class="docutils literal notranslate"><span class="pre">righe</span></code>?
+Quante righe ci sono nel file?</p>
+</li>
+<li><p>Usate <code class="docutils literal notranslate"><span class="pre">open()</span></code> per aprire il file <code class="docutils literal notranslate"><span class="pre">&quot;data/aatable&quot;</span></code> in modalita’ di sola
+lettura, mettendo il risultato di <code class="docutils literal notranslate"><span class="pre">open()</span></code> nella variabile <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<p>Poi usate <code class="docutils literal notranslate"><span class="pre">readline()</span></code> (non <code class="docutils literal notranslate"><span class="pre">readlines()</span></code>!) per leggere la prima riga
+del file, mettendo il risultato in <code class="docutils literal notranslate"><span class="pre">prima_riga</span></code>.</p>
+<p>Quante righe sono rimaste da leggere? Controllate usando <code class="docutils literal notranslate"><span class="pre">readlines()</span></code>.</p>
+<p>A questo punto, quante altre righe sono rimaste da leggere?</p>
+</li>
+<li><p>Usate <code class="docutils literal notranslate"><span class="pre">open()</span></code> per aprire il file <code class="docutils literal notranslate"><span class="pre">&quot;output.txt&quot;</span></code> in modalita’ di sola
+scrittura <code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code>, mettendo il risultato di <code class="docutils literal notranslate"><span class="pre">open()</span></code> nella variabile <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<p>Poi scrivete la stringa <code class="docutils literal notranslate"><span class="pre">&quot;prova</span> <span class="pre">prova</span> <span class="pre">uno</span> <span class="pre">due</span> <span class="pre">tre</span> <span class="pre">prova&quot;</span></code> nel file.</p>
+<p>Chiudete il file usando il metodo <code class="docutils literal notranslate"><span class="pre">close()</span></code>.</p>
+<p>Ora invece aprite <code class="docutils literal notranslate"><span class="pre">&quot;output.txt&quot;</span></code> in modalita’ di sola lettura e stampate
+a schermo i suoi contenuti.</p>
+</li>
+<li><p>usate <code class="docutils literal notranslate"><span class="pre">open()</span></code> per aprire il file <code class="docutils literal notranslate"><span class="pre">&quot;poesia.txt&quot;</span></code> in modalita’ di sola
+scrittura. Poi scrivete nel file le stringhe in questa lista, una per riga:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">versi</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;S&#39;i fosse fuoco, arderei &#39;l mondo&quot;</span>
+    <span class="s2">&quot;s&#39;i fosse vento, lo tempestarei&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Ora fare la stessa cosa aprendo due volte il file <code class="docutils literal notranslate"><span class="pre">&quot;poesia2.txt&quot;</span></code> in
+modalita’ di sola scrittura (appendendo), ed ogni volta scrivendoci uno
+dei due versi.</p>
+<p>Cosa succede se riapro <code class="docutils literal notranslate"><span class="pre">&quot;poesia2.txt&quot;</span></code> in modalita’ <code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code> e lo richiudo
+subito?</p>
+</li>
+<li><p>Scrivere un modulo <code class="docutils literal notranslate"><span class="pre">trucco.py</span></code> che stampa il codice del modulo stesso
+a schermo.</p>
+<p><em>Curiosita’</em>: abbiamo appena scritto (barando!) un <a class="reference external" href="http://it.wikipedia.org/wiki/Quine">programma di Quine</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_io_sol.html" class="btn btn-neutral float-right" title="Lezione 9 - Soluzioni" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_tuples_sol.html" class="btn btn-neutral float-left" title="Lezione 8.2 - Soluzioni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
