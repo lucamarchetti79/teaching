@@ -1,0 +1,643 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lezione 3.2 - Python: Numeri &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 3.2 - Soluzioni" href="python_numbers_sol.html" />
+    <link rel="prev" title="Lezione 3.1 - Soluzioni" href="python_moduli_sol.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Laboratorio di Informatica
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a.a. 2021/2022
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 3.2 - Python: Numeri</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#numeri-tipi-fondamentali">Numeri: Tipi Fondamentali</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#numeri-aritmetica">Numeri: Aritmetica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#numeri-confronti">Numeri: Confronti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esempi">Esempi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esercizi">Esercizi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv_sol.html">Lezione 6 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Lezione 7 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries_sol.html">Lezione 7 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Lezione 8.1 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets_sol.html">Lezione 8.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples.html">Lezione 8.2 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples_sol.html">Lezione 8.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Lezione 9 - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io_sol.html">Lezione 9 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1.html">Lezione 10 - Python: Statement Complessi (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1_sol.html">Lezione 10 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2.html">Lezione 11 - Python: Statement Complessi (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 12 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 12 - Soluzioni</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Lezione 3.2 - Python: Numeri</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/python_numbers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lezione-3-2-python-numeri">
+<h1>Lezione 3.2 - Python: Numeri<a class="headerlink" href="#lezione-3-2-python-numeri" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="numeri-tipi-fondamentali">
+<h2>Numeri: Tipi Fondamentali<a class="headerlink" href="#numeri-tipi-fondamentali" title="Permalink to this headline">¶</a></h2>
+<p>Ci sono tre <strong>tipi</strong> numerici fondamentali:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 86%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo</p></th>
+<th class="head"><p>Significato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p>Rappresenta numeri interi (!)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></td>
+<td><p>Rappresenta numeri razionali a virgola mobile (<em>float</em> ing-point)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td><p>Rappresenta condizioni, puo’ essere <code class="docutils literal notranslate"><span class="pre">True</span></code> o <code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I razionali <code class="docutils literal notranslate"><span class="pre">float</span></code> hanno precisione limitata: la maggior parte dei
+razionali puo’ essere rappresentata solo <em>approssimatamente</em> con un
+<code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
+<p>Ai fini di questo corso, i dettagli <em>non</em> sono importanti.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Esempio</strong>. Creo tre variabili, una per tipo, poi le stampo a schermo con
+<code class="docutils literal notranslate"><span class="pre">print</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">3.14</span>
+<span class="n">cond</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="c1"># Stampo le tre variabili</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">cond</span><span class="p">)</span>
+
+<span class="c1"># Idem, inframezzando testo</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;n =&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="s2">&quot;x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;e la condizione cond vale&quot;</span><span class="p">,</span> <span class="n">cond</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Questa sintassi di <code class="docutils literal notranslate"><span class="pre">print</span></code> vale per tutti i tipi di variabili, non solo
+quelli numerici.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="numeri-aritmetica">
+<h2>Numeri: Aritmetica<a class="headerlink" href="#numeri-aritmetica" title="Permalink to this headline">¶</a></h2>
+<p>Tutti i tipi numerici mettono a disposizione le stesse <strong>operazioni aritmetiche</strong>:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operazione</p></th>
+<th class="head"><p>Significato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code></p></td>
+<td><p>somma</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">-</span> <span class="pre">b</span></code></p></td>
+<td><p>differenza</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">*</span> <span class="pre">b</span></code></p></td>
+<td><p>prodotto</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">/</span> <span class="pre">b</span></code></p></td>
+<td><p>divisione</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">//</span> <span class="pre">b</span></code></p></td>
+<td><p>divisione intera</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">%</span> <span class="pre">b</span></code></p></td>
+<td><p>resto della divisione (o modulo)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">**</span> <span class="pre">b</span></code></p></td>
+<td><p>elevamento a potenza</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Il tipo del risultato di <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">operazione</span> <span class="pre">m</span></code> e’ <em>automaticamente</em> il tipo
+piu’ “complesso” tra i tipi di <code class="docutils literal notranslate"><span class="pre">n</span></code> e <code class="docutils literal notranslate"><span class="pre">m</span></code> – per questo si parla di
+<strong>conversione automatica</strong>.</p>
+<p>La scala di complessita’ dei tipi numerici e’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span> <span class="o">&lt;</span> <span class="nb">int</span> <span class="o">&lt;</span> <span class="nb">float</span>
+</pre></div>
+</div>
+<p><strong>Esempio</strong>. Ad esempio, se sommo un <code class="docutils literal notranslate"><span class="pre">int</span></code> ed un <code class="docutils literal notranslate"><span class="pre">float</span></code>, otterro’ un
+<code class="docutils literal notranslate"><span class="pre">float</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risultato</span> <span class="o">=</span> <span class="mf">1.2</span> <span class="o">+</span> <span class="mi">1</span>             <span class="c1"># float + int</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>                <span class="c1"># 1.2</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">risultato</span><span class="p">))</span>          <span class="c1"># float</span>
+</pre></div>
+</div>
+<p>Questo perche’ e’ necessario un <code class="docutils literal notranslate"><span class="pre">float</span></code> per rappresentare il valore <code class="docutils literal notranslate"><span class="pre">1.2</span></code>:
+un <code class="docutils literal notranslate"><span class="pre">int</span></code> non basterebbe!</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Per evitare errori, e’ necessario scegliere il tipo delle variabili in
+modo che il <em>tipo</em> del risultato sia sufficientemente “complesso” da
+riuscire a rappresentarne il <em>valore</em>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>State attenti che, come anticipato prima, la accuratezza della matematica fornita da Python
+non e’ perfetta. Per questo motivo a volte possono capitare dei risultati inaspettati:</p>
+<ol class="lowerroman simple">
+<li><p>Errore di arrotondamento: 1.1 + 2.2 = 3.3000000000000003</p></li>
+<li><p>Errore di cancellazione: 0.1 + 0.1 + 0.1 - 0.3 = 5.551115123125783e-17</p></li>
+</ol>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="numeri-confronti">
+<h2>Numeri: Confronti<a class="headerlink" href="#numeri-confronti" title="Permalink to this headline">¶</a></h2>
+<p>Tutti i tipi numerici (e in generale tutto i tipi Python che vedremo durante
+il corso) supportano le operazioni di <strong>comparazione</strong>:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operazione</p></th>
+<th class="head"><p>Significato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">==</span> <span class="pre">b</span></code></p></td>
+<td><p>uguale</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">!=</span> <span class="pre">b</span></code></p></td>
+<td><p>diverso</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code></p></td>
+<td><p>minore</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code></p></td>
+<td><p>minore o uguale</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&gt;</span> <span class="pre">b</span></code></p></td>
+<td><p>maggiore</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&gt;=</span> <span class="pre">b</span></code></p></td>
+<td><p>maggiore o uguale</p></td>
+</tr>
+</tbody>
+</table>
+<p>Il risultato di un’espressione di confronto e’ sempre un <code class="docutils literal notranslate"><span class="pre">bool</span></code>: vale
+<code class="docutils literal notranslate"><span class="pre">True</span></code> se la condizione e’ soddisfatta, e <code class="docutils literal notranslate"><span class="pre">False</span></code> altrimenti.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Esempio</strong>. Aritmetica e confronti possono essere combinati per verificare
+condizioni “complesse”, come questa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">na</span><span class="p">,</span> <span class="n">nc</span><span class="p">,</span> <span class="n">ng</span><span class="p">,</span> <span class="n">nt</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">4</span>
+
+<span class="n">risultato</span> <span class="o">=</span> <span class="p">(</span><span class="n">na</span> <span class="o">+</span> <span class="n">nt</span><span class="p">)</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">nc</span> <span class="o">+</span> <span class="n">ng</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">risultato</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>I valori Booleani <code class="docutils literal notranslate"><span class="pre">bool</span></code> (es. i risultati delle operazioni di confronto)
+possono essere combinati attraverso le operazioni logiche:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 86%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operazione</p></th>
+<th class="head"><p>Significato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">and</span> <span class="pre">b</span></code></p></td>
+<td><p>congiunzione: <code class="docutils literal notranslate"><span class="pre">True</span></code> se e solo se <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code> sono <code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">or</span> <span class="pre">b</span></code></p></td>
+<td><p>disgiunzione: <code class="docutils literal notranslate"><span class="pre">True</span></code> se almeno una tra <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code> e’ <code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">a</span></code></p></td>
+<td><p>negazione: <code class="docutils literal notranslate"><span class="pre">True</span></code> se <code class="docutils literal notranslate"><span class="pre">a</span></code> e’ <code class="docutils literal notranslate"><span class="pre">False</span></code> e viceversa</p></td>
+</tr>
+</tbody>
+</table>
+<p>Qui sia <code class="docutils literal notranslate"><span class="pre">a</span></code> che <code class="docutils literal notranslate"><span class="pre">b</span></code> sono dei <code class="docutils literal notranslate"><span class="pre">bool</span></code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In generale, fare aritmetica (es. somme) con valori Booleani e costruire
+espressioni logiche con valori interi o razionali e’ sconsigliato.</p>
+<p>In questi casi, Python si comporta in modo (deterministico e spiegabile,
+ma decisamente) bizzarro.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Esempio</strong>. <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">12</span></code> e <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">34</span></code> danno come risultato dei <code class="docutils literal notranslate"><span class="pre">bool</span></code>, quindi
+le posso combinare per ottenere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#     int          int</span>
+<span class="c1">#      |            |</span>
+<span class="nb">print</span><span class="p">((</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">34</span><span class="p">))</span>
+<span class="c1">#     \______/     \______/</span>
+<span class="c1">#       bool         bool</span>
+<span class="c1">#     \___________________/</span>
+<span class="c1">#             bool</span>
+</pre></div>
+</div>
+<p>oppure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#          int          int</span>
+<span class="c1">#           |            |</span>
+<span class="nb">print</span><span class="p">((</span><span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">34</span><span class="p">))</span>
+<span class="c1">#          \______/</span>
+<span class="c1">#            bool</span>
+<span class="c1">#     \____________/    \______/</span>
+<span class="c1">#          bool           bool</span>
+<span class="c1">#     \________________________/</span>
+<span class="c1">#                bool</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="esempi">
+<h2>Esempi<a class="headerlink" href="#esempi" title="Permalink to this headline">¶</a></h2>
+<p><strong>Esempio</strong>. Calcolo gli zeri dell’equazione quadratica <img class="math" src="_images/math/6ceff813b9c96f2a87ed1b0c5f8aff9d0395a483.png" alt="x^2 - 1 = 0"/>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span>
+
+<span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
+
+<span class="n">zero1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">delta</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">zero2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="n">delta</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">zero1</span><span class="p">,</span> <span class="n">zero2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Qui uso <code class="docutils literal notranslate"><span class="pre">x**0.5</span></code> per calcolare la radice quadrata: <img class="math" src="_images/math/7532f62bb07fdc2577426a30f0ca62f6649b2a59.png" alt="\sqrt{x} = x^\frac{1}{2}"/>.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Esempio</strong>. Voglio calcolare il <a class="reference external" href="https://en.wikipedia.org/wiki/GC-content">GC-content</a>
+di un gene. So che il gene:</p>
+<ul class="simple">
+<li><p>E’ lungo 1521 basi.</p></li>
+<li><p>Contiene 316 citosine.</p></li>
+<li><p>Contiene 235 guanine.</p></li>
+</ul>
+<p>Simbolicamente, il GC-content e’ definito come <img class="math" src="_images/math/739a0810452d574a623e683006c83279a985c882.png" alt="(g + c) / n"/>. Per
+calcolarlo posso scrivere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">g</span> <span class="o">=</span> <span class="mi">1521</span><span class="p">,</span> <span class="mi">316</span><span class="p">,</span> <span class="mi">235</span>
+
+<span class="n">gc_content</span> <span class="o">=</span> <span class="p">(</span><span class="n">c</span> <span class="o">+</span> <span class="n">g</span><span class="p">)</span> <span class="o">/</span> <span class="n">n</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gc_content</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Esempio</strong>. Per  controllare che <code class="docutils literal notranslate"><span class="pre">x</span></code> (il cui valore e’ “fuori dal mio
+controllo”, ma nell’esempio sotto fisso per convenienza) cada nell’intervallo A
+<img class="math" src="_images/math/aa8e1b5e3a953bf32aa27256fbdce41d7ea14e73.png" alt="= [10,50]"/> scrivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">17</span> <span class="c1"># ad esempio</span>
+
+<span class="n">minimo_a</span><span class="p">,</span> <span class="n">massimo_a</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span>
+
+<span class="n">dentro_a</span> <span class="o">=</span> <span class="p">(</span><span class="n">minimo_a</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">massimo_a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dentro_a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>oppure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dentro_a</span> <span class="o">=</span> <span class="p">((</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="n">minimo_a</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">massimo_a</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Assumendo che <code class="docutils literal notranslate"><span class="pre">dentro_a</span></code>, <code class="docutils literal notranslate"><span class="pre">dentro_b</span></code> e <code class="docutils literal notranslate"><span class="pre">dentro_c</span></code> indichino che <code class="docutils literal notranslate"><span class="pre">x</span></code> e’
+nell’intervallo A, B o C, rispettivamente, posso comporre condizioni piu’
+complesse:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># x e&#39; in almeno uno dei tre intervalli</span>
+<span class="n">dentro_almeno_uno</span> <span class="o">=</span> <span class="n">dentro_a</span> <span class="ow">or</span> <span class="n">dentro_b</span> <span class="ow">or</span> <span class="n">dentro_c</span>
+
+<span class="c1"># x e&#39; sia in A e B, ma non in C</span>
+<span class="n">dentro_a_e_b_ma_non_c</span> <span class="o">=</span> <span class="n">dentro_a</span> <span class="ow">and</span> <span class="n">dentro_b</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">dentro_c</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="esercizi">
+<h2>Esercizi<a class="headerlink" href="#esercizi" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Creare alcune variabili, controllando ad ogni passaggio che valore e tipo
+siano corretti (usando <code class="docutils literal notranslate"><span class="pre">print</span></code> e <code class="docutils literal notranslate"><span class="pre">type</span></code>):</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code> con valore <code class="docutils literal notranslate"><span class="pre">12</span></code> e <code class="docutils literal notranslate"><span class="pre">23</span></code> come interi.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> con valore <code class="docutils literal notranslate"><span class="pre">21</span></code> e <code class="docutils literal notranslate"><span class="pre">14</span></code> come razionali.</p></li>
+</ol>
+</li>
+<li><p>Usando <code class="docutils literal notranslate"><span class="pre">print</span></code> (una sola volta), stampare:</p>
+<ol class="arabic simple">
+<li><p>Tutte le variabili di cui sopra sulla stessa riga.</p></li>
+<li><p>Tutte le variabili di cui sopra, separate da <code class="docutils literal notranslate"><span class="pre">;</span></code>, sulla stessa riga.</p></li>
+<li><p>Il testo “il prodotto di <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code> e’ <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">*</span> <span class="pre">b</span></code>”, sostituendo ad
+<code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code> e <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">*</span> <span class="pre">b</span></code> i valori delle variabili.</p></li>
+</ol>
+</li>
+<li><p>Determinare valore e tipo di:</p>
+<ol class="arabic simple">
+<li><p>Il prodotto di <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
+<li><p>Il quoziente di <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+<li><p>Il quoziente intero di <code class="docutils literal notranslate"><span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
+<li><p>Il quoziente intero di <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+<li><p>Il prodotto di <code class="docutils literal notranslate"><span class="pre">b</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> elevato a <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> elevato a <code class="docutils literal notranslate"><span class="pre">1.2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> elevato a <code class="docutils literal notranslate"><span class="pre">-2</span></code>.</p></li>
+<li><p>La radice quadrata di <code class="docutils literal notranslate"><span class="pre">4</span></code>.</p></li>
+<li><p>La radice quadrata di <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p></li>
+</ol>
+</li>
+<li><p>Che differenza c’e’ tra:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">/</span> <span class="pre">12</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">/</span> <span class="pre">12.0</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">//</span> <span class="pre">12</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">//</span> <span class="pre">12.0</span></code></p></li>
+</ol>
+</li>
+<li><p>Che differenza c’e’ tra:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">%</span> <span class="pre">3</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">%</span> <span class="pre">3.0</span></code></p></li>
+</ol>
+</li>
+<li><p>Usando <code class="docutils literal notranslate"><span class="pre">pi</span> <span class="pre">=</span> <span class="pre">3.141592</span></code> e dato <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">=</span> <span class="pre">2.5</span></code>, calcolare:</p>
+<ol class="arabic simple">
+<li><p>La circonferenza di raggio <code class="docutils literal notranslate"><span class="pre">r</span></code>: <img class="math" src="_images/math/8688a9526feae64f4280f2c4e16814484b72abc5.png" alt="2 \pi r"/>.</p></li>
+<li><p>L’area di un cerchio di raggio <code class="docutils literal notranslate"><span class="pre">r</span></code>: <img class="math" src="_images/math/aae36891fd5bc71d102f4c3319897f9eb4c059bf.png" alt="\pi r^2"/>.</p></li>
+<li><p>Il volume di una sfera di raggio <code class="docutils literal notranslate"><span class="pre">r</span></code>: <img class="math" src="_images/math/63ac1f3fa8fd8fc34ede65de9bf3ec11ebcbddf9.png" alt="\frac{4}{3} \pi r^3"/>.</p></li>
+</ol>
+</li>
+<li><p>Creare due variabili <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">100</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">True</span></code>. Usando un numero opportuno
+di variabili ausiliarie (chiamatele come volete!), fate in modo che il
+valore di <code class="docutils literal notranslate"><span class="pre">a</span></code> finisca in <code class="docutils literal notranslate"><span class="pre">b</span></code> e che quello di <code class="docutils literal notranslate"><span class="pre">b</span></code> finisca in <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+<p>(Scrivere <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">True</span></code> e <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">100</span></code> non vale!)</p>
+<p>Si puo’ fare con una sola variabile ausiliaria?</p>
+</li>
+<li><p>Sullo stesso strand di DNA si trovano due geni. Il primo include i
+nucelotidi dalla posizione 10 alla posizione 20, il secondo quelli dalla
+posizione 30 alla posizione 40. Scriviamo queste informazioni cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gene1_inizio</span><span class="p">,</span> <span class="n">gene1_fine</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>
+<span class="n">gene2_inizio</span><span class="p">,</span> <span class="n">gene2_fine</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span>
+</pre></div>
+</div>
+<p>Data una variabile <code class="docutils literal notranslate"><span class="pre">pos</span></code> che rappresenta una posizione arbitraria sullo
+strand, scrivere dei confronti per verificare se:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pos</span></code> si trova nel primo gene.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pos</span></code> si trova nel secondo gene.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pos</span></code> si trova tra l’inizio del primo gene e la fine del secondo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pos</span></code> si trova tra l’inizio del primo gene e la fine del secondo, ma in nessuno dei due geni.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pos</span></code> si trova prima dell’inizio del primo gene o dopo la fine del secondo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pos</span></code> cade in uno dei due geni.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pos</span></code> non dista piu’ di 10 dall’inizio del primo gene.</p></li>
+</ol>
+</li>
+<li><p>Date le tre variabili Booleane <code class="docutils literal notranslate"><span class="pre">t</span></code>, <code class="docutils literal notranslate"><span class="pre">u</span></code>, e <code class="docutils literal notranslate"><span class="pre">v</span></code>, scrivere delle
+espressioni che valgono <code class="docutils literal notranslate"><span class="pre">True</span></code> se e solo se:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code>, <code class="docutils literal notranslate"><span class="pre">u</span></code>, <code class="docutils literal notranslate"><span class="pre">v</span></code> tutte e tre vere.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t</span></code> e’ vera oppure <code class="docutils literal notranslate"><span class="pre">u</span></code> e’ vera, ma non entrambe.</p></li>
+<li><p>Esattamente una delle tre variabili e’ falsa.</p></li>
+<li><p>Esattamente una delle tre variabili e’ vera.</p></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_numbers_sol.html" class="btn btn-neutral float-right" title="Lezione 3.2 - Soluzioni" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_moduli_sol.html" class="btn btn-neutral float-left" title="Lezione 3.1 - Soluzioni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

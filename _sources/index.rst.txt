@@ -1,0 +1,102 @@
+==========================
+Laboratorio di Informatica
+==========================
+
+
+|
+    Il seguente materiale didattico è stato inizialmente scritto e curato  dal Dr. Stefano
+    Teso, dal Dr. Paolo Morettin e da Antonio Longa, che mi hanno gentilmente concesso di utilizzarlo per questa
+    edizione del corso.
+|
+    
+ 
+|
+
+.. hint::
+   Se avete dubbi o domande potete rivolgervi a me:
+
+   * **Luca Marchetti:**  luca dot marchetti at unitn dot it
+   
+|   
+ 
+
+
+Bibliografia
+------------
+**Tutorial ufficiale del linguaggio Python:** `<https://pytutorial-it.readthedocs.io/it/python3.8>`_
+
+**Allen Downey, Pensare in Python — Come pensare da Informatico, Green Tea Press**
+`<https://github.com/AllenDowney/ThinkPythonItalian/raw/master/thinkpython_italian.pdf>`_
+	
+
+|
+
+
+Note Introduttive
+-----------------
+
+* Assumeremo di lavorare *esclusivamente* con file di testo, indipendentemente
+  dall'estensione dei file.
+* La shell e Python non capiscono le lettere accentate, non usatele.
+* Il comportamento di alcuni comandi puo' variare tra varianti diverse di Unix,
+  ad esempio GNU/Linux e MacOS X.
+
+
+|
+.. highlight:: Virtualbox e Ubuntu
+
+.. include:: python_virtualbox_ubuntu.rst
+|
+
+
+.. toctree::
+    :maxdepth: 2
+
+    shell_basics.rst
+    shell_basics_sol.rst
+
+    shell_commands1.rst	      
+    shell_commands1_sol.rst	      
+
+    python_basics.rst
+    python_basics_sol.rst
+
+    python_moduli.rst
+    python_moduli_sol.rst
+
+    python_numbers.rst
+    python_numbers_sol.rst
+
+    python_strings.rst
+    python_strings_sol.rst
+
+    python_lists.rst
+    python_lists_sol.rst
+
+    python_lists_adv.rst
+    python_lists_adv_sol.rst
+
+    python_test.rst
+    python_test_sol.rst
+    
+    python_dictionaries.rst
+    python_dictionaries_sol.rst
+
+    python_sets.rst
+    python_sets_sol.rst
+
+    python_tuples.rst
+    python_tuples_sol.rst
+
+    python_io.rst
+    python_io_sol.rst
+
+    python_complex_statements_1.rst
+    python_complex_statements_1_sol.rst
+
+    python_complex_statements_2.rst
+    python_complex_statements_2_sol.rst
+
+    python_functions.rst
+    python_functions_sol.rst
+
