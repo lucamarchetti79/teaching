@@ -1,0 +1,523 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python: Tuple &mdash; Laboratorio di Informatica 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+    
+    <script type="text/javascript" src="static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python: Input-Output" href="python_io.html" />
+    <link rel="prev" title="Python: Sets" href="python_sets.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Laboratorio di Informatica
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Shell: Parte 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists.html">Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Python: Fake Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Python: Sets</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python: Tuple</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#operazioni">Operazioni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodi">Metodi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conversione-lista-tupla">Conversione Lista-Tupla</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esercizi">Esercizi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soluzioni">Soluzioni</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements.html">Python: Statement Complessi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions.html">Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame1.html">Python: Simulazione esame 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame2.html">Python: Simulazione esame 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame3.html">Python: Simulazione esame 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame4.html">Python: Simulazione esame 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame5.html">Python: Simulazione esame 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="video.html">Video</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Python: Tuple</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/python_tuples.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-tuple">
+<h1>Python: Tuple<a class="headerlink" href="#python-tuple" title="Permalink to this headline">¶</a></h1>
+<p>Le tuple sono liste <strong>immutabili</strong>.</p>
+<p>Per definire una tupla uso le parentesi tonde:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">partners</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;BIOGRID:112315&quot;</span><span class="p">,</span> <span class="s2">&quot;BIOGRID:108607&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Esempio</strong>. Se voglio creare una tupla con un solo elemento (puo’ capitare…)
+devo ricordarmi di usare la virgola, oltre alle parentesi tonde:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">tupla</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tupla</span><span class="p">))</span>
+
+<span class="n">non_tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">non_tupla</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">non_tupla</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Come si vede, <code class="docutils literal notranslate"><span class="pre">non_tupla</span></code> e’ un intero, <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<div class="section" id="operazioni">
+<h2>Operazioni<a class="headerlink" href="#operazioni" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="11%" />
+<col width="24%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Ritorna</th>
+<th class="head">Operatore</th>
+<th class="head">Significato</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">int</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">len(tuple)</span></code></td>
+<td>Restituisce la lunghezza della tuple</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">tuple</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">tuple</span> <span class="pre">+</span> <span class="pre">tuple</span></code></td>
+<td>Concatena le due tuple</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">tuple</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">tuple</span> <span class="pre">*</span> <span class="pre">int</span></code></td>
+<td>Replica la tupla</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">bool</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">in</span> <span class="pre">tuple</span></code></td>
+<td>Contolla se un oggetto arbitrario appare nella tupla</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">tuple</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">tuple[int:int]</span></code></td>
+<td>Estrae una sotto-tupla</td>
+</tr>
+</tbody>
+</table>
+<p>Le tuple supportanto tutti gli operatori delle stringhe e delle liste,
+tranne l’assegnamento.</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Creo una tupla con elementi misti:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">proteina</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;2B0Q&quot;</span><span class="p">,</span> <span class="s2">&quot;phosphotransferase&quot;</span><span class="p">,</span> <span class="s2">&quot;PF03881&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>che contiene informazioni su una proteina. Posso accedere ai vari elementi come
+farei con una lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">id_proteina</span> <span class="o">=</span> <span class="n">proteina</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">id_proteina</span><span class="p">)</span>
+
+<span class="n">nome_proteina</span> <span class="o">=</span> <span class="n">proteina</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nome_proteina</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Pero’ non posso modificare la tupla:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">proteina</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;1A3A&quot;</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">&#39;tuple&#39; object does not support item assignment</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Proprio come le liste e gli intervalli, posso usare le
+tuple come <em>input</em> ad una list comprehension:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tripla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="n">risultato</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">numero</span> <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">tripla</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">risultato</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Il risultato di una <strong>list</strong> <em>comprehension</em> e’ comunque una lista.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="metodi">
+<h2>Metodi<a class="headerlink" href="#metodi" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="29%" />
+<col width="61%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Ritorna</th>
+<th class="head">Metodo</th>
+<th class="head">Significato</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">int</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">tuple.index(object)</span></code></td>
+<td>Restituisce la posizione di object.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">int</span></code></td>
+<td><code class="docutils literal notranslate"><span class="pre">tuple.count(object)</span></code></td>
+<td>Conta il numero di ripetizioni di un valore</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="conversione-lista-tupla">
+<h2>Conversione Lista-Tupla<a class="headerlink" href="#conversione-lista-tupla" title="Permalink to this headline">¶</a></h2>
+<p>Per convertire tra liste e tuple uso <code class="docutils literal notranslate"><span class="pre">tuple()</span></code> e <code class="docutils literal notranslate"><span class="pre">list()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">tupla</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">tupla</span><span class="p">))</span>
+
+<span class="n">lista_2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_2</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">lista_2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Ne segue che se <em>proprio</em> voglio “modificare” una tupla posso scrivere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;sono&quot;</span><span class="p">,</span> <span class="s2">&quot;una&quot;</span><span class="p">,</span> <span class="s2">&quot;tupla&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+
+<span class="n">copia</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+<span class="n">copia</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;bella&quot;</span><span class="p">)</span>
+<span class="n">tupla</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">copia</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In realta’ quello che ottengo e’ una <em>nuova</em> tupla che contiene gli elementi
+della vecchia tupla in aggiunta a …</p>
+</div>
+<div class="section" id="esercizi">
+<h2>Esercizi<a class="headerlink" href="#esercizi" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Creare:</p>
+<ol class="arabic">
+<li><p class="first">Una tupla di due interi di valore <code class="docutils literal notranslate"><span class="pre">0</span></code> e <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</li>
+<li><p class="first">Una tupla di due stringhe, <code class="docutils literal notranslate"><span class="pre">&quot;una&quot;</span></code> e <code class="docutils literal notranslate"><span class="pre">&quot;tupla&quot;</span></code>.</p>
+</li>
+<li><p class="first">Una tupla di un solo elemento, <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p><em>Hint</em>: ci sono due modi di farlo: usare la sintassi vista all’inzio
+del capitolo, oppure usare la conversione lista-tupla.</p>
+</li>
+<li><p class="first">Una tupla di cento elementi: i numeri interi da <code class="docutils literal notranslate"><span class="pre">0</span></code> a <code class="docutils literal notranslate"><span class="pre">99</span></code>.</p>
+<p><em>Hint</em>: posso usare (indirettamente) <code class="docutils literal notranslate"><span class="pre">range()</span></code>?</p>
+</li>
+<li><p class="first">Una tupla con due elementi: la <em>lista</em> degli interi da <code class="docutils literal notranslate"><span class="pre">0</span></code> a <code class="docutils literal notranslate"><span class="pre">49</span></code> e
+la <em>lista</em> degli interi da <code class="docutils literal notranslate"><span class="pre">50</span></code> a <code class="docutils literal notranslate"><span class="pre">99</span></code>.</p>
+</li>
+<li><p class="first">Una tupla con due elementi: la <em>tupla</em> degli interi da <code class="docutils literal notranslate"><span class="pre">0</span></code> a <code class="docutils literal notranslate"><span class="pre">49</span></code> e
+la <em>tupla</em> degli interi da <code class="docutils literal notranslate"><span class="pre">50</span></code> a <code class="docutils literal notranslate"><span class="pre">99</span></code>.</p>
+</li>
+</ol>
+</li>
+<li><p class="first">Date <code class="docutils literal notranslate"><span class="pre">l</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2]</span></code> e <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">(0,</span> <span class="pre">1,</span> <span class="pre">2)</span></code>, che differenza c’e’ tra:</p>
+<ol class="arabic">
+<li><p class="first">Primo caso:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">l</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Secondo caso:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">t</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p class="first">Data la tupla:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li>Di che tipo e’ il primo elemento della tupla? Quanto vale?</li>
+<li>Di che tipo e’ il quarto elemento della tupla? Quanto vale?</li>
+<li>Quanti elementi contiene la tupla?</li>
+<li>Quanti elementi contiene la lista contenuta nella tupla?</li>
+<li>Cambiare l’ultimo elemento della lista contenuta in <code class="docutils literal notranslate"><span class="pre">tupla</span></code> in <code class="docutils literal notranslate"><span class="pre">&quot;ultimo&quot;</span></code>.</li>
+<li>Cambiare l’ultimo elemento di <code class="docutils literal notranslate"><span class="pre">tupla</span></code> in <code class="docutils literal notranslate"><span class="pre">&quot;ultimo&quot;</span></code>. (Si puo’ fare?)</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="soluzioni">
+<h2>Soluzioni<a class="headerlink" href="#soluzioni" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Soluzioni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">coppia_di_interi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_interi</span><span class="p">))</span>            <span class="c1"># tuple</span>
+
+
+<span class="n">coppia_di_stringhe</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;una&quot;</span><span class="p">,</span> <span class="s2">&quot;tupla&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_stringhe</span><span class="p">))</span>          <span class="c1"># tuple</span>
+
+
+<span class="n">un_solo_elemento</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">un_solo_elemento</span><span class="p">))</span>            <span class="c1"># tuple</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">un_solo_elemento</span><span class="p">))</span>             <span class="c1"># 1</span>
+
+<span class="n">un_solo_elemento_alt</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">un_solo_elemento_alt</span><span class="p">))</span>        <span class="c1"># tuple</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">un_solo_elemento_alt</span><span class="p">))</span>         <span class="c1"># 1</span>
+
+<span class="n">sbagliato</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">sbagliato</span><span class="p">))</span>                   <span class="c1"># int</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sbagliato</span><span class="p">))</span>                    <span class="c1"># errore!</span>
+
+
+<span class="n">cento_elementi</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">cento_elementi</span><span class="p">))</span>              <span class="c1"># tuple</span>
+
+
+<span class="n">coppia_di_liste</span> <span class="o">=</span> <span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_liste</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_liste</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+
+<span class="n">coppia_di_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">)),</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_tuple</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Soluzioni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># x si riferisce ad una lista, il codice sostituisce</span>
+<span class="c1"># il primo elemento con 100</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">l</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># x ora si riferisce ad una tupla, che e&#39; immutabile:</span>
+<span class="c1"># non posso sostituire i suoi elementi, Python da&#39;</span>
+<span class="c1"># errore</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">t</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>                          <span class="c1"># errore!</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Soluzioni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>                      <span class="c1"># 0</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>                <span class="c1"># int</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>                      <span class="c1"># [3, 4, 5]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>                <span class="c1"># list</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tupla</span><span class="p">))</span>                    <span class="c1"># 9</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>                 <span class="c1"># 3</span>
+
+<span class="n">tupla</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ultimo&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+<span class="c1"># ebbene lo posso fare! ho &quot;modificato&quot; la</span>
+<span class="c1"># tupla modificando la lista contenuta</span>
+<span class="c1"># in essa.</span>
+
+<span class="n">tupla</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ultimo&quot;</span>                <span class="c1"># errore!</span>
+<span class="c1"># non posso modificare la tupla &quot;direttamente&quot;</span>
+<span class="c1"># e&#39; un oggetto immutabile</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_io.html" class="btn btn-neutral float-right" title="Python: Input-Output" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_sets.html" class="btn btn-neutral float-left" title="Python: Sets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2016, Stefano Teso
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

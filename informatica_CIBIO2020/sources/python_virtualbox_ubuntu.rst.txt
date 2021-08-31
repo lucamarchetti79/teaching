@@ -1,0 +1,36 @@
+====================
+Virtualbox e Ubuntu
+====================
+
+Virtualbox
+----------
+
+Virtualbox è un software **gratuito** e **open source** per l'esecuzione di macchine virtuali 
+per architettura x86 e 64bit che supporta Windows, GNU/Linux e macOS come sistemi operativi host,
+ed è in grado di eseguire diversi sistemi operativi guest come Windows, Linux, OS/2 Warp, OpenBSD, FreeBSD, Solaris etc.  
+  
+Installazione:
+
+- Scaricate Virtualbox dal seguente link https://www.virtualbox.org/wiki/Downloads nella sezione 
+  ``VirtualBox 6.1.14 platform packages`` 
+
+- Lancite l'eseguibile appena scaricato.
+
+|
+
+Ubuntu
+------
+
+Download di Ubuntu:
+
+- Scaricate Ubuntu dal seguente link https://www.ubuntu-it.org/download 
+
+- Sceglite la versione **Desktop** di **Ubuntu 20.04.1 LTS** (Long Term Support) 
+
+|
+
+Installazione di Ubuntu su VirtualBox
+------
+
+Per poter installare Ubutnu in VirtualBox, vi consiglio di seguire il seguente tutorial 
+https://www.youtube.com/watch?v=x3Zpe1rIPFE 

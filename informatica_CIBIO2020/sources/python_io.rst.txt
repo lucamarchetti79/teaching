@@ -1,0 +1,290 @@
+====================
+Python: Input-Output
+====================
+
+Interfaccia Utente
+------------------
+
+=============== ======================= ===================================================
+Ritorna         Operatore               Significato
+=============== ======================= ===================================================
+``str``         ``input([str])``        Fa una domanda all'utente e restituisce la risposta
+=============== ======================= ===================================================
+
+****
+
+**Esempio**. Faccio una domanda all'utente::
+
+    risposta = input("scrivi tre parole separate da spazi: ")
+
+    print(risposta)
+    print(type(risposta))
+
+Ho messo nella variabile ``risposta`` la risposta dell'utente (che e' sempre
+una stringa). Il contenuto di ``risposta`` dipende dall'utente, che potrebbe
+aver dato una risposta qualunque.
+
+Voglio controllare che abbia effettivamente risposto con tre parole separate da
+spazi::
+
+    parti = parole.split()
+
+    print("hai scritto", len(parti), "parole")
+
+    reazione_a = {True: "bravo!", False: "impegnati di piu'"}
+    print(reazione_a[len(parti) == 3])
+
+****
+
+**Esempio**. Faccio una domanda all'utente::
+
+    risposta = input("scrivi due numeri: ")
+
+    print(risposta)
+    print(type(risposta))
+
+Voglio stampare la somma dei numeri dati dall'utente. Prima estraggo le varie
+parole, poi le converto in ``float``, poi eseguo la somma e la stampo::
+
+    parti = risposta.split()
+
+    numero_1 = float(parti[0])
+    numero_2 = float(parti[1])
+
+    print("la loro somma e'", numero_1 + numero_2)
+
+****
+
+Esercizi
+--------
+
+#. Usando ``input()``, chiedere all'utente il suo piatto preferito, mettere
+   il risultato in una variabile ``cibo``, poi stampare a schermo:
+   ``anche a me piace`` ed il piatto preferito.
+
+#. Chiedere all'utente due interi, diciamo ``a`` e ``b``, poi un terzo
+   intero, diciamo ``risultato``.
+
+   Controllare se la somma di ``a`` e ``b`` e' uguale a ``risultato``: in
+   tale caso stampare a schermo ``True``, altrimenti ``False``.
+
+#. Chiedere all'utente una chiave ed un valore, e costruire un dizionario
+   che include (solo) quella coppia chiave-valore. Stampare a schermo il
+   risultato.
+
+#. Chiedere all'utente il suo nome, metterlo nella variabile ``nome``, poi
+   stampare a schermo il nome assicurandosi che le prime lettere di tutte
+   le parole del nome siano maiuscole e le altre minuscole.
+
+   Infine stampare a schermo il risultato.
+
+Interfaccia Filesystem
+----------------------
+
+=============== ======================= ===================================================
+Ritorna         Operatore               Significato
+=============== ======================= ===================================================
+``file``        ``open(str, [str])``    Restituisce un riferimento ad un ``file``
+``str``         ``file.read()``         Legge i contenuti del file
+``str``         ``file.readline()``     Legge una riga dal file
+``list-of-str`` ``file.readlines()``    Legge tutte le righe del file
+``int``         ``file.write(str)``     Scrive una stringa nel file
+--              ``file.close()``        Chiude il riferimento ad un ``file``
+=============== ======================= ===================================================
+
+Ci sono diverse modalita' di accesso usabili con ``open()``:
+
+#. ``"r"``: modalita' di sola lettura (non posso scrivere nel file). Questo e' il *default*.
+#. ``"w"``: modalita' di sola scrittura (non posso leggere dal file), sovrascrivendo.
+#. ``"a"``: modalita' di sola scrittura (non posso leggere dal file), appendendo.
+#. ``"+"``: modificatore per update (lettura/scrittura).
+
+**Esempio**. Apro un file in modalita' di lettura::
+
+    un_file = open("data/aatable", "r")
+
+    print(type(un_file))                 # file
+
+Il primo argomento e' il percorso al file che voglio aprire (in questo caso
+un percorso relativo alla directory da cui ho fatto partire ``python``), il
+secondo ``"r""`` specifica in che modalita' aprire il file.
+
+.. warning::
+
+    Non potete usare directory speciali, ad esempio ``"~"`` (la vostra home)
+    nel percorso che date a ``open()``.
+
+****
+
+**Esempio**. Una volta aperto un file::
+
+    un_file = open("data/aatable", "r")
+
+leggo i contenuti o per intero, in un'unica stringa::
+
+    contenuti = un_file.read()
+    print(contenuti)
+    print(type(contenuti))
+
+oppure per intero ma spezzati in una lista di righe::
+
+    righe = un_file.readlines()
+    print(righe)
+    print(type(righe))
+
+oppure una sola riga alla volta, dalla prima in giu'::
+
+    riga_1 = un_file.readline()
+    riga_2 = un_file.readline()
+    riga_3 = un_file.readline()
+
+    print(riga_1)
+    print(riga_2)
+    print(riga_3)
+
+.. warning::
+
+    Una volta aperto un file, non posso leggere due volte la stessa riga.
+
+    Questo vuol dire che una volta che ho letto tutto il file, ad esempio
+    usando ``readlines()`` (che legge tutto il contenuto), se uso una
+    seconda volta ``readlines()`` o qualunque altro metodo di lettura,
+    questa mi restituira' una riga vuota.
+
+    Ad esempio::
+
+        un_file = open("data/aatable", "r")
+        # non ho ancora letto niente, quindi readlines() mi
+        # restituisce tutti i contenuti del file
+
+        contenuti = un_file.readlines()
+        print(len(contenuti))
+
+        # ora che ho letto tutti i contenuti, non resta piu' niente
+        # da leggere, e infatti...
+        contenuti_2 = un_file.readlines()
+        print(len(contenuti_2))
+
+        # qui contenuti_2 ha ZERO righe
+
+Visto che il file e' stato aperto con ``open()`` in modalita' di sola lettura,
+non posso scriverci dentro::
+
+    un_file.write("del testo\n")
+
+perche' Python mi da' errore::
+
+    Traceback (most recent call last):
+      File "<stdin>", line 1, in <module>
+    IOError: File not open for writing
+    #        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    #         il file non e' aperto in modalita' di scrittura!
+
+La stessa cosa accade se provo a leggere da un file aperto in modalita' di
+sola scrittura (sia con ``"w"`` che con ``"a"``).
+
+****
+
+**Esempio**. Per aprire un file in cui mettere i risultati di un lunghissimo
+calcolo::
+
+    file_dei_risultati = open("risultati", "w")
+
+    # blah blah blah
+    # blah blah blah
+    # blah blah blah
+
+    file_dei_risultati.close()
+
+Una volta finito di leggere o scrivere, chiamo ``close()``.
+
+.. warning::
+
+
+    Per i file aperti in modalita' di scrittura (con ``"w"``, ``"r+"``,
+    ``"a"``, ...), ``close()`` si assicura che tutto cio' che avete detto a
+    Python di scriverci effettivamente finisca per essere scritto nel file.
+
+    Se dimendicate di chiamare ``close()`` la scrittura nel file *potrebbe*
+    non accadere.
+
+****
+
+**Esempio**. Chiedo all'utente il nome di un file (che puo' esistere o meno),
+e poi cosa vuole scriverci::
+
+    percorso = input("dove vuoi scrivere? ")
+    testo = input("cosa vuoi scrivere? ")
+
+    il_file = open(percorso, "w")
+    il_file.write("l'utente ha scritto:\n" + testo)
+    il_file.close()
+
+Ora riapro lo stesso file, ma in modalita' di lettura, ne leggo i contenuti
+e li stampo a schermo::
+
+    stesso_file = open(percroso, "r")
+    contenuti = stesso_file.read()
+    stesso_file.close()
+
+    print("Nel file ", percorso, " hai scritto:")
+    print(contenuti)
+
+****
+
+Esercizi
+--------
+
+.. warning::
+
+    Se ``open()`` vi da' errore, puo' darsi che vi troviate nella directory
+    sbagliata. Aggiustate il percorso di conseguenza.
+
+#. Usate ``open()`` per aprire il file ``"data/aatable"`` in modalita' di sola
+   lettura, mettendo il risultato di ``open()`` nella variabile ``f``.
+
+   Poi usate ``readlines()`` per leggere il contenuto del file, mettendo il
+   risultato in ``righe``.
+
+   Di che tipo e' ``righe``? Di che tipo e' il primo elemento di ``righe``?
+   Quante righe ci sono nel file?
+
+#. Usate ``open()`` per aprire il file ``"data/aatable"`` in modalita' di sola
+   lettura, mettendo il risultato di ``open()`` nella variabile ``f``.
+
+   Poi usate ``readline()`` (non ``readlines()``!) per leggere la prima riga
+   del file, mettendo il risultato in ``prima_riga``.
+
+   Quante righe sono rimaste da leggere? Controllate usando ``readlines()``.
+
+   A questo punto, quante altre righe sono rimaste da leggere?
+
+#. Usate ``open()`` per aprire il file ``"output.txt"`` in modalita' di sola
+   scrittura ``"w"``, mettendo il risultato di ``open()`` nella variabile ``f``.
+
+   Poi scrivete la stringa ``"prova prova uno due tre prova"`` nel file.
+
+   Chiudete il file usando il metodo ``close()``.
+
+   Ora invece aprite ``"output.txt"`` in modalita' di sola lettura e stampate
+   a schermo i suoi contenuti.
+
+#. usate ``open()`` per aprire il file ``"poesia.txt"`` in modalita' di sola
+   scrittura. Poi scrivete nel file le stringhe in questa lista, una per riga::
+
+    versi = [
+        "S'i fosse fuoco, arderei 'l mondo"
+        "s'i fosse vento, lo tempestarei"
+    ]
+
+   Ora fare la stessa cosa aprendo due volte il file ``"poesia2.txt"`` in
+   modalita' di sola scrittura (appendendo), ed ogni volta scrivendoci uno
+   dei due versi.
+
+   Cosa succede se riapro ``"poesia2.txt"`` in modalita' ``"w"`` e lo richiudo
+   subito?
+
+#. Scrivere un modulo ``trucco.py`` che stampa il codice del modulo stesso
+   a schermo.
+
+   *Curiosita'*: abbiamo appena scritto (barando!) un `programma di Quine <http://it.wikipedia.org/wiki/Quine>`_.

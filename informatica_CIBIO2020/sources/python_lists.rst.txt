@@ -1,0 +1,1962 @@
+=============
+Python: Liste
+=============
+
+Le liste rappresentano sequenze ordinate di oggetti arbitrari.
+
+.. warning::
+
+    Le liste sono **mutabili**!
+
+Per definire una lista uso le parentesi quadre::
+
+    # Una lista di interi (anche ripetuti)
+    alcuni_interi = [1, 2, 1, 1, 9]
+
+    # Una lista di stringhe
+    proteine_uniprot = ["Y08501", "Q95747"]
+
+    # Una lista mista
+    cose = ["Y08501", 0.13, "Q95747", 0.96]
+
+    # Una lista di liste
+    lista_di_liste = [
+        ["Y08501", 120, 520],
+        ["Q95747", 550, 920],
+    ]
+
+    # La lista vuota
+    una_lista_vuota = []
+
+.. warning::
+
+    Le liste possono contenere elementi ripetuti::
+
+        [3, 3, 3, "a", "a", "a"] != [3, "a"]
+
+    e l'ordine degli elementi conta::
+
+        [1, 2, 3] != [3, 2, 1]
+
+Operazioni
+----------
+
+========= ====================== ====================================================
+Ritorna   Operatore              Significato
+========= ====================== ====================================================
+``range`` ``range(int, [int])``  Restituisce un intervallo di interi
+``int``   ``len(list)``          Restituisce la lunghezza della lista
+``list``  ``list + list``        Concatena le due liste
+``list``  ``list * int``         Replica la lista
+``bool``  ``object in list``     Contolla se un oggetto arbitrario appare nella lista
+``list``  ``list[int:int]``      Estrae una sotto-lista
+``list``  ``list[int] = object`` Sostituisce un elemento della lista
+========= ====================== ====================================================
+
+****
+
+**Esempio**. Uso ``range()`` per costruire una lista di interi::
+
+    >>> intervallo = range(0, 5)
+    >>> lista = list(intervallo)    
+    >>> print(lista)
+    [0, 1, 2, 3, 4]
+
+``range(5)`` fa la stessa cosa.
+
+****
+
+**Esempio**.  La sostituzione di un elemento funziona solo se l'indice
+corrisponde ad un elemento gia' esistente::
+
+    lista = [0, 1, 2, 3, 4]
+
+    lista[0] = "primo"
+    print(lista)                         # ["primo", 1, 2, 3, 4]
+
+    lista[-1] = "ultimo"
+    print(lista)                         # ["primo", 1, 2, 3, "ultimo"]
+
+    lista[100] = "oltre l'ultimo"        # Errore!
+
+****
+
+Esercizi
+--------
+
+#. Creare una lista vuota. Controllare che sia vuota con ``len()``.
+
+#. Creare una lista con i primi cinque interi non-negativi: ``0``, ``1``, *etc.* usando ``range()``.
+
+#. Creare una lista con cento elementi ``0``.
+
+   *Hint*: replicate una lista con un solo elemento.
+
+#. Date::
+
+    lista_1 = list(range(10))
+    lista_2 = list(range(10, 20))
+
+   concatenare le due liste e mettere il risultato in una nuova lista
+   ``lista_completa``. Quanto vale? E' uguale al risultato di ``list(range(20))``?
+
+#. Creare una lista con tre stringhe: ``"sono"``, ``"una"``, ``"lista"``. Poi
+   stampare a schermo tipo e lunghezza dei tre elementi, uno per uno.
+
+#. Data::
+
+    lista = [0.0, "b", [3], [4, 5]]
+
+   #. Quanto e' lunga ``lista``?
+   #. Di che tipo e' il primo elemento di ``lista``?
+   #. Quanto e' lungo il secondo elemento di ``lista``?
+   #. Quanto e' lungo il terzo elemento di ``lista``?
+   #. Quanto vale l'ultimo elemento di ``lista``? Quanto e' lungo?
+   #. La lista ha un elemento di valore ``"b"``?
+   #. La lista ha un elemento di valore ``4``?
+
+      *Hint*: usate ``in`` per controllare.
+
+#. Che differenza c'e' tra le seguenti "liste"?::
+
+    lista_1 = [1, 2, 3]
+    lista_2 = ["1", "2", "3"]
+    lista_3 = "[1, 2, 3]"
+
+   *Hint*: la terza e' una lista?
+
+#. Quali dei seguenti frammenti sono validi/errati?
+
+   (Dopo ogni punto, cancellate la lista ``lista`` con ``del``, per evitare
+   problemi con i punti successivi)
+
+   #. ``lista = []``
+   #. ``lista = [}``
+   #. ``lista = [[]]``
+   #. ``lista.append(0)``
+   #. ``lista = []; lista.append(0)``
+   #. ``lista = [1 2 3]``
+   #. ``lista = list(range(3))``, ``elemento = lista[3]``
+   #. ``lista = list(range(3))``, ``elemento = lista[-1]``
+   #. ``lista = list(range(3))``, ``sottolista = lista[0:2]``
+   #. ``lista = list(range(3))``, ``sottolista = lista[0:3]``
+   #. ``lista = list(range(3))``, ``sottolista = lista[0:-1]``
+   #. ``lista = list(range(3))``, ``lista[2] = "due"``
+   #. ``lista = list(range(3))``, ``lista[3] = "tre"``
+   #. ``lista = list(range(3))``, ``lista[-1] = "tre"``
+   #. ``lista = list(range(3))``, ``lista[1.2] = "uno virgola due"``
+   #. ``lista = list(range(3))``, ``lista[1] = ["testo-1", "testo-2"]``
+
+#. Data la lista::
+
+    matrice = [
+        [1, 2, 3],          # <-- prima riga
+        [4, 5, 6],          # <-- seconda riga
+        [7, 8, 9],          # <-- terza riga
+    ]
+    #    ^  ^  ^
+    #    |  |  |
+    #    |  |  +-- terza colonna
+    #    |  |
+    #    |  +----- seconda colonna
+    #    |
+    #    +-------- prima colonna
+
+   Come faccio a:
+
+   #. Estrarre la prima riga?
+   #. Estrarre il secondo elemento della prima riga?
+   #. Sommare gli elementi della prima riga?
+   #. Creare una nuova lista con gli elementi della la seconda colonna?
+   #. Creare una nuova lista con gli elementi la diagonale maggiore?
+   #. Creare una lista concatenando la prima, seconda, e terza riga?
+
+Metodi
+------
+
+======== =========================== =================================================
+Ritorna  Metodo                      Significato
+======== =========================== =================================================
+``None`` ``list.append(object)``     Aggiunge un elemento alla fine della lista
+``None`` ``list.extend(list)``       Estende una lista con un'altra lista
+``None`` ``list.insert(int,object)`` Inserisce un elemento in una posizione arbitraria
+``None`` ``list.remove(object)``     Rimuove la prima ripetizione di un valore
+``None`` ``list.reverse()``          Inverte la lista
+``None`` ``list.sort()``             Ordina la lista
+``int``  ``list.count(object)``      Conta il numero di ripetizioni di un valore
+======== =========================== =================================================
+
+.. warning::
+
+    Tutti i metodi delle liste (escluso ``count()``):
+
+    - Modificano la lista stessa.
+    - Restituiscono ``None``.
+
+    Questo comportamento e' l'esatto *opposto* di cio' che accade con i
+    metodi delle stringhe!
+
+    Una conseguenza e' che fare qualcosa come::
+
+        print(lista.append(10))
+
+    non ha senso, perche' ``print`` stampa il *risultato* di ``append()``,
+    che e' sempre ``None``!
+
+    Per lo stesso motivo *non* possiamo fare::
+
+        lista.append(1).append(2).append(3)
+
+    perche' il primo ``append()`` restituisce ``None`` -- che non e' una
+    lista, e non possiamo farci ``append()``!
+
+****
+
+**Esempio**. ``append()`` aggiunge in *coda*::
+
+    lista = list(range(10))
+    print(lista)                         # [0, 1, 2, ..., 9]
+
+    lista.append(10)
+    print(lista)                         # [0, 1, 2, ..., 9, 10]
+
+Notate come ``lista`` sia stata modificata! Se invece faccio::
+
+    lista = list(range(10))
+    risultato = lista.append(10)
+
+    print(risultato)                     # None
+
+Come ci aspettavamo, ``append()`` restituisce ``None``.
+
+Lo stesso vale per ``extend()``::
+
+    lista = list(range(10))
+    risultato = lista.extend(list(range(10, 20)))
+
+    print(lista)                         # [0, 1, 2, ..., 19]
+    print(risultato)                     # None
+
+Per inserire elementi in una posizione arbitraria, uso ``insert()``::
+
+    lista = list(range(10))
+    risultato = lista.insert(2, "un altro valore")
+
+    print(lista)                         # [0, 1, "un altro valore", 3, ...]
+    print(risultato)                     # None
+
+``remove()`` invece prende un valore, non una posizione::
+
+    lista = ["una", "lista", "non", "una", "stringa"]
+    risultato = lista.remove("una")
+
+    print(lista)                         # ["lista", "non", "una", "stringa"]
+    print(risultato)                     # None
+
+Anche ``sort()`` e ``reverse()`` modificano la lista stessa::
+
+    lista = [3, 2, 1, 5, 4]
+
+    risultato = lista.reverse()
+    print(lista)                         # [4, 5, 1, 2, 3]
+    print(risultato)                     # None
+
+    risultato = lista.sort()
+    print(lista)                         # [1, 2, 3, 4, 5]
+    print(risultato)                     # None
+
+Invece ``count()`` non modifica affatto la lista, e restituisce un ``int``::
+
+    lista = ["a", "b", "a", "b", "a"]
+    risultato_a = lista.count("a")      # 3
+    risultato_b = lista.count("b")      # 2
+    print("ci sono", risultato_a, "a, e", risultato_b, "b")
+
+****
+
+**Esempio**. Contrariamente ad ``append()`` e soci, la concatenazione non
+modifica la lista originale::
+
+    lista_1 = list(range(0, 10))
+    lista_2 = list(range(10, 20))
+
+    # usando la concatenazione +
+    lista_completa = lista_1 + lista_2
+    print(lista_1, "+", lista_2, "->", lista_completa)
+
+    # usando extend()
+    lista_completa = lista_1.extend(lista_2)
+    print(lista_1, "estesa con", lista_2, "->", lista_completa)
+
+Nel primo caso tutto funziona come vorrei; nel secondo ``lista_1`` e' estesa
+con ``lista_2`` (che resta invariata), mentre ``lista_completa`` vale ``None``.
+
+****
+
+.. warning::
+
+    Le liste sono *mutabili*, e contengono *riferimenti* ad oggetti.
+
+Questi due fatti possono dare luogo ad effetti complicati -- che
+esploriamo nei prossimi esercizi.
+
+**Esempio**. Questo codice::
+
+    sottolista = list(range(5))
+    lista = [sottolista]
+    print(lista)
+
+crea una lista ``lista`` che contiene una lista ``sottolista`` come elemento.
+Quando modifico ``sottolista``, che e' una lista e quindi e' mutabile, finisco
+inavvertitamente per modificare anche ``lista``!::
+
+    sottolista.append(5)
+    print(sottolista)
+
+    print(lista)
+
+**Esempio**. Questo codice mostra un'altra anomalia::
+
+    lista = list(range(5))
+    print(lista)
+
+    finta_copia = lista         # copio solo il *riferimento* a lista!
+    print(finta_copia)
+
+    lista.append(5)
+    print(lista)
+
+    print(finta_copia)           # Ooops!
+
+Questo accade perche' ``lista_1`` e ``lista_2`` si riferiscono allo stesso
+oggetto ``lista``. Se voglio creare una *copia* reale della lista ``lista``,
+scrivo::
+
+    lista = list(range(5))
+    print(lista)
+
+    copia_vera = list(lista)
+    # oppure
+    # copia_vera = [elem for elem in lista]
+    
+    print(copia_vera)
+
+    lista.append(5)
+    print(lista)
+
+    print(copia_vera)
+
+Esercizi
+--------
+
+#. Inserire nella lista ``lista`` prima un intero, poi una stringa, poi
+   una lista.
+
+    .. warning::
+    
+        La lista deve *esistere gia'* prima di poterci fare ``append()``,
+        ``extend()``, ``insert()``, *etc.*. Ad esempio::
+    
+            >>> una_lista_che_non_ho_mai_definito.append(0)
+    
+        da' errore::
+    
+            Traceback (most recent call last):
+              File "<stdin>", line 1, in <module>
+            NameError: name 'una_lista_che_non_ho_mai_definito' is not defined
+
+#. Partendo (per ogni punto) da::
+
+    lista = list(range(3))
+
+   cosa fanno i seguenti frammenti di codice? (Ripartite ogni volta da
+   ``lista = list(range(3))``.)
+
+   #. ``lista.append(3)``
+   #. ``lista.append([3])``
+   #. ``lista.extend([3])``
+   #. ``lista.extend(3)``
+   #. ``lista.insert(0, 3)``
+   #. ``lista.insert(3, 3)``
+   #. ``lista.insert(3, [3])``
+   #. ``lista.insert([3], 3)``
+
+#. Che differenza c'e' tra::
+
+    lista = []
+    lista.append(list(range(10)))
+    lista.append(list(range(10, 20)))
+
+   e::
+
+    lista = []
+    lista.extend(list(range(10)))
+    lista.extend(list(range(10, 20)))
+
+   Di che lunghezza e' ``lista`` nei due casi?
+
+#. Che cosa fa questo codice?::
+
+    lista = [0, 0, 0, 0]
+    lista.remove(0)
+
+#. Che cosa fa questo codice?::
+
+    lista = [1, 2, 3, 4, 5]
+    lista.reverse()
+    lista.sort()
+
+   Posso riscriverlo cosi'?::
+
+    lista = [1, 2, 3, 4, 5]
+    lista.reverse().sort()
+
+#. Data la lista::
+
+    lista = list(range(10))
+
+   mettere in ``lista_inversa`` gli elementi di ``lista`` in ordine inverso
+   (dall'ultimo al primo) usando ``reverse()``. ``lista`` non deve essere
+   alterata.
+
+#. Data la lista::
+
+    frammenti = [
+        "KSYK",
+        "SVALVV",
+        "GVTGI",
+        "VGSSLAEVLKLPD",
+    ]
+
+   mettere in ``frammenti_ordinati`` gli elementi di ``frammenti`` ordinati
+   alfanumericamente con ``sort()``. ``frammenti`` non deve essere alterata.
+
+#. (Una Curiosita' Inutile). Che "struttura" ha questa lista?::
+
+    lista = []
+    lista.append(lista)
+
+Metodi Stringhe-Liste
+---------------------
+
+=============== =========================== =================================================
+Ritorna         Metodo                      Significato
+=============== =========================== =================================================
+``list-of-str`` ``str.split(str)``          Rompe una stringa in una lista di stringhe
+``str``         ``str.join(list-of-str)``   Ricompone una lista di stringhe in una stringa
+=============== =========================== =================================================
+
+****
+
+**Esempio**. La lista di stringhe::
+
+    tabella = [
+        "nome,cognome,numero di premi nobel vinti",
+        "Albert,Einstein,1",
+        "Marie,Curie,2",
+    ]
+
+che riporta informazioni su personaggi noti in tre colonne separate da
+virgole ``","``.
+
+Estraggo i titoli delle colonne dall'intestazione (la prima riga della
+tabella) con ``split()``::
+
+    titoli_colonne = tabella[0].split(",")
+
+    print(titoli_colonne)
+    print(type(titoli_colonne))
+
+e calcolo quante colonne ci sono::
+
+    num_colonne = len(titoli_colonne)
+
+****
+
+**Esempio**. ``join()`` e' utile per ricomporre liste di stringhe, ad
+esempio::
+
+    lista_di_stringhe = ["uno", "due", "tre"] * 100
+
+    print(type(lista_di_stringhe), lista_di_stringhe)
+
+    stringa_intera = " ".join(lista_di_stringhe)
+
+    print(type(stringa_intera), stringa_intera)
+
+.. warning::
+
+    Quando uso ``join()``, la lista deve contenere stringhe! Questo
+    non funziona::
+
+        " ".join([1, 2, 3])
+
+****
+
+Esercizi
+--------
+
+#. Data la stringa::
+
+    testo = """The Wellcome Trust Sanger Institute
+    is a world leader in genome research."""
+
+   mettere le parole di ``testo`` in una lista di stringhe. Poi stampare
+   a schermo quante parole contiene.
+
+   Poi mettere in ``prima_riga`` la prima riga di ``testo``.
+
+   Fare la stessa cosa con ``seconda_riga``.
+
+   Estrarre la prima parola di ``seconda_riga`` e stamparla a schermo.
+
+#. La tabella di stringhe::
+
+    tabella = [
+        "protein | database | domain | start | end",
+        "YNL275W | Pfam | PF00955 | 236 | 498",
+        "YHR065C | SMART | SM00490 | 335 | 416",
+        "YKL053C-A | Pfam | PF05254 | 5 | 72",
+        "YOR349W | PANTHER | 353 | 414",
+    ]
+
+   presa da `Saccharomyces Genome Database <http://www.yeastgenome.org/>`_,
+   rappresenta una lista di (informazioni su) *domini* identificati nella
+   sequenza di alcune proteine del lievito.
+
+   Ogni riga e' un dominio, tranne la prima (che fa da intestazione).
+
+   Usando ``split()`` ottenere una lista dei titoli delle varie colonne,
+   avendo cura di accertarsi che le stringhe che corrispondono ai titoli
+   *non* contengano spazi superflui.
+
+   *Hint*: non e' necessario usare ``strip()``.
+
+#. Data la lista di stringhe::
+
+    parole = ["parola_1", "parola_2", "parola_3"]
+
+   costruire, usando *solo* ``join()`` ed un opportuno delimitatore le seguenti
+   stringhe:
+
+   #. ``"parola_1 parola_2 parola_3"``
+   #. ``"parola_1,parola_2,parola_3"``
+   #. ``"parola_1 e parola_2 e parola_3"``
+   #. ``"parola_1parola_2parola3"``
+   #. ``r"parola_1\parola_2\parola_3"``
+
+#. Data la lista di stringhe::
+
+    versi = [
+        "Taci. Su le soglie",
+        "del bosco non odo",
+        "parole che dici",
+        "umane; ma odo",
+        "parole piu' nuove",
+        "che parlano gocciole e foglie",
+        "lontane."
+    ]
+
+   usare ``join()`` per creare una stringa multi-linea con i versi in
+   ``versi``.Il risultato (``"poesia"``) deve essere::
+
+     >>> print(poesia)
+     Taci. Su le soglie
+     del bosco non odo
+     parole che dici
+     umane; ma odo
+     parole piu' nuove
+     che parlano gocciole e foglie
+     lontane.
+
+   *Hint*: che delimitatore devo usare?
+
+List Comprehension
+------------------
+
+La *list comprehension* permette di trasformare e/o filtrare una lista.
+
+Data una lista qualunque ``lista_originale``, posso creare una nuova lista
+che contiene solo gli elementi che soddisfano una certa condizione::
+
+    lista_filtrata = [elemento
+                      for elemento in lista_originale
+                      if condizione(elemento)]
+
+Qui ``condizione()`` ce la inventiamo noi.
+
+****
+
+**Esempio**. Creo una nuova lista contenente solo i numeri pari da 0 a 9::
+
+    numeri = range(10)
+    numeri_pari = [numero for numero in numeri
+                   if numero % 2 == 0]
+    print(numeri_pari)
+
+****
+
+**Esempio**. Data la lista di sequenze nucleotidiche::
+
+    sequenze = ["ACTGG", "CCTGT", "ATTTA", "TATAGC"]
+
+tengo solo le sequenze che contengono almeno una adenosina::
+
+    sequenze_con_a = [sequenza for sequenza in sequenze
+                      if "A" in sequenza]
+    print(sequenze_con_a)
+
+Per tenere solo quelle che *non* contengono adenosina, nego la condizione::
+
+    sequenze_senza_a = [sequenza for sequenza in sequenze
+                        if not "A" in sequenza]
+    print(sequenze_senza_a)
+
+****
+
+**Esempio**. Se ometto la condizione, cosi'::
+
+    lista_2 = [elemento for elemento in lista]
+
+ottengo una copia di ``lista``.
+
+****
+
+**Esempio**. Uso una lista di liste per descrivere una rete di regolazione
+tra geni::
+
+    microarray = [
+        ["G1C2W9", "G1C2Q7", 0.2],
+        ["G1C2W9", "G1C2Q4", 0.9],
+        ["Q6NMS1", "G1C2W9", 0.8],
+        # ^^^^^^    ^^^^^^   ^^^
+        #  gene1     gene2   correlazione
+    ]
+
+Ogni lista "interna" ha tre elementi: i primi due sono  identificativi di geni
+di *A.  Thaliana*, il terzo e' una misura di correlazione tra l'espressione dei
+due geni in un qualche microarray.
+
+Posso usare una *list comprehension* per tenere solo le coppie di geni
+con correlazione alta::
+
+    geni_altamente_correlati = \
+        [tripla[:-1] for tripla in microarray if tripla[-1] > 0.75]
+
+oppure ottenere i geni che sono altamente coespressi con il gene ``"G1C2W9"``::
+
+    soglia = 0.75
+    geni_coespressi = \
+        [tripla[0] for tripla in microarray
+         if tripla[1] == "G1C2W9" and tripla[-1] >= soglia] + \
+        [tripla[1] for tripla in microarray
+         if tripla[0] == "G1C2W9" and tripla[-1] >= soglia]
+
+****
+
+.. warning::
+
+    Il nome della variabile che itera sugli elementi (nell'esempio sopra,
+    ``elemento``) e' arbitrario. Questo codice::
+
+        intervallo = range(10)
+        print([x for x in intervallo if x > 5])
+
+    e' identico a questo::
+
+        intervallo = range(10)
+        print([y for y in intervallo if y > 5])
+
+    Il nome della variabile, ``x`` o ``y``, e' immateriale.
+
+****
+
+La *list comprehension* puo' essere usata anche per creare una nuova lista
+che contiene gli elementi di ``lista_originale`` trasformati (uno per uno,
+individualmente) in qualche modo::
+
+    lista_trasformata = [trasforma(elemento)
+                         for elemento in lista_originale]
+
+Qui ``trasforma()`` e' una "trasformazione" che ci inventiamo noi.
+
+****
+
+**Esempio**. Dato l'intervallo::
+
+    numeri = range(10)
+
+creo una nuova lista con i loro doppi::
+
+    doppi = [numero * 2 for numero in numeri]
+    #        ^^^^^^^^^^
+    #      trasformazione
+    print(doppi)
+
+****
+
+**Esempio**. Data la lista di percorsi relativi alla directory ``data/``::
+
+    percorsi = ["aatable", "fasta.1", "fasta.2"]
+
+prefisso il percorso ``"data/"`` a ciascun elemento::
+
+    percorsi_completi = ["data/" + percorso
+                         for percorso in percorsi]
+    print(percorsi_completi)
+
+****
+
+**Esempio**. Data la lista di sequenze primarie::
+
+    sequenze = [
+        "MVLTIYPDELVQIVSDKIASNK",
+        "GKITLNQLWDIS",
+        "KYFDLSDKKVKQFVLSCVILKKDIE",
+        "VYCDGAITTKNVTDIIGDANHSYS",
+    ]
+
+metto in una lista nuova ``lunghezze`` le lunghezze di ciascuna sequenza,
+in ordine::
+
+    lunghezze = [len(sequenza) for sequenza in sequenze]
+    print(lunghezze)
+
+****
+
+**Esempio**. Data una lista di stringhe::
+
+    atomi = [
+        "SER A 96 77.253 20.522 75.007",
+        "VAL A 97 76.066 22.304 71.921",
+        "PRO A 98 77.731 23.371 68.681",
+        "SER A 99 80.136 26.246 68.973",
+        "GLN A 100 79.039 29.534 67.364",
+        "LYS A 101 81.787 32.022 68.157",
+    ]
+
+che rappresenta (parte della) struttura terziaria di una catena proteica,
+voglio ottenere una lista di liste che contiene, per ogni residuo (stringa)
+in ``atomi``, le sue coordinate (tre elementi).
+
+Scrivo::
+
+    coordinate = [riga.split()[-3:] for riga in atomi]
+
+ed ottengo::
+
+    >>> print(coordinate)
+    [
+        ["77.253", "20.522", "75.007"],
+        ["76.066", "22.304", "71.921"],
+        ["77.731", "23.371", "68.681"],
+        ["80.136", "26.246", "68.973"],
+        ["79.039", "29.534", "67.364"],
+        ["81.787", "32.022", "68.157"],
+    ]
+
+Come funziona questo codice? Consideriamo la prima riga di``atomi``::
+
+    "SER A 96 77.253 20.522 75.007"
+
+Quando la *list comprehension* incontra questa riga, fa questo::
+
+    riga = "SER A 96 77.253 20.522 75.007"
+
+poi applica la trasformazione ``riga.split()[-3:]``, i cui passaggi sono::
+
+    >>> print(riga.split())
+    ["SER", "A", "96", "77.253", "20.522", "75.007"]
+    #                  ^^^^^^^^  ^^^^^^^^  ^^^^^^^^
+    #                     -3        -2        -1
+
+    >>> print(riga.split()[-3:])
+    ["77.253", "20.522", "75.007"]
+
+quindi il risultato della trasformazione applicata a questa riga e' la lista::
+
+    ["77.253", "20.522", "75.007"]
+
+Questa lista viene appesa a ``coordinate``.
+
+A questo punto la *list comprehension* prende la seconda seconda riga di ``atomi``::
+
+    "VAL A 97 76.066 22.304 71.921"
+
+la mette in ``riga``, ed applica la stessa trasformazione, ottenendo la lista::
+
+    ["76.066", "22.304", "71.921"]
+
+che appende a ``coordinate``.
+
+Poi prende la terza riga di atomi, *etc.*
+
+****
+
+Infine, posso combinare filtro e trasformazione per creare una nuova lista che
+contiene solo gli elementi di ``lista_originale`` che soddisfano una certa
+condizione, ma trasformati in qualche modo::
+
+    nuova_lista = [trasforma(elemento)
+                   for elemento in lista_originale
+                   if condizione(elemento)]
+
+****
+
+**Esempio**. Dati gli interi da 0 a 10, voglio tenere solo quelli pari e
+dividerli per 3::
+
+    pari_diviso_3 = [float(numero) / 3
+                     for numero in range(10)
+                     if numero % 2 == 0]
+
+Notate che la condizione opera su ``numero`` (l'elemento originale della lista
+oridinale, non trasformato), non su ``float(numero) / 3``.
+
+****
+
+.. warning::
+
+    La list comprehension costruisce una nuova lista, lasciando l'originale
+    inalterata, sia quando filtro::
+
+        numeri = range(10)
+        numeri_pari = [numero
+                       for numero in lista_originale
+                       if numero % 2 == 0]
+
+        print(numeri, "e' lunga", len(numeri))
+        print(numeri_pari, "e' lunga", len(numeri_pari))
+
+    sia quando trasformo::
+
+        numeri = range(10)
+        doppi = [numero * 2 for numero in numeri]
+
+        print(numeri)
+        print(doppi)
+
+Esercizi
+--------
+
+.. warning::
+
+    Nei prossimi esercizi, se ``open()`` da' errore e' probabile che non
+    abbiate fatto partire il terminale dalla directory giusta. Ad esempio
+    in questo caso::
+
+        >>> righe = open("file/che/non/esiste").readlines()
+
+    Python da' (giustamente) errore::
+
+        Traceback (most recent call last):
+          File "<stdin>", line 1, in <module>
+        IOError: [Errno 2] No such file or directory: 'file/che/non/esiste'
+        #                  ^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^
+        #                  non esiste questo file!        nome del file
+
+    Assicuratevi di adattare il percorso in base alla directory nella quale vi
+    trovate.
+
+#. Data la lista::
+
+    lista = list(range(100))
+
+   #. Creare una nuova lista ``lista_piu_3`` contenente il valore degli
+      elementi di ``lista`` piu' ``3``. Il risultato deve essere::
+
+        [3, 4, 5, ...]
+
+   #. Creare una nuova lista ``lista_dispari`` contenente solo gli elementi
+      dispari di ``lista``. Il risultato deve essere::
+
+        [1, 3, 5, ...]
+
+      *Hint*: un intero e' dispari se e solo se il risultato di::
+
+        numero % 2
+
+      e' ``1``.
+
+   #. Creare una nuova lista ``lista_opposti`` contenente l'opposto
+      aritmetico (l'opposto di :math:`x` e' :math:`-x`) degli elementi di
+      ``lista``. Il risultato deve essere::
+
+        [0, -1, -2, ...]
+
+   #. Creare una nuova lista ``lista_inversi`` contenente l'inverso
+      aritmetico (l'inverso aritmetico di :math:`x` e' :math:`\frac{1}{x}`)
+      degli elementi di ``lista``. Se l'inverso di un elemento non esiste,
+      l'elemento deve essere ignorato (non comparire in ``lista_inversi``). Il
+      risultato deve essere::
+
+        [1, 0.5, 0.33334, ...]
+
+      *Hint*: l'unico intero senza un inverso e' 0.
+
+   #. Creare una nuova lista contenente solo il primo e l'ultimo elemento
+      di ``lista``. Il risultato deve essere::
+
+        [0, 99]
+
+      *Hint*: si fa con una *list comprehension*?
+
+   #. Creare una nuova lista contenente tutti gli elementi di ``lista`` tranne
+      il primo e l'ultimo. Il risultato deve essere::
+
+        [1, 2, ..., 97, 98]
+
+   #. Contare quanti numeri dispari ci sono in ``lista``. Il risultato deve
+      essere ``50``.
+
+      *Hint*: basta usare una *list comprehension*?
+
+   #. Creare una nuova lista contenente tutti gli elementi di ``lista``
+      divisi per 5 (anche quelli non divisibili per 5!). Il risultato deve
+      essere::
+
+        [0.0, 0.2, 0.4, ...]
+
+   #. Creare una nuova lista ``lista_multipli_5_divisi`` contenente solo i
+      multipli di 5, ma divisi per 5. Il risultato deve essere::
+
+        [0.0, 1.0, 2.0, ..., 19.0]
+
+   #. Creare una nuova lista ``lista_di_stringhe`` contenente tutti gli
+      elementi di ``lista`` ma convertiti in stringhe. Il risultato deve
+      essere::
+
+        ["0", "1", "2", ...]
+
+   #. Contare quante stringhe rappresentanti un numero dispari ci sono in
+      ``lista_di_stringhe``.
+
+   #. Creare una stringa che contenga tutti gli elementi di ``lista``, visti
+      come stringhe, e separati da uno spazio. Il risultato deve essere::
+
+        "0 1 2 ..."
+
+      *Hint*: basta usare una *list comprehension*?
+
+#. Per ciascuno dei punti seguenti, scrivere due *list comprehension* che
+   producano ``lista_1`` da ``lista_2`` e viceversa.
+
+   #. ::
+
+        lista_1 = [1, 2, 3]
+        lista_2 = ["1", "2", "3"]
+
+   #. ::
+
+        lista_1 = ["nome", "cognome", "eta'"]
+        lista_2 = [["nome"], ["cognome"], ["eta'"]]
+
+   #. ::
+
+        lista_1 = ["ACTC", "TTTGGG", "CT"]
+        lista_2 = [["actc", 4], ["tttgggcc", 6], ["ct", 2]]
+
+#. Data la lista::
+
+    lista = list(range(10))
+
+   quali dei seguenti frammenti sono validi o errati, e cosa fanno?
+
+   #. ``[x for x in lista]``
+   #. ``[y for y in lista]``
+   #. ``[y for x in lista]``
+   #. ``["x" for x in lista]``
+   #. ``[str(x) for x in lista]``
+   #. ``[x for str(x) in lista]``
+   #. ``[x + 1 for x in lista]``
+   #. ``[x + 1 for x in lista if x == 2]``
+
+#. Data la lista di stringhe ``dna`` restituita da::
+
+    dna = open("data/dna-fasta/fasta.1").readlines()
+    print(dna)
+
+   #. Creare una nuova lista di stringhe che contenga tutte le stringhe in
+      ``dna`` tranne quella di intestazione (la riga che comincia per ``">"``).
+   #. Ci sono caratteri di *a capo* o spazi nella lista di stringhe ottenuta?
+      Se si', creare una nuova lista di stringhe che sia identica a quella
+      ottenuta, ma dove le stringhe non contengano caratteri di *a capo* ne'
+      spazi.
+   #. Concatenare in una singola stringa tutte le righe ottenute.
+   #. Calcolare la percentuale di citosina e guanina nella sequenza ottenuta.
+   #. Calcolare il `GC-content <https://en.wikipedia.org/wiki/GC-content>`_ della sequenza.
+
+#. Consideriamo la stringa::
+
+    risultato_cdhit = """\
+    >Cluster 0
+    0 >YLR106C at 100.00%
+    >Cluster 50
+    0 >YPL082C at 100.00%
+    >Cluster 54
+    0 >YHL009W-A at 90.80%
+    1 >YHL009W-B at 100.00%
+    2 >YJL113W at 98.77%
+    3 >YJL114W at 97.35%
+    >Cluster 52
+    0 >YBR208C at 100.00%
+    """
+
+   ottenuta raggruppando le strutture primarie del genoma
+   di *S. Cerevisiae* (preso da `SGD <http://yeastgenome.org/>`_) con
+   un software di clustering (`CD-HIT <http://weizhongli-lab.org/cd-hit/>`_).
+
+   ``risultato_cdhit`` codifica in forma testuale alcuni cluster di proteine
+   raggruppate in base alla similarita' delle loro sequenze.
+
+   Un gruppo comincia con la riga::
+
+        >Cluster N
+
+   dove ``N`` e' il numero del cluster. I contenuti del cluster sono dati
+   dalle righe successive, ad esempio::
+
+    >Cluster 54
+    0 >YHL009W-A at 90.80%
+    1 >YHL009W-B at 100.00%
+    2 >YJL113W at 98.77%
+    3 >YJL114W at 97.35%
+
+   rappresenta un gruppo di quattro sequenze, denominato ``"Cluster 54"``:
+   di quel gruppo fanno parte la proteina ``"YHL009W-A"``
+   con una similarita' del ``90.80%``, la proteina ``"YHL009-B"`` con una
+   similarita' del ``100.00%``, *etc.*
+
+   Data ``risultato_cdhit``, usare delle *list comprehension* per:
+
+   #. Estrarre i nomi dei vari cluster. Il risultato deve essere::
+
+        >>> print(nomi_cluster)
+        ["0", "50", "54", "52"]
+
+   #. Estrarre i nomi di *tutte* le proteine (non importa se ci sono doppioni).
+      Il risultato deve essere::
+
+        >>> print(proteine)
+        ["YLR1106C", "YPL082C", "YHL00W-A", ...]
+
+   #. Estrarre le coppie proteina-percentuale per *tutte* le proteine. il
+      risultato deve essere::
+
+        >>> print(coppie_proteina_percentuale)
+        [["YLR106C", 100.0],
+         ["YPL082C", 100.0],
+         ["YHL009W-A", 90.8],
+         # ...
+        ]
+
+#. Il comando::
+
+    righe = open("data/prot-pdb/1A3A.pdb").readlines()
+    print(" ".join(righe))                   # stampo le righe
+    print(len(righe))                        # 5472
+
+   restituisce una lista di righe del file ``data/prot-pdb/1A3A.pdb``, preso
+   dalla `Protein Data Bank <http://www.rcsb.org/pdb/explore.do?structureId=1a3a>`_.
+   Descrive una proteina di *E. Coli*.
+
+   *Hint*: aprite il file con un editor di testo (``nano``, ``gedit``, quello
+   che preferite) e fatevi un'idea dei contenuti prima di procedere!
+
+   #. Estrarre tutte le righe che cominciano per ``"SEQRES"`` e mettere il
+      risultato nella lista ``righe_seqres``.
+
+      Dovrebbero esserci esattamente ``48`` righe di questo tipo.  Il risultato
+      deve somigliare a questo::
+
+            >>> print(" ".join(righe_seqres))
+            SEQRES   1 A  148  MET ALA ASN LEU PHE LYS LEU GLY ALA GLU ASN ILE PHE
+            SEQRES   2 A  148  LEU GLY ARG LYS ALA ALA THR LYS GLU GLU ALA ILE ARG
+            SEQRES   3 A  148  PHE ALA GLY GLU GLN LEU VAL LYS GLY GLY TYR VAL GLU
+            # ...
+            SEQRES  10 D  148  LEU THR ASN ALA LEU ASP ASP GLU SER VAL ILE GLU ARG
+            SEQRES  11 D  148  LEU ALA HIS THR THR SER VAL ASP GLU VAL LEU GLU LEU
+            SEQRES  12 D  148  LEU ALA GLY ARG LYS
+            #          ^       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            #        catena    sequenza primaria della catena
+
+      La prima colonna delle righe in ``righe_seqres`` e' sempre ``"SEQRES"``
+      (per costruzione), la terza e' il nome della catena di 1A3A descritta
+      in quella riga, mentre le colonne dalla quinta in poi descrivono la
+      sequenza primaria della catena stessa.
+
+      #. Estrarre le catene da ``righe_seqres`` (non importa se ci sono doppioni).
+
+         Il risultato deve essere::
+
+            >>> print(catene)
+            ["A", ..., "B", ..., "C", ..., "D", ...]
+
+      #. Estrarre solo le righe della catena B e metterle in ``righe_seqres_B``.
+         Devono esserci esattamente ``12`` righe.
+
+      #. Estrarre da ``righe_seqres_B`` la sequenza della catena B e metterla
+         in una sola stringa ``sequenza_B``.
+
+         Il risultato deve essere::
+
+            >>> print(sequenza_B)
+            "MET ALA ASN LEU PHE ... ALA GLY ARG LYS"
+
+   #. Estrarre da ``righe`` tutte le righe che cominciano per ``"HELIX"`` e
+      mettere il risultato nella lista ``righe_helix``.
+
+      Devono esserci esattamente ``30`` righe di questo tipo.  Il risultato
+      deve somigliare a questo::
+
+            >>> print(" ".join(righe_helix))
+            HELIX    1   1 ALA A    9  ASN A   11  5                                   3
+            HELIX    2   2 LYS A   21  LYS A   34  1                                  14
+            HELIX    3   3 PRO A   40  LEU A   52  5                                  13
+            HELIX    4   4 VAL A   68  ARG A   73  5                                   6
+            HELIX    5   5 HIS A  111  ALA A  121  1                                  11
+            #              ^^^^^^^^^^  ^^^^^^^^^^
+            #             inizio elica  fine elica
+
+      La prima colonna delle righe in ``righe_helix`` e' sempre ``"HELIX"``
+      (per costruzione). Ogni riga descrive una :math:`\alpha`-helix della
+      proteina 1A3A.
+
+      La quarta, quinta e sesta colonna descrivono il residuo dal quale
+      parte l'elica: tipo del residuo, catena di riferimento, e posizione
+      del residuo.
+
+      La settima, ottava e nona colonna descrivono il residuo dove finisce
+      l'elica: sempre con tipo, catena e posizione.
+
+      Estrarre una lista ``info_eliche`` in cui ogni elemento rappresenta un'elica, e
+      ne contiene la posizione di inizio, la posizione di fine, e la
+      lunghezza.
+
+#. Data la matrice :math:`3\times 3`::
+
+    matrice = [list(range(0,3)), list(range(3,6)), list(range(6,9))]
+
+   #. Mettere in una lista ``prima_riga`` la prima riga.
+   #. Mettere in una lista ``prima_colonna`` la prima colonna.
+   #. Creare una matrice ``sottosopra`` che contenga le righe di ``matrice`` ma sottosopra.
+   #. (Difficile.) Creare una matrice ``palindromo`` che contenga le righe di ``matrice`` ma da destra a sinistra.
+   #. (Difficile.) Ricreare ``matrice`` con una sola *list comprehension*.
+
+#. (Difficile). Data la lista::
+
+    lista = range(100)
+
+   Creare una lista ``lista_quadrati`` contenente i quadrati degli elementi
+   di ``lista``. Il risultato deve essere::
+
+     [0, 1, 4, 9, ...]
+
+   Poi creare una lista ``lista_differenze_quadrati`` che contenga, nella
+   posizione ``i``-esima il valore::
+
+     lista_quadrati[i+1] - lista_quadrati[i]
+
+   per tutti, tranne l'ultimo, valore di ``lista_quadrati``. E' consigliabile
+   usare piu' di un passaggio, ed eventualmente liste ausiliarie.
+
+   (Che numeri avete ottenuto? Ecco `perche' <http://math.stackexchange.com/questions/263101/prove-every-odd-integer-is-the-difference-of-two-squares>`_.)
+
+
+
+
+
+Python: Liste (Soluzioni)
+-------------------------
+
+.. note::
+
+    In alcune soluzioni uso il carattere ``\`` alla fine di una riga di codice.
+
+    Usato in questo modo, ``\`` spiega a Python che il comando continua alla
+    riga successiva. Se non usassi ``\``, Python potrebbe pensare che il
+    comando finisca li' e quindi che sia sintatticamente sbagliato -- dando
+    errore.
+
+    Potete tranquillamente ignorare questi ``\``.
+
+Soluzioni Operazioni
+----------
+
+#. Soluzione::
+
+    lista = []
+    print(lista, len(lista))         # controllo
+
+#. Soluzione::
+
+    lista = list(range(5))
+    print(lista, len(lista))         # controllo
+    print(len(lista))
+
+#. Soluzione::
+
+    lista = [0] * 100
+    print(lista, len(lista))         # controllo
+
+#. Soluzione::
+
+    lista_1 = list(range(10))
+    lista_2 = list(range(10, 20))
+
+    lista_completa = lista_1 + lista_2
+    print(lista_completa)
+
+    print(lista_completa) == list(range(20))   # Ture
+
+#. Soluzione::
+
+    lista = ["sono", "una", "lista"]
+    print(lista, len(lista))         # controllo
+
+    print(len(lista[0]))
+    print(len(lista[1]))
+    print(len(lista[2]))
+
+#. Soluzione::
+
+    lista = [0.0, "b", [3], [4, 5]]
+
+    print(len(lista))                # 4
+
+    print(type(lista[0]))            # float
+
+    print(lista[1], len(lista[1]))   # "b", 1
+
+    print(lista[2], len(lista[2]))   # [3], 1
+
+    print(lista[-1], len(lista[-1])) # [4, 5], 2
+
+    print("b" in lista)              # True
+
+    print(4 in lista)                # False
+    print(4 in lista[-1])            # True
+
+#. Soluzione: la prima e' una lista di interi, la seconda una lista
+   di stringhe, mentre la terza e' una *stringa*!::
+
+    print(type(lista_1))             # list
+    print(type(lista_2))             # list
+    print(type(lista_3))            # str
+
+#. Soluzioni::
+
+    # una lista vuota
+    lista = []
+    print(len(lista))                # 0
+    del lista
+
+
+    # sintassi non valida, Python da' errore
+    lista = [}
+
+
+    # una lista che contiene una lista vuota
+    lista = [[]]
+    print(len(lista))                # 1
+    print(len(lista[0]))             # 0
+    del lista
+
+
+    # non funziona perche' lista non e' definita!
+    lista.append(0)
+
+
+    # questa invece funziona
+    lista = []
+    lista.append(0)
+    print(lista)                     # [0]
+    del lista
+
+
+    # non funziona perche' mancano le virgole!
+    lista = [1 2 3]
+
+
+    # da' errore perche' la lista ha solo 3 elementi!
+    lista = list(range(3))
+    print(lista[3])
+
+
+    # estrae l'ultimo elemento
+    lista = list(range(3))
+    print(lista[-1])
+    del lista
+
+
+    # estrae i primi due elementi (lista[2], il terzo,
+    # e' escluso)
+    lista = list(range(3))
+    sottolista = lista[0:2]
+    print(lista)
+    del lista
+
+
+    # estrare tutti gli elementi (lista[3], che 'non
+    # esiste', e' escluso)
+    lista = list(range(3))
+    sottolista = lista[0:3]
+    print(lista)
+    del lista
+
+
+    # estrae i primi due elementi (lista[-1], il terzo,
+    # e' escluso)
+    lista = list(range(3))
+    sottolista = lista[0:-1]
+    print(lista)
+    del lista
+
+
+    # inserisce in terza posizione la stringa "due"
+    lista = list(range(3))
+    lista[2] = "due"
+    print(lista)
+    del lista
+
+
+    # non funziona: la lista contiene solo tre elementi,
+    # quindi non ha una quarta posizione, e Python da'
+    # errore
+    lista = list(range(3))
+    lista[3] = "tre"
+
+
+    # inserisce in terza posizione la stringa "tre"
+    lista = list(range(3))
+    lista[-1] = "tre"
+    print(lista)
+    del lista
+
+
+    # l'indice deve essere un intero, Python da' errore
+    lista = list(range(3))
+    lista[1.2] = "uno virgola due"
+
+
+    # sostituisce il secondo elemento di lista (cioe' 1)
+    # con una lista di due stringhe; e' perfettamente
+    # legale: le liste *possono* contenere altre stringhe
+    lista = list(range(3))
+    lista[1] = ["testo-1", "testo-2"]
+    print(lista)
+    del lista
+
+#. Soluzione::
+
+    matrice = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+    ]
+
+    prima_riga = matrice[0]
+    print(prima_riga)
+
+    secondo_elemento_prima_riga = prima_riga[1]
+    # oppure
+    secondo_elemento_prima_riga = matrice[0][1]
+    print(secondo_elemento_prima_riga)
+
+    somma_prima_riga = matrice[0][0] + matrice[0][1] + matrice[0][2]
+    print(somma_prima_riga)
+
+    seconda_colonna = [matrice[0][1], matrice[1][1], matrice[2][1]]
+    print(seconda_colonna)
+
+    diagonale = [matrice[0][0], matrice[1][1], matrice[2][2]]
+    print(diagonale)
+
+    tre_righe_assieme = matrice[0] + matrice[1] + matrice[2]
+    print(tre_righe_assieme)
+
+Soluzioni Metodi
+------
+
+#. Prima dichiaro una lista qualunque, ad esempio quella vuota::
+
+    lista = []
+
+   poi aggiungo i vari elementi richiesti con ``append()``::
+
+    lista.append(0)
+    lista.append("testo")
+    lista.append([0, 1, 2, 3])
+
+#. Soluzione::
+
+    # aggiunge un 3 alla fine della lista
+    lista = list(range(3))
+    lista.append(3)
+    print(lista)
+    del lista
+
+    # aggiunge una lista con un 3 dentro alla fine della lista
+    lista = list(range(3))
+    lista.append([3])
+    print(lista)
+    del lista
+
+    # aggiunge un 3 (il solo elemento contenuto nella lista [3]) alla
+    # fine della lista
+    lista = list(range(3))
+    lista.extend([3])
+    print(lista)
+    del lista
+
+    # non funziona: extend() estende una lista con i contenuti
+    # di un'altra lista, ma qui 3 *non* e' una lista! Python da'
+    # errore
+    lista = list(range(3))
+    lista.extend(3)
+
+    # sostituisce l'elemento in posizione 0, il primo, con il
+    # valore 3
+    lista = list(range(3))
+    lista.insert(0, 3)
+    print(lista)
+    del lista
+
+    # inserisce un 3 alla fine di lista
+    lista = list(range(3))
+    lista.insert(3, 3)
+    print(lista)
+    del lista
+
+    # inserisce la lista [3] alla fine di lista
+    lista = list(range(3))
+    lista.insert(3, [3])
+    print(lista)
+    del lista
+
+    # non funziona: il primo argomento di insert() deve essere
+    # un intero, qui gli stiamo dando una lista! Python da' errore
+    lista = list(range(3))
+    lista.insert([3], 3)
+
+#. Soluzione::
+
+    lista = []
+    lista.append(range(10))
+    lista.append(range(10, 20))
+    print(lista)
+
+   Qui uso ``append()``, che inserisce un *elemento* alla fine di ``lista``.
+   In questo caso inserisco due liste, cioe' i risultati di ``range(10)`` e
+   ``range(10, 20)``.
+
+   E' chiaro che ``len(lista)`` e' ``2``, visto che ho inserito solo due elementi.
+
+   Invece::
+
+    lista = []
+    lista.extend(range(10))
+    lista.extend(range(10, 20))
+    print(lista)
+
+   fa uso di ``extend()``, che "estende" una lista con un'altra lista. Qui
+   la lista finale ha ``20`` elementi, come si evince con::
+
+    print(len(lista))
+
+#. Soluzione::
+
+    lista = [0, 0, 0, 0]
+    lista.remove(0)
+    print(lista)
+
+   solo la prima ripetizione di ``0`` viene rimossa!
+
+#. Soluzione::
+
+    lista = [1, 2, 3, 4, 5]
+
+    # inverte l'ordine degli elementi di lista
+    lista.reverse()
+    print(lista)
+
+    # ordina gli elementi di lista
+    lista.sort()
+    print(lista)
+
+   Il risultato e' che dopo le due operazioni ``lista`` torna al suo
+   valore iniziale.
+
+   Invece questo::
+
+    lista = [1, 2, 3, 4, 5]
+    lista.reverse().sort()
+
+   *non* si puo' fare. Il risultato di ``lista.reverse()`` e' ``None``::
+
+    lista = [1, 2, 3, 4, 5]
+    risultato = lista.reverse()
+    print(risultato)
+
+   che certamente non e' una lista, e quindi non ci posso fare sopra ``sort()``.
+   Python dara' errore.
+
+#. Sono tentato di scrivere::
+
+    lista = list(range(10))
+    lista_inversa = lista.reverse()
+
+    print(lista)                         # modificata!
+    print(lista_inversa)                 # None!
+
+   ma questa cosa non funziona: ``reverse()`` modifica ``lista`` e restituisce
+   ``None``! Perdipiu' questo codice modifica ``lista`` direttamente, ed io
+   non voglio.
+
+   Quindi prima faccio una copia di ``lista``, e poi ordino quella::
+
+    lista = list(range(10))
+    lista_inversa = lista[:]            # *non* lista_inversa = lista
+    lista_inversa.reverse()
+    print(lista)                         # invariata
+    print(lista_inversa)                 # invertita
+
+   Invece questo codice::
+
+    lista = list(range(10))
+    lista_inversa = lista
+    lista_inversa.reverse()
+    print(lista)                         # modificata!
+    print(lista_inversa)                 # invertita
+
+   non funziona come vorrei: quello che succede e' che ``lista_inversa``
+   contiene non una copia di ``lista``, ma un riferimento allo stesso
+   oggetto riferito da ``lista``.
+
+   Quindi quando inverto ``lista_inversa`` finisco per invertire anche ``lista``.
+
+#. Come sopra::
+
+    frammenti = [
+        "KSYK",
+        "SVALVV"
+        "GVTGI",
+        "VGSSLAEVLKLPD",
+    ]
+    frammenti_ordinati = frammenti.sort()
+
+   non funziona: ``sort()`` ordina ``lista`` e restituisce ``None``! Quindi
+   sono costretto a fare prima una copia di ``frammenti``, e poi ad ordinare
+   quella::
+
+    frammenti_ordinati = frammenti[:]
+    frammenti_ordinati.sort()
+    print(frammenti)                     # invariata
+    print(frammenti_ordinati)            # ordinata
+
+#. Soluzione::
+
+    lista = []
+    lista.append(lista)
+
+    print(lista)
+
+   crea una lista che contiene se' stessa; ``lista`` e' una struttura che
+   in gergo viene detta *ricorsiva*.
+
+   ``lista`` e' chiaramente *infinita* (in termini di annidamento), visto che
+   posso farci cose come queste::
+
+    print(lista)
+    print(lista[0])
+    print(lista[0][0])
+    print(lista[0][0][0])
+    print(lista[0][0][0][0])
+    # ...
+
+   Visto che ``lista`` ha profondita' infinita, Python quando la stampa
+   usa un'ellissi ``...`` per indicare che c'e' una quantita' infinita di liste
+   dentro a ``lista`` (ed ovviamente non puo' stamparle tutte).
+
+   **Non** vedremo altre strutture ricorsive nel corso.
+
+Soluzioni Metodi Stringhe-Liste
+---------------------
+
+#. Soluzione::
+
+    testo = """The Wellcome Trust Sanger Institute
+    is a world leader in genome research.""""
+
+    parole = testo.split()
+    print(len(parole))
+
+
+    righe = testo.split("\n")
+
+    prima_riga = righe[0]
+    print("la prima riga e':", prima_riga)
+
+    seconda_riga = righe[1]
+    print("la seconda riga e':", seconda_riga)
+
+
+    print("la prima parola della seconda riga e':", seconda_riga.split()[0])
+
+#. Soluzione::
+
+    tabella = [
+        "protein | database | domain | start | end",
+        "YNL275W | Pfam | PF00955 | 236 | 498",
+        "YHR065C | SMART | SM00490 | 335 | 416",
+        "YKL053C-A | Pfam | PF05254 | 5 | 72",
+        "YOR349W | PANTHER | 353 | 414",
+    ]
+
+    prima_riga = tabella[0]
+    titoli_colonne_quasi = prima_riga.split("|")
+    print(titoli_colonne_quasi)
+    # ["protein ", " database ", ...]
+
+    # purtroppo qui i titoli delle colonne contengono spazi superflui
+    # per evitarli posso cambiare il delimitatore che do a split()
+
+    titoli_colonne = prima_riga.split(" | ")
+    print(titoli_colonne)
+    # ["protein", "database", ...]
+
+   Volendo si puo' usare anche ``strip()`` assieme ad una *list comprehension*
+   su ``titoli_colonne_quasi``, ma (come appena dimostrato) non e' necessario.
+
+#. Soluzione::
+
+    parole = ["parola_1", "parola_2", "parola_3"]
+
+    print(" ".join(parole))
+
+    print(",".join(parole))
+
+    print(" e ".join(parole))
+
+    print("".join(parole))
+
+    backslash = "\\"
+    print(backslash.join(parole))
+
+#. Soluzione::
+
+    versi = [
+        "Taci. Su le soglie"
+        "del bosco non odo"
+        "parole che dici"
+        "umane; ma odo"
+        "parole piu' nuove"
+        "che parlano gocciole e foglie"
+        "lontane."
+    ]
+
+    poesia = "\n".join(versi)
+
+Soluzioni List Comprehension
+------------------
+
+#. Soluzioni:
+
+   #. Soluzione::
+
+        lista_piu_tre = [numero + 3 for numero in lista]
+
+        print(lista_piu_tre)             # controllo
+
+   #. Soluzione::
+
+        lista_dispari = [numero for numero in lista
+                         if (numero % 2 == 1)]
+
+   #. Soluzione::
+
+        lista_opposti = [-numero for numero in lista]
+
+   #. Soluzione::
+
+        lista_inversi = [1.0 / numero for numero in lista
+                         if numero != 0]
+
+   #. Soluzione::
+
+        primo_e_ultimo = [lista[0], lista[-1]]
+
+   #. Soluzione::
+
+        dal_secondo_al_penultimo = lista[1:-1]
+
+   #. Soluzione::
+
+        lista_dispari = [numero for numero in lista
+                         if (numero % 2 == 1)]
+        quanti_dispari = len(lista_dispari)
+        print(quanti_dispari)
+
+      oppure abbreviando::
+
+        quanti_dispari = len([numero for numero in lista
+                              if (numero % 2 == 1)])
+
+   #. Soluzione::
+
+        lista_divisi_per_5 = [float(numero) / 5
+                              for numero in lista]
+
+   #. Soluzione::
+
+        lista_multipli_5_divisi = [float(numero) / 5.0)
+                                   for numero in lista
+                                   if (numero % 5 == 0)]
+
+   #. Soluzione::
+
+        lista_di_stringhe = [str(numero) for numero in lista]
+
+   #. Soluzione::
+
+        # Come sopra, ma iterando su `lista_di_stringhe`
+        # piuttosto che direttamente su `lista`
+        quanti_dispari = len([stringa for stringa in lista_di_stringhe
+                              if (int(stringa) % 5 == 0)])
+
+   #. Soluzione::
+
+        testo = " ".join([str(numero) for numero in lista])
+
+      Occhio che se dimentico di fare ``str(numero)``, ``join()`` si
+      rifiuta di funzionare.
+
+#. Soluzioni:
+
+   #. ::
+
+        # andata
+        lista_1 = [1, 2, 3]
+        lista_2 = [str(x) for x in lista_1]
+
+        # ritorno
+        lista_2 = ["1", "2", "3"]
+        lista_1 = [int(x) for x in lista_2]
+
+   #. ::
+
+        # andata
+        lista_1 = ["nome", "cognome", "eta'"]
+        lista_2 = [[x] for x in lista_1]
+
+        # ritorno
+        lista_2 = [["nome"], ["cognome"], ["eta'"]]
+        lista_1 = [l[0] for l in lista_2]
+
+   #. ::
+
+        # andata
+        lista_1 = ["ACTC", "TTTGGG", "CT"]
+        lista_2 = [[x.lower(), len(x)] for x in lista_1]
+
+        # ritorno
+        lista_2 = [["actc", 4], ["tttgggcc", 6], ["ct", 2]]
+        lista_1 = [l[0].upper() for l in lista_2]
+
+#. Soluzione:
+
+   #. ``[x for x in lista]``: crea una copia di ``lista``.
+   #. ``[y for y in lista]``: crea una copia di ``lista`` (identico a sopra).
+   #. ``[y for x in lista]``: invalida. (Se ``x`` rappresenta l'elemento della lista, cos'e' ``y``?)
+   #. ``["x" for x in lista]``: crea una lista piena di stringhe ``"x"`` lunga quanto ``lista``. Il risultato sara': ``["x", "x", ..., "x"]``.
+   #. ``[str(x) for x in lista]``: per ogni intero ``x`` in ``lista``, lo converte in stringa con ``str(x)`` e mette il risultato nella lista che sta creando. Il risultato sara': ``["0", "1", ..., "9"]``.
+   #. ``[x for str(x) in lista]``: invalida: la trasformazione ``str(...)`` e' nel posto sbagliato!
+   #. ``[x + 1 for x in lista]``: per ogni intero ``x`` in ``lista``, aggiunge uno con ``x + 1`` e mette il risultato nella lista che sta creando. Il risultato sara': ``[1, 2, ..., 10]``.
+   #. ``[x + 1 for x in lista if x == 2]``: per ogni intero ``x`` in ``lista`` controlla se vale ``2``. Se lo e' mette ``x + 1`` nella lista che sta creando, altrimento lo scarta. Il risultato sara': ``[3]``.
+
+#. Soluzione::
+
+    dna = open("data/dna-fasta/fasta.1").readlines()
+    print(" ".join(dna))
+
+
+    # Rimuovo l'intestazione: due alternative
+    dna_no_intestazione = [riga for riga in dna
+                           if not riga[0].startswith(">")]
+    dna_no_intestazione = [riga for riga in dna
+                           if riga[0] != ">"]
+
+
+    # Si', ci sono caratteri di a capo o spazi
+    print(["\n" in riga for riga in dna_no_intestazione])
+    print([" " in riga for riga in dna_no_intestazione])
+
+    # Rimuovo i caratteri a capo da tutte le righe
+    dna_solo_seq = [riga.strip() for riga in dna_no_intestazione]
+
+    # Ricontrollo per sicurezza: non ci sono caratteri
+    # di a capo ne' spazi
+    print(["\n" in riga for riga in dna_solo_seq])
+    print([" " in riga for riga in dna_solo_seq])
+
+
+    # Concateno tutte le righe di dna_solo_seq
+    sequenza = "".join(dna_solo_seq)
+
+
+    # Calcolo il numero di "C" e "G"
+    num_c = sequenza.count("C")
+    num_g = sequenza.count("G")
+
+
+    # Calcolo il GC-content, facendo attenzione da usare
+    # dei float per evitare errori di approssimazione
+    gc_content = float(num_c + num_g) / len(sequenza)
+
+#. Soluzione::
+
+    risultato_cdhit = """\
+    >Cluster 0
+    0 >YLR106C at 100.00%
+    >Cluster 50
+    0 >YPL082C at 100.00%
+    >Cluster 54
+    0 >YHL009W-A at 90.80%
+    1 >YHL009W-B at 100.00%
+    2 >YJL113W at 98.77%
+    3 >YJL114W at 97.35%
+    >Cluster 52
+    0 >YBR208C at 100.00%
+    """
+
+    righe = risultato_cdhit.split("\n")
+
+   Per ottenere i nomi dei cluster, devo tenere solo le righe che cominciano
+   per ``">"``, e per ciascuna di queste fare lo ``split()`` in modo da poter
+   ottenere il secondo elemento (che e' il nome del cluster)::
+
+    nomi_cluster = [riga.split()[1] for riga in righe
+                    if riga.startswith(">")]
+
+   Per ottenere i nomi delle proteine, devo tenere solo le righe che *non*
+   cominciano per ``">"``, e per ciascuna di queste fare lo ``split()`` e
+   tenere il secondo elemento (avendo cura di rimuovere il ``">"`` dal nome
+   della proteina)::
+
+    proteine = [riga.split()[1].lstrip(">") for riga in righe
+                if not riga.startswith(">")]
+
+   Per ottenere le coppie proteina-percentuale, come nel caso precedente,
+   tengo solo le righe che *non* cominciano per ``">"``. Su ciascuna di
+   queste faccio ``split()`` e tengo il nome della proteina (secondo elemento)
+   e la percentuale (ultimo elemento)::
+
+    coppie_proteina_percentuale = \
+        [[riga.split()[1].lstrip(">"), riga.split()[-1].rstrip("%")]
+         for riga in righe if not riga.startswith(">")]
+
+   Versione annotata::
+
+    coppie_proteina_percentuale = \
+        [[riga.split()[1].lstrip(">"), riga.split()[-1].rstrip("%")]
+    #     ^^^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    #       nome proteina, come sopra            percentuale
+    #    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    #                     coppia proteina-percentuale
+         for riga in righe if not riga.startswith(">")]
+
+#. Soluzione::
+
+    righe = open("data/prot-pdb/1A3A.pdb").readlines()
+
+
+    # ~~~~ prima parte ~~~~
+
+    # Estraggo tutte le righe SEQRES
+    righe_seqres = [riga for riga in righe
+                    if riga.startswith("SEQRES")]
+    print(len(righe_seqres))                     # 48
+
+    # Estraggo i nomi delle catene
+    catene = [riga.split()[2] for riga in righe_seqres]
+    print(catene)
+
+    # Estraggo da righe_seqres quelle relative alla catena B
+    righe_seqres_b = [riga for riga in righe_seqres
+                      if riga.split()[2] == "B"]
+    print(len(righe_seqres_b))                   # 12
+
+    # Estraggo le sequenze da ciascuna riga di righe_seqres_b,
+    # poi concateno per ottenere il risultato voluto.
+    sequenze_parziali_B = [" ".join(riga.split()[4:])
+                           for riga in righe_seqres_b]
+    sequenza_B = "".join(sequenze_parziali_B)
+
+
+    # ~~~~ seconda parte ~~~~
+
+    # Estraggo tutte le righe HELIX
+    righe_helix = [riga for riga in righe
+                   if riga.startswith("HELIX")]
+    print(len(righe_helix))                      # 30
+
+    # Estraggo dalle righe le posizioni di ciascuna elica
+    eliche_inizio_fine = [[int(riga.split()[5]), int(riga.split()[8])]
+    #                      ^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^
+    #                           inizio elica         fine elica
+                          for riga in righe_helix]
+
+    # In un secondo passaggio (per comodita') calcolo
+    # il risultato voluto
+    info_eliche = [coppia + [coppia[1] - coppia[0] + 1]
+    #              ^^^^^^   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    #           [inizio, fine]       lunghezza
+                   for coppia in eliche_inizio_fine]
+
+#. Soluzione::
+
+    matrice = [list(range(0,3)), list(range(3,6)), list(range(6,9))]
+
+
+    # estraggo la prima riga
+    prima_riga = matrice[0]
+
+
+    # estraggo la prima colonna
+    prima_colonna = [matrice[0][i] for i in range(3)]
+
+
+    # inverto l'ordine delle righe
+    sottosopra = matrice[:]
+    sottosopra.reverse()
+    # oppure
+    sottosopra = [matrice[2-i] for i in range(3)]
+
+
+    # inverto l'ordine delle colonne
+    palindromo = []
+    # appendo la prima riga di matrice invertita
+    palindromo.append([matrice[0][2-i] for i in range(3)])
+    # appendo la seconda riga di matrice invertita
+    palindromo.append([matrice[1][2-i] for i in range(3)])
+    # appendo la terza riga di matrice invertita
+    palindromo.append([matrice[2][2-i] for i in range(3)])
+
+    # oppure in un solo passaggio -- ma e' complicato e potete ignorarlo!!!
+    palindromo = [[riga[2-i] for i in range(3)]
+                   for riga in matrice]
+
+
+    # ricreo matrice con una sola list comprehension
+    matrice_di_nuovo = [list(range(i, i+3)) for i in range(9)
+                        if i % 3 == 0]
+
+#. Soluzioni::
+
+    lista = list(range(100))
+
+    lista_quadrati = [numero**2 for numero in numeri]
+
+    lista_differenze_quadrati = \
+        [lista_quadrati[i+1] - lista_quadrati[i]
+         for i in range(len(lista_quadrati) - 1)]

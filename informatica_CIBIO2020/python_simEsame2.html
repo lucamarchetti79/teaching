@@ -1,0 +1,477 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python: Simulazione esame 2 &mdash; Laboratorio di Informatica 2020 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+    
+    <script type="text/javascript" src="static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python: Simulazione esame 3" href="python_simEsame3.html" />
+    <link rel="prev" title="Python: Simulazione esame 1" href="python_simEsame1.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Laboratorio di Informatica
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Shell: Parte 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists.html">Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Python: Fake Test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples.html">Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements.html">Python: Statement Complessi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions.html">Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame1.html">Python: Simulazione esame 1</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python: Simulazione esame 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#testo">TESTO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soluzione">Soluzione</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame3.html">Python: Simulazione esame 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame4.html">Python: Simulazione esame 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame5.html">Python: Simulazione esame 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="video.html">Video</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Python: Simulazione esame 2</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/python_simEsame2.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-simulazione-esame-2">
+<h1>Python: Simulazione esame 2<a class="headerlink" href="#python-simulazione-esame-2" title="Permalink to this headline">¶</a></h1>
+<p>Proviamo a simulare insieme una prova d’esame! in particolare stiamo simulando l’esame del 12 6 2020</p>
+<div class="section" id="testo">
+<h2>TESTO<a class="headerlink" href="#testo" title="Permalink to this headline">¶</a></h2>
+<p>Scrivere un programma che</p>
+<ol class="arabic simple">
+<li>prenda in ingresso un file con annotazioni di score di artefatti in ecografie polmonari, fatte da più medici diversi.</li>
+<li>calcoli per ogni video lo score con pi‘ănnotazioni (score di consenso)</li>
+<li>restituisca per ogni score il numero di video annotati con quello score di consenso</li>
+</ol>
+<p><strong>ESMPIO File in input</strong></p>
+<p>video_scores.csv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Video</span>       <span class="n">Score</span> <span class="n">M1</span>        <span class="n">Score</span> <span class="n">M2</span>        <span class="n">Score</span> <span class="n">M3</span>        <span class="n">Score</span> <span class="n">M4</span>        <span class="n">Score</span> <span class="n">M5</span>        <span class="n">Score</span> <span class="n">M6</span>
+<span class="mi">1</span>   <span class="mi">2</span>       <span class="mi">1</span>       <span class="mi">2</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">2</span>
+<span class="mi">2</span>   <span class="mi">1</span>       <span class="mi">2</span>       <span class="mi">1</span>       <span class="mi">1</span>       <span class="mi">1</span>       <span class="mi">2</span>
+<span class="mi">3</span>   <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">1</span>
+<span class="mi">4</span>   <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>
+</pre></div>
+</div>
+<p><strong>ESMPIO DI OUTPUT</strong></p>
+<p>python majority.py:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Inserire</span> <span class="n">nome</span> <span class="n">file</span><span class="p">:</span> <span class="n">video_scores</span><span class="o">.</span><span class="n">csv</span>
+<span class="n">Majority</span> <span class="n">score</span> <span class="n">counts</span>
+<span class="mi">2</span> <span class="p">(</span><span class="mi">19</span><span class="p">)</span> <span class="mi">1</span> <span class="p">(</span><span class="mi">16</span><span class="p">)</span> <span class="mi">0</span> <span class="p">(</span><span class="mi">16</span><span class="p">)</span> <span class="mi">3</span> <span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>SUGGERIMENTI</strong></p>
+<p>Si possono implementare 5 funzioni separate:</p>
+<ol class="arabic simple">
+<li>una che legga il file dati e restituisca per ogni video la lista di score, ignorando eventuali valori ’NC’ (non classificabile)</li>
+<li>una che data una lista di score restituisca lo score più frequente</li>
+<li>una che data le liste di score di tutti i video, calcoli per ciascuno lo score più frequente (usando la funzione precedente) e restituisca un dizionario di conteggi degli score più frequenti</li>
+<li>una che stampi il dizionario di score e conteggi in ordine decrescente per conteggi.</li>
+<li>una (o un main) che realizzi il programma richiesto usando le funzioni di cui sottostringa_piu_lunga</li>
+</ol>
+</div>
+<div class="section" id="soluzione">
+<h2>Soluzione<a class="headerlink" href="#soluzione" title="Permalink to this headline">¶</a></h2>
+<p><strong>LEGGETE E RI LEGGETE la consegna per capire se è chiara</strong></p>
+<p>iniziamo seguendo i suggerimenti:</p>
+<dl class="docutils">
+<dt>suggerimento 1</dt>
+<dd><ol class="first last arabic simple">
+<li>una che legga il file dati e restituisca per ogni video la lista di score, ignorando eventuali valori ’NC’ (non classificabile)</li>
+</ol>
+</dd>
+</dl>
+<p><strong>SEMPLICE</strong>
+lo abbiamo sempre fatto:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">load_scores</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">all_scores</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>               <span class="c1"># itero su ogni riga del file in input</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>      <span class="c1"># splitto la riga</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="p">[]</span>                <span class="c1"># uso un array temporaneo</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>      <span class="c1"># per ogni numero di artefatti in data (senza l&#39;elem in pos 0 [che è il numero video])</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="s2">&quot;NC&quot;</span><span class="p">:</span>       <span class="c1"># se i non è uguale a NC</span>
+                <span class="n">tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>   <span class="c1"># lo converto in intero e lo appendo a tmp</span>
+        <span class="n">all_scores</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">tmp</span><span class="p">))</span> <span class="c1">#aggiungo al risultato una tupla, contenente in pos 0 il numero del video</span>
+                                         <span class="c1"># in pos 1 l&#39;array di score (senza NC)</span>
+
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>               <span class="c1"># chiudo il file</span>
+    <span class="k">return</span> <span class="n">all_scores</span>       <span class="c1"># ritorno il risultato</span>
+</pre></div>
+</div>
+<p><strong>E’ corretto il codice che abbiamo scritto fino ad ora?</strong>
+non lo so, ma posso verificarlo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prova</span> <span class="o">=</span> <span class="n">load_scores</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prova</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>si, funziona!</p>
+<dl class="docutils">
+<dt>suggerimento 2</dt>
+<dd><ol class="first last arabic simple">
+<li>una che data una lista di score restituisca lo score più frequente</li>
+</ol>
+</dd>
+</dl>
+<p>mmmm, che cosa ci sta chiedendo?
+data una lista di scores di un determinato video, resituisce lo score piu frequente.
+Es data la lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Video</span> <span class="mi">1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>la funzione ritorna 1, perche è lo score piu frequente.</p>
+<p><strong>SEMPLICE</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_majority_score</span><span class="p">(</span><span class="n">scores</span><span class="p">):</span>
+     <span class="n">counts</span> <span class="o">=</span> <span class="p">{}</span>                     <span class="c1"># inizializzo un diz</span>
+     <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>            <span class="c1"># itero su tutti gli scores</span>
+             <span class="k">if</span> <span class="ow">not</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">counts</span><span class="p">:</span>     <span class="c1"># se score non è in count</span>
+                     <span class="n">counts</span><span class="p">[</span><span class="n">score</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>           <span class="c1"># lo aggiungo e ci mento valore 1</span>
+             <span class="k">else</span><span class="p">:</span>                               <span class="c1"># altrimenti (se score è in count)</span>
+                     <span class="n">counts</span><span class="p">[</span><span class="n">score</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>          <span class="c1"># incremento il valore di count</span>
+
+     <span class="n">max_score</span><span class="o">=-</span><span class="mi">1</span>                            <span class="c1"># inizializzo max_score a -1</span>
+     <span class="n">max_count</span><span class="o">=</span><span class="mi">0</span>                             <span class="c1"># inizializzo max_count a 0</span>
+     <span class="k">for</span> <span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">count</span><span class="p">)</span> <span class="ow">in</span> <span class="n">counts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>    <span class="c1"># itero sul dizinario che ho creato sopra</span>
+             <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="n">max_count</span><span class="p">:</span>               <span class="c1"># se il conteggio è maggiore di max_count</span>
+                     <span class="n">max_score</span> <span class="o">=</span> <span class="n">score</span>               <span class="c1"># aggiorno max score</span>
+                     <span class="n">max_count</span> <span class="o">=</span> <span class="n">count</span>               <span class="c1"># aggiorno max count</span>
+
+     <span class="k">return</span> <span class="n">max_score</span>                        <span class="c1"># ritorno il valore</span>
+</pre></div>
+</div>
+<p><strong>E’ corretto il codice che abbiamo scritto fino ad ora?</strong>
+non lo so, ma posso verificarlo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;video_scores.csv&quot;</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">load_scores</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">compute_majority_score</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>si, funziona!</p>
+<dl class="docutils">
+<dt>suggerimento 3</dt>
+<dd><ol class="first last arabic simple">
+<li>una che data le liste di score di tutti i video, calcoli per ciascuno lo score più frequente (usando la funzione precedente) e restituisca un dizionario di conteggi degli score più frequenti</li>
+</ol>
+</dd>
+</dl>
+<p>mmmm, che cosa ci sta chiedendo?
+ci chiede di calcolare un diz, che abbia come chiave il numero di scores piu frequente di ogni video, e come valore le volte che compare.
+Es supponiamo di avere queste liste:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Video</span> <span class="mi">1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">Video</span> <span class="mi">2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">Video</span> <span class="mi">3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">Video</span> <span class="mi">4</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Lo score piu frequente è:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">score</span> <span class="n">piu</span> <span class="n">freq</span> <span class="n">di</span> <span class="n">video</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">score</span> <span class="n">piu</span> <span class="n">freq</span> <span class="n">di</span> <span class="n">video</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">score</span> <span class="n">piu</span> <span class="n">freq</span> <span class="n">di</span> <span class="n">video</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">score</span> <span class="n">piu</span> <span class="n">freq</span> <span class="n">di</span> <span class="n">video</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>il dizionario in output è il seguente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>Ora che abbiamo capito la consegna, scrivere il codice è easy :)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_majority_counts</span><span class="p">(</span><span class="n">all_scores</span><span class="p">):</span>
+    <span class="n">majority_counts</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">video</span><span class="p">,</span><span class="n">scores</span><span class="p">)</span> <span class="ow">in</span> <span class="n">all_scores</span><span class="p">:</span>
+        <span class="n">majority_score</span> <span class="o">=</span> <span class="n">compute_majority_score</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">majority_score</span> <span class="ow">in</span> <span class="n">majority_counts</span><span class="p">:</span>
+            <span class="n">majority_counts</span><span class="p">[</span><span class="n">majority_score</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">majority_counts</span><span class="p">[</span><span class="n">majority_score</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">majority_counts</span>
+</pre></div>
+</div>
+<p><strong>E’ corretto il codice che abbiamo scritto fino ad ora?</strong>
+non lo so, ma posso verificarlo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;video_scores.csv&quot;</span>
+<span class="n">all_scores</span> <span class="o">=</span> <span class="n">load_scores</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">majority_counts</span> <span class="o">=</span> <span class="n">compute_majority_counts</span><span class="p">(</span><span class="n">all_scores</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">majority_counts</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>si, funziona!</p>
+<p>suggerimento 4</p>
+<ol class="arabic simple">
+<li>una che stampi il dizionario di score e conteggi in ordine decrescente per conteggi.</li>
+</ol>
+<p>semplice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_majority_counts</span><span class="p">(</span><span class="n">majority_counts</span><span class="p">):</span>
+    <span class="n">score_list</span> <span class="o">=</span> <span class="p">[(</span><span class="n">count</span><span class="p">,</span><span class="n">score</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">count</span><span class="p">)</span> <span class="ow">in</span> <span class="n">majority_counts</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+    <span class="n">score_list</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Majority score counts&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> (</span><span class="si">%d</span><span class="s2">)&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">count</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">count</span><span class="p">,</span><span class="n">score</span><span class="p">)</span> <span class="ow">in</span> <span class="n">score_list</span><span class="p">]))</span>
+</pre></div>
+</div>
+<p>suggerimento 5</p>
+<ol class="arabic simple">
+<li>una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra</li>
+</ol>
+<p>semplice ci chiede di mettere tutto insieme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">load_scores</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">all_scores</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">all_scores</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="s1">&#39;NC&#39;</span><span class="p">]))</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">all_scores</span>
+
+
+
+
+
+<span class="k">def</span> <span class="nf">compute_majority_score</span><span class="p">(</span><span class="n">scores</span><span class="p">):</span>
+    <span class="n">counts</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">counts</span><span class="p">:</span>
+            <span class="n">counts</span><span class="p">[</span><span class="n">score</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">counts</span><span class="p">[</span><span class="n">score</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">max_score</span><span class="o">=-</span><span class="mi">1</span>
+    <span class="n">max_count</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">count</span><span class="p">)</span> <span class="ow">in</span> <span class="n">counts</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="n">max_count</span><span class="p">:</span>
+            <span class="n">max_score</span> <span class="o">=</span> <span class="n">score</span>
+            <span class="n">max_count</span> <span class="o">=</span> <span class="n">count</span>
+
+    <span class="k">return</span> <span class="n">max_score</span>
+
+<span class="k">def</span> <span class="nf">compute_majority_counts</span><span class="p">(</span><span class="n">all_scores</span><span class="p">):</span>
+    <span class="n">majority_counts</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">video</span><span class="p">,</span><span class="n">scores</span><span class="p">)</span> <span class="ow">in</span> <span class="n">all_scores</span><span class="p">:</span>
+        <span class="n">majority_score</span> <span class="o">=</span> <span class="n">compute_majority_score</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">majority_score</span> <span class="ow">in</span> <span class="n">majority_counts</span><span class="p">:</span>
+            <span class="n">majority_counts</span><span class="p">[</span><span class="n">majority_score</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">majority_counts</span><span class="p">[</span><span class="n">majority_score</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">majority_counts</span>
+
+<span class="k">def</span> <span class="nf">print_majority_counts</span><span class="p">(</span><span class="n">majority_counts</span><span class="p">):</span>
+    <span class="n">score_list</span> <span class="o">=</span> <span class="p">[(</span><span class="n">count</span><span class="p">,</span><span class="n">score</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">count</span><span class="p">)</span> <span class="ow">in</span> <span class="n">majority_counts</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+    <span class="n">score_list</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Majority score counts&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> (</span><span class="si">%d</span><span class="s2">)&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">count</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">count</span><span class="p">,</span><span class="n">score</span><span class="p">)</span> <span class="ow">in</span> <span class="n">score_list</span><span class="p">]))</span>
+
+
+<span class="n">filename</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserire nome file: &quot;</span><span class="p">)</span>
+<span class="n">all_scores</span> <span class="o">=</span> <span class="n">load_scores</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">majority_counts</span> <span class="o">=</span> <span class="n">compute_majority_counts</span><span class="p">(</span><span class="n">all_scores</span><span class="p">)</span>
+<span class="n">print_majority_counts</span><span class="p">(</span><span class="n">majority_counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_simEsame3.html" class="btn btn-neutral float-right" title="Python: Simulazione esame 3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_simEsame1.html" class="btn btn-neutral float-left" title="Python: Simulazione esame 1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2016, Stefano Teso
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

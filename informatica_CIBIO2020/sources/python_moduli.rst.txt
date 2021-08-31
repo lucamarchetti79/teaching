@@ -1,0 +1,96 @@
+==============
+Python: Moduli
+==============
+
+Interprete Python
+-------------------------
+
+Le scorse volte abbiamo lavorato con l'interprete Python, è stato divertente ma poco utile.
+
+**A cosa serve l'interprete**
+ 
+#. Testare funzioni del quale non ricordimo il funzionamento
+#. Interrogare la documentazione
+#. Testare il codice che abbiamo scitto
+#. Eseguire python in tempo reale (es interrogare database, inviare pacchetti in rete, etc...)
+
+
+
+Moduli
+------
+
+Un'alternativa all'eseguire codice nell'interprete e' scrivere un *modulo*: un
+file di testo con estensione ``.py`` in cui scrivete il codice da eseguire.
+
+.. warning::
+
+    L'estensione ``.py`` e' obbligatoria!
+
+Per **scrivere** un modulo, diciamo il file ``eseguibile.py``, devo aprire un editro di testo (es nano, gedit, notepad++ etc), 
+scrivere il codice python e salvarlo::
+
+    eseguibile.py
+
+Per **eseguire** un modulo, diciamo il file ``eseguibile.py``, scrivo dalla shell::
+
+    python eseguibile.py
+
+
+**PROVATE VOI**
+
+#. Create un file prova.py
+#. Scrive un semplice programma che fa la somma di 2 numeri e stampate il risultato.
+#. Lanciate il programa apppena scritto.
+
+
+
+Per utilizzare le funzioni definite in un modulo all'interno di un altro, uso
+``import``. Ad esempio, se in ``eseguibile.py`` voglio usare la funzione
+``ordina_proteine()`` precedentemente definita nel modulo ``util.py``, scrivo
+all'inizio di ``eseguibile.py``::
+
+    import util
+
+.. warning::
+
+    Quando importate un modulo, omettete l'estensione ``.py``.
+
+A questo punto posso usare ``ordina_proteine()`` cosi'::
+
+    util.ordina_proteine()
+
+.. warning::
+
+    I contenuti di un modulo importato vengono prefissati col nome del modulo:
+    qui abbiamo invocato ``util.ordina_proteine``, non ``ordina_protein`` liscio.
+
+
+
+
+Esercizi
+--------
+
+#. Create un modulo che calcola i BMI.
+#. Create un modulo che stampi una frase.
+
+
+Soluzioni
+--------
+#. Create un modulo che calcola i BMI.
+
+    Aprite un editor di testo
+    Scrivete il seguente codice::
+        peso = 50
+        altezza = 160
+        BMI = peso /(altezza * altezza)
+        print(BMI)
+    Aprite una shell, raggingete il precorso dove è stato salvato il file ed eseguitelo
+
+
+#. Create un modulo che stampi una frase.
+
+    Aprite un editor di testo
+    Scrivete il seguente codice::
+        testo = "Ciao come va"
+        print(testo)
+    Aprite una shell, raggingete il precorso dove è stato salvato il file ed eseguitelo
