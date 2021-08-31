@@ -1,0 +1,1776 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Module 2, Practical 1 &mdash; QCB Scientific Programming Lab</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/js/jupman.js"></script>
+        <script type="text/javascript" src="_static/js/pytutor-embed.bundle.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/jupman.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/jupman-web.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module 2, Practical 2" href="M2_practical2.html" />
+    <link rel="prev" title="Module 1, Practical 12" href="M1_practical12.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="toc-page.html" class="icon icon-home"> QCB Scientific Programming Lab
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Scientific Programming for QCB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#General-Info">General Info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Timetable-and-lecture-rooms">Timetable and lecture rooms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Zoom-links">Zoom links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Equipment">Equipment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical1.html">Module 1, Practical 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Setting-up-the-environment">Setting up the environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical1.html#Linux-on-windows">Linux on windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical1.html#A-dual-boot-system">A dual boot system</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Our-toolbox">Our toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Installing-Python3-in-Linux">Installing Python3 in Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Installing-Python3-in-Windows/Mac">Installing Python3 in Windows/Mac</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical1.html#OPTION-1:">OPTION 1:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical1.html#OPTION-2-(easier):">OPTION 2 (easier):</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#The-console">The console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Visual-Studio-Code">Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#The-debugger">The debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#A-quick-Jupyter-primer-(just-for-your-information,-skip-if-not-interested)">A quick Jupyter primer (just for your information, skip if not interested)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical1.html#Installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical2.html">Module 1, Practical 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Modules">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Objects">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Numeric-types">Numeric types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Integers">Integers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Booleans">Booleans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Real-numbers">Real numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Strings">Strings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Methods-for-the-str-object">Methods for the str object</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical3.html">Module 1, Practical 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical3.html#Lists">Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#Operators-for-lists">Operators for lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#Methods-of-the-class-list">Methods of the class list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#From-strings-to-lists,-the-split-method">From strings to lists, the <code class="docutils literal notranslate"><span class="pre">split</span></code> method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#And-back-to-strings-with-the-join-method">And back to strings with the <code class="docutils literal notranslate"><span class="pre">join</span></code> method</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical3.html#Tuples">Tuples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical3.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical4.html">Module 1, Practical 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Execution-flow">Execution flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Conditionals">Conditionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#The-basic-if---else-statement">The basic <em>if - else</em> statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#The-if---elif---else-statement">The <em>if - elif - else</em> statement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Loops">Loops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#For-loop">For loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#Looping-over-a-range">Looping over a range</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#Nested-for-loops">Nested for loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#While-loops">While loops</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical5.html">Module 1, Practical 5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical5.html#More-on-loops">More on loops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Ternary-operator">Ternary operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Break-and-continue">Break and continue</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="M1_practical5.html#Continue-statement">Continue statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="M1_practical5.html#Break-statement">Break statement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#List-comprehension">List comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical5.html#Dictionaries">Dictionaries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Functions-working-on-dictionaries">Functions working on dictionaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Dictionary-methods">Dictionary methods</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical5.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical6.html">Module 1, Practical 6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Namespace-and-variable-scope">Namespace and variable scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Argument-passing">Argument passing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Positional-arguments">Positional arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Passing-arguments-by-keyword">Passing arguments by keyword</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Specifying-default-values">Specifying default values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#File-input-and-output">File input and output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Opening-a-file">Opening a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Closing-a-file">Closing a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Reading-from-a-file">Reading from a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Writing-to-a-file">Writing to a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#String-formatting-with-format">String formatting with format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical7.html">Module 1, Practical 7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical7.html#Recursive-functions">Recursive functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical7.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical8.html">Module 1, Practical 8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Getting-input-from-the-command-line">Getting input from the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Argparse">Argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical9.html">Module 1, Practical 9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Libraries-installation">Libraries installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Pandas">Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Series">Series</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#How-to-define-and-access-a-Series">How to define and access a Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Operator-broadcasting">Operator broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Missing-data">Missing data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Computing-stats">Computing stats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Plotting-data">Plotting data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Pandas-DataFrames">Pandas DataFrames</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Define-a-DataFrame">Define a DataFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Loading-data-from-external-files">Loading data from external files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Extract-values-by-row-and-column">Extract values by row and column</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Broadcasting,-filtering-and-computing-stats">Broadcasting, filtering and computing stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Merging-DataFrames">Merging DataFrames</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Grouping">Grouping</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical10.html">Module 1, Practical 10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Numpy">Numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Numpy-ndarray">Numpy ndarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Random-arrays">Random arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Numpy-to-and-from-pandas">Numpy to and from pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Reshaping">Reshaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Iterating-over-arrays-and-Indexing">Iterating over arrays and Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Broadcasting-and-arithmetic-functions">Broadcasting and arithmetic functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Filtering">Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Linear-algebra">Linear algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Matplotlib">Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical11.html">Module 1, Practical 11</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Biopython">Biopython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Installation-of-Biopython">Installation of Biopython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#General-overview">General overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Sequence-objects">Sequence objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Looping,-slicing-and-concatenation">Looping, slicing and concatenation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Complement-and-reverse-complement">Complement and reverse complement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Transcription-and-translation">Transcription and translation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#MutableSeq">MutableSeq</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Sequence-annotation">Sequence annotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Sequence-I/O">Sequence I/O</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#BioSeqIO.parse()">BioSeqIO.parse()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Sequences-as-dictionaries">Sequences as dictionaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Writing-sequence-files">Writing sequence files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Multiple-sequence-alignment">Multiple sequence alignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Parsing-multiple-sequence-alignments">Parsing multiple sequence alignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Writing-multiple-sequence-alignments">Writing multiple sequence alignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Manipulating-alignments">Manipulating alignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Biopython’s-pairwise2-alignment">Biopython’s pairwise2 alignment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical12.html">Module 1, Practical 12</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Biopython">Biopython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#BLAST">BLAST</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#The-function-qblast">The function qblast</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#Parsing-qblast-output">Parsing qblast output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#Saving-results-to-file">Saving results to file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#Open-a-blast-.XML-file">Open a blast .XML file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#The-BLAST-record-class">The BLAST record class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Getting-data-from-NCBI">Getting data from NCBI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Getting-data-from-ExPASy">Getting data from ExPASy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#3D-structure-and-PDB">3D structure and PDB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module 2, Practical 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Object-Oriented-Programming">Object Oriented Programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Classes,-Methods-and-Objects">Classes, Methods and Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Self">Self</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Definition-of-a-class">Definition of a class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#The-life-cycle-of-classes-and-objects-in-a-program:">The life-cycle of classes and objects in a program:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Encapsulation">Encapsulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Special-methods">Special methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Inheritance-and-overriding">Inheritance and overriding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Lambda-functions">Lambda functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical2.html">Module 2, Practical 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Unit-testing">Unit testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical2.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Measuring-time">Measuring time</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical2.html#id1">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Measuring-memory">Measuring memory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical2.html#id2">Exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical3.html">Module 2, Practical 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical3.html#Complexity">Complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical3.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical4.html">Module 2, Practical 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical4.html#Regular-expressions">Regular expressions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Basic-Patterns">Basic Patterns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Group-extraction">Group extraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Exercises">Exercises</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#re.compile">re.compile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Substitution">Substitution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical4.html#id1">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical5.html">Module 2, Practical 5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Sorting-algorithms">Sorting algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Selection-sort">Selection sort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#A-base-class-for-sorting-algorithms">A base class for sorting algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Exercise-(implementation)">Exercise (implementation)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Insertion-sort">Insertion sort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#id1">Exercise (implementation)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Merge-sort-and-Quick-sort">Merge sort and Quick sort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Merge-sort">Merge sort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Exercise-(Implementation)">Exercise (Implementation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Quick-sort">Quick sort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#id3">Exercise (Implementation)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Exercise-(algorithm-benchmark)">Exercise (algorithm benchmark)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Exercise-(Counting-Sort)">Exercise (Counting Sort)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical6.html">Module 2, Practical 6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Data-structures">Data structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Abstract-Data-Types-(ADTs)">Abstract Data Types (ADTs)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="M2_practical6.html#ADT:-Sequence">ADT: Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="M2_practical6.html#ADT:-Set">ADT: Set</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise-(set-implementation)">Exercise (set implementation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#ADT:-dictionary">ADT: dictionary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Linked-lists">Linked lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Example:-bidirectional-linked-list">Example: bidirectional linked list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise-(complete-bidirectional-list)">Exercise (complete bidirectional list)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise-(circular-list)">Exercise (circular list)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Stacks">Stacks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Queues">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Collections">Collections</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#id1">Exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical7.html">Module 2, Practical 7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#Trees">Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#ADT:-Binary-Tree">ADT: Binary Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#Tree-visit">Tree visit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Binary-Tree-visits:-DFS">Binary Tree visits: DFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Binary-Tree-visits:-BFS">Binary Tree visits: BFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#ADT:-Generic-Tree">ADT: Generic Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Exercise-(implementation)">Exercise (implementation)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical8.html">Module 2, Practical 8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Graphs">Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Graph-ADT">Graph ADT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Implementation-as-adjacency-matrix">Implementation as adjacency matrix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical8.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Implementation-as-(adjacency)-linked-list">Implementation as (adjacency) linked list</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical8.html#id1">Exercises</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical9.html">Module 2, Practical 9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical9.html#Graphs-recap">Graphs recap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical9.html#Visits">Visits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Depth-First-Search-(DFS)">Depth First Search (DFS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Exercises">Exercises</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Breadth-First-Search-(BFS)">Breadth First Search (BFS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical9.html#id1">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical10.html">Module 2, Practical 10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical10.html#Dynamic-programming">Dynamic programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical10.html#Excercise">Excercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical10.html#Finding-(the-optimal)-overlaps-among-DNA-strings">Finding (the optimal) overlaps among DNA strings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical10.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical10.html#Greedy-programming">Greedy programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical10.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html"> </a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="toc-page.html">QCB Scientific Programming Lab</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+    <div id='jupman-langs'></div>
+
+    <!-- SMALL TEMPLATE FOR LANGUAGES (VERY CUSTOM FOR softpython.org !!)
+    <script>
+    var hn = window.location.hostname;
+    var pn = window.location.pathname;
+
+    if (hn.includes('softpython.org')){
+        JUPMAN_LANG = hn.slice(0,window.location.hostname.indexOf('.'));
+    } else if (pn.includes('/_build/html')){
+        var pos = pn.indexOf('/_build/html');
+        JUPMAN_LANG = pn.slice(pos-2, pos);
+    } else {
+        JUPMAN_LANG = 'en';
+    }
+    console.log('JUPMAN_LANG=',JUPMAN_LANG);
+    </script>
+    -->
+    
+    
+     <!-- <li> <h2 style="background-color:red; color:yellow">WARNING! THIS VERSION IS OLD !  <br/>
+    <a style=" text-decoration: underline;" href="https://jupman.readthedocs.io/en/latest">GOT TO LATEST VERSION</a></li>
+ </h2></li>-->
+    <!-- Commented because doesn't work with sections,
+         see https://github.com/DavidLeoni/jupman/issues/39
+    <li><a href="toc-page.html">Docs</a> &raquo;</li>
+    
+        <li><a href="toc.html"> </a> &raquo;</li>
+    
+    <li>Module 2, Practical 1</li>
+    -->
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Module-2,-Practical-1">
+<h1>Module 2, Practical 1<a class="headerlink" href="#Module-2,-Practical-1" title="Permalink to this headline">¶</a></h1>
+<p>The practicals of the second teaching module are a refinement of those prepared by Massimiliano Luca and Erik Dassi. Many thanks for their help.</p>
+<div class="section" id="Object-Oriented-Programming">
+<h2>Object Oriented Programming<a class="headerlink" href="#Object-Oriented-Programming" title="Permalink to this headline">¶</a></h2>
+<p>As seen in the lecture, Python is a multi-paradigm language and it supports in fact the <strong>imperative/procedural</strong> paradigm (programs are sequences of statements that change the state of the system), the <strong>functional</strong> paradigm (programs are seen as mathematical functions, e.g. list comprehensions), some libraries are <strong>declarative</strong> (they define the logic without specifying the control-flow e.g. Matplotlib) but is also <strong>Object Oriented</strong>. In fact <strong>everything in Python is an object.</strong> Moreover,
+as we will see, new data-types can be defined in Python.</p>
+<p>In Object Oriented Programming (OOP) objects are <strong>data structures that contain data, which is attributes and functions to work with them</strong>. In OOP, programs are made by a set of objects that interact with each other.</p>
+<p>OOP allows to create a distinction (<em>abstraction</em>) between the way objects are <strong>implemented</strong> and how objects are <strong>used</strong> (i.e. what we can do with them).</p>
+<div class="section" id="Classes,-Methods-and-Objects">
+<h3>Classes, Methods and Objects<a class="headerlink" href="#Classes,-Methods-and-Objects" title="Permalink to this headline">¶</a></h3>
+<p>The three key players of OOP are: <strong>classes</strong>, <strong>objects</strong> and <strong>methods</strong>.</p>
+<p><strong>Classes</strong> (types) are an abstraction that captures:</p>
+<ol class="arabic simple">
+<li><p>the internal data representation (i.e. data attributes that are called <strong>fields</strong>)</p></li>
+<li><p>the interface to interact with the class (i.e. functions that can be used to manipulate the the <strong>methods</strong>).</p></li>
+</ol>
+<p><strong>Objects</strong> are <strong>instances</strong> of classes. Classes define the structure and are used to create objects. Objects are a <em>concrete</em> realization of the class, a real instance based on the footprint of the class. Programs are interactions among different objects.</p>
+<p><strong>Methods</strong> are functions that can be applied to manipulate objects.</p>
+<p>Attributes and methods within an instantiated object can be accessed by using the <code class="docutils literal notranslate"><span class="pre">.</span></code> (dot) operator.</p>
+</div>
+<div class="section" id="Self">
+<h3>Self<a class="headerlink" href="#Self" title="Permalink to this headline">¶</a></h3>
+<p>Within a class method, we can refer to that very same instance of the object being created by using a special argument that is called <code class="docutils literal notranslate"><span class="pre">self</span></code>. <strong>self</strong> is always the first argument of each method.</p>
+<div class="admonition note">
+<p><strong>Important note:</strong> All data types seen so far are in fact classes and every time that we used a data type (e.g. defining a list, a string etc.) we were in fact instantiating an object of that type (class).</p>
+</div>
+</div>
+<div class="section" id="Definition-of-a-class">
+<h3>Definition of a class<a class="headerlink" href="#Definition-of-a-class" title="Permalink to this headline">¶</a></h3>
+<p>The syntax to define a class is the following:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>class class_name:
+        #the initializer method
+        def __init__(self, val1,...,valn):
+            self.att1 = val1
+            ...
+            self.attn = valn
+
+        #definition of a method returning something
+        def method1(self, par1,...,parn):
+            ...
+            return value
+
+        #definition of a method returning None
+        def method2(self, par1,...,parn):
+            ...
+</pre></div>
+</div>
+<p>In this case we defined a <strong>class</strong> <code class="docutils literal notranslate"><span class="pre">class_name</span></code> that has <code class="docutils literal notranslate"><span class="pre">att1,...,</span> <span class="pre">attn</span></code> (attributes) <strong>fields</strong> and two methods <code class="docutils literal notranslate"><span class="pre">method1</span></code> with parameters <code class="docutils literal notranslate"><span class="pre">par1,...,parn</span></code> returning a <strong>value</strong> <code class="docutils literal notranslate"><span class="pre">value</span></code> and a method <code class="docutils literal notranslate"><span class="pre">method2</span></code> with parameters <code class="docutils literal notranslate"><span class="pre">par1,...,parn</span></code> that does not return anything.</p>
+<p>The values of the fields are <strong>initialized when the object is instantiated</strong> at the beginning by calling the <strong>__init__</strong> method, which does not return anything. Note also the use of <code class="docutils literal notranslate"><span class="pre">self</span></code> in the <strong>initializer</strong>, which is used to specify that each field <strong>of this instance</strong> has to be given the corresponding value and must always be the first argument of the initializer.</p>
+<p>The object is instantiated with:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>my_class = class_name(p1,...,pn)
+</pre></div>
+</div>
+<p>which attributes the values <code class="docutils literal notranslate"><span class="pre">p1,...,pn</span></code> to the fields <code class="docutils literal notranslate"><span class="pre">field1,...,fieldn</span></code>.</p>
+<p><strong>Example:</strong> Let’s define a simple class rectangle with two fields (length and width) and two methods (perimeter and area).</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">class</span> <span class="nc">class_name</span><span class="p">:</span>
+        <span class="c1">#the initilizer method</span>
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">valn</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">att1</span> <span class="o">=</span> <span class="n">val1</span>
+            <span class="o">...</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">attn</span> <span class="o">=</span> <span class="n">valn</span>
+
+        <span class="c1">#definition of a method returning something</span>
+        <span class="k">def</span> <span class="nf">method1</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">par1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">parn</span><span class="p">):</span>
+            <span class="o">...</span>
+            <span class="k">return</span> <span class="n">value</span>
+
+        <span class="c1">#definition of a method returning None</span>
+        <span class="k">def</span> <span class="nf">method2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">par1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">parn</span><span class="p">):</span>
+            <span class="o">...</span>
+
+
+<span class="n">my_class</span> <span class="o">=</span> <span class="n">class_name</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">pn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span><span class="n">w</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">l</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">w</span>
+
+    <span class="k">def</span> <span class="nf">perimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
+
+    <span class="k">def</span> <span class="nf">diagonal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">R</span><span class="p">))</span>
+<span class="n">R1</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">R1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R == R1? </span><span class="si">{}</span><span class="s2"> id R:</span><span class="si">{}</span><span class="s2"> id R1:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">R</span> <span class="o">==</span> <span class="n">R1</span><span class="p">,</span>
+                                            <span class="nb">id</span><span class="p">(</span><span class="n">R</span><span class="p">),</span>
+                                            <span class="nb">id</span><span class="p">(</span><span class="n">R1</span><span class="p">)))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">perimeter</span><span class="p">()</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">area</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">R:</span><span class="se">\n</span><span class="s2">Length: </span><span class="si">{}</span><span class="s2"> Width: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Perimeter: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Area:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">R</span><span class="o">.</span><span class="n">length</span><span class="p">,</span>
+                                                                  <span class="n">R</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+                                                                  <span class="n">p</span><span class="p">,</span>
+                                                                  <span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R&#39;s diagonal: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+<span class="n">R2</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mi">72</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">R2</span><span class="o">.</span><span class="n">perimeter</span><span class="p">()</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">R2</span><span class="o">.</span><span class="n">area</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">R2</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">R2:</span><span class="se">\n</span><span class="s2">Length: </span><span class="si">{}</span><span class="s2"> Width: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Perimeter: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Area:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">R2</span><span class="o">.</span><span class="n">length</span><span class="p">,</span>
+                                                                   <span class="n">R2</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+                                                                   <span class="n">p</span><span class="p">,</span>
+                                                                   <span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R&#39;s diagonal: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<p>Note that the type of the two objects <code class="docutils literal notranslate"><span class="pre">R</span></code> and <code class="docutils literal notranslate"><span class="pre">R2</span></code> are of type <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> and that they have have different identifiers. Instantiating objects automatically calls the initializer methods (<code class="docutils literal notranslate"><span class="pre">__init__</span></code>) passing the correct parameters to it. The dot <code class="docutils literal notranslate"><span class="pre">.</span></code> operator is used to access methods of the objects. Through the dot operator we can also access the fields of an object, even though this is normally not the best practice and implementing methods to <code class="docutils literal notranslate"><span class="pre">get</span></code> and <code class="docutils literal notranslate"><span class="pre">set</span></code> the values of fields
+are recommended.</p>
+</div>
+<div class="section" id="The-life-cycle-of-classes-and-objects-in-a-program:">
+<h3>The life-cycle of classes and objects in a program:<a class="headerlink" href="#The-life-cycle-of-classes-and-objects-in-a-program:" title="Permalink to this headline">¶</a></h3>
+<p>The usual life-cycle of classes and objects is the following:</p>
+<ol class="arabic simple">
+<li><p>Classes are defined with the specification of class attributes (fields) and methods;</p></li>
+<li><p>Objects are instantiated based on the definition of the corresponding classes;</p></li>
+<li><p>Objects interact with each other to implement the logic of the program and modify their state;</p></li>
+<li><p>Objects are destroyed (explicitly with del) or implicitly when there are no more references to them.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="Encapsulation">
+<h2>Encapsulation<a class="headerlink" href="#Encapsulation" title="Permalink to this headline">¶</a></h2>
+<p>When defining classes, it is possible to hide some of the details that must be kept private to the object itself and not accessed directly. This can be done by setting <strong>methods</strong> and <strong>attributes</strong> (fields) as <strong>private</strong> to the object (i.e. accessible only internally to the object itself).</p>
+<p>Private attributes and methods can be defined using the <code class="docutils literal notranslate"><span class="pre">__</span></code> notation (i.e. the name of the attribute or method is <strong>preceded</strong> by two underscores <code class="docutils literal notranslate"><span class="pre">__</span></code>).</p>
+<p><strong>Example</strong> Let’s see what happens to the rectangle class with encapsulation.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span><span class="n">w</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__length</span> <span class="o">=</span> <span class="n">l</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__width</span> <span class="o">=</span> <span class="n">w</span>
+
+    <span class="k">def</span> <span class="nf">perimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__length</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">__width</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__length</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">__width</span>
+
+    <span class="k">def</span> <span class="nf">diagonal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__length</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">__width</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">perimeter</span><span class="p">()</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">area</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span>
+<span class="c1">#we might be tempted to access the encapsulated values:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">R:</span><span class="se">\n</span><span class="s2">Length: </span><span class="si">{}</span><span class="s2"> Width: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Perimeter: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Area:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">R</span><span class="o">.</span><span class="n">__length</span><span class="p">,</span>
+                                                                  <span class="n">R</span><span class="o">.</span><span class="n">__width</span><span class="p">,</span>
+                                                                  <span class="n">p</span><span class="p">,</span>
+                                                                  <span class="n">a</span><span class="p">))</span>
+<span class="c1">#The following is going to fail alike.</span>
+<span class="c1">#print(&quot;\nR:\nLength: {} Width: {}\nPerimeter: {}\nArea:{}&quot;.format(R.length,</span>
+<span class="c1">#                                                                  R.width,</span>
+<span class="c1">#                                                                  p,</span>
+<span class="c1">#                                                                  a))</span>
+</pre></div>
+</div>
+</div>
+<p>Since the <code class="docutils literal notranslate"><span class="pre">length</span></code> and <code class="docutils literal notranslate"><span class="pre">width</span></code> attributes are private to the class, it is not possible to get access from the outside. The code above will fail with the <strong>object has no attribute</strong> error message</p>
+<p>To work around this, we can define a specific interface to access the values (these are normally called <strong>getter</strong> methods as they get and return the value).</p>
+<p><strong>Example</strong> Let’s see what happens to the rectangle class with encapsulation and getter methods.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span><span class="n">w</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__length</span> <span class="o">=</span> <span class="n">l</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__width</span> <span class="o">=</span> <span class="n">w</span>
+
+    <span class="k">def</span> <span class="nf">getLength</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__length</span>
+
+    <span class="k">def</span> <span class="nf">getWidth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__width</span>
+
+    <span class="k">def</span> <span class="nf">perimeter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__length</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">__width</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__length</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">__width</span>
+
+    <span class="k">def</span> <span class="nf">diagonal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__length</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">__width</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">R</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">perimeter</span><span class="p">()</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">area</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">R:</span><span class="se">\n</span><span class="s2">Length: </span><span class="si">{}</span><span class="s2"> Width: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Perimeter: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Area:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">R</span><span class="o">.</span><span class="n">getLength</span><span class="p">(),</span>
+                                                                  <span class="n">R</span><span class="o">.</span><span class="n">getWidth</span><span class="p">(),</span>
+                                                                  <span class="n">p</span><span class="p">,</span>
+                                                                  <span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Setter</strong> methods can be used to change the values of attributes <strong>after initialization</strong>.</p>
+<p><strong>Example:</strong> Let’s define a Person class with the following attributes: name, surname, telephone number and address. All attributes are private. The address and phone numbers might change, so we need a method to change them.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">,</span> <span class="n">birthdate</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__n</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__s</span> <span class="o">=</span> <span class="n">surname</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__dob</span> <span class="o">=</span> <span class="n">birthdate</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__a</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__t</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+
+    <span class="k">def</span> <span class="nf">setAddress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">address</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__a</span> <span class="o">=</span> <span class="n">address</span>
+
+    <span class="k">def</span> <span class="nf">setTelephone</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">telephone</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__t</span> <span class="o">=</span> <span class="n">telephone</span>
+
+    <span class="k">def</span> <span class="nf">getName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__n</span>
+
+    <span class="k">def</span> <span class="nf">getSurname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__s</span>
+
+    <span class="k">def</span> <span class="nf">getDoB</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__dob</span>
+
+    <span class="k">def</span> <span class="nf">getAddress</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__a</span>
+
+    <span class="k">def</span> <span class="nf">getTel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__t</span>
+
+<span class="n">Joe</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Joe&quot;</span><span class="p">,</span> <span class="s2">&quot;Page&quot;</span><span class="p">,</span> <span class="s2">&quot;20/5/1980&quot;</span><span class="p">)</span>
+<span class="n">Joe</span><span class="o">.</span><span class="n">setAddress</span><span class="p">(</span><span class="s2">&quot;Somerset Rd.,Los Angeles, CA 90016&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Date of Birth: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Phone: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Address: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Joe</span><span class="o">.</span><span class="n">getName</span><span class="p">(),</span>
+                                               <span class="n">Joe</span><span class="o">.</span><span class="n">getSurname</span><span class="p">(),</span>
+                                               <span class="n">Joe</span><span class="o">.</span><span class="n">getDoB</span><span class="p">(),</span>
+                                               <span class="n">Joe</span><span class="o">.</span><span class="n">getTel</span><span class="p">(),</span>
+                                               <span class="n">Joe</span><span class="o">.</span><span class="n">getAddress</span><span class="p">()</span>
+                                              <span class="p">))</span>
+<span class="c1">#Joe moves to Trento</span>
+<span class="n">Joe</span><span class="o">.</span><span class="n">setAddress</span><span class="p">(</span><span class="s2">&quot;via Sommarive, Povo, Trento&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">New address: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Joe</span><span class="o">.</span><span class="n">getAddress</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">setAddress</span></code> method is a <strong>setter method</strong> that is used to change the value of the attribute <code class="docutils literal notranslate"><span class="pre">__a</span></code>.</p>
+</div>
+<div class="section" id="Special-methods">
+<h2>Special methods<a class="headerlink" href="#Special-methods" title="Permalink to this headline">¶</a></h2>
+<p>As seen in the lecture, it is possible to redefine some operators by redefining the corresponding <strong>special methods</strong> through a process called <strong>overriding</strong>.</p>
+<p>These are useful to define things like the sum of two objects (<code class="docutils literal notranslate"><span class="pre">__add__</span></code>), the equality (<code class="docutils literal notranslate"><span class="pre">__eq__</span></code>), which one is the smallest (<code class="docutils literal notranslate"><span class="pre">__lt__</span></code> that is less than) or the way the object should be translated into a string (<code class="docutils literal notranslate"><span class="pre">__str__</span></code>), for example for printing purposes.</p>
+<p>More information on these special methods can be found <a class="reference external" href="https://docs.python.org/3/reference/datamodel.html?#special-method-names">here</a>.</p>
+<p><strong>Example</strong> A decimal number <span class="math notranslate nohighlight">\(T\)</span> can be expressed in base <span class="math notranslate nohighlight">\(X\)</span> (for simplicity we will consider <span class="math notranslate nohighlight">\(X \in [1,9]\)</span>) as: <span class="math notranslate nohighlight">\(T = aX^{N} + bX^{N-1}+...+ (n+1) X^{0}\)</span>. Such a number can be represented as two elements: <span class="math notranslate nohighlight">\((X, (a,b,...,n+1))\)</span> (the base and the tuple of all the values). Let’s define a class MyNumber that can represent numbers in any base (from 1 to 9). The class has two attributes, the <code class="docutils literal notranslate"><span class="pre">base</span></code> (which is a number representing the base) and the <code class="docutils literal notranslate"><span class="pre">values</span></code> a tuple of
+numbers. Let’s redefine some operators (i.e. <strong>add</strong>, <strong>lt</strong>, <strong>str</strong>) and implement some methods to covert these numbers into decimals.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">class</span> <span class="nc">MyNumber</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="n">base</span>
+        <span class="n">warn</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">v</span> <span class="o">&gt;=</span> <span class="n">base</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error.Values must be lower than base&quot;</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Can&#39;t create n. with base </span><span class="si">{}</span><span class="s2"> and values </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">base</span><span class="p">,</span><span class="n">values</span><span class="p">))</span>
+                <span class="n">warn</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">warn</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="n">values</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">values</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">toDecimal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">L</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+                <span class="n">res</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="o">**</span><span class="p">(</span><span class="n">L</span><span class="o">-</span><span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Base: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">Values:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">()</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">toDecimalString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">L</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;*&quot;</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">**</span> <span class="p">(</span><span class="n">L</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="s2">&quot; + &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;*&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="o">**</span><span class="p">(</span><span class="n">L</span><span class="o">-</span><span class="mi">1</span> <span class="o">-</span> <span class="n">i</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+<span class="n">mn</span> <span class="o">=</span> <span class="n">MyNumber</span><span class="p">(</span><span class="mi">10</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mn</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">(),</span> <span class="n">mn</span><span class="o">.</span><span class="n">toDecimalString</span><span class="p">()))</span>
+<span class="n">mn2</span> <span class="o">=</span> <span class="n">MyNumber</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mn2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mn2</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">(),</span> <span class="n">mn2</span><span class="o">.</span><span class="n">toDecimalString</span><span class="p">()))</span>
+<span class="n">mn3</span> <span class="o">=</span> <span class="n">mn</span> <span class="o">+</span> <span class="n">mn2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">mn+mn2:</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mn3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">mn4</span> <span class="o">=</span> <span class="n">MyNumber</span><span class="p">(</span><span class="mi">3</span><span class="p">,(</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> &lt; </span><span class="si">{}</span><span class="s2">? </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mn</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">(),</span><span class="n">mn2</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">(),</span><span class="n">mn</span> <span class="o">&lt;</span> <span class="n">mn2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> == </span><span class="si">{}</span><span class="s2">? </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mn</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">(),</span><span class="n">mn2</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">(),</span><span class="n">mn</span> <span class="o">==</span> <span class="n">mn2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> &gt; </span><span class="si">{}</span><span class="s2">? </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mn</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">(),</span><span class="n">mn2</span><span class="o">.</span><span class="n">toDecimal</span><span class="p">(),</span><span class="n">mn</span> <span class="o">&gt;</span> <span class="n">mn2</span><span class="p">))</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Inheritance-and-overriding">
+<h2>Inheritance and overriding<a class="headerlink" href="#Inheritance-and-overriding" title="Permalink to this headline">¶</a></h2>
+<p>One object can <strong>inherit</strong> the attributes and methods from another object. This establishes a “Is-a” relationship between the two objects. The first object is called <strong>subclass</strong> of the original class. A subclass inherits all the methods and attributes of the <strong>superclass</strong>, but it can also redefine some methods through a process called <strong>overriding</strong>.</p>
+<p>The syntax to define a subclass is the following:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>class MySuperClass:
+    ...
+    def myMethod(self,...):
+        ...
+
+class MySubClass(MySuperClass):
+    ...
+        def myMethod(self,...):
+        ...
+</pre></div>
+</div>
+<p>basically, we just specify the superclass after the name of the subclass we are defining.</p>
+<p>Consider the following example:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">=</span> <span class="n">surname</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+    <span class="k">def</span> <span class="nf">getInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> is aged </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Dad</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+
+        <span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">def</span> <span class="nf">addChild</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">child</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">getChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span>
+
+        <span class="k">def</span> <span class="nf">getInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">personalInfo</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> is aged </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+            <span class="n">childrInfo</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">for</span> <span class="n">son</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getChildren</span><span class="p">():</span>
+                <span class="n">childrInfo</span> <span class="o">+=</span> <span class="s2">&quot; - </span><span class="si">{}</span><span class="s2">&#39;s child is </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">son</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">son</span><span class="o">.</span><span class="n">surname</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+            <span class="k">return</span> <span class="n">personalInfo</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">childrInfo</span>
+
+<span class="n">jade</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Jade&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">jade</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+<span class="n">john</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">tim</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Tim&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">dan</span> <span class="o">=</span> <span class="n">Dad</span><span class="p">(</span><span class="s2">&quot;Dan&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">dan</span><span class="o">.</span><span class="n">addChild</span><span class="p">(</span><span class="n">jade</span><span class="p">)</span>
+<span class="n">dan</span><span class="o">.</span><span class="n">addChild</span><span class="p">(</span><span class="n">john</span><span class="p">)</span>
+<span class="n">dan</span><span class="o">.</span><span class="n">addChild</span><span class="p">(</span><span class="n">tim</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dan</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
+
+</pre></div>
+</div>
+</div>
+<p>Note that the object <code class="docutils literal notranslate"><span class="pre">Dad</span></code> (subclass) is-a <code class="docutils literal notranslate"><span class="pre">Person</span></code> (superclass) but has a further attribute that is the list of children, each of which are of type <code class="docutils literal notranslate"><span class="pre">Person</span></code>. The <code class="docutils literal notranslate"><span class="pre">getInfo</span></code> method of the subclass <code class="docutils literal notranslate"><span class="pre">Dad</span></code> overrides the corresponding method of the superclass <code class="docutils literal notranslate"><span class="pre">Person</span></code> and prints some information on the children.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span> <span class="o">=</span> <span class="n">surname</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> is aged </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Dad</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span>
+
+        <span class="n">children</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">def</span> <span class="nf">addChild</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">child</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">children</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">setChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">children</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="n">children</span>
+
+        <span class="k">def</span> <span class="nf">getChildren</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">children</span>
+
+        <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="n">personalInfo</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> is aged </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">surname</span><span class="p">,</span>
+                                        <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">)</span>
+            <span class="n">childrInfo</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="k">for</span> <span class="n">son</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">getChildren</span><span class="p">():</span>
+                <span class="n">childrInfo</span> <span class="o">+=</span> <span class="s2">&quot; - </span><span class="si">{}</span><span class="s2">&#39;s child is </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">son</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">son</span><span class="o">.</span><span class="n">surname</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+            <span class="k">return</span> <span class="n">personalInfo</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">childrInfo</span>
+
+<span class="n">jade</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Jade&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="c1">#print(jade.getInfo())</span>
+<span class="n">john</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">tim</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Tim&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">dan</span> <span class="o">=</span> <span class="n">Dad</span><span class="p">(</span><span class="s2">&quot;Dan&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">dan</span><span class="o">.</span><span class="n">setChildren</span><span class="p">([</span><span class="n">jade</span><span class="p">,</span><span class="n">john</span><span class="p">])</span>
+<span class="c1">#dan.addChild(john)</span>
+<span class="n">dan</span><span class="o">.</span><span class="n">addChild</span><span class="p">(</span><span class="n">tim</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">jade</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dan</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Exercise">
+<h3>Exercise<a class="headerlink" href="#Exercise" title="Permalink to this headline">¶</a></h3>
+<p>MicroRNAs (miRNAs) are a class of non-coding RNAs that play important roles in regulating gene expression. The majority of miRNAs are transcribed from DNA sequences into primary miRNAs and processed into precursor miRNAs, and finally mature miRNAs. In most cases, miRNAs interact with the 3’ untranslated region (3’ UTR) of target mRNAs to induce mRNA degradation and translational repression. (doi: 10.3389/fendo.2018.00402)</p>
+<p>Implement:</p>
+<ul class="simple">
+<li><p>a <strong>Gene</strong> class that can hold gene name, symbol, organism and chromosomal coordinates</p></li>
+<li><p>override the <em>less than</em> operator to compare the location of two genes and say which comes first in the genome (same chromosome only)</p></li>
+<li><p>a <strong>MiRNAGene</strong> child class that inherits from the Gene class and allows to store the mature miRNA sequence and a list of known target mRNAs</p></li>
+<li><p>getters / setters / print methods</p></li>
+</ul>
+<div class="tggle" onclick="toggleVisibility(&#39;ex1&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex1" style="display:none;"><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">class</span> <span class="nc">Gene</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">organism</span><span class="p">,</span> <span class="n">chrom</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span> <span class="o">=</span> <span class="n">symbol</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">organism</span> <span class="o">=</span> <span class="n">organism</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">chrom</span> <span class="o">=</span> <span class="n">chrom</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="n">start</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">=</span> <span class="n">end</span>
+
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">chrom</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">chrom</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">start</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">chrom</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">chrom</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Gene &lt;&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; (&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span> <span class="o">+</span> <span class="s2">&quot;)&gt; in organism &lt;&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">organism</span> <span class="o">+</span> <span class="s2">&quot;&gt; is located on chromosome &quot;</span> <span class="o">+</span> \
+             <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chrom</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">)</span>
+
+<span class="n">g1</span> <span class="o">=</span> <span class="n">Gene</span><span class="p">(</span><span class="s2">&quot;Hu Antigen R&quot;</span><span class="p">,</span> <span class="s2">&quot;ELAVL1&quot;</span><span class="p">,</span> <span class="s2">&quot;Homo sapiens&quot;</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20000</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">g1</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">MiRNAGene</span><span class="p">(</span><span class="n">Gene</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">organism</span><span class="p">,</span> <span class="n">chrom</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">preSequence</span><span class="p">,</span> <span class="n">matureSequence</span><span class="p">,</span> <span class="n">targets</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">MiRNAGene</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">organism</span><span class="p">,</span> <span class="n">chrom</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">preSequence</span> <span class="o">=</span> <span class="n">preSequence</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">matureSequence</span> <span class="o">=</span> <span class="n">matureSequence</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">targets</span> <span class="o">=</span> <span class="n">targets</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;microRNA &lt;&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; (&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">symbol</span> <span class="o">+</span> <span class="s2">&quot;)&gt; in organism &lt;&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">organism</span> <span class="o">+</span> <span class="s2">&quot;&gt; is located on chromosome &quot;</span> <span class="o">+</span> \
+             <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">chrom</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;-&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">)</span> <span class="o">+</span> \
+             <span class="s2">&quot;.</span><span class="se">\n</span><span class="s2">Its targets are: &quot;</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">targets</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span>
+
+<span class="n">m1</span> <span class="o">=</span> <span class="n">MiRNAGene</span><span class="p">(</span><span class="s2">&quot;microRNA-21&quot;</span><span class="p">,</span> <span class="s2">&quot;MIR21&quot;</span><span class="p">,</span> <span class="s2">&quot;Homo sapiens&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">2500</span><span class="p">,</span> <span class="s2">&quot;UGUCGGGUAGCUUAUCAGACUGAUGUUGACUGUUGAAUCUCAUGGCAACACCAGUCGAUGGGCUGUCUGACA&quot;</span><span class="p">,</span> <span class="s2">&quot;uagcuuaucagacugauguuga&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;ELAVL1&quot;</span><span class="p">,</span> <span class="s2">&quot;CDKN1A&quot;</span><span class="p">,</span> <span class="s2">&quot;KRAS&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">MiRNAGene</span><span class="p">,</span> <span class="n">m1</span><span class="p">)</span><span class="o">.</span><span class="fm">__str__</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div></div>
+</div>
+<div class="section" id="Lambda-functions">
+<h2>Lambda functions<a class="headerlink" href="#Lambda-functions" title="Permalink to this headline">¶</a></h2>
+<p>Computing in the <strong>functional programming</strong> paradigm is obtained by applying functions to a set of inputs.</p>
+<p>Three mechanisms are available in python:</p>
+<ul class="simple">
+<li><p>map : <code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">input_list)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to all the elements of <code class="docutils literal notranslate"><span class="pre">input_list</span></code>;</p></li>
+<li><p>filter : <code class="docutils literal notranslate"><span class="pre">filter(f,</span> <span class="pre">input_list)</span></code> filters <code class="docutils literal notranslate"><span class="pre">input_list</span></code> based on a function <code class="docutils literal notranslate"><span class="pre">f</span></code> that returns true or false for each of the input elements;</p></li>
+<li><p>reduce : <code class="docutils literal notranslate"><span class="pre">reduce(f,</span> <span class="pre">input_list)</span></code> applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> to the first two elements of the input list, then it applies it to the result and to the third element and so on until the end of the list is reached and one value only is returned.</p></li>
+</ul>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">reduce</span></code> function is part of the <code class="docutils literal notranslate"><span class="pre">functools</span></code> module and needs to be imported with:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>from functools import reduce
+</pre></div>
+</div>
+<p>Let’s see some examples of map and filter.</p>
+<p><strong>Example:</strong> Let’s define two functions to convert temperatures from fahrenheit to celsius and vice-versa. Let’s finally use them to work out the temperatures that are above and below freezing.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">fahrenheit</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">((</span><span class="nb">float</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="n">T</span> <span class="o">+</span> <span class="mi">32</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">celsius</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">/</span><span class="mi">9</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">T</span><span class="o">-</span><span class="mi">32</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">freezingFiltF</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">celsius</span><span class="p">(</span><span class="n">T</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span>
+<span class="k">def</span> <span class="nf">freezingFiltC</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">T</span> <span class="o">&lt;</span> <span class="mi">0</span>
+
+<span class="n">farTmp</span> <span class="o">=</span> <span class="p">(</span><span class="mf">27.5</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mf">37.5</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">C</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">celsius</span><span class="p">,</span> <span class="n">farTmp</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">C</span><span class="p">))</span>
+<span class="n">C</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">C</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">°F --&gt; </span><span class="si">{:.2f}</span><span class="s2">°C&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">farTmp</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Freezing temperatures:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">freezingFiltF</span><span class="p">,</span> <span class="n">farTmp</span><span class="p">)))</span>
+<span class="n">ftF</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">freezingFiltF</span><span class="p">,</span> <span class="n">farTmp</span><span class="p">))</span>
+<span class="n">ftC</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">freezingFiltC</span><span class="p">,</span> <span class="n">C</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ftF</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">°F --&gt; </span><span class="si">{:.2f}</span><span class="s2">°C&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ftF</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">ftC</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">map</span></code> and <code class="docutils literal notranslate"><span class="pre">filter</span></code> respectively return an object <code class="docutils literal notranslate"><span class="pre">map</span></code> and an object <code class="docutils literal notranslate"><span class="pre">filter</span></code> which we need to convert into lists or tuples if we want to work with the results.</p>
+<p><strong>Examples</strong></p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">reduce</span></code> to:</p>
+<ol class="arabic simple">
+<li><p>sum the elements of a list</p></li>
+<li><p>count how many <strong>non-space</strong> characters a string has</p></li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+
+<span class="n">reducedLst</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="nb">int</span><span class="o">.</span><span class="fm">__add__</span><span class="p">,</span> <span class="n">lst</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">reducedLst</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+
+<span class="n">myText</span> <span class="o">=</span> <span class="s2">&quot;Testing shows the presence, not the absence of bugs&quot;</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">myText</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Word sizes: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">words</span><span class="p">))))</span>
+<span class="n">cnt</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="nb">int</span><span class="o">.</span><span class="fm">__add__</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">words</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dijkstra&#39;s quote has </span><span class="si">{}</span><span class="s2"> characters&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cnt</span><span class="p">))</span>
+
+</pre></div>
+</div>
+</div>
+<p>All the above examples required the specification of a function. We do not necessarily need to specify a function name in Python thanks to the <strong>anonimous functions</strong> also known as <strong>lambda functions</strong>.</p>
+<p>Their basic syntax is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>lambda input-parameters: expression
+</pre></div>
+</div>
+<p>where the keyword <code class="docutils literal notranslate"><span class="pre">lambda</span></code> proceeds the comma separated list of input parameters and a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> marks the beginning of the expression. We can anyway give a name to the lambda function with:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>myfunct = lambda input-parameters: expression
+</pre></div>
+</div>
+<p>Some examples of lambda functions follow:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">sum_lambda</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+<span class="n">mult_lambda</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="p">:</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
+<span class="n">cap_lambda</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_lambda</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_lambda</span><span class="p">(</span><span class="s2">&quot;Hi &quot;</span><span class="p">,</span> <span class="s2">&quot;there!&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mult_lambda</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mult_lambda</span><span class="p">(</span><span class="s2">&quot;Hi! &quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">txt</span> <span class="o">=</span> <span class="s2">&quot;hi there from luca!&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cap_lambda</span><span class="p">(</span><span class="n">txt</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">cap_lambda</span><span class="p">,</span> <span class="n">txt</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span>
+</pre></div>
+</div>
+</div>
+<p>More interesting uses of lambda involve sorting of tuples through the <code class="docutils literal notranslate"><span class="pre">key</span></code> parameter:</p>
+<p><strong>Example:</strong> Let’s count how many occurrences we have for each non-space character in the string “Testing shows the presence, not the absence of bugs”. And print the least and most frequent character, as well as the first and last in alphabetic order.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">myText</span> <span class="o">=</span> <span class="s2">&quot;testing shows the presence, not the absence of bugs&quot;</span>
+
+<span class="n">cnts</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span><span class="n">myText</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">myText</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="s2">&quot; &quot;</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">!=</span> <span class="s2">&quot;,&quot;</span><span class="p">]</span>
+<span class="n">uniqueCnts</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">cnts</span><span class="p">:</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">e</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">uniqueCnts</span><span class="p">):</span>
+        <span class="n">uniqueCnts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">uniqueCnts</span><span class="p">)</span>
+
+<span class="n">get_first</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">get_second</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1">#Get the most and least frequent character(s).</span>
+<span class="n">uniqueCnts</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="n">get_second</span><span class="p">)</span>
+<span class="n">all_least_f</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">uniqueCnts</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">uniqueCnts</span><span class="p">))</span>
+<span class="n">all_most_f</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">uniqueCnts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">uniqueCnts</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All least frequent: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">all_least_f</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All most frequent: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">all_most_f</span><span class="p">))</span>
+
+<span class="c1">#Get the most and least frequent character.</span>
+<span class="n">uniqueCnts</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="n">get_first</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The first in alphabetic order: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">uniqueCnts</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The last in alphabetic order: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">uniqueCnts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="Exercises">
+<h2>Exercises<a class="headerlink" href="#Exercises" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Create a Sequence class that can contain DNA sequences assuming “A,G,C,T” as the only characters allowed. Implement a <code class="docutils literal notranslate"><span class="pre">complement</span></code> method that complements the sequence, a <code class="docutils literal notranslate"><span class="pre">computeGC</span></code> method that returns the GC content (i.e. number of G+C/total length of sequence), redefine the “+” operator (<code class="docutils literal notranslate"><span class="pre">__add__</span></code>) to concatenate the sequence with another sequence (an object of the Sequence class) in input and the <code class="docutils literal notranslate"><span class="pre">__str__</span></code> so that given a DNA sequence “ACTCG” will print it as:</p></li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>5&#39;-ACTCG-3&#39;
+3&#39;-TGAGC-5&#39;
+</pre></div>
+</div>
+<div class="tggle" onclick="toggleVisibility(&#39;ex1b&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex1b" style="display:none;"><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="k">class</span> <span class="nc">Sequence</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seq</span> <span class="o">=</span> <span class="n">s</span>
+
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">Sequence</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">complement</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">el</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span><span class="p">:</span>
+                <span class="n">out</span> <span class="o">+=</span> <span class="s2">&quot;T&quot;</span>
+            <span class="k">elif</span> <span class="n">el</span> <span class="o">==</span> <span class="s2">&quot;T&quot;</span><span class="p">:</span>
+                <span class="n">out</span> <span class="o">+=</span> <span class="s2">&quot;A&quot;</span>
+            <span class="k">elif</span> <span class="n">el</span> <span class="o">==</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span>
+                <span class="n">out</span> <span class="o">+=</span> <span class="s2">&quot;G&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">out</span> <span class="o">+=</span> <span class="s2">&quot;C&quot;</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">computeGC</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">gc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;G&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">gc</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;5</span><span class="se">\&#39;</span><span class="s2">-&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">seq</span> <span class="o">+</span> <span class="s2">&quot;-3</span><span class="se">\&#39;\n</span><span class="s2">3</span><span class="se">\&#39;</span><span class="s2">-&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">complement</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;-5</span><span class="se">\&#39;</span><span class="s2">&quot;</span>
+
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">(</span><span class="s2">&quot;TACATGCC&quot;</span><span class="p">)</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">(</span><span class="s2">&quot;ACTCG&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S (gc:</span><span class="si">{}</span><span class="s2">):</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">computeGC</span><span class="p">(),</span><span class="n">s</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">S1 (gc:</span><span class="si">{}</span><span class="s2">):</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s1</span><span class="o">.</span><span class="n">computeGC</span><span class="p">(),</span><span class="n">s1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">s1</span><span class="p">))</span>
+<span class="n">sm</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="n">s1</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">sm</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">S+S1 (gc:</span><span class="si">{}</span><span class="s2">):</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sm</span><span class="o">.</span><span class="n">computeGC</span><span class="p">(),</span><span class="n">sm</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div><ol class="arabic simple" start="2">
+<li><p>Define a 3D point class (<code class="docutils literal notranslate"><span class="pre">Point3D</span></code>) which contains three attributes that are the (x,y,z) coordinates in the 3D space and a string (label). Implement a <code class="docutils literal notranslate"><span class="pre">computeDistance</span></code> method that computes the distance between the point and another point. Remember that if <span class="math notranslate nohighlight">\(a = (x_a,y_a,z_a)\)</span> and <span class="math notranslate nohighlight">\(b = (x_b,y_b,z_b)\)</span>, <span class="math notranslate nohighlight">\(distance(a,b) = \sqrt{{(x_a-x_b)}^2 + {(y_a-y_b)}^2 + {(z_a-z_b)}^2}\)</span>.</p></li>
+</ol>
+<p>Given the following points:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>p = Point3D(0,10,0, &quot;alfa&quot;)
+p1 = Point3D(10,20,10, &quot;point&quot;)
+p2 = Point3D(4,9, 10, &quot;other&quot;)
+p3 = Point3D(8,9,11, &quot;zebra&quot;)
+p4 = Point3D(0,10,10, &quot;label&quot;)
+p5 = Point3D(0,10,10, &quot;last&quot;)
+p6 = Point3D(42,102,10, &quot;fifth&quot;)
+</pre></div>
+</div>
+<ol class="loweralpha simple">
+<li><p>Write some code to find out the closest pair of 3D points;</p></li>
+<li><p>Sort the points by distance to the origin (0,0,0) and print them in this order;</p></li>
+<li><p>Sort the points alphabetically by label (and print them).</p></li>
+</ol>
+<div class="tggle" onclick="toggleVisibility(&#39;ex2&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex2" style="display:none;"><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#from previous edition of the class</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">class</span> <span class="nc">Point3D</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span> <span class="n">lab</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">=</span> <span class="n">z</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">lab</span>
+
+    <span class="k">def</span> <span class="nf">computeDistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otherP</span><span class="p">):</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="n">otherP</span><span class="o">.</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="n">otherP</span><span class="o">.</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">dz</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">z</span> <span class="o">-</span> <span class="n">otherP</span><span class="o">.</span><span class="n">z</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span> <span class="o">+</span> <span class="n">dy</span> <span class="o">+</span> <span class="n">dz</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">:(</span><span class="si">{}</span><span class="s2">,</span><span class="si">{}</span><span class="s2">,</span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">Point3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;alfa&quot;</span><span class="p">)</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">Point3D</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;point&quot;</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">Point3D</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;other&quot;</span><span class="p">)</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">Point3D</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;zebra&quot;</span><span class="p">)</span>
+<span class="n">p4</span> <span class="o">=</span> <span class="n">Point3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="p">)</span>
+<span class="n">p5</span> <span class="o">=</span> <span class="n">Point3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;last&quot;</span><span class="p">)</span>
+<span class="n">p6</span> <span class="o">=</span> <span class="n">Point3D</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span><span class="mi">102</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;fifth&quot;</span><span class="p">)</span>
+
+<span class="n">allPoints</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">,</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">,</span> <span class="n">p4</span><span class="p">,</span><span class="n">p5</span><span class="p">,</span> <span class="n">p6</span><span class="p">]</span>
+
+<span class="n">minDist</span> <span class="o">=</span> <span class="mi">10000000</span>
+<span class="n">closest</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">allPoints</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">allPoints</span><span class="p">)):</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">allPoints</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">allPoints</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">d</span> <span class="o">&lt;</span> <span class="n">minDist</span><span class="p">):</span>
+            <span class="n">closest</span> <span class="o">=</span> <span class="p">(</span><span class="n">allPoints</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">allPoints</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">minDist</span> <span class="o">=</span> <span class="n">d</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Closest pair (d:</span><span class="si">{}</span><span class="s2">): (</span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">minDist</span><span class="p">,</span><span class="n">closest</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">closest</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="c1">#sort the points by distance from origin.</span>
+<span class="n">lambda_dist</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">computeDistance</span><span class="p">(</span><span class="n">Point3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;origin&quot;</span><span class="p">))</span>
+
+<span class="n">allPoints</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="n">lambda_dist</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">allPoints</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> distance from origin:</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">el</span><span class="p">,</span><span class="n">lambda_dist</span><span class="p">(</span><span class="n">el</span><span class="p">)))</span>
+
+<span class="c1">#sort by label</span>
+<span class="n">lambda_label</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">label</span>
+<span class="n">allPoints</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="n">lambda_label</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sort by label&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">allPoints</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> distance from origin:</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">el</span><span class="p">,</span><span class="n">lambda_dist</span><span class="p">(</span><span class="n">el</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div><ol class="arabic simple" start="3">
+<li><p>Write a Person class with the following attributes: name, surname and mailbox. A mailbox is a list that contains string messages sent to the person. Each message entry should be a tuple <code class="docutils literal notranslate"><span class="pre">(name,</span> <span class="pre">surname,</span> <span class="pre">message)</span></code> where <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">surname</span></code> are the name and surname of the sender of the message, while <code class="docutils literal notranslate"><span class="pre">message</span></code> is a string with the text of the message. Implement the following methods:</p></li>
+</ol>
+<ol class="loweralpha simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">getName</span></code> : gets the name of the Person;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getSurname</span></code> : gets the surname of the Person;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sendMessage</span></code> : that has a <code class="docutils literal notranslate"><span class="pre">Person</span></code> and the string with the message in input and sends the message to the specified Person;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">checkMailbox</span></code> : returns the number of messages in the mailbox;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">readMessages</span></code> : returns all the messages in the mailbox as a list;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">checkMessagesFrom</span></code> : checks and prints any messages coming from a specific Person (in input);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clearMailbox</span></code> : clears the mailbox (does not return anything);</p></li>
+</ol>
+<p>Test the class with the following conversation:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>luca = Person(&quot;Luca&quot;, &quot;Bianco&quot;)
+alberto = Person(&quot;Alberto&quot;, &quot;Montresor&quot;)
+david = Person(&quot;David&quot;, &quot;Leoni&quot;)
+stranger = &quot;&quot;
+
+luca.sendMessage(alberto, &quot;Hi Alberto, hope things are fine.&quot;)
+alberto.sendMessage(luca, &quot;I am fine, thanks. Yourself?&quot;)
+luca.sendMessage(alberto, &quot;Great. Cheers. How about David?&quot;)
+alberto.sendMessage(david, &quot;You OK?&quot;)
+david.sendMessage(alberto, &quot;Yep. Thanks&quot;)
+alberto.sendMessage(luca, &quot;All OK&quot;)
+luca.sendMessage(stranger, &quot;Who are you?&quot;)
+</pre></div>
+</div>
+<p>and check the mailbox of all the Persons in <code class="docutils literal notranslate"><span class="pre">[luca,alberto,david]</span></code>.</p>
+<div class="tggle" onclick="toggleVisibility(&#39;ex3&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex3" style="display:none;"><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+
+<span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">surname</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__n</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__s</span> <span class="o">=</span> <span class="n">surname</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mailbox</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+    <span class="k">def</span> <span class="nf">getName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__n</span>
+
+    <span class="k">def</span> <span class="nf">getSurname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__s</span>
+
+    <span class="k">def</span> <span class="nf">sendMessage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otherPerson</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">otherPerson</span><span class="p">)</span> <span class="o">==</span> <span class="n">Person</span><span class="p">):</span>
+            <span class="n">otherPerson</span><span class="o">.</span><span class="n">mailbox</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">__n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">__s</span><span class="p">,</span> <span class="n">msg</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unable to send message. Person not found&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">checkMailbox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mailbox</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">):</span>
+            <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mailbox</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">readMessages</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mailbox</span>
+
+    <span class="k">def</span> <span class="nf">checkMessagesFrom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">otherPerson</span><span class="p">):</span>
+        <span class="k">if</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">otherPerson</span><span class="p">)</span> <span class="o">==</span> <span class="n">Person</span><span class="p">):</span>
+            <span class="n">msgs</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">mailbox</span>
+                        <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">otherPerson</span><span class="o">.</span><span class="n">getName</span><span class="p">()</span>
+                        <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">otherPerson</span><span class="o">.</span><span class="n">getSurname</span><span class="p">()</span>
+                   <span class="p">]</span>
+            <span class="k">return</span> <span class="n">msgs</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">clearMailbox</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mailbox</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__n</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__s</span><span class="p">)</span>
+
+
+<span class="n">luca</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Luca&quot;</span><span class="p">,</span> <span class="s2">&quot;Bianco&quot;</span><span class="p">)</span>
+<span class="n">alberto</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Alberto&quot;</span><span class="p">,</span> <span class="s2">&quot;Montresor&quot;</span><span class="p">)</span>
+<span class="n">david</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;David&quot;</span><span class="p">,</span> <span class="s2">&quot;Leoni&quot;</span><span class="p">)</span>
+<span class="n">stranger</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="n">luca</span><span class="o">.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">alberto</span><span class="p">,</span> <span class="s2">&quot;Hi Alberto, hope things are fine.&quot;</span><span class="p">)</span>
+<span class="n">alberto</span><span class="o">.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">luca</span><span class="p">,</span> <span class="s2">&quot;I am fine, thanks. Yourself?&quot;</span><span class="p">)</span>
+<span class="n">luca</span><span class="o">.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">alberto</span><span class="p">,</span> <span class="s2">&quot;Great. Cheers. How about David?&quot;</span><span class="p">)</span>
+<span class="n">alberto</span><span class="o">.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">david</span><span class="p">,</span> <span class="s2">&quot;You OK?&quot;</span><span class="p">)</span>
+<span class="n">david</span><span class="o">.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">alberto</span><span class="p">,</span> <span class="s2">&quot;Yep. Thanks&quot;</span><span class="p">)</span>
+<span class="n">alberto</span><span class="o">.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">luca</span><span class="p">,</span> <span class="s2">&quot;All OK&quot;</span><span class="p">)</span>
+<span class="n">luca</span><span class="o">.</span><span class="n">sendMessage</span><span class="p">(</span><span class="n">stranger</span><span class="p">,</span> <span class="s2">&quot;Who are you?&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">luca</span><span class="p">,</span> <span class="n">alberto</span><span class="p">,</span><span class="n">david</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{}</span><span class="s2"> has </span><span class="si">{}</span><span class="s2"> new message(s):&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">p</span><span class="o">.</span><span class="n">checkMailbox</span><span class="p">()))</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">readMessages</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; - from </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                        <span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                                        <span class="n">m</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">luca</span><span class="p">,</span> <span class="n">alberto</span><span class="p">,</span> <span class="n">david</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">p1</span> <span class="ow">in</span> <span class="p">[</span><span class="n">luca</span><span class="p">,</span> <span class="n">alberto</span><span class="p">,</span> <span class="n">david</span><span class="p">]:</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">p</span> <span class="o">!=</span> <span class="n">p1</span><span class="p">):</span>
+            <span class="n">msgs</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">checkMessagesFrom</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+            <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">msgs</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">msgs</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> --&gt; </span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">m</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{}</span><span class="s2"> does not have messages from </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">p1</span><span class="p">))</span>
+
+<span class="n">luca</span><span class="o">.</span><span class="n">clearMailbox</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{}</span><span class="s2"> has </span><span class="si">{}</span><span class="s2"> new message(s).&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">luca</span><span class="p">,</span><span class="n">luca</span><span class="o">.</span><span class="n">checkMailbox</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div></div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="M2_practical2.html" class="btn btn-neutral float-right" title="Module 2, Practical 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="M1_practical12.html" class="btn btn-neutral float-left" title="Module 1, Practical 12" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright # 2021 - 2021, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
