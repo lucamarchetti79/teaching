@@ -1,0 +1,971 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lezione 6 - Python: Liste, concetti avanzati &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 6 - Soluzioni" href="python_lists_adv_sol.html" />
+    <link rel="prev" title="Lezione 5 - Soluzioni" href="python_lists_sol.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Laboratorio di Informatica
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a.a. 2021/2022
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 6 - Python: Liste, concetti avanzati</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#metodi-stringhe-liste">Metodi Stringhe-Liste</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esercizi">Esercizi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-comprehension">List Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Esercizi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv_sol.html">Lezione 6 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Lezione 7 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries_sol.html">Lezione 7 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Lezione 8.1 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets_sol.html">Lezione 8.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples.html">Lezione 8.2 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples_sol.html">Lezione 8.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Lezione 9 - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io_sol.html">Lezione 9 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1.html">Lezione 10 - Python: Statement Complessi (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1_sol.html">Lezione 10 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2.html">Lezione 11 - Python: Statement Complessi (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 12 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 12 - Soluzioni</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Lezione 6 - Python: Liste, concetti avanzati</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/python_lists_adv.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lezione-6-python-liste-concetti-avanzati">
+<h1>Lezione 6 - Python: Liste, concetti avanzati<a class="headerlink" href="#lezione-6-python-liste-concetti-avanzati" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="metodi-stringhe-liste">
+<h2>Metodi Stringhe-Liste<a class="headerlink" href="#metodi-stringhe-liste" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 30%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ritorna</p></th>
+<th class="head"><p>Metodo</p></th>
+<th class="head"><p>Significato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">list-of-str</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">str.split(str)</span></code></p></td>
+<td><p>Rompe una stringa in una lista di stringhe</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">str.join(list-of-str)</span></code></p></td>
+<td><p>Ricompone una lista di stringhe in una stringa</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. La lista di stringhe:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tabella</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;nome,cognome,numero di premi nobel vinti&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Albert,Einstein,1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Marie,Curie,2&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>che riporta informazioni su personaggi noti in tre colonne separate da
+virgole <code class="docutils literal notranslate"><span class="pre">&quot;,&quot;</span></code>.</p>
+<p>Estraggo i titoli delle colonne dall’intestazione (la prima riga della
+tabella) con <code class="docutils literal notranslate"><span class="pre">split()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">titoli_colonne</span> <span class="o">=</span> <span class="n">tabella</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">titoli_colonne</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">titoli_colonne</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>e calcolo quante colonne ci sono:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">num_colonne</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">titoli_colonne</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. <code class="docutils literal notranslate"><span class="pre">join()</span></code> e’ utile per ricomporre liste di stringhe, ad
+esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_di_stringhe</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;uno&quot;</span><span class="p">,</span> <span class="s2">&quot;due&quot;</span><span class="p">,</span> <span class="s2">&quot;tre&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">lista_di_stringhe</span><span class="p">),</span> <span class="n">lista_di_stringhe</span><span class="p">)</span>
+
+<span class="n">stringa_intera</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lista_di_stringhe</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">stringa_intera</span><span class="p">),</span> <span class="n">stringa_intera</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Quando uso <code class="docutils literal notranslate"><span class="pre">join()</span></code>, la lista deve contenere stringhe! Questo
+non funziona:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="esercizi">
+<h2>Esercizi<a class="headerlink" href="#esercizi" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Data la stringa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">testo</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;The Wellcome Trust Sanger Institute</span>
+<span class="s2">is a world leader in genome research.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>mettere le parole di <code class="docutils literal notranslate"><span class="pre">testo</span></code> in una lista di stringhe. Poi stampare
+a schermo quante parole contiene.</p>
+<p>Poi mettere in <code class="docutils literal notranslate"><span class="pre">prima_riga</span></code> la prima riga di <code class="docutils literal notranslate"><span class="pre">testo</span></code>.</p>
+<p>Fare la stessa cosa con <code class="docutils literal notranslate"><span class="pre">seconda_riga</span></code>.</p>
+<p>Estrarre la prima parola di <code class="docutils literal notranslate"><span class="pre">seconda_riga</span></code> e stamparla a schermo.</p>
+</li>
+<li><p>La tabella di stringhe:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tabella</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;protein | database | domain | start | end&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;YNL275W | Pfam | PF00955 | 236 | 498&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;YHR065C | SMART | SM00490 | 335 | 416&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;YKL053C-A | Pfam | PF05254 | 5 | 72&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;YOR349W | PANTHER | 353 | 414&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>presa da <a class="reference external" href="http://www.yeastgenome.org/">Saccharomyces Genome Database</a>,
+rappresenta una lista di (informazioni su) <em>domini</em> identificati nella
+sequenza di alcune proteine del lievito.</p>
+<p>Ogni riga e’ un dominio, tranne la prima (che fa da intestazione).</p>
+<p>Usando <code class="docutils literal notranslate"><span class="pre">split()</span></code> ottenere una lista dei titoli delle varie colonne,
+avendo cura di accertarsi che le stringhe che corrispondono ai titoli
+<em>non</em> contengano spazi superflui.</p>
+<p><em>Hint</em>: non e’ necessario usare <code class="docutils literal notranslate"><span class="pre">strip()</span></code>.</p>
+</li>
+<li><p>Data la lista di stringhe:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parole</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;parola_1&quot;</span><span class="p">,</span> <span class="s2">&quot;parola_2&quot;</span><span class="p">,</span> <span class="s2">&quot;parola_3&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>costruire, usando <em>solo</em> <code class="docutils literal notranslate"><span class="pre">join()</span></code> ed un opportuno delimitatore le seguenti
+stringhe:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;parola_1</span> <span class="pre">parola_2</span> <span class="pre">parola_3&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;parola_1,parola_2,parola_3&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;parola_1</span> <span class="pre">e</span> <span class="pre">parola_2</span> <span class="pre">e</span> <span class="pre">parola_3&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;parola_1parola_2parola3&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">r&quot;parola_1\parola_2\parola_3&quot;</span></code></p></li>
+</ol>
+</li>
+<li><p>Data la lista di stringhe:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">versi</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;Taci. Su le soglie&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;del bosco non odo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;parole che dici&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;umane; ma odo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;parole piu&#39; nuove&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;che parlano gocciole e foglie&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;lontane.&quot;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>usare <code class="docutils literal notranslate"><span class="pre">join()</span></code> per creare una stringa multi-linea con i versi in
+<code class="docutils literal notranslate"><span class="pre">versi</span></code>. Il risultato (<code class="docutils literal notranslate"><span class="pre">&quot;poesia&quot;</span></code>) deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">poesia</span><span class="p">)</span>
+<span class="go">Taci. Su le soglie</span>
+<span class="go">del bosco non odo</span>
+<span class="go">parole che dici</span>
+<span class="go">umane; ma odo</span>
+<span class="go">parole piu&#39; nuove</span>
+<span class="go">che parlano gocciole e foglie</span>
+<span class="go">lontane.</span>
+</pre></div>
+</div>
+<p><em>Hint</em>: che delimitatore devo usare?</p>
+</li>
+</ol>
+</div>
+<div class="section" id="list-comprehension">
+<h2>List Comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this headline">¶</a></h2>
+<p>La <em>list comprehension</em> permette di trasformare e/o filtrare una lista.</p>
+<p>Data una lista qualunque <code class="docutils literal notranslate"><span class="pre">lista_originale</span></code>, posso creare una nuova lista
+che contiene solo gli elementi che soddisfano una certa condizione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_filtrata</span> <span class="o">=</span> <span class="p">[</span><span class="n">elemento</span>
+                  <span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">lista_originale</span>
+                  <span class="k">if</span> <span class="n">condizione</span><span class="p">(</span><span class="n">elemento</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>Qui <code class="docutils literal notranslate"><span class="pre">condizione()</span></code> ce la inventiamo noi.</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Creo una nuova lista contenente solo i numeri pari da 0 a 9:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">numeri_pari</span> <span class="o">=</span> <span class="p">[</span><span class="n">numero</span> <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeri</span>
+               <span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numeri_pari</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Data la lista di sequenze nucleotidiche:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sequenze</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ACTGG&quot;</span><span class="p">,</span> <span class="s2">&quot;CCTGT&quot;</span><span class="p">,</span> <span class="s2">&quot;ATTTA&quot;</span><span class="p">,</span> <span class="s2">&quot;TATAGC&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>tengo solo le sequenze che contengono almeno una adenosina:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sequenze_con_a</span> <span class="o">=</span> <span class="p">[</span><span class="n">sequenza</span> <span class="k">for</span> <span class="n">sequenza</span> <span class="ow">in</span> <span class="n">sequenze</span>
+                  <span class="k">if</span> <span class="s2">&quot;A&quot;</span> <span class="ow">in</span> <span class="n">sequenza</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sequenze_con_a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Per tenere solo quelle che <em>non</em> contengono adenosina, nego la condizione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sequenze_senza_a</span> <span class="o">=</span> <span class="p">[</span><span class="n">sequenza</span> <span class="k">for</span> <span class="n">sequenza</span> <span class="ow">in</span> <span class="n">sequenze</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="s2">&quot;A&quot;</span> <span class="ow">in</span> <span class="n">sequenza</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sequenze_senza_a</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Se ometto la condizione, cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_2</span> <span class="o">=</span> <span class="p">[</span><span class="n">elemento</span> <span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>ottengo una copia di <code class="docutils literal notranslate"><span class="pre">lista</span></code>.</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Uso una lista di liste per descrivere una rete di regolazione
+tra geni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">microarray</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;G1C2W9&quot;</span><span class="p">,</span> <span class="s2">&quot;G1C2Q7&quot;</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;G1C2W9&quot;</span><span class="p">,</span> <span class="s2">&quot;G1C2Q4&quot;</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Q6NMS1&quot;</span><span class="p">,</span> <span class="s2">&quot;G1C2W9&quot;</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">],</span>
+    <span class="c1"># ^^^^^^    ^^^^^^   ^^^</span>
+    <span class="c1">#  gene1     gene2   correlazione</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Ogni lista “interna” ha tre elementi: i primi due sono  identificativi di geni
+di <em>A.  Thaliana</em>, il terzo e’ una misura di correlazione tra l’espressione dei
+due geni in un qualche microarray.</p>
+<p>Posso usare una <em>list comprehension</em> per tenere solo le coppie di geni
+con correlazione alta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geni_altamente_correlati</span> <span class="o">=</span> \
+    <span class="p">[</span><span class="n">tripla</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">tripla</span> <span class="ow">in</span> <span class="n">microarray</span> <span class="k">if</span> <span class="n">tripla</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.75</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>oppure ottenere i geni che sono altamente coespressi con il gene <code class="docutils literal notranslate"><span class="pre">&quot;G1C2W9&quot;</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">soglia</span> <span class="o">=</span> <span class="mf">0.75</span>
+<span class="n">geni_coespressi</span> <span class="o">=</span> \
+    <span class="p">[</span><span class="n">tripla</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">tripla</span> <span class="ow">in</span> <span class="n">microarray</span>
+     <span class="k">if</span> <span class="n">tripla</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;G1C2W9&quot;</span> <span class="ow">and</span> <span class="n">tripla</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">soglia</span><span class="p">]</span> <span class="o">+</span> \
+    <span class="p">[</span><span class="n">tripla</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">tripla</span> <span class="ow">in</span> <span class="n">microarray</span>
+     <span class="k">if</span> <span class="n">tripla</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;G1C2W9&quot;</span> <span class="ow">and</span> <span class="n">tripla</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">soglia</span><span class="p">]</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Il nome della variabile che itera sugli elementi (nell’esempio sopra,
+<code class="docutils literal notranslate"><span class="pre">elemento</span></code>) e’ arbitrario. Questo codice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">intervallo</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">intervallo</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>e’ identico a questo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">intervallo</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">intervallo</span> <span class="k">if</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Il nome della variabile, <code class="docutils literal notranslate"><span class="pre">x</span></code> o <code class="docutils literal notranslate"><span class="pre">y</span></code>, e’ immateriale.</p>
+</div>
+<hr class="docutils" />
+<p>La <em>list comprehension</em> puo’ essere usata anche per creare una nuova lista
+che contiene gli elementi di <code class="docutils literal notranslate"><span class="pre">lista_originale</span></code> trasformati (uno per uno,
+individualmente) in qualche modo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_trasformata</span> <span class="o">=</span> <span class="p">[</span><span class="n">trasforma</span><span class="p">(</span><span class="n">elemento</span><span class="p">)</span>
+                     <span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">lista_originale</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Qui <code class="docutils literal notranslate"><span class="pre">trasforma()</span></code> e’ una “trasformazione” che ci inventiamo noi.</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Dato l’intervallo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>creo una nuova lista con i loro doppi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">doppi</span> <span class="o">=</span> <span class="p">[</span><span class="n">numero</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">]</span>
+<span class="c1">#        ^^^^^^^^^^</span>
+<span class="c1">#      trasformazione</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">doppi</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Data la lista di percorsi relativi alla directory <code class="docutils literal notranslate"><span class="pre">data/</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">percorsi</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;aatable&quot;</span><span class="p">,</span> <span class="s2">&quot;fasta.1&quot;</span><span class="p">,</span> <span class="s2">&quot;fasta.2&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>prefisso il percorso <code class="docutils literal notranslate"><span class="pre">&quot;data/&quot;</span></code> a ciascun elemento:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">percorsi_completi</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;data/&quot;</span> <span class="o">+</span> <span class="n">percorso</span>
+                     <span class="k">for</span> <span class="n">percorso</span> <span class="ow">in</span> <span class="n">percorsi</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">percorsi_completi</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Data la lista di sequenze primarie:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sequenze</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;MVLTIYPDELVQIVSDKIASNK&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GKITLNQLWDIS&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;KYFDLSDKKVKQFVLSCVILKKDIE&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;VYCDGAITTKNVTDIIGDANHSYS&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>metto in una lista nuova <code class="docutils literal notranslate"><span class="pre">lunghezze</span></code> le lunghezze di ciascuna sequenza,
+in ordine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lunghezze</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">sequenza</span><span class="p">)</span> <span class="k">for</span> <span class="n">sequenza</span> <span class="ow">in</span> <span class="n">sequenze</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lunghezze</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Data una lista di stringhe:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">atomi</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;SER A 96 77.253 20.522 75.007&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;VAL A 97 76.066 22.304 71.921&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PRO A 98 77.731 23.371 68.681&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SER A 99 80.136 26.246 68.973&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GLN A 100 79.039 29.534 67.364&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;LYS A 101 81.787 32.022 68.157&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>che rappresenta (parte della) struttura terziaria di una catena proteica,
+voglio ottenere una lista di liste che contiene, per ogni residuo (stringa)
+in <code class="docutils literal notranslate"><span class="pre">atomi</span></code>, le sue coordinate (tre elementi).</p>
+<p>Scrivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">coordinate</span> <span class="o">=</span> <span class="p">[</span><span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span> <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">atomi</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>ed ottengo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">coordinate</span><span class="p">)</span>
+<span class="go">[</span>
+<span class="go">    [&quot;77.253&quot;, &quot;20.522&quot;, &quot;75.007&quot;],</span>
+<span class="go">    [&quot;76.066&quot;, &quot;22.304&quot;, &quot;71.921&quot;],</span>
+<span class="go">    [&quot;77.731&quot;, &quot;23.371&quot;, &quot;68.681&quot;],</span>
+<span class="go">    [&quot;80.136&quot;, &quot;26.246&quot;, &quot;68.973&quot;],</span>
+<span class="go">    [&quot;79.039&quot;, &quot;29.534&quot;, &quot;67.364&quot;],</span>
+<span class="go">    [&quot;81.787&quot;, &quot;32.022&quot;, &quot;68.157&quot;],</span>
+<span class="go">]</span>
+</pre></div>
+</div>
+<p>Come funziona questo codice? Consideriamo la prima riga di``atomi``:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;SER A 96 77.253 20.522 75.007&quot;</span>
+</pre></div>
+</div>
+<p>Quando la <em>list comprehension</em> incontra questa riga, fa questo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">riga</span> <span class="o">=</span> <span class="s2">&quot;SER A 96 77.253 20.522 75.007&quot;</span>
+</pre></div>
+</div>
+<p>poi applica la trasformazione <code class="docutils literal notranslate"><span class="pre">riga.split()[-3:]</span></code>, i cui passaggi sono:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="go">[&quot;SER&quot;, &quot;A&quot;, &quot;96&quot;, &quot;77.253&quot;, &quot;20.522&quot;, &quot;75.007&quot;]</span>
+<span class="go">#                  ^^^^^^^^  ^^^^^^^^  ^^^^^^^^</span>
+<span class="go">#                     -3        -2        -1</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="o">-</span><span class="mi">3</span><span class="p">:])</span>
+<span class="go">[&quot;77.253&quot;, &quot;20.522&quot;, &quot;75.007&quot;]</span>
+</pre></div>
+</div>
+<p>quindi il risultato della trasformazione applicata a questa riga e’ la lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;77.253&quot;</span><span class="p">,</span> <span class="s2">&quot;20.522&quot;</span><span class="p">,</span> <span class="s2">&quot;75.007&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Questa lista viene appesa a <code class="docutils literal notranslate"><span class="pre">coordinate</span></code>.</p>
+<p>A questo punto la <em>list comprehension</em> prende la seconda seconda riga di <code class="docutils literal notranslate"><span class="pre">atomi</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;VAL A 97 76.066 22.304 71.921&quot;</span>
+</pre></div>
+</div>
+<p>la mette in <code class="docutils literal notranslate"><span class="pre">riga</span></code>, ed applica la stessa trasformazione, ottenendo la lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;76.066&quot;</span><span class="p">,</span> <span class="s2">&quot;22.304&quot;</span><span class="p">,</span> <span class="s2">&quot;71.921&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>che appende a <code class="docutils literal notranslate"><span class="pre">coordinate</span></code>.</p>
+<p>Poi prende la terza riga di atomi, <em>etc.</em></p>
+<hr class="docutils" />
+<p>Infine, posso combinare filtro e trasformazione per creare una nuova lista che
+contiene solo gli elementi di <code class="docutils literal notranslate"><span class="pre">lista_originale</span></code> che soddisfano una certa
+condizione, ma trasformati in qualche modo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nuova_lista</span> <span class="o">=</span> <span class="p">[</span><span class="n">trasforma</span><span class="p">(</span><span class="n">elemento</span><span class="p">)</span>
+               <span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">lista_originale</span>
+               <span class="k">if</span> <span class="n">condizione</span><span class="p">(</span><span class="n">elemento</span><span class="p">)]</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Dati gli interi da 0 a 10, voglio tenere solo quelli pari e
+dividerli per 3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pari_diviso_3</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+                 <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+                 <span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Notate che la condizione opera su <code class="docutils literal notranslate"><span class="pre">numero</span></code> (l’elemento originale della lista
+oridinale, non trasformato), non su <code class="docutils literal notranslate"><span class="pre">float(numero)</span> <span class="pre">/</span> <span class="pre">3</span></code>.</p>
+<hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>La list comprehension costruisce una nuova lista, lasciando l’originale
+inalterata, sia quando filtro:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">numeri_pari</span> <span class="o">=</span> <span class="p">[</span><span class="n">numero</span>
+               <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">lista_originale</span>
+               <span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">numeri</span><span class="p">,</span> <span class="s2">&quot;e&#39; lunga&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">numeri</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">numeri_pari</span><span class="p">,</span> <span class="s2">&quot;e&#39; lunga&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">numeri_pari</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>sia quando trasformo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">doppi</span> <span class="o">=</span> <span class="p">[</span><span class="n">numero</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">numeri</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">doppi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Esercizi<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Nei prossimi esercizi, se <code class="docutils literal notranslate"><span class="pre">open()</span></code> da’ errore e’ probabile che non
+abbiate fatto partire il terminale dalla directory giusta. Ad esempio
+in questo caso:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">righe</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;file/che/non/esiste&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Python da’ (giustamente) errore:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">IOError</span><span class="p">:</span> <span class="p">[</span><span class="n">Errno</span> <span class="mi">2</span><span class="p">]</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span><span class="p">:</span> <span class="s1">&#39;file/che/non/esiste&#39;</span>
+<span class="c1">#                  ^^^^^^^^^^^^^^^^^^^^^^^^^  ^^^^^^^^^^^^^^^^^^^^^</span>
+<span class="c1">#                  non esiste questo file!        nome del file</span>
+</pre></div>
+</div>
+<p>Assicuratevi di adattare il percorso in base alla directory nella quale vi
+trovate.</p>
+</div>
+<ol class="arabic">
+<li><p>Data la lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p>Creare una nuova lista <code class="docutils literal notranslate"><span class="pre">lista_piu_3</span></code> contenente il valore degli
+elementi di <code class="docutils literal notranslate"><span class="pre">lista</span></code> piu’ <code class="docutils literal notranslate"><span class="pre">3</span></code>. Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Creare una nuova lista <code class="docutils literal notranslate"><span class="pre">lista_dispari</span></code> contenente solo gli elementi
+dispari di <code class="docutils literal notranslate"><span class="pre">lista</span></code>. Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><em>Hint</em>: un intero e’ dispari se e solo se il risultato di:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>e’ <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</li>
+<li><p>Creare una nuova lista <code class="docutils literal notranslate"><span class="pre">lista_opposti</span></code> contenente l’opposto
+aritmetico (l’opposto di <img class="math" src="_images/math/888f7c323ac0341871e867220ae2d76467d74d6e.png" alt="x"/> e’ <img class="math" src="_images/math/7d6495fa9cfffb1558b902cbe5b8f24f76e03773.png" alt="-x"/>) degli elementi di
+<code class="docutils literal notranslate"><span class="pre">lista</span></code>. Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Creare una nuova lista <code class="docutils literal notranslate"><span class="pre">lista_inversi</span></code> contenente l’inverso
+aritmetico (l’inverso aritmetico di <img class="math" src="_images/math/888f7c323ac0341871e867220ae2d76467d74d6e.png" alt="x"/> e’ <img class="math" src="_images/math/705f754ff812a031314279e9d0cd646b8b7dc437.png" alt="\frac{1}{x}"/>)
+degli elementi di <code class="docutils literal notranslate"><span class="pre">lista</span></code>. Se l’inverso di un elemento non esiste,
+l’elemento deve essere ignorato (non comparire in <code class="docutils literal notranslate"><span class="pre">lista_inversi</span></code>). Il
+risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.33334</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><em>Hint</em>: l’unico intero senza un inverso e’ 0.</p>
+</li>
+<li><p>Creare una nuova lista contenente solo il primo e l’ultimo elemento
+di <code class="docutils literal notranslate"><span class="pre">lista</span></code>. Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">99</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><em>Hint</em>: si fa con una <em>list comprehension</em>?</p>
+</li>
+<li><p>Creare una nuova lista contenente tutti gli elementi di <code class="docutils literal notranslate"><span class="pre">lista</span></code> tranne
+il primo e l’ultimo. Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mi">97</span><span class="p">,</span> <span class="mi">98</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Contare quanti numeri dispari ci sono in <code class="docutils literal notranslate"><span class="pre">lista</span></code>. Il risultato deve
+essere <code class="docutils literal notranslate"><span class="pre">50</span></code>.</p>
+<p><em>Hint</em>: basta usare una <em>list comprehension</em>?</p>
+</li>
+<li><p>Creare una nuova lista contenente tutti gli elementi di <code class="docutils literal notranslate"><span class="pre">lista</span></code>
+divisi per 5 (anche quelli non divisibili per 5!). Il risultato deve
+essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Creare una nuova lista <code class="docutils literal notranslate"><span class="pre">lista_multipli_5_divisi</span></code> contenente solo i
+multipli di 5, ma divisi per 5. Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="mf">19.0</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Creare una nuova lista <code class="docutils literal notranslate"><span class="pre">lista_di_stringhe</span></code> contenente tutti gli
+elementi di <code class="docutils literal notranslate"><span class="pre">lista</span></code> ma convertiti in stringhe. Il risultato deve
+essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Contare quante stringhe rappresentanti un numero dispari ci sono in
+<code class="docutils literal notranslate"><span class="pre">lista_di_stringhe</span></code>.</p></li>
+<li><p>Creare una stringa che contenga tutti gli elementi di <code class="docutils literal notranslate"><span class="pre">lista</span></code>, visti
+come stringhe, e separati da uno spazio. Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;0 1 2 ...&quot;</span>
+</pre></div>
+</div>
+<p><em>Hint</em>: basta usare una <em>list comprehension</em>?</p>
+</li>
+</ol>
+</li>
+<li><p>Per ciascuno dei punti seguenti, scrivere due <em>list comprehension</em> che
+producano <code class="docutils literal notranslate"><span class="pre">lista_1</span></code> da <code class="docutils literal notranslate"><span class="pre">lista_2</span></code> e viceversa.</p>
+<ol class="arabic">
+<li><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">lista_2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nome&quot;</span><span class="p">,</span> <span class="s2">&quot;cognome&quot;</span><span class="p">,</span> <span class="s2">&quot;eta&#39;&quot;</span><span class="p">]</span>
+<span class="n">lista_2</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;nome&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;cognome&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;eta&#39;&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</li>
+<li><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ACTC&quot;</span><span class="p">,</span> <span class="s2">&quot;TTTGGG&quot;</span><span class="p">,</span> <span class="s2">&quot;CT&quot;</span><span class="p">]</span>
+<span class="n">lista_2</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;actc&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;tttgggcc&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;ct&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Data la lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>quali dei seguenti frammenti sono validi o errati, e cosa fanno?</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[x</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">lista]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[y</span> <span class="pre">for</span> <span class="pre">y</span> <span class="pre">in</span> <span class="pre">lista]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[y</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">lista]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[&quot;x&quot;</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">lista]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[str(x)</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">lista]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[x</span> <span class="pre">for</span> <span class="pre">str(x)</span> <span class="pre">in</span> <span class="pre">lista]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[x</span> <span class="pre">+</span> <span class="pre">1</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">lista]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[x</span> <span class="pre">+</span> <span class="pre">1</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">lista</span> <span class="pre">if</span> <span class="pre">x</span> <span class="pre">==</span> <span class="pre">2]</span></code></p></li>
+</ol>
+</li>
+<li><p>Data la lista di stringhe <code class="docutils literal notranslate"><span class="pre">dna</span></code> restituita da:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data/dna-fasta/fasta.1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dna</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Creare una nuova lista di stringhe che contenga tutte le stringhe in
+<code class="docutils literal notranslate"><span class="pre">dna</span></code> tranne quella di intestazione (la riga che comincia per <code class="docutils literal notranslate"><span class="pre">&quot;&gt;&quot;</span></code>).</p></li>
+<li><p>Ci sono caratteri di <em>a capo</em> o spazi nella lista di stringhe ottenuta?
+Se si’, creare una nuova lista di stringhe che sia identica a quella
+ottenuta, ma dove le stringhe non contengano caratteri di <em>a capo</em> ne’
+spazi.</p></li>
+<li><p>Concatenare in una singola stringa tutte le righe ottenute.</p></li>
+<li><p>Calcolare la percentuale di citosina e guanina nella sequenza ottenuta.</p></li>
+<li><p>Calcolare il <a class="reference external" href="https://en.wikipedia.org/wiki/GC-content">GC-content</a> della sequenza.</p></li>
+</ol>
+</li>
+<li><p>Consideriamo la stringa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risultato_cdhit</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
+<span class="s2">&gt;Cluster 0</span>
+<span class="s2">0 &gt;YLR106C at 100.00%</span>
+<span class="s2">&gt;Cluster 50</span>
+<span class="s2">0 &gt;YPL082C at 100.00%</span>
+<span class="s2">&gt;Cluster 54</span>
+<span class="s2">0 &gt;YHL009W-A at 90.80%</span>
+<span class="s2">1 &gt;YHL009W-B at 100.00%</span>
+<span class="s2">2 &gt;YJL113W at 98.77%</span>
+<span class="s2">3 &gt;YJL114W at 97.35%</span>
+<span class="s2">&gt;Cluster 52</span>
+<span class="s2">0 &gt;YBR208C at 100.00%</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>ottenuta raggruppando le strutture primarie del genoma
+di <em>S. Cerevisiae</em> (preso da <a class="reference external" href="http://yeastgenome.org/">SGD</a>) con
+un software di clustering (<a class="reference external" href="http://weizhongli-lab.org/cd-hit/">CD-HIT</a>).</p>
+<p><code class="docutils literal notranslate"><span class="pre">risultato_cdhit</span></code> codifica in forma testuale alcuni cluster di proteine
+raggruppate in base alla similarita’ delle loro sequenze.</p>
+<p>Un gruppo comincia con la riga:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">Cluster</span> <span class="n">N</span>
+</pre></div>
+</div>
+<p>dove <code class="docutils literal notranslate"><span class="pre">N</span></code> e’ il numero del cluster. I contenuti del cluster sono dati
+dalle righe successive, ad esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">Cluster</span> <span class="mi">54</span>
+<span class="mi">0</span> <span class="o">&gt;</span><span class="n">YHL009W</span><span class="o">-</span><span class="n">A</span> <span class="n">at</span> <span class="mf">90.80</span><span class="o">%</span>
+<span class="mi">1</span> <span class="o">&gt;</span><span class="n">YHL009W</span><span class="o">-</span><span class="n">B</span> <span class="n">at</span> <span class="mf">100.00</span><span class="o">%</span>
+<span class="mi">2</span> <span class="o">&gt;</span><span class="n">YJL113W</span> <span class="n">at</span> <span class="mf">98.77</span><span class="o">%</span>
+<span class="mi">3</span> <span class="o">&gt;</span><span class="n">YJL114W</span> <span class="n">at</span> <span class="mf">97.35</span><span class="o">%</span>
+</pre></div>
+</div>
+<p>rappresenta un gruppo di quattro sequenze, denominato <code class="docutils literal notranslate"><span class="pre">&quot;Cluster</span> <span class="pre">54&quot;</span></code>:
+di quel gruppo fanno parte la proteina <code class="docutils literal notranslate"><span class="pre">&quot;YHL009W-A&quot;</span></code>
+con una similarita’ del <code class="docutils literal notranslate"><span class="pre">90.80%</span></code>, la proteina <code class="docutils literal notranslate"><span class="pre">&quot;YHL009-B&quot;</span></code> con una
+similarita’ del <code class="docutils literal notranslate"><span class="pre">100.00%</span></code>, <em>etc.</em></p>
+<p>Data <code class="docutils literal notranslate"><span class="pre">risultato_cdhit</span></code>, usare delle <em>list comprehension</em> per:</p>
+<ol class="arabic">
+<li><p>Estrarre i nomi dei vari cluster. Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">nomi_cluster</span><span class="p">)</span>
+<span class="go">[&quot;0&quot;, &quot;50&quot;, &quot;54&quot;, &quot;52&quot;]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Estrarre i nomi di <em>tutte</em> le proteine (non importa se ci sono doppioni).
+Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">proteine</span><span class="p">)</span>
+<span class="go">[&quot;YLR1106C&quot;, &quot;YPL082C&quot;, &quot;YHL00W-A&quot;, ...]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Estrarre le coppie proteina-percentuale per <em>tutte</em> le proteine. il
+risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">coppie_proteina_percentuale</span><span class="p">)</span>
+<span class="go">[[&quot;YLR106C&quot;, 100.0],</span>
+<span class="go"> [&quot;YPL082C&quot;, 100.0],</span>
+<span class="go"> [&quot;YHL009W-A&quot;, 90.8],</span>
+<span class="go"> # ...</span>
+<span class="go">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Il comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">righe</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data/prot-pdb/1A3A.pdb&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>                   <span class="c1"># stampo le righe</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>                        <span class="c1"># 5472</span>
+</pre></div>
+</div>
+<p>restituisce una lista di righe del file <code class="docutils literal notranslate"><span class="pre">data/prot-pdb/1A3A.pdb</span></code>, preso
+dalla <a class="reference external" href="http://www.rcsb.org/pdb/explore.do?structureId=1a3a">Protein Data Bank</a>.
+Descrive una proteina di <em>E. Coli</em>.</p>
+<p><em>Hint</em>: aprite il file con un editor di testo (<code class="docutils literal notranslate"><span class="pre">nano</span></code>, <code class="docutils literal notranslate"><span class="pre">gedit</span></code>, quello
+che preferite) e fatevi un’idea dei contenuti prima di procedere!</p>
+<ol class="arabic">
+<li><p>Estrarre tutte le righe che cominciano per <code class="docutils literal notranslate"><span class="pre">&quot;SEQRES&quot;</span></code> e mettere il
+risultato nella lista <code class="docutils literal notranslate"><span class="pre">righe_seqres</span></code>.</p>
+<p>Dovrebbero esserci esattamente <code class="docutils literal notranslate"><span class="pre">48</span></code> righe di questo tipo.  Il risultato
+deve somigliare a questo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">righe_seqres</span><span class="p">))</span>
+<span class="go">SEQRES   1 A  148  MET ALA ASN LEU PHE LYS LEU GLY ALA GLU ASN ILE PHE</span>
+<span class="go">SEQRES   2 A  148  LEU GLY ARG LYS ALA ALA THR LYS GLU GLU ALA ILE ARG</span>
+<span class="go">SEQRES   3 A  148  PHE ALA GLY GLU GLN LEU VAL LYS GLY GLY TYR VAL GLU</span>
+<span class="go"># ...</span>
+<span class="go">SEQRES  10 D  148  LEU THR ASN ALA LEU ASP ASP GLU SER VAL ILE GLU ARG</span>
+<span class="go">SEQRES  11 D  148  LEU ALA HIS THR THR SER VAL ASP GLU VAL LEU GLU LEU</span>
+<span class="go">SEQRES  12 D  148  LEU ALA GLY ARG LYS</span>
+<span class="go">#          ^       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
+<span class="go">#        catena    sequenza primaria della catena</span>
+</pre></div>
+</div>
+<p>La prima colonna delle righe in <code class="docutils literal notranslate"><span class="pre">righe_seqres</span></code> e’ sempre <code class="docutils literal notranslate"><span class="pre">&quot;SEQRES&quot;</span></code>
+(per costruzione), la terza e’ il nome della catena di 1A3A descritta
+in quella riga, mentre le colonne dalla quinta in poi descrivono la
+sequenza primaria della catena stessa.</p>
+<ol class="arabic">
+<li><p>Estrarre le catene da <code class="docutils literal notranslate"><span class="pre">righe_seqres</span></code> (non importa se ci sono doppioni).</p>
+<p>Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">catene</span><span class="p">)</span>
+<span class="go">[&quot;A&quot;, ..., &quot;B&quot;, ..., &quot;C&quot;, ..., &quot;D&quot;, ...]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Estrarre solo le righe della catena B e metterle in <code class="docutils literal notranslate"><span class="pre">righe_seqres_B</span></code>.
+Devono esserci esattamente <code class="docutils literal notranslate"><span class="pre">12</span></code> righe.</p></li>
+<li><p>Estrarre da <code class="docutils literal notranslate"><span class="pre">righe_seqres_B</span></code> la sequenza della catena B e metterla
+in una sola stringa <code class="docutils literal notranslate"><span class="pre">sequenza_B</span></code>.</p>
+<p>Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sequenza_B</span><span class="p">)</span>
+<span class="go">&quot;MET ALA ASN LEU PHE ... ALA GLY ARG LYS&quot;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Estrarre da <code class="docutils literal notranslate"><span class="pre">righe</span></code> tutte le righe che cominciano per <code class="docutils literal notranslate"><span class="pre">&quot;HELIX&quot;</span></code> e
+mettere il risultato nella lista <code class="docutils literal notranslate"><span class="pre">righe_helix</span></code>.</p>
+<p>Devono esserci esattamente <code class="docutils literal notranslate"><span class="pre">30</span></code> righe di questo tipo.  Il risultato
+deve somigliare a questo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">righe_helix</span><span class="p">))</span>
+<span class="go">HELIX    1   1 ALA A    9  ASN A   11  5                                   3</span>
+<span class="go">HELIX    2   2 LYS A   21  LYS A   34  1                                  14</span>
+<span class="go">HELIX    3   3 PRO A   40  LEU A   52  5                                  13</span>
+<span class="go">HELIX    4   4 VAL A   68  ARG A   73  5                                   6</span>
+<span class="go">HELIX    5   5 HIS A  111  ALA A  121  1                                  11</span>
+<span class="go">#              ^^^^^^^^^^  ^^^^^^^^^^</span>
+<span class="go">#             inizio elica  fine elica</span>
+</pre></div>
+</div>
+<p>La prima colonna delle righe in <code class="docutils literal notranslate"><span class="pre">righe_helix</span></code> e’ sempre <code class="docutils literal notranslate"><span class="pre">&quot;HELIX&quot;</span></code>
+(per costruzione). Ogni riga descrive una <img class="math" src="_images/math/2f5aa019312e1bbc969deab8dca8b00f76025404.png" alt="\alpha"/>-helix della
+proteina 1A3A.</p>
+<p>La quarta, quinta e sesta colonna descrivono il residuo dal quale
+parte l’elica: tipo del residuo, catena di riferimento, e posizione
+del residuo.</p>
+<p>La settima, ottava e nona colonna descrivono il residuo dove finisce
+l’elica: sempre con tipo, catena e posizione.</p>
+<p>Estrarre una lista <code class="docutils literal notranslate"><span class="pre">info_eliche</span></code> in cui ogni elemento rappresenta un’elica, e
+ne contiene la posizione di inizio, la posizione di fine, e la
+lunghezza.</p>
+</li>
+</ol>
+</li>
+<li><p>Data la matrice <img class="math" src="_images/math/7356a12d46f4b6eebf0229ca08278f85f541c8d8.png" alt="3\times 3"/>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matrice</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)),</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">)),</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">))]</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Mettere in una lista <code class="docutils literal notranslate"><span class="pre">prima_riga</span></code> la prima riga.</p></li>
+<li><p>Mettere in una lista <code class="docutils literal notranslate"><span class="pre">prima_colonna</span></code> la prima colonna.</p></li>
+<li><p>Creare una matrice <code class="docutils literal notranslate"><span class="pre">sottosopra</span></code> che contenga le righe di <code class="docutils literal notranslate"><span class="pre">matrice</span></code> ma sottosopra.</p></li>
+<li><p>(Difficile.) Creare una matrice <code class="docutils literal notranslate"><span class="pre">palindromo</span></code> che contenga le righe di <code class="docutils literal notranslate"><span class="pre">matrice</span></code> ma da destra a sinistra.</p></li>
+<li><p>(Difficile.) Ricreare <code class="docutils literal notranslate"><span class="pre">matrice</span></code> con una sola <em>list comprehension</em>.</p></li>
+</ol>
+</li>
+<li><p>(Difficile). Data la lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Creare una lista <code class="docutils literal notranslate"><span class="pre">lista_quadrati</span></code> contenente i quadrati degli elementi
+di <code class="docutils literal notranslate"><span class="pre">lista</span></code>. Il risultato deve essere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Poi creare una lista <code class="docutils literal notranslate"><span class="pre">lista_differenze_quadrati</span></code> che contenga, nella
+posizione <code class="docutils literal notranslate"><span class="pre">i</span></code>-esima il valore:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_quadrati</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">lista_quadrati</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>per tutti, tranne l’ultimo, valore di <code class="docutils literal notranslate"><span class="pre">lista_quadrati</span></code>. E’ consigliabile
+usare piu’ di un passaggio, ed eventualmente liste ausiliarie.</p>
+<p>(Che numeri avete ottenuto? Ecco <a class="reference external" href="http://math.stackexchange.com/questions/263101/prove-every-odd-integer-is-the-difference-of-two-squares">perche’</a>.)</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_lists_adv_sol.html" class="btn btn-neutral float-right" title="Lezione 6 - Soluzioni" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_lists_sol.html" class="btn btn-neutral float-left" title="Lezione 5 - Soluzioni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
