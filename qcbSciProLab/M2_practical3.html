@@ -1,0 +1,1243 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Module 2, Practical 3 &mdash; QCB Scientific Programming Lab</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/js/jupman.js"></script>
+        <script type="text/javascript" src="_static/js/pytutor-embed.bundle.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/jupman.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/jupman-web.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module 2, Practical 4" href="M2_practical4.html" />
+    <link rel="prev" title="Module 2, Practical 2" href="M2_practical2.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="toc-page.html" class="icon icon-home"> QCB Scientific Programming Lab
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Scientific Programming for QCB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#General-Info">General Info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Timetable-and-lecture-rooms">Timetable and lecture rooms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Zoom-links">Zoom links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Equipment">Equipment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical1.html">Module 1, Practical 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Setting-up-the-environment">Setting up the environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical1.html#Linux-on-windows">Linux on windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical1.html#A-dual-boot-system">A dual boot system</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Our-toolbox">Our toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Installing-Python3-in-Linux">Installing Python3 in Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Installing-Python3-in-Windows/Mac">Installing Python3 in Windows/Mac</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical1.html#OPTION-1:">OPTION 1:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical1.html#OPTION-2-(easier):">OPTION 2 (easier):</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#The-console">The console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Visual-Studio-Code">Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#The-debugger">The debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#A-quick-Jupyter-primer-(just-for-your-information,-skip-if-not-interested)">A quick Jupyter primer (just for your information, skip if not interested)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical1.html#Installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical1.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical2.html">Module 1, Practical 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Modules">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Objects">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Numeric-types">Numeric types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Integers">Integers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Booleans">Booleans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Real-numbers">Real numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Strings">Strings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Methods-for-the-str-object">Methods for the str object</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical3.html">Module 1, Practical 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical3.html#Lists">Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#Operators-for-lists">Operators for lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#Methods-of-the-class-list">Methods of the class list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#From-strings-to-lists,-the-split-method">From strings to lists, the <code class="docutils literal notranslate"><span class="pre">split</span></code> method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#And-back-to-strings-with-the-join-method">And back to strings with the <code class="docutils literal notranslate"><span class="pre">join</span></code> method</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical3.html#Tuples">Tuples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical3.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical4.html">Module 1, Practical 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Execution-flow">Execution flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Conditionals">Conditionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#The-basic-if---else-statement">The basic <em>if - else</em> statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#The-if---elif---else-statement">The <em>if - elif - else</em> statement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Loops">Loops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#For-loop">For loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#Looping-over-a-range">Looping over a range</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#Nested-for-loops">Nested for loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#While-loops">While loops</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical5.html">Module 1, Practical 5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical5.html#More-on-loops">More on loops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Ternary-operator">Ternary operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Break-and-continue">Break and continue</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="M1_practical5.html#Continue-statement">Continue statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="M1_practical5.html#Break-statement">Break statement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#List-comprehension">List comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical5.html#Dictionaries">Dictionaries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Functions-working-on-dictionaries">Functions working on dictionaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Dictionary-methods">Dictionary methods</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical5.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical6.html">Module 1, Practical 6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Namespace-and-variable-scope">Namespace and variable scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Argument-passing">Argument passing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Positional-arguments">Positional arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Passing-arguments-by-keyword">Passing arguments by keyword</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Specifying-default-values">Specifying default values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#File-input-and-output">File input and output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Opening-a-file">Opening a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Closing-a-file">Closing a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Reading-from-a-file">Reading from a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Writing-to-a-file">Writing to a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#String-formatting-with-format">String formatting with format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical7.html">Module 1, Practical 7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical7.html#Recursive-functions">Recursive functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical7.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical8.html">Module 1, Practical 8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Getting-input-from-the-command-line">Getting input from the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Argparse">Argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical9.html">Module 1, Practical 9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Libraries-installation">Libraries installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Pandas">Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Series">Series</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#How-to-define-and-access-a-Series">How to define and access a Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Operator-broadcasting">Operator broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Missing-data">Missing data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Computing-stats">Computing stats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Plotting-data">Plotting data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Pandas-DataFrames">Pandas DataFrames</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Define-a-DataFrame">Define a DataFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Loading-data-from-external-files">Loading data from external files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Extract-values-by-row-and-column">Extract values by row and column</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Broadcasting,-filtering-and-computing-stats">Broadcasting, filtering and computing stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Merging-DataFrames">Merging DataFrames</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Grouping">Grouping</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical10.html">Module 1, Practical 10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Numpy">Numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Numpy-ndarray">Numpy ndarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Random-arrays">Random arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Numpy-to-and-from-pandas">Numpy to and from pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Reshaping">Reshaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Iterating-over-arrays-and-Indexing">Iterating over arrays and Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Broadcasting-and-arithmetic-functions">Broadcasting and arithmetic functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Filtering">Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Linear-algebra">Linear algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Matplotlib">Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical11.html">Module 1, Practical 11</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Biopython">Biopython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Installation-of-Biopython">Installation of Biopython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#General-overview">General overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Sequence-objects">Sequence objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Looping,-slicing-and-concatenation">Looping, slicing and concatenation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Complement-and-reverse-complement">Complement and reverse complement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Transcription-and-translation">Transcription and translation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#MutableSeq">MutableSeq</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Sequence-annotation">Sequence annotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Sequence-I/O">Sequence I/O</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#BioSeqIO.parse()">BioSeqIO.parse()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Sequences-as-dictionaries">Sequences as dictionaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Writing-sequence-files">Writing sequence files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Multiple-sequence-alignment">Multiple sequence alignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Parsing-multiple-sequence-alignments">Parsing multiple sequence alignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Writing-multiple-sequence-alignments">Writing multiple sequence alignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Manipulating-alignments">Manipulating alignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Biopython’s-pairwise2-alignment">Biopython’s pairwise2 alignment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical12.html">Module 1, Practical 12</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Biopython">Biopython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#BLAST">BLAST</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#The-function-qblast">The function qblast</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#Parsing-qblast-output">Parsing qblast output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#Saving-results-to-file">Saving results to file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#Open-a-blast-.XML-file">Open a blast .XML file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#The-BLAST-record-class">The BLAST record class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Getting-data-from-NCBI">Getting data from NCBI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Getting-data-from-ExPASy">Getting data from ExPASy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#3D-structure-and-PDB">3D structure and PDB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical1.html">Module 2, Practical 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Object-Oriented-Programming">Object Oriented Programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical1.html#Classes,-Methods-and-Objects">Classes, Methods and Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical1.html#Self">Self</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical1.html#Definition-of-a-class">Definition of a class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical1.html#The-life-cycle-of-classes-and-objects-in-a-program:">The life-cycle of classes and objects in a program:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Encapsulation">Encapsulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Special-methods">Special methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Inheritance-and-overriding">Inheritance and overriding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical1.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Lambda-functions">Lambda functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical2.html">Module 2, Practical 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Unit-testing">Unit testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical2.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Measuring-time">Measuring time</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical2.html#id1">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Measuring-memory">Measuring memory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical2.html#id2">Exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module 2, Practical 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Complexity">Complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical4.html">Module 2, Practical 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical4.html#Regular-expressions">Regular expressions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Basic-Patterns">Basic Patterns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Group-extraction">Group extraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Exercises">Exercises</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#re.compile">re.compile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Substitution">Substitution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical4.html#id1">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical5.html">Module 2, Practical 5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Sorting-algorithms">Sorting algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Selection-sort">Selection sort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#A-base-class-for-sorting-algorithms">A base class for sorting algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Exercise-(implementation)">Exercise (implementation)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Insertion-sort">Insertion sort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#id1">Exercise (implementation)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Merge-sort-and-Quick-sort">Merge sort and Quick sort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Merge-sort">Merge sort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Exercise-(Implementation)">Exercise (Implementation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Quick-sort">Quick sort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#id3">Exercise (Implementation)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Exercise-(algorithm-benchmark)">Exercise (algorithm benchmark)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Exercise-(Counting-Sort)">Exercise (Counting Sort)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical6.html">Module 2, Practical 6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Data-structures">Data structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Abstract-Data-Types-(ADTs)">Abstract Data Types (ADTs)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="M2_practical6.html#ADT:-Sequence">ADT: Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="M2_practical6.html#ADT:-Set">ADT: Set</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise-(set-implementation)">Exercise (set implementation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#ADT:-dictionary">ADT: dictionary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Linked-lists">Linked lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Example:-bidirectional-linked-list">Example: bidirectional linked list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise-(complete-bidirectional-list)">Exercise (complete bidirectional list)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise-(circular-list)">Exercise (circular list)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Stacks">Stacks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Queues">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Collections">Collections</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#id1">Exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical7.html">Module 2, Practical 7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#Trees">Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#ADT:-Binary-Tree">ADT: Binary Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#Tree-visit">Tree visit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Binary-Tree-visits:-DFS">Binary Tree visits: DFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Binary-Tree-visits:-BFS">Binary Tree visits: BFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#ADT:-Generic-Tree">ADT: Generic Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Exercise-(implementation)">Exercise (implementation)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical8.html">Module 2, Practical 8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Graphs">Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Graph-ADT">Graph ADT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Implementation-as-adjacency-matrix">Implementation as adjacency matrix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical8.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Implementation-as-(adjacency)-linked-list">Implementation as (adjacency) linked list</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical8.html#id1">Exercises</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical9.html">Module 2, Practical 9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical9.html#Graphs-recap">Graphs recap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical9.html#Visits">Visits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Depth-First-Search-(DFS)">Depth First Search (DFS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Exercises">Exercises</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Breadth-First-Search-(BFS)">Breadth First Search (BFS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical9.html#id1">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical10.html">Module 2, Practical 10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical10.html#Dynamic-programming">Dynamic programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical10.html#Excercise">Excercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical10.html#Finding-(the-optimal)-overlaps-among-DNA-strings">Finding (the optimal) overlaps among DNA strings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical10.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical10.html#Greedy-programming">Greedy programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical10.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html"> </a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="toc-page.html">QCB Scientific Programming Lab</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+    <div id='jupman-langs'></div>
+
+    <!-- SMALL TEMPLATE FOR LANGUAGES (VERY CUSTOM FOR softpython.org !!)
+    <script>
+    var hn = window.location.hostname;
+    var pn = window.location.pathname;
+
+    if (hn.includes('softpython.org')){
+        JUPMAN_LANG = hn.slice(0,window.location.hostname.indexOf('.'));
+    } else if (pn.includes('/_build/html')){
+        var pos = pn.indexOf('/_build/html');
+        JUPMAN_LANG = pn.slice(pos-2, pos);
+    } else {
+        JUPMAN_LANG = 'en';
+    }
+    console.log('JUPMAN_LANG=',JUPMAN_LANG);
+    </script>
+    -->
+    
+    
+     <!-- <li> <h2 style="background-color:red; color:yellow">WARNING! THIS VERSION IS OLD !  <br/>
+    <a style=" text-decoration: underline;" href="https://jupman.readthedocs.io/en/latest">GOT TO LATEST VERSION</a></li>
+ </h2></li>-->
+    <!-- Commented because doesn't work with sections,
+         see https://github.com/DavidLeoni/jupman/issues/39
+    <li><a href="toc-page.html">Docs</a> &raquo;</li>
+    
+        <li><a href="toc.html"> </a> &raquo;</li>
+    
+    <li>Module 2, Practical 3</li>
+    -->
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Module-2,-Practical-3">
+<h1>Module 2, Practical 3<a class="headerlink" href="#Module-2,-Practical-3" title="Permalink to this headline">¶</a></h1>
+<p>In this practical we will start working with algorithm complexity through practical examples.</p>
+<div class="section" id="Complexity">
+<h2>Complexity<a class="headerlink" href="#Complexity" title="Permalink to this headline">¶</a></h2>
+<p>The <em>complexity</em> of an algorithm can be defined as a function mapping the size of the input to the time required to get the result. This is also called the <em>cost function</em>.</p>
+<p>There exist several asymptotic (time-measuring) notations. Informally they are:</p>
+<ul class="simple">
+<li><p>Big Omega (best case)</p></li>
+<li><p>Big Theta (average case)</p></li>
+<li><p>Big O (worst case)</p></li>
+</ul>
+<p>The upper-bound complexity <em>O</em> (the <em>big-Oh</em>) is generally the most interesting to analyze. In this practical we will work with this notation considering several Python code samples.</p>
+<p>Big O is a formal notation that describes the behaviour of a function when the argument tends towards the maximum input. Big O takes the upper bound, that is, it considers the worst-case results, the worst execution of the algorithm.</p>
+<p>Instead of saying the input is 10 billion, or infinite, we say the input is <code class="docutils literal notranslate"><span class="pre">n</span></code> size. The exact size of the input doesn’t matter, we only care of how our algorithm performs with the worst input. This approach allows to still work with Big O even if we do not know the exact size of the input during the code execution.</p>
+<p>Big O is easy to read once we learn the different order of growth:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">inputList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+
+<span class="n">linear</span>  <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">inputList</span><span class="p">]</span>
+<span class="n">logn</span>  <span class="o">=</span> <span class="p">[</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">inputList</span><span class="p">]</span>
+<span class="n">quadratic</span>  <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">inputList</span><span class="p">]</span>
+<span class="n">cubic</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">inputList</span><span class="p">]</span>
+<span class="n">exponential</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">**</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">inputList</span><span class="p">]</span>
+
+<span class="n">functDict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;linear&#39;</span><span class="p">:</span> <span class="n">linear</span><span class="p">,</span> <span class="s2">&quot;logn&quot;</span><span class="p">:</span> <span class="n">logn</span><span class="p">,</span> <span class="s2">&quot;quadratic&quot;</span><span class="p">:</span> <span class="n">quadratic</span><span class="p">,</span> <span class="s2">&quot;cubic&quot;</span><span class="p">:</span> <span class="n">cubic</span><span class="p">,</span> <span class="s2">&quot;exp&quot;</span><span class="p">:</span> <span class="n">exponential</span><span class="p">}</span>
+<span class="n">functDf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">functDict</span><span class="p">)</span>
+<span class="n">functDf</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.axes._subplots.AxesSubplot at 0x1f683f0e6a0&gt;
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/M2_practical3_1_1.svg" src="_images/M2_practical3_1_1.svg" /></div>
+</div>
+<p><strong>Example 1</strong></p>
+<p>Determine the complexity of these two functions:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">printList</span><span class="p">(</span><span class="n">inputList</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">inputList</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+<span class="n">printList</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---------------------&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">printListBothDirections</span><span class="p">(</span><span class="n">inputList</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Forward:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">inputList</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reverse:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">inputList</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+<span class="n">printListBothDirections</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+4
+5
+6
+8
+---------------------
+Forward:
+4
+5
+6
+8
+Reverse:
+8
+6
+5
+4
+</pre></div></div>
+</div>
+<div class="tggle" onclick="toggleVisibility(&#39;Example1&#39;);"><p>Show/Hide Complexity</p>
+</div><div id="Example1" style="display:none;"><p>Both <code class="docutils literal notranslate"><span class="pre">printList</span></code> and <code class="docutils literal notranslate"><span class="pre">printListBothDirections</span></code> are <code class="docutils literal notranslate"><span class="pre">O(n)</span></code>, so their complexity is linear with respect to the processed list lenght.
+To be precise, <code class="docutils literal notranslate"><span class="pre">printListBothDirections</span></code> is <code class="docutils literal notranslate"><span class="pre">O(n+n)</span> <span class="pre">=</span> <span class="pre">O(2n)</span></code>, but since we’re looking towards infinite-size inputs, the double of infinite is still infinite.</p>
+</div><p><strong>Example 2</strong></p>
+<p>Determine the complexity of a function that computes the highest value for each pair of values from two input lists <code class="docutils literal notranslate"><span class="pre">l1</span></code> and <code class="docutils literal notranslate"><span class="pre">l2</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">computeHighest</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span> <span class="n">l2</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i1</span> <span class="ow">in</span> <span class="n">l1</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i2</span> <span class="ow">in</span> <span class="n">l2</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">i1</span> <span class="o">&gt;</span> <span class="n">i2</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Value </span><span class="si">{}</span><span class="s2"> in l1 greater than value </span><span class="si">{}</span><span class="s2"> in l2&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">))</span>
+
+<span class="n">computeHighest</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">11</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Value 4 in l1 greater than value 1 in l2
+Value 5 in l1 greater than value 1 in l2
+Value 6 in l1 greater than value 1 in l2
+Value 8 in l1 greater than value 1 in l2
+</pre></div></div>
+</div>
+<div class="tggle" onclick="toggleVisibility(&#39;Example2&#39;);"><p>Show/Hide Complexity</p>
+</div><div id="Example2" style="display:none;"><p>The function is quadratic, <code class="docutils literal notranslate"><span class="pre">O(n^2)</span></code>, as we do n iterations (one per each element in l1) times n iterations (one per each element in l2).</p>
+</div><p><strong>Example 3</strong></p>
+<p>Determine the complexity of the following functions, performing multiple tasks.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">myFunction</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)):</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> seconds left&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;boom!</span><span class="se">\n</span><span class="s2">--------------&quot;</span><span class="p">)</span>
+
+    <span class="n">itemsString</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="n">itemsString</span> <span class="o">+=</span> <span class="s2">&quot;&gt;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">itemsString</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--------------&quot;</span><span class="p">)</span>
+
+    <span class="n">pairwiseProducts</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">item1</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">item2</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">item1</span> <span class="o">==</span> <span class="n">item2</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m in the diagonal </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">item1</span><span class="p">,</span> <span class="n">item2</span><span class="p">))</span>
+            <span class="n">pairwiseProducts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item1</span><span class="o">*</span><span class="n">item2</span><span class="p">)</span>
+
+<span class="n">myFunction</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+4 seconds left
+3 seconds left
+2 seconds left
+1 seconds left
+boom!
+--------------
+4&gt;5&gt;6&gt;8&gt;12&gt;14
+--------------
+I&#39;m in the diagonal 4 4
+I&#39;m in the diagonal 5 5
+I&#39;m in the diagonal 6 6
+I&#39;m in the diagonal 8 8
+I&#39;m in the diagonal 12 12
+I&#39;m in the diagonal 14 14
+</pre></div></div>
+</div>
+<div class="tggle" onclick="toggleVisibility(&#39;Example3&#39;);"><p>Show/Hide Complexity</p>
+</div><div id="Example3" style="display:none;"><p>The complexity of this function can be determined by breaking it down in its different parts:</p>
+<ul class="simple">
+<li><p>the first loop does 5 iterations, regardless of the input. It is constant, so <code class="docutils literal notranslate"><span class="pre">O(5)</span></code>.</p></li>
+<li><p>the second loop does n iterations, where n is the size of the input. It is linear, so <code class="docutils literal notranslate"><span class="pre">O(n)</span></code>.</p></li>
+<li><p>the last loop does n*n iterations, where n is the size of the input. It is quadratic, so <code class="docutils literal notranslate"><span class="pre">O(n^2)</span></code>.</p></li>
+</ul>
+<p>Therefore, by summing <code class="docutils literal notranslate"><span class="pre">O(5)</span> <span class="pre">+</span> <span class="pre">O(n)</span> <span class="pre">+</span> <span class="pre">O(n^2)</span></code> we can say that the function is <code class="docutils literal notranslate"><span class="pre">O(n^2)</span></code>, which “dominates” the other terms.</p>
+</div><p><strong>Example 4</strong></p>
+<p>Determine the complexity of the <code class="docutils literal notranslate"><span class="pre">listHalver</span></code> function that returns every division by 2 of the <code class="docutils literal notranslate"><span class="pre">inputList</span></code> parameter until it’s empty, and the <code class="docutils literal notranslate"><span class="pre">sliceStepper</span></code> function that uses <code class="docutils literal notranslate"><span class="pre">listHalver</span></code> function with lists of length <code class="docutils literal notranslate"><span class="pre">n...1</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">listHalver</span><span class="p">(</span><span class="n">inputList</span><span class="p">):</span>
+    <span class="n">sliced</span> <span class="o">=</span> <span class="n">inputList</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">sliced</span> <span class="o">=</span> <span class="n">sliced</span><span class="p">[:</span><span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">sliced</span><span class="p">)</span>
+
+<span class="n">listHalver</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">halverStepper</span><span class="p">(</span><span class="n">maxListLength</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">maxListLength</span><span class="p">)):</span>
+        <span class="n">listHalver</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">step</span><span class="p">)))</span>
+
+<span class="n">halverStepper</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[1, 2, 3, 4]
+[1, 2]
+[1]
+------------
+[1, 2, 3, 4, 5]
+[1, 2]
+[1]
+[1, 2, 3, 4]
+[1, 2]
+[1]
+[1, 2, 3, 4]
+[1, 2]
+[1]
+[1, 2, 3]
+[1]
+[1, 2, 3]
+[1]
+[1, 2]
+[1]
+[1, 2]
+[1]
+[1]
+[1]
+</pre></div></div>
+</div>
+<div class="tggle" onclick="toggleVisibility(&#39;Example4&#39;);"><p>Show/Hide Complexity</p>
+</div><div id="Example4" style="display:none;"><p>The <code class="docutils literal notranslate"><span class="pre">listHalver</span></code> function needs to look at a smaller subset of the data at every step, and is therefore logarithmic, <code class="docutils literal notranslate"><span class="pre">O(log(n))</span></code>.
+The <code class="docutils literal notranslate"><span class="pre">halverStepper</span></code> function does <code class="docutils literal notranslate"><span class="pre">n</span></code> times an <code class="docutils literal notranslate"><span class="pre">O(log(n))</span></code> operation (<code class="docutils literal notranslate"><span class="pre">listHalver</span></code>), and is therefore <code class="docutils literal notranslate"><span class="pre">O(nlog(n))</span></code>.</p>
+</div></div>
+<div class="section" id="Exercises">
+<h2>Exercises<a class="headerlink" href="#Exercises" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Let <code class="docutils literal notranslate"><span class="pre">M</span></code> be a square matrix - a list containing <code class="docutils literal notranslate"><span class="pre">n</span></code> lists, each of them of size <code class="docutils literal notranslate"><span class="pre">n</span></code>. Return the computational complexity of function <code class="docutils literal notranslate"><span class="pre">fun()</span></code> with respect to <code class="docutils literal notranslate"><span class="pre">n</span></code>:</p></li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">M</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">M</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">row</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="n">element</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="tggle" onclick="toggleVisibility(&#39;Ex1&#39;);"><p>Show/Hide Complexity</p>
+</div><div id="Ex1" style="display:none;"><p><code class="docutils literal notranslate"><span class="pre">O(n^3)</span></code>, because the complexity is <code class="docutils literal notranslate"><span class="pre">n</span></code> for the list comprehension, times <code class="docutils literal notranslate"><span class="pre">n</span></code> for the inner <code class="docutils literal notranslate"><span class="pre">for</span></code> cycle, times <code class="docutils literal notranslate"><span class="pre">n</span></code> for the outer <code class="docutils literal notranslate"><span class="pre">for</span></code> cycle</p>
+</div><ol class="arabic simple" start="2">
+<li><p>Given a list <code class="docutils literal notranslate"><span class="pre">L</span></code> of <code class="docutils literal notranslate"><span class="pre">n</span></code> elements, please compute the asymptotic computational complexity of the following function, explaining your reasoning.</p></li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">my_fun</span><span class="p">(</span><span class="n">L</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">)):</span>
+        <span class="n">tmp</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="n">L</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">3</span><span class="p">)])</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="tggle" onclick="toggleVisibility(&#39;Ex2&#39;);"><p>Show/Hide Complexity</p>
+</div><div id="Ex2" style="display:none;"><p>It mainly depends on the implementation of the list (we will see in the following practicals what this means). One possbile answer could be:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">len(L)</span></code> has a constant complexity <code class="docutils literal notranslate"><span class="pre">O(1)</span></code></p></li>
+<li><p>the for loop costs <code class="docutils literal notranslate"><span class="pre">n</span></code> times the head insertion in the list <code class="docutils literal notranslate"><span class="pre">tmp</span></code>, if this requires a shift right of all the previously inserted elements, this could be in total <code class="docutils literal notranslate"><span class="pre">O(n^2)</span></code></p></li>
+<li><p>the final sum costs <code class="docutils literal notranslate"><span class="pre">O(n)</span></code></p></li>
+</ul>
+<p>This makes a quadratic overall asymptotic complexity.</p>
+</div><ol class="arabic simple" start="3">
+<li><p>Given a sorted list <code class="docutils literal notranslate"><span class="pre">alist</span></code> of <code class="docutils literal notranslate"><span class="pre">n</span></code> elements, please compute the asymptotic computational complexity of the following function implementing binary search, explaining your reasoning.</p></li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">binarySearch</span><span class="p">(</span><span class="n">alist</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+    <span class="n">first</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">last</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+    <span class="n">found</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">while</span> <span class="n">first</span> <span class="o">&lt;=</span> <span class="n">last</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span>
+        <span class="n">midpoint</span> <span class="o">=</span> <span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="n">last</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+        <span class="k">if</span> <span class="n">alist</span><span class="p">[</span><span class="n">midpoint</span><span class="p">]</span> <span class="o">==</span> <span class="n">item</span><span class="p">:</span>
+            <span class="n">found</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">item</span> <span class="o">&lt;</span> <span class="n">alist</span><span class="p">[</span><span class="n">midpoint</span><span class="p">]:</span>
+            <span class="n">last</span> <span class="o">=</span> <span class="n">midpoint</span><span class="o">-</span><span class="mi">1</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">first</span> <span class="o">=</span> <span class="n">midpoint</span><span class="o">+</span><span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">found</span>
+</pre></div>
+</div>
+</div>
+<div class="tggle" onclick="toggleVisibility(&#39;Ex3&#39;);"><p>Show/Hide Complexity</p>
+</div><div id="Ex3" style="display:none;"><p>The binary search divides by two the lenght of the list at each iteration, this maks the asymptotic complexity to be <code class="docutils literal notranslate"><span class="pre">0(log(n))</span></code>.</p>
+</div><ol class="arabic simple" start="4">
+<li><p>Please compute the asymptotic computational complexity of the following code, that computes the Fibonacci sequence according to the following formula:</p></li>
+</ol>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">n</span></code> is even, then <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">n/2</span></code> and <code class="docutils literal notranslate"><span class="pre">F(n)</span> <span class="pre">=</span> <span class="pre">[2*F(k-1)</span> <span class="pre">+</span> <span class="pre">F(k)]*F(k)</span></code></p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">n</span></code> is odd, then <code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">(n</span> <span class="pre">+</span> <span class="pre">1)/2</span></code> and <code class="docutils literal notranslate"><span class="pre">F(n)</span> <span class="pre">=</span> <span class="pre">F(k)*F(k)</span> <span class="pre">+</span> <span class="pre">F(k-1)*F(k-1)</span></code>.</p></li>
+</ul>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># Create an array of length n for memoization (we will see later what memoization is...)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+
+<span class="c1"># Returns n&#39;th fibonacci number using table f[]</span>
+<span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
+    <span class="c1"># Base cases</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">])</span>
+
+    <span class="c1"># If fib(n) is already computed (thanks to memoization)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]):</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+
+    <span class="c1"># Applying above formula [Note value n&amp;1 is 1</span>
+    <span class="c1"># if n is odd, else 0.</span>
+    <span class="k">if</span><span class="p">((</span><span class="n">n</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">)):</span>
+        <span class="c1"># (n &amp; 1) is 1 when n is odd, 0 otherwise</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">*</span> <span class="n">fib</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">fib</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">fib</span><span class="p">(</span><span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">k</span><span class="p">))</span><span class="o">*</span><span class="n">fib</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">f</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+
+
+<span class="c1"># main code</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fib</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="c1"># avoids to add a new line at each iteration</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1"># to go to new line at the end</span>
+</pre></div>
+</div>
+</div>
+<div class="tggle" onclick="toggleVisibility(&#39;Ex4&#39;);"><p>Show/Hide Complexity</p>
+</div><div id="Ex4" style="display:none;"><p>Thanks to memoization, the access to the already computed Fibonacci numbers has constant complexity (<code class="docutils literal notranslate"><span class="pre">O(1)</span></code>). This makes the asymptotic complexity of the function <code class="docutils literal notranslate"><span class="pre">fib</span></code> to be logarithmic (<code class="docutils literal notranslate"><span class="pre">O(log</span> <span class="pre">(n))</span></code>). The function <code class="docutils literal notranslate"><span class="pre">fib</span></code> is then called <code class="docutils literal notranslate"><span class="pre">n</span></code> times. This makes the overall complexity to be <code class="docutils literal notranslate"><span class="pre">O(n</span> <span class="pre">log(n))</span></code>.</p>
+</div><ol class="arabic simple" start="5">
+<li><p>Please compute the asymptotic computational complexity of the function <code class="docutils literal notranslate"><span class="pre">subsets</span></code>, that computes all the subsets of a set of elements.</p></li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Subsets of {a,b}: {(), (&#39;b&#39;,), (&#39;a&#39;,), (&#39;b&#39;, &#39;a&#39;)}
+Subsets of {a,b,c}: {(), (&#39;b&#39;,), (&#39;a&#39;,), (&#39;c&#39;,), (&#39;b&#39;, &#39;a&#39;), (&#39;b&#39;, &#39;c&#39;), (&#39;a&#39;, &#39;c&#39;), (&#39;b&#39;, &#39;a&#39;, &#39;c&#39;)}
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">chain</span><span class="p">,</span> <span class="n">combinations</span>
+
+<span class="k">def</span> <span class="nf">subsets</span><span class="p">(</span><span class="n">elementSet</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span><span class="n">combinations</span><span class="p">(</span><span class="n">elementSet</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">elementSet</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Subsets of {a,b}:&#39;</span><span class="p">,</span> <span class="n">subsets</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">}))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Subsets of {a,b,c}:&#39;</span><span class="p">,</span> <span class="n">subsets</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">}))</span>
+</pre></div>
+</div>
+</div>
+<div class="tggle" onclick="toggleVisibility(&#39;Ex5&#39;);"><p>Show/Hide Complexity</p>
+</div><div id="Ex5" style="display:none;"><p>What’s important to notice here is that the number of subsets grows <strong>exponentially</strong> with the number <code class="docutils literal notranslate"><span class="pre">n</span></code> of the elements on the original set. This makes the overall complexity to be exponential <code class="docutils literal notranslate"><span class="pre">O(2^n)</span></code>.</p>
+</div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="M2_practical4.html" class="btn btn-neutral float-right" title="Module 2, Practical 4" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="M2_practical2.html" class="btn btn-neutral float-left" title="Module 2, Practical 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright # 2021 - 2021, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

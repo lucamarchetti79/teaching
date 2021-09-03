@@ -1,0 +1,1531 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Module 1, Practical 1 &mdash; QCB Scientific Programming Lab</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/js/jupman.js"></script>
+        <script type="text/javascript" src="_static/js/pytutor-embed.bundle.min.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/jupman.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/jupman-web.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module 1, Practical 2" href="M1_practical2.html" />
+    <link rel="prev" title="Scientific Programming for QCB" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="toc-page.html" class="icon icon-home"> QCB Scientific Programming Lab
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Scientific Programming for QCB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#General-Info">General Info</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Timetable-and-lecture-rooms">Timetable and lecture rooms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Zoom-links">Zoom links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Equipment">Equipment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#Acknowledgements">Acknowledgements</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module 1, Practical 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Setting-up-the-environment">Setting up the environment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Linux-on-windows">Linux on windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#A-dual-boot-system">A dual boot system</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Our-toolbox">Our toolbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Installing-Python3-in-Linux">Installing Python3 in Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Installing-Python3-in-Windows/Mac">Installing Python3 in Windows/Mac</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#OPTION-1:">OPTION 1:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#OPTION-2-(easier):">OPTION 2 (easier):</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#The-console">The console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Visual-Studio-Code">Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#The-debugger">The debugger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#A-quick-Jupyter-primer-(just-for-your-information,-skip-if-not-interested)">A quick Jupyter primer (just for your information, skip if not interested)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Installation">Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical2.html">Module 1, Practical 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Modules">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Objects">Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Numeric-types">Numeric types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Integers">Integers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Booleans">Booleans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Real-numbers">Real numbers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Strings">Strings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical2.html#Methods-for-the-str-object">Methods for the str object</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical2.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical3.html">Module 1, Practical 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical3.html#Lists">Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#Operators-for-lists">Operators for lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#Methods-of-the-class-list">Methods of the class list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#From-strings-to-lists,-the-split-method">From strings to lists, the <code class="docutils literal notranslate"><span class="pre">split</span></code> method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical3.html#And-back-to-strings-with-the-join-method">And back to strings with the <code class="docutils literal notranslate"><span class="pre">join</span></code> method</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical3.html#Tuples">Tuples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical3.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical4.html">Module 1, Practical 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Execution-flow">Execution flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Conditionals">Conditionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#The-basic-if---else-statement">The basic <em>if - else</em> statement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#The-if---elif---else-statement">The <em>if - elif - else</em> statement</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Loops">Loops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#For-loop">For loop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#Looping-over-a-range">Looping over a range</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#Nested-for-loops">Nested for loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical4.html#While-loops">While loops</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical4.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical5.html">Module 1, Practical 5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical5.html#More-on-loops">More on loops</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Ternary-operator">Ternary operator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Break-and-continue">Break and continue</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="M1_practical5.html#Continue-statement">Continue statement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="M1_practical5.html#Break-statement">Break statement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#List-comprehension">List comprehension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical5.html#Dictionaries">Dictionaries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Functions-working-on-dictionaries">Functions working on dictionaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical5.html#Dictionary-methods">Dictionary methods</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical5.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical6.html">Module 1, Practical 6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Namespace-and-variable-scope">Namespace and variable scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Argument-passing">Argument passing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Positional-arguments">Positional arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Passing-arguments-by-keyword">Passing arguments by keyword</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Specifying-default-values">Specifying default values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#File-input-and-output">File input and output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Opening-a-file">Opening a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Closing-a-file">Closing a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Reading-from-a-file">Reading from a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#Writing-to-a-file">Writing to a file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical6.html#String-formatting-with-format">String formatting with format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical6.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical7.html">Module 1, Practical 7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical7.html#Recursive-functions">Recursive functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical7.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical8.html">Module 1, Practical 8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Getting-input-from-the-command-line">Getting input from the command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Argparse">Argparse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical9.html">Module 1, Practical 9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Libraries-installation">Libraries installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Pandas">Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Series">Series</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#How-to-define-and-access-a-Series">How to define and access a Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Operator-broadcasting">Operator broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Missing-data">Missing data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Computing-stats">Computing stats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Plotting-data">Plotting data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Pandas-DataFrames">Pandas DataFrames</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Define-a-DataFrame">Define a DataFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Loading-data-from-external-files">Loading data from external files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Extract-values-by-row-and-column">Extract values by row and column</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Broadcasting,-filtering-and-computing-stats">Broadcasting, filtering and computing stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Merging-DataFrames">Merging DataFrames</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical9.html#Grouping">Grouping</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical9.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical10.html">Module 1, Practical 10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Numpy">Numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Numpy-ndarray">Numpy ndarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Random-arrays">Random arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Numpy-to-and-from-pandas">Numpy to and from pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Reshaping">Reshaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Iterating-over-arrays-and-Indexing">Iterating over arrays and Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Broadcasting-and-arithmetic-functions">Broadcasting and arithmetic functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Filtering">Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Linear-algebra">Linear algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Matplotlib">Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical10.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical11.html">Module 1, Practical 11</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Biopython">Biopython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Installation-of-Biopython">Installation of Biopython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#General-overview">General overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Sequence-objects">Sequence objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Looping,-slicing-and-concatenation">Looping, slicing and concatenation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Complement-and-reverse-complement">Complement and reverse complement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Transcription-and-translation">Transcription and translation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#MutableSeq">MutableSeq</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Sequence-annotation">Sequence annotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Sequence-I/O">Sequence I/O</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#BioSeqIO.parse()">BioSeqIO.parse()</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Sequences-as-dictionaries">Sequences as dictionaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Writing-sequence-files">Writing sequence files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Multiple-sequence-alignment">Multiple sequence alignment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Parsing-multiple-sequence-alignments">Parsing multiple sequence alignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Writing-multiple-sequence-alignments">Writing multiple sequence alignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Manipulating-alignments">Manipulating alignments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical11.html#Biopython’s-pairwise2-alignment">Biopython’s pairwise2 alignment</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical11.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical12.html">Module 1, Practical 12</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Biopython">Biopython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#BLAST">BLAST</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#The-function-qblast">The function qblast</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#Parsing-qblast-output">Parsing qblast output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#Saving-results-to-file">Saving results to file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#Open-a-blast-.XML-file">Open a blast .XML file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical12.html#The-BLAST-record-class">The BLAST record class</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Getting-data-from-NCBI">Getting data from NCBI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Getting-data-from-ExPASy">Getting data from ExPASy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#3D-structure-and-PDB">3D structure and PDB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical12.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical1.html">Module 2, Practical 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Object-Oriented-Programming">Object Oriented Programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical1.html#Classes,-Methods-and-Objects">Classes, Methods and Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical1.html#Self">Self</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical1.html#Definition-of-a-class">Definition of a class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical1.html#The-life-cycle-of-classes-and-objects-in-a-program:">The life-cycle of classes and objects in a program:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Encapsulation">Encapsulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Special-methods">Special methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Inheritance-and-overriding">Inheritance and overriding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical1.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Lambda-functions">Lambda functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical1.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical2.html">Module 2, Practical 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Unit-testing">Unit testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical2.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Measuring-time">Measuring time</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical2.html#id1">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical2.html#Measuring-memory">Measuring memory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical2.html#id2">Exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical3.html">Module 2, Practical 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical3.html#Complexity">Complexity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical3.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical4.html">Module 2, Practical 4</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical4.html#Regular-expressions">Regular expressions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Basic-Patterns">Basic Patterns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Group-extraction">Group extraction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Exercises">Exercises</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#re.compile">re.compile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Substitution">Substitution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical4.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical4.html#id1">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical5.html">Module 2, Practical 5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Sorting-algorithms">Sorting algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Selection-sort">Selection sort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#A-base-class-for-sorting-algorithms">A base class for sorting algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Exercise-(implementation)">Exercise (implementation)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Insertion-sort">Insertion sort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#id1">Exercise (implementation)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Merge-sort-and-Quick-sort">Merge sort and Quick sort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Merge-sort">Merge sort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Exercise-(Implementation)">Exercise (Implementation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Quick-sort">Quick sort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#id3">Exercise (Implementation)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Exercise-(algorithm-benchmark)">Exercise (algorithm benchmark)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Reflection">Reflection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical5.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical5.html#Exercise-(Counting-Sort)">Exercise (Counting Sort)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical6.html">Module 2, Practical 6</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Data-structures">Data structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Abstract-Data-Types-(ADTs)">Abstract Data Types (ADTs)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="M2_practical6.html#ADT:-Sequence">ADT: Sequence</a></li>
+<li class="toctree-l4"><a class="reference internal" href="M2_practical6.html#ADT:-Set">ADT: Set</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise-(set-implementation)">Exercise (set implementation)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#ADT:-dictionary">ADT: dictionary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Linked-lists">Linked lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Example:-bidirectional-linked-list">Example: bidirectional linked list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise-(complete-bidirectional-list)">Exercise (complete bidirectional list)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise-(circular-list)">Exercise (circular list)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Stacks">Stacks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Queues">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical6.html#Collections">Collections</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical6.html#id1">Exercise</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical7.html">Module 2, Practical 7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#Trees">Trees</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#ADT:-Binary-Tree">ADT: Binary Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#Tree-visit">Tree visit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Binary-Tree-visits:-DFS">Binary Tree visits: DFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Binary-Tree-visits:-BFS">Binary Tree visits: BFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical7.html#ADT:-Generic-Tree">ADT: Generic Tree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical7.html#Exercise-(implementation)">Exercise (implementation)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical8.html">Module 2, Practical 8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Graphs">Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Graph-ADT">Graph ADT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Implementation-as-adjacency-matrix">Implementation as adjacency matrix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical8.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical8.html#Implementation-as-(adjacency)-linked-list">Implementation as (adjacency) linked list</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical8.html#id1">Exercises</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical9.html">Module 2, Practical 9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical9.html#Graphs-recap">Graphs recap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical9.html#Visits">Visits</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Depth-First-Search-(DFS)">Depth First Search (DFS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Exercises">Exercises</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Breadth-First-Search-(BFS)">Breadth First Search (BFS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical9.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical9.html#id1">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="M2_practical10.html">Module 2, Practical 10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical10.html#Dynamic-programming">Dynamic programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical10.html#Excercise">Excercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical10.html#Finding-(the-optimal)-overlaps-among-DNA-strings">Finding (the optimal) overlaps among DNA strings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical10.html#Exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M2_practical10.html#Greedy-programming">Greedy programming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M2_practical10.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="toc.html"> </a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="toc-page.html">QCB Scientific Programming Lab</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+    <div id='jupman-langs'></div>
+
+    <!-- SMALL TEMPLATE FOR LANGUAGES (VERY CUSTOM FOR softpython.org !!)
+    <script>
+    var hn = window.location.hostname;
+    var pn = window.location.pathname;
+
+    if (hn.includes('softpython.org')){
+        JUPMAN_LANG = hn.slice(0,window.location.hostname.indexOf('.'));
+    } else if (pn.includes('/_build/html')){
+        var pos = pn.indexOf('/_build/html');
+        JUPMAN_LANG = pn.slice(pos-2, pos);
+    } else {
+        JUPMAN_LANG = 'en';
+    }
+    console.log('JUPMAN_LANG=',JUPMAN_LANG);
+    </script>
+    -->
+    
+    
+     <!-- <li> <h2 style="background-color:red; color:yellow">WARNING! THIS VERSION IS OLD !  <br/>
+    <a style=" text-decoration: underline;" href="https://jupman.readthedocs.io/en/latest">GOT TO LATEST VERSION</a></li>
+ </h2></li>-->
+    <!-- Commented because doesn't work with sections,
+         see https://github.com/DavidLeoni/jupman/issues/39
+    <li><a href="toc-page.html">Docs</a> &raquo;</li>
+    
+        <li><a href="toc.html"> </a> &raquo;</li>
+    
+    <li>Module 1, Practical 1</li>
+    -->
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container,
+div.nbinput.container div.prompt,
+div.nbinput.container div.input_area,
+div.nbinput.container div[class*=highlight],
+div.nbinput.container div[class*=highlight] pre,
+div.nboutput.container,
+div.nboutput.container div.prompt,
+div.nboutput.container div.output_area,
+div.nboutput.container div[class*=highlight],
+div.nboutput.container div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    background: #f5f5f5;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="Module-1,-Practical-1">
+<h1>Module 1, Practical 1<a class="headerlink" href="#Module-1,-Practical-1" title="Permalink to this headline">¶</a></h1>
+<p>The practicals of the first teaching module are a refinement of those prepared by Luca Bianco. Many thanks for his help.</p>
+<p>The aim of this practical is to set up a working Python3.x development environment and will start familiarizing a bit with Python.</p>
+<div class="section" id="Setting-up-the-environment">
+<h2>Setting up the environment<a class="headerlink" href="#Setting-up-the-environment" title="Permalink to this headline">¶</a></h2>
+<p>We will need to install several pieces of software to get a working programming environment suitable for this practical. In this section we will install everything that we are going to need in the next few weeks.</p>
+<p>Python3 is available for Windows, Linux and Mac, therefore you can run it on your preferred platform.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Note:</strong></p>
+<p>Altough for this course you will be fine with any operating system, my advice, if you are interested in pursuing a bioinformatics career, is to get familiar with Linux.</p>
+</div>
+<p>The following section explains how to install Linux on a windows machine. This is for your reference, you can read the following instructions before the next practical and try to instally Linux if you want to test it out.</p>
+<div class="section" id="Linux-on-windows">
+<h3>Linux on windows<a class="headerlink" href="#Linux-on-windows" title="Permalink to this headline">¶</a></h3>
+<p>If your computer has Windows installed but you want to learn Linux you have several options to get it to run Linux:</p>
+<ol class="arabic simple">
+<li><p>You can install a virtualization software like <a class="reference external" href="https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/15_0%7CPLAYER-1550%7Cproduct_downloads">vmware player</a> and download the .iso image of a linux distribution like <a class="reference external" href="https://ubuntu.com/#download">ubuntu.</a> and install/run it from vmware player. For more information you can look at <a class="reference external" href="https://www.youtube.com/watch?v=9rUhGWijf9U">this tutorial.</a> Another option is to install <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">virtual
+box</a>.</p></li>
+<li><p>This video tutorial (only in Italian) shows you how to set up a usb stick to run Linux from it: <a class="reference external" href="https://youtu.be/8_SK8iEMyJk">https://youtu.be/8_SK8iEMyJk</a></p></li>
+</ol>
+<p><a class="reference external" href="https://www.osboxes.org/virtualbox-images/">Here</a> you can find some VDI images that you can load in virtual box or in vmware player with several different operating systems including Linux distributions like Ubuntu, Debian, Centos, Fedora, etc. Please refer to this <a class="reference external" href="https://www.osboxes.org/guide/">guide</a> (for information on vmware please click on <strong>VM IMAGES –&gt; VMware IMAGES</strong> in the menu of the page).</p>
+</div>
+<div class="section" id="A-dual-boot-system">
+<h3>A dual boot system<a class="headerlink" href="#A-dual-boot-system" title="Permalink to this headline">¶</a></h3>
+<p>You can also install <strong>Linux and Windows on the same machine</strong> and every time you boot your system up <strong>you can decide on which one of the two operating systems you want to use</strong>. Unlike the case described above in which Linux runs <strong>within</strong> Windows, in this case to switch from one operating system to the other you will always have to reboot the machine.</p>
+<p>The installation of a dual boot system is easy, in principle, but there are a few things that you have to be careful on, like creating a partition of the hard disk on which you want to install Linux. If you make a mistake here you might end up losing Windows for example. My advice is to read carefully one of the following (or other guides) before attempting this:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://itsfoss.com/install-ubuntu-dual-boot-mode-windows/">How To Install Ubuntu Along With Windows</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=-iSAyiicyQY">How to Dual Boot Ubuntu 20.04 LTS and Windows 10</a></p></li>
+<li><p><a class="reference external" href="https://averagelinuxuser.com/dualboot-linux-windows/">How to Dual boot Windows 10 and Linux (Beginner’s Guide)</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="Our-toolbox">
+<h2>Our toolbox<a class="headerlink" href="#Our-toolbox" title="Permalink to this headline">¶</a></h2>
+<p>If you decide to work on Windows or Mac, you can safely skip the following information and go straight to the section <strong>“Installing Python3 in Windows/Mac”</strong>. Note that, regardless your operating system, a useful source of information on how to install python can be found <a class="reference external" href="http://docs.python-guide.org/en/latest/">here</a>.</p>
+</div>
+<div class="section" id="Installing-Python3-in-Linux">
+<h2>Installing Python3 in Linux<a class="headerlink" href="#Installing-Python3-in-Linux" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>The Python interpreter. In this course we will use python version 3.x. A lot of information on python can be found on the <a class="reference external" href="https://www.python.org/">python web page</a>. Open a terminal and try typing in:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python3</span></code></p>
+</li>
+</ol>
+<p>if you get an error like “python3 command not found” you need to install it, while if you get something like this (note that the version might be different):</p>
+<img alt="img1" src="_images/console.png" />
+<p>you are already sorted, just press Ctrl-D to exit.</p>
+<p>Installation on a debian-like linux distribution (e.g. Ubuntu) can be done by typing the following commands on a terminal:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">update</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python3</span></code></p>
+<p>While <strong>if you are using Fedora</strong> you can use:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">dnf</span> <span class="pre">install</span> <span class="pre">python3</span></code></p>
+<ol class="arabic" start="2">
+<li><p>Install now the package manager pip, which is a very convenient tool to install python packages, with the following command (<strong>on Fedora, the command above should have already installed it</strong>):</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python3-pip</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Note:</strong></p>
+<p>If pip is already installed in your system you will get a message like: python3-pip is already the newest version (3.x.y)</p>
+</div>
+</li>
+<li><p>Finally, install the Integrated Development Environment (IDE) that we will be using. This is called Visual Studio Code and is available for all platforms. You can read about it <a class="reference external" href="https://code.visualstudio.com/">here</a>. Downloads for all platforms can be found <a class="reference external" href="https://code.visualstudio.com/Download">here</a>. On a debian-like distribution go to the folder where you downloaded the .deb package and type:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">dpkg</span> <span class="pre">-i</span> <span class="pre">code*.deb</span></code></p>
+<p>While <strong>if you are using Fedora</strong> you can use:</p>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">dnf</span> <span class="pre">install</span> <span class="pre">code*.rpm</span></code></p>
+</li>
+</ol>
+</div>
+<div class="section" id="Installing-Python3-in-Windows/Mac">
+<h2>Installing Python3 in Windows/Mac<a class="headerlink" href="#Installing-Python3-in-Windows/Mac" title="Permalink to this headline">¶</a></h2>
+<p>Two options are available, please read them both <strong>CAREFULLY</strong> and then pick the one you are more comfortable with.</p>
+<div class="section" id="OPTION-1:">
+<h3>OPTION 1:<a class="headerlink" href="#OPTION-1:" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>The python interpreter. In this course we will use python version 3.x. A lot of information on python can be found on the <a class="reference external" href="https://www.python.org/">python web page</a>. Installers for Windows and Mac can be downloaded from <a class="reference external" href="https://www.python.org/downloads/">this page</a>. Click on Download Python 3.8.x. <strong>PLEASE REFRAIN FROM DOUBLE-CLICKING ON THE INSTALLER LIKE THERE IS NO TOMORROW AND READ BELOW FIRST.</strong></p>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Attention! Important note</strong></p>
+<p>When executing the installer, please remember to tick the flag “Add Python 3.8.x to PATH” and then click on Install now (see picture below noting that the current version might differ from the picture).</p>
+</div>
+</li>
+</ol>
+<img alt="img2" src="_images/installnow.png" />
+<ol class="arabic simple" start="2">
+<li><p>Install now the Integrated Development Environment (IDE) that we will be using. This is called Visual Studio Code and is available for all platforms. You can read about it <a class="reference external" href="https://code.visualstudio.com/">here</a>. Downloads for all platforms can be found <a class="reference external" href="https://code.visualstudio.com/Download">here</a>.</p></li>
+</ol>
+</div>
+<div class="section" id="OPTION-2-(easier):">
+<h3>OPTION 2 (easier):<a class="headerlink" href="#OPTION-2-(easier):" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Additional Information:</strong></p>
+<p>It is also possible to install python through the Anaconda package manager. You can install Visual Studio Code together with Anaconda(the Anaconda installer will ask if you want it, just say yes!).</p>
+<p>Anaconda is available <a class="reference external" href="https://www.anaconda.com/distribution/">here</a></p>
+</div>
+<p>Upon launching the installer you should be prompted something like:</p>
+<img alt="img3" src="_images/anaconda1.png" />
+<p>at the next step flag the correct items as in the figure below (i.e. <strong>Flag Register Anaconda as my Default Python 3.x</strong>):</p>
+<img alt="img4" src="_images/anaconda2.png" />
+<p>When installation is complete, start anaconda through the <strong>Anaconda Navigator</strong> in the windows menu. When the navigator starts, you should see a screen similar to:</p>
+<img alt="img5" src="_images/anaconda3.png" />
+<p>from which you can install Visual Studio Code as IDE (by clicking on Install).</p>
+<p>For more information please have a look <a class="reference external" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/#open-nav-win">here</a>.</p>
+</div>
+</div>
+<div class="section" id="The-console">
+<h2>The console<a class="headerlink" href="#The-console" title="Permalink to this headline">¶</a></h2>
+<p>To access the console on Linux just open a terminal and type:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python3</span></code></p>
+<p>while in Windows you have to look for “Python” and run “Python 3.x”. The console should look like this:</p>
+<img alt="img6" src="_images/pythonconsole.png" />
+<p>Now we are all set to start interacting with the Python interpreter. In the console, type the following instructions (i.e. the first line and then press ENTER):</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+8
+</pre></div></div>
+</div>
+<p>All as expected. The “In [1]” line is the input, while the “Out [1]” reports the output of the interpreter. Let’s challenge python with some other operations:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="mi">12</span> <span class="o">/</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2.4
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="mi">1</span><span class="o">/</span><span class="mi">133</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.007518796992481203
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="mi">2</span><span class="o">**</span><span class="mi">1000</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+10715086071862673209484250490600018105614048117055336074437503883703510511249361224931983788156958581275946729175531468251871452856923140435984577574698574803934567774824230985421074605062371141877954182153046474983581941267398767559165543946077062914571196477686542167660429831652624386837205668069376
+</pre></div></div>
+</div>
+<p>And some assignments:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sum is:&quot;</span><span class="p">,</span><span class="n">s</span><span class="p">,</span> <span class="s2">&quot; division is:&quot;</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+sum is: 17  division is: 1.4285714285714286
+</pre></div></div>
+</div>
+<p>In the first four lines, values have been assigned to variables through the = operator. In the last line, the print function is used to display the output. For the time being, we will skip all the details and just notice that the print function somehow managed to get text and variables in input and coherently merged them in an output text. Although quite useful in some occasions, the console is quite limited therefore you can close it for now. To exit press Ctrl-D or type exit() and press ENTER.</p>
+</div>
+<div class="section" id="Visual-Studio-Code">
+<h2>Visual Studio Code<a class="headerlink" href="#Visual-Studio-Code" title="Permalink to this headline">¶</a></h2>
+<p>Once you open the IDE Visual Studio Code you will see the welcome screen:</p>
+<img alt="img7" src="_images/visual_studio_code.png" />
+<p>You can find useful information on this tool <a class="reference external" href="https://code.visualstudio.com/docs#vscode">here</a>. Please spend some time having a look at that page. Once you are done with it you can close this window pressing on the “x”.</p>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Attention! Important note</strong></p>
+<p>The following procedure is quite important and you will need to remember it to do the exams on the PCs of the lab.</p>
+</div>
+<p>The first thing to do is to set the python interpreter to use. Click on <strong>View –&gt; Command Palette</strong> and type <strong>“Python”</strong> in the text search space. Select <strong>Python: Select Workspace Interpreter</strong> as shown in the picture below.</p>
+<img alt="img8" src="_images/pythoninterpreter.png" />
+<p>Finally, select the python version you want to use (e.g. Python3.x).</p>
+<p>Now you can click on <strong>Open Folder</strong> to create a new folder to place all the scripts you are going to create. You can call it something like “exercises”. Next you can create a new file, <em>example1.py</em> (as you might have guessed the <strong>.py</strong> extension stands for python).</p>
+<p>Visual Studio Code will understand that you are writing Python code and will help you writing valid syntax in your scripts.</p>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Warning:</strong></p>
+<p>If you get the following error message:</p>
+<img alt="img9" src="_images/pylint.png" />
+<p>click on <strong>Install Pylint</strong> which is a useful tool to help your coding experience.</p>
+</div>
+<p>Add the following text to your <strong>example1.py</strong> file.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This is the first example of Python script.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># variable a</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">33</span> <span class="c1"># variable b</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span> <span class="c1"># variable c holds the ratio</span>
+
+<span class="c1"># Let&#39;s print the result to screen.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot; b:&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot; a/b=&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+a: 10  b: 33  a/b= 0.30303030303030304
+</pre></div></div>
+</div>
+<p>A couple of things worth nothing: the first three lines opened and closed by “”” are some text describing the content of the script. Moreover, comments are proceeded by the hash key (#) and they are just ignored by the python interpreter.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Note</strong></p>
+<p>Good <em>Pythonic</em> code follows some syntactic rules on how to write things, naming conventions etc. The IDE will help you writing pythonic code even though we will not enforce this too much in this course. If you are interested in getting more details on this, you can have a look at the <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP8 Python Style Guide</a> (Python Enanchement Proposals - index 8).</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Warning</strong></p>
+<p><strong>Please remember to comment your code, as it helps readability and will make your life easier when you have to modify or just understand the code you wrote some time in the past.</strong></p>
+</div>
+<p>Please notice that Visual Studio Code will help you writing your Python scripts. For example, when you start writing the <strong>print</strong> line it will complete the code for you (<strong>if the Pylint extension mentioned above is installed</strong>), suggesting the functions that match the letters typed in. This useful feature is called <strong>code completion</strong> and, alongside suggesting possible matches, it also visualizes a description of the function and parameters it needs. Here is an example:</p>
+<img alt="img10" src="_images/codecompletion.png" />
+<p>Save the file (Ctrl+S as shortcut). It is convenient to ask the IDE to highlight potential <em>syntactic</em> problems found in the code. You can toggle this function on/off by clicking on <strong>View –&gt; Problems</strong>. The <em>Problems</em> panel should look like this</p>
+<img alt="img11" src="_images/problems.png" />
+<p>Visual Studio Code is warning us that the variable names <em>a,b,c</em> at lines 4,5,6 do not follow Python naming conventions for constants (do you understand why? Check <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#constants">here</a> to find the answer). This warning is because they have been defined at the top level (there is no structure to our script yet) and therefore are interpreted as constants. The naming convention for constants states that they should be in capital letters. To amend the code,
+you can just replace all the names with the corresponding capitalized name (i.e. A,B,C). If you do that, and you save the file again (Ctrl+S), you will see all these problems disappearing as well as the green underlining of the variable names. If your code does not have an empty line before the end, you might get another warning “<em>Final new line missing</em>”.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Info</strong></p>
+<p>Note that these were just warnings and the interpreter <strong>in this case</strong> will happily and correctly execute the code anyway, but it is always good practice to understand what the warnings are telling us before deciding to ignore them! Please, note also that these warnings could be not dispalyed with some versions of python and Visual Studio Code.</p>
+</div>
+<p>Had we by mistake mispelled the <strong>print</strong> function name (something that should not happen with the code completion tool that suggests functions names!) writing <em>printt</em> (note the double t), upon saving the file, the IDE would have underlined in red the function name and flagged it up as a problem.</p>
+<img alt="img12" src="_images/errors.png" />
+<p>This is because the builtin function <em>printt</em> does not exist and the python interpreter does not know what to do when it reads it. Note that <em>printt</em> is actually underlined in red, meaning that there is an error which will cause the interpreter to stop the execution with a failure. <strong>Please remember ALL ERRORS MUST BE FIXED before running any piece of code.</strong></p>
+<p>Now it is time to execute the code. By <strong>right-clicking</strong> in the code panel and selecting <strong>Run Python File in Terminal</strong> (see picture below) you can execute the code you have just written.</p>
+<img alt="img13" src="_images/pythonrun.png" />
+<p>Upon clicking on <em>Run Python File in Terminal</em> a terminal panel should pop up in the lower section of the coding panel and the result shown above should be reported.</p>
+<p>Saving script files like the <strong>example1.py</strong> above is also handy because they can be invoked several times (later on we will learn how to get inputs from the command line to make them more useful…). To do so, you just need to call the python intepreter passing the script file as parameter. From the folder containing the <em>example1.py</em> script:</p>
+<p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">example1.py</span></code></p>
+<p>will in fact return:</p>
+<p>a: 10 b: 33 a/b= 0.30303030303030304</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Info: syntactic vs semantic errors</strong></p>
+<p>Before ending this section, let me add another note on errors. The IDE will diligently point you out <strong>syntactic</strong> warnings and errors (i.e. errors/warnings concerning the structure of the written code like name of functions, number and type of parameters, etc.) but it will not detect <strong>semantic</strong> or <strong>runtime</strong> errors (i.e. connected to the meaning of your code or to the value of your variables). These sort of errors will most probably make your code crash or may result in unexpected
+results/behaviours. In the next section we will introduce the debugger, which is a useful tool to help detecting these errors.</p>
+</div>
+<p>Before getting into that, consider the following lines of code (do not focus on the <em>import</em> line, this is only to load the mathematics module and use its method <em>sqrt</em> to compute the square root of its parameter):</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Runtime error example, compute square root of numbers</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="n">B</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A:&quot;</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="s2">&quot; B:&quot;</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="s2">&quot; C:&quot;</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span>
+
+<span class="n">D</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="n">C</span><span class="p">)</span> <span class="c1"># whoops, A-C is now -4!!!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+A: 16  B: 4.0  C: 20.0
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-7-5d4ed1b10924&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;A:&#34;</span><span class="ansi-blue-fg">,</span> A<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34; B:&#34;</span><span class="ansi-blue-fg">,</span> B<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34; C:&#34;</span><span class="ansi-blue-fg">,</span> C<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span>
+<span class="ansi-green-fg">---&gt; 11</span><span class="ansi-red-fg"> </span>D <span class="ansi-blue-fg">=</span> math<span class="ansi-blue-fg">.</span>sqrt<span class="ansi-blue-fg">(</span>A<span class="ansi-blue-fg">-</span>C<span class="ansi-blue-fg">)</span> <span class="ansi-red-fg"># whoops, A-C is now -4!!!</span>
+<span class="ansi-green-intense-fg ansi-bold">     12</span> print<span class="ansi-blue-fg">(</span>D<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">ValueError</span>: math domain error
+</pre></div></div>
+</div>
+<p>If you add that code to a python file (e.g. sqrt_example.py), you save it and you try to execute it, you should get an error message as reported above. You can see that the interpreter has happily printed off the vaule of A,B and C but then stumbled into an error at line 9 (math domain error) when trying to compute <span class="math notranslate nohighlight">\(\sqrt{A-C} = \sqrt{-4}\)</span>, because the sqrt method of the math module cannot be applied to negative values (i.e. it works in the domain of real numbers).</p>
+<p><em>Please take some time to familiarize with Visual Studio Code (creating files, saving files etc.) as in the next practicals we will take this ability for granted.</em></p>
+</div>
+<div class="section" id="The-debugger">
+<h2>The debugger<a class="headerlink" href="#The-debugger" title="Permalink to this headline">¶</a></h2>
+<p>Another important feature of advanced Integrated Development Environments (IDEs) is their debugging capabilities. Visual Studio Code comes with a debugging tool that can help you trace the execution of your code and understand where possible errors hide.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Note</strong></p>
+<p>Please note that the following part of the guide presents a set of commands that <strong>could be different</strong> from the ones of the most updated versions of Visual Studio Code. For example, in my current version of the editor the debugger can be launched with <strong>Run –&gt; Start Debugging</strong> (shortcut F5). Before doing this, you should add a breakpoint to the code with <strong>Run –&gt; Toggle Breakpoint</strong> (shortcut F9).</p>
+</div>
+<p>Write the following code on a new file (let’s call it <em>integer_sum.py</em>) and execute it to get the result.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot; integer_sum.py is a script to</span>
+<span class="sd"> compute the sum of the first 1200 integers. &quot;&quot;&quot;</span>
+
+<span class="n">S</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1201</span><span class="p">):</span>
+    <span class="n">S</span> <span class="o">=</span> <span class="n">S</span> <span class="o">+</span> <span class="n">i</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The sum of the first 1200 integers is: &quot;</span><span class="p">,</span> <span class="n">S</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The sum of the first 1200 integers is:  720600
+</pre></div></div>
+</div>
+<p>Without getting into too many details, the code you just wrote starts initializing a variable S to zero, and then loops from 0 to 1200 assigning each time the value to a variable i, accumulating the sum of S + i in the variable S.</p>
+<p><strong>A final thing to notice is indentation.</strong></p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Info</strong></p>
+<p>In Python it is important to indent the code properly as this provides the right scope for variables (e.g. see that the line <em>S = S + 1</em> starts more to the right than the previous and following line – this is because it is inside the for loop). You do not have to worry about this for the time being, we will get to this in a later practical…</p>
+</div>
+<p>How does this code work? How does the value of S and i change as the code is executed? These are questions that can be answered by the debugger.</p>
+<p>To start the debugger, click on <strong>Debug –&gt; Start Debugging</strong> (shortcut F5). The following small panel should pop up:</p>
+<img alt="img14" src="_images/debug.png" />
+<p>We will use it shortly, but before that, let’s focus on what we want to track. On the left hand side of the main panel, a <em>Watch</em> panel appeared. This is where we need to add the things we want to monitor as the execution of the program goes. With respect to the code written above, we are interested in keeping an eye on the variables S, i and also of the expression S+i (that will give us the value of S of the next iteration). Add these three expressions in the watch panel (click on <strong>+</strong> to add
+new expressions). The watch panel should look like this:</p>
+<img alt="img15" src="_images/watch.png" />
+<p>do not worry about the message “<em>name X is not defined</em>”, this is normal as no execution has taken place yet and the interpreter still does not know the value of these expressions.</p>
+<p>The final thing before starting to debug is to set some breakpoints, places where the execution will stop so that we can check the value of the watched expressions. This can be done by hovering with the mouse on the left of the line number. A small reddish dot should appear, place the mouse over the correct line (e.g. the line corresponding to <em>S = S + 1</em> and click to add the breakpoint (a red dot should appear once you click).</p>
+<img alt="img16" src="_images/breakpoint.png" />
+<p>Now we are ready to start debugging the code. Click on the green triangle on the small debug panel and you will see that the yellow arrow moved to the breakpoint and that the watch panel updated the value of all our expressions.</p>
+<img alt="img17" src="_images/step0.png" />
+<p>The value of all expressions is zero because the debugger stopped <strong>before</strong> executing the code specified at the breakpoint line (recall that S is initialized to 0 and that i will range from 0 to 1200). If you click again on the green arrow, execution will continue until the next breakpoint (we are in a for loop, so this will be again the same line - trust me for the time being).</p>
+<img alt="img18" src="_images/step1.png" />
+<p>Now i has been increased to 1, S is still 0 (remember that the execution stopped <strong>before</strong> executing the code at the breakpoint) and therefore S + i is now 1. Click one more time on the green arrow and values should update accordingly (i.e. S to 1, i to 2 and S + i to 3), another round of execution should update S to 3, i to 3 and S + i to 6. Got how this works? Variable i is increased by one each time, while S increases by i. You can go on for a few more iterations and see if this makes any
+sense to you, once you are done with debugging you can stop the execution by pressing the red square on the small debug panel.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle"><strong>Note</strong></p>
+<p>The debugger is very useful to understand what your program does. Please spend some time to understand how this works as being able to run the debugger properly is a good help to identify and solve <strong>semantic errors</strong> of your code.</p>
+</div>
+<p>Other editors are available, if you already have your favourite one you can stick to it. Some examples are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pythonhosted.org/spyder/installation.html">Spyder</a></p></li>
+<li><p><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm Community Edition</a></p></li>
+<li><p><a class="reference external" href="http://jupyter.org/">Jupyter Notebook</a>. Note: we might use it later on in the course.</p></li>
+</ul>
+</div>
+<div class="section" id="A-quick-Jupyter-primer-(just-for-your-information,-skip-if-not-interested)">
+<h2>A quick Jupyter primer (just for your information, skip if not interested)<a class="headerlink" href="#A-quick-Jupyter-primer-(just-for-your-information,-skip-if-not-interested)" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter allows to write notebooks organized in cells (these can be saved in files with .ipynb extension). Notebooks contain both the <strong>code</strong>, some <strong>text describing the code</strong> and the <strong>output of the code execution</strong>, they are quite useful to produce some quick reports on data analysis. where there is both code, output of running that code and text. The code by default is Python, but can also support other languages like R). The text is formatted using the <a class="reference external" href="https://en.wikipedia.org/wiki/Markdown">Markdown
+language</a> - see <a class="reference external" href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">cheatsheet</a> for its details. <em>Jupyter is becoming the de-facto standard for writing technical documentation</em>.</p>
+<div class="section" id="Installation">
+<h3>Installation<a class="headerlink" href="#Installation" title="Permalink to this headline">¶</a></h3>
+<p>To install it (if you have not installed python with Anaconda otherwise you should have it already):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python3 -m pip install jupyter
+</pre></div>
+</div>
+<p>you can find more information <a class="reference external" href="https://jupyter.org/install">here</a></p>
+<p>Upon successful installation, you can run it with:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>jupyter-notebook
+</pre></div>
+</div>
+<p>This should fire up a browser on a page where you can start creating your notebooks or modifying existing ones. To create a new notebook you simply click on <strong>New</strong>:</p>
+<img alt="img19" src="_images/jupyter.png" />
+<p>and then you can start adding cells (i.e. containers of code and text). The type of each cell is specified by selecting the cell and selecting the right type in the dropdown list:</p>
+<img alt="img20" src="_images/juptyter2b.png" />
+<p>Cells can be executed by clicking on the <strong>Run</strong> button. This will get the code to execute (and output to be written) and text to be processed to provide the final page layout. To go back to the edit mode, just double click on an executed cell.</p>
+<img alt="img21" src="_images/jupyter3.png" />
+<p><em>Please take some more time to familiarize with Visual Studio Code (creating files, saving files, interacting with the debugger etc.) as in the next practicals we will take this ability for granted. Once you are done you can move on and do the following exercises.</em></p>
+</div>
+</div>
+<div class="section" id="Exercises">
+<h2>Exercises<a class="headerlink" href="#Exercises" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>The size of the Sars-Cov-2 genome is 29,811 base pairs. 8,903 of these bases are adenines. Write some python code to compute the percentage of the genome that is an adenine and print it.</p></li>
+</ol>
+<div class="tggle" onclick="toggleVisibility(&#39;ex_new&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex_new" style="display:none;"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">gen_size</span> <span class="o">=</span> <span class="mi">29811</span>
+<span class="n">adenines</span> <span class="o">=</span> <span class="mi">8903</span>
+<span class="n">fraction</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="n">adenines</span><span class="o">/</span><span class="n">gen_size</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The Sars-Cov-2 genome has &quot;</span><span class="p">,</span> <span class="n">fraction</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">% a</span><span class="s2">denines&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The Sars-Cov-2 genome has  29.864815001174062 % adenines
+</pre></div></div>
+</div>
+</div><ol class="arabic simple" start="2">
+<li><p>Compute the area of a triangle having base 120 units (B) and height 33 (H). Assign the result to a variable named area and print it.</p></li>
+</ol>
+<div class="tggle" onclick="toggleVisibility(&#39;ex1&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex1" style="display:none;"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">B</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="n">H</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="n">Area</span> <span class="o">=</span> <span class="n">B</span><span class="o">*</span><span class="n">H</span><span class="o">/</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Triangle area is:&quot;</span><span class="p">,</span> <span class="n">Area</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Triangle area is: 1980.0
+</pre></div></div>
+</div>
+</div><ol class="arabic simple" start="3">
+<li><p>Compute the area of a square having side (S) equal to 145 units. Assign the result to a variable named area and print it.</p></li>
+</ol>
+<div class="tggle" onclick="toggleVisibility(&#39;ex2&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex2" style="display:none;"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">S</span> <span class="o">=</span> <span class="mi">145</span>
+<span class="n">Area</span> <span class="o">=</span> <span class="n">S</span><span class="o">*</span><span class="n">S</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Square area is:&quot;</span><span class="p">,</span><span class="n">Area</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Square area is: 21025
+</pre></div></div>
+</div>
+</div><ol class="arabic simple" start="4">
+<li><p>Modify the program at point 2. to acquire the side S from the user at runtime. Hint: use the input function (details <a class="reference external" href="https://docs.python.org/3/library/functions.html#input">here</a>) and remember to convert the acquired value into an int.</p></li>
+</ol>
+<div class="tggle" onclick="toggleVisibility(&#39;ex3&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex3" style="display:none;"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">S_str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Insert size: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">S_str</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">S_str</span><span class="p">)</span>
+<span class="n">S</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">S_str</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">S</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
+<span class="n">Area</span> <span class="o">=</span> <span class="n">S</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Square area is:&quot;</span><span class="p">,</span><span class="n">Area</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Insert size: 27
+&lt;class &#39;str&#39;&gt;
+27
+&lt;class &#39;int&#39;&gt;
+27
+Square area is: 729
+</pre></div></div>
+</div>
+</div><ol class="arabic simple" start="5">
+<li><p>If you have not done so already, put the two previous scripts in two separate files (e.g. triangle_area.py and square_area.py and execute them from the terminal).</p></li>
+<li><p>Write a small script (trapezoid.py) that computes the area of a trapezoid having major base (MB) equal to 30 units, minor base (mb) equal to 12 and height (H) equal to 17. Print the resulting area. Try executing the script from inside Visual Studio Code and from the terminal.</p></li>
+</ol>
+<div class="tggle" onclick="toggleVisibility(&#39;ex4&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex4" style="display:none;"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;trapezoid.py&quot;&quot;&quot;</span>
+<span class="n">MB</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">mb</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">H</span> <span class="o">=</span> <span class="mi">17</span>
+<span class="n">Area</span> <span class="o">=</span> <span class="p">(</span><span class="n">MB</span> <span class="o">+</span> <span class="n">mb</span><span class="p">)</span><span class="o">*</span><span class="n">H</span><span class="o">/</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trapezoid area is: &quot;</span><span class="p">,</span> <span class="n">Area</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Trapezoid area is:  357.0
+</pre></div></div>
+</div>
+</div><ol class="arabic simple" start="7">
+<li><p>Rewrite the example of the sum of the first 1200 integers by using the following equation: <span class="math notranslate nohighlight">\(\sum\limits_{i=1}^n i = \frac{n (n+1)}{2}\)</span>.</p></li>
+</ol>
+<div class="tggle" onclick="toggleVisibility(&#39;ex5&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex5" style="display:none;"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">1200</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of first 1200 integers: &quot;</span><span class="p">,</span> <span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Sum of first 1200 integers:  720600.0
+</pre></div></div>
+</div>
+</div><ol class="arabic simple" start="8">
+<li><p>Modify the program at point 6. to make it acquire the number of integers to sum N from the user at runtime.</p></li>
+</ol>
+<div class="tggle" onclick="toggleVisibility(&#39;ex6&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex6" style="display:none;"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Input number N:&quot;</span><span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum of first &quot;</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="s2">&quot; integers: &quot;</span><span class="p">,</span> <span class="n">N</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Input number N:
+7
+Sum of first  7  integers:  28.0
+</pre></div></div>
+</div>
+</div><ol class="arabic simple" start="9">
+<li><p>Write a small script to compute the length of the hypotenuse (c) of a right triangle having sides a=133 and b=72 units (see picture below). Hint: <em>remember the Pythagorean theorem and use math.sqrt</em>).</p></li>
+</ol>
+<img alt="img22" src="_images/triangle.png" />
+<div class="tggle" onclick="toggleVisibility(&#39;ex7&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex7" style="display:none;"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">133</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">72</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hypotenuse: &quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Hypotenuse:  151.23822268196622
+</pre></div></div>
+</div>
+</div><ol class="arabic simple" start="10">
+<li><p>Rewrite the trapezoid script making it compute the area of the trapezoid starting from the major base (MB), minor base (mb) and height (H) taken in input. (Hint: <em>use the input function and remember to convert the acquired value into an int</em>).</p></li>
+</ol>
+<div class="tggle" onclick="toggleVisibility(&#39;ex8&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex8" style="display:none;"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;trapezoidV2.py&quot;&quot;&quot;</span>
+<span class="n">MB</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Input the major base (MB):&quot;</span><span class="p">))</span>
+<span class="n">mb</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Input the minor base (mb):&quot;</span><span class="p">))</span>
+<span class="n">H</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Input the height (H):&quot;</span><span class="p">))</span>
+<span class="n">Area</span> <span class="o">=</span> <span class="p">(</span><span class="n">MB</span> <span class="o">+</span> <span class="n">mb</span><span class="p">)</span><span class="o">*</span><span class="n">H</span><span class="o">/</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Given MB:&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">MB</span><span class="p">)</span> <span class="p">,</span> <span class="s2">&quot; mb:&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">mb</span><span class="p">)</span> <span class="p">,</span> <span class="s2">&quot; and H:&quot;</span><span class="p">,</span> <span class="n">H</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The trapezoid area is: &quot;</span><span class="p">,</span> <span class="n">Area</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Input the major base (MB):5
+Input the minor base (mb):9
+Input the height (H):12
+Given MB: 5  mb: 9  and H: 12
+The trapezoid area is:  84.0
+</pre></div></div>
+</div>
+</div><ol class="arabic simple" start="11">
+<li><p>Write a script that reads the side of an hexagon in input and computes its perimeter and area printing them to the screen. <em>Hint:</em> <span class="math notranslate nohighlight">\(Area = \frac{3*\sqrt{3}*side^{2}}{2}\)</span></p></li>
+</ol>
+<div class="tggle" onclick="toggleVisibility(&#39;ex9&#39;);"><p>Show/Hide Solution</p>
+</div><div id="ex9" style="display:none;"><div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">side</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please insert the side of the hexagon: &quot;</span><span class="p">))</span>
+
+<span class="n">P</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="n">side</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">side</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Perimeter: &quot;</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="s2">&quot; Area: &quot;</span><span class="p">,</span> <span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Please insert the side of the hexagon: 6
+Perimeter:  36  Area:  93.53074360871938
+</pre></div></div>
+</div>
+</div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="M1_practical2.html" class="btn btn-neutral float-right" title="Module 1, Practical 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Scientific Programming for QCB" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright # 2021 - 2021, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
