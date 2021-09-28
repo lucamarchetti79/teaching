@@ -9,7 +9,7 @@ Le scorse volte abbiamo lavorato con l'interprete Python, è stato divertente ma
 
 **A cosa serve l'interprete**
  
-#. Testare funzioni del quale non ricordimo il funzionamento
+#. Testare funzioni del quale non ricordiamo il funzionamento
 #. Interrogare la documentazione
 #. Testare il codice che abbiamo scitto
 #. Eseguire python in tempo reale (es interrogare database, inviare pacchetti in rete, etc...)

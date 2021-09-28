@@ -60,6 +60,11 @@ Note Introduttive
     shell_basics_sol.rst
 
     shell_commands1.rst	      
+    shell_commands1_sol.rst	      
 
     python_basics.rst
+    python_basics_sol.rst
 
+    python_moduli.rst
+
+    python_numbers.rst
