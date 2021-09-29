@@ -19,7 +19,7 @@
     Module 1, Practical 9 <M1_practical9.ipynb>
     Module 1, Practical 10 <M1_practical10.ipynb>
     Module 1, Practical 11 <M1_practical11.ipynb>
-    Module 1, Practical 12 <M1_practical12.ipynb>
+    OPTIONAL Module 1, Practical 12 <M1_practical12.ipynb>
     
     Module 2, Practical 1 <M2_practical1.ipynb>
     Module 2, Practical 2 <M2_practical2.ipynb>
