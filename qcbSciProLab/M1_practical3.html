@@ -148,6 +148,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#Tuples">Tuples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Introduction-to-sets">Introduction to sets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Exercises">Exercises</a></li>
 </ul>
 </li>
@@ -1343,6 +1344,36 @@ Index: 0
 
 <span class="ansi-red-fg">ValueError</span>: tuple.index(x): x not in tuple
 </pre></div></div>
+</div>
+</div>
+<div class="section" id="Introduction-to-sets">
+<h2>Introduction to sets<a class="headerlink" href="#Introduction-to-sets" title="Permalink to this headline">¶</a></h2>
+<p>Python also includes a data type for <strong>sets</strong>. A set is an unordered collection with no duplicate elements. Basic uses include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.</p>
+<p>Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(), not {}; the latter creates an empty dictionary, a data structure that we will discuss in the next practicals.</p>
+<p>Here is a brief demonstration:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; basket = {&#39;apple&#39;, &#39;orange&#39;, &#39;apple&#39;, &#39;pear&#39;, &#39;orange&#39;, &#39;banana&#39;}
+&gt;&gt;&gt; print(basket)                      # show that duplicates have been removed
+{&#39;orange&#39;, &#39;banana&#39;, &#39;pear&#39;, &#39;apple&#39;}
+&gt;&gt;&gt; &#39;orange&#39; in basket                 # fast membership testing
+True
+&gt;&gt;&gt; &#39;crabgrass&#39; in basket
+False
+
+&gt;&gt;&gt; # Demonstrate set operations on unique letters from two words
+...
+&gt;&gt;&gt; a = set(&#39;abracadabra&#39;)
+&gt;&gt;&gt; b = set(&#39;alacazam&#39;)
+&gt;&gt;&gt; a                                  # unique letters in a
+{&#39;a&#39;, &#39;r&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;}
+&gt;&gt;&gt; a - b                              # letters in a but not in b
+{&#39;r&#39;, &#39;d&#39;, &#39;b&#39;}
+&gt;&gt;&gt; a | b                              # letters in a or b or both
+{&#39;a&#39;, &#39;c&#39;, &#39;r&#39;, &#39;d&#39;, &#39;b&#39;, &#39;m&#39;, &#39;z&#39;, &#39;l&#39;}
+&gt;&gt;&gt; a &amp; b                              # letters in both a and b
+{&#39;a&#39;, &#39;c&#39;}
+&gt;&gt;&gt; a ^ b                              # letters in a or b but not both
+{&#39;r&#39;, &#39;d&#39;, &#39;b&#39;, &#39;m&#39;, &#39;z&#39;, &#39;l&#39;}
+</pre></div>
 </div>
 </div>
 <div class="section" id="Exercises">
