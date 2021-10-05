@@ -375,8 +375,7 @@ delle stringhe.
 
 |
 
-Esercizio insieme
------------------
+**PROVATE VOI**
 
 #. Considerando la seguente stringa in input: DNA = "ttggtatcggtctacgcctcgcatcgattaggtgattgtgga"
 #. Convertiamo la stringa in maiuscolo.

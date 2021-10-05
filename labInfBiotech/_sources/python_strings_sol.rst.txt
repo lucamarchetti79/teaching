@@ -234,25 +234,6 @@ Soluzioni
         print(stringa)
         print(len(stringa))                  # 1
 
-   #. Gia' controllato nell'esercizio sopra, la risposta e' no. Verifichiamo
-      comunque::
-
-        backslash = "\\"
-
-        print(backslash*2 in "\\")           # False
-
-   #. Primo metodo::
-
-        backslash = "\\"
-
-        condizione = testo.startswith(backslash) or \
-                     testo.endswith(backslash)
-
-      Secondo metodo::
-
-        condizione = (testo[0] == backslash) or \
-                     (testo[-1] == backslash)
-
    #. Soluzione::
 
         condizione = \

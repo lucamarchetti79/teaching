@@ -403,27 +403,6 @@ noi invece le abbiamo passato <code class="docutils literal notranslate"><span c
 </pre></div>
 </div>
 </li>
-<li><p>Gia’ controllato nell’esercizio sopra, la risposta e’ no. Verifichiamo
-comunque:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">backslash</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">backslash</span><span class="o">*</span><span class="mi">2</span> <span class="ow">in</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">)</span>           <span class="c1"># False</span>
-</pre></div>
-</div>
-</li>
-<li><p>Primo metodo:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">backslash</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span>
-
-<span class="n">condizione</span> <span class="o">=</span> <span class="n">testo</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">backslash</span><span class="p">)</span> <span class="ow">or</span> \
-             <span class="n">testo</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="n">backslash</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Secondo metodo:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">condizione</span> <span class="o">=</span> <span class="p">(</span><span class="n">testo</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">backslash</span><span class="p">)</span> <span class="ow">or</span> \
-             <span class="p">(</span><span class="n">testo</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">backslash</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
 <li><p>Soluzione:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">condizione</span> <span class="o">=</span> \
      <span class="n">testo</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;xxx&quot;</span><span class="p">)</span> <span class="ow">or</span> \
