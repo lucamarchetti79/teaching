@@ -12,7 +12,6 @@
     Module 1, Practical 2 <M1_practical2.ipynb>
     Module 1, Practical 3 <M1_practical3.ipynb>
     Module 1, Practical 4 <M1_practical4.ipynb>
-    Module 1, Practical 5 <M1_practical5.ipynb>
 
 |space|
 ==========
