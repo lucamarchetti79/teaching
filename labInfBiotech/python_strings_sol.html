@@ -602,8 +602,8 @@ noi invece le abbiamo passato <code class="docutils literal notranslate"><span c
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dna</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>                      <span class="c1"># False</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dna</span><span class="p">))</span>                          <span class="c1"># 61</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="n">dna</span><span class="p">)</span>                       <span class="c1"># True</span>
-<span class="c1"># rimuovo gli &#39;a capo&#39;</span>
-<span class="n">dna</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+<span class="n">dna</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>              <span class="c1"># rimuovo gli &#39;a capo&#39;</span>
+<span class="n">dna</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>                        <span class="c1"># tolgo anche eventuali spazi a dx e sx</span>
 
 
 <span class="nb">print</span><span class="p">(</span><span class="n">dna</span><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>                           <span class="c1"># &quot;CAT&quot;</span>

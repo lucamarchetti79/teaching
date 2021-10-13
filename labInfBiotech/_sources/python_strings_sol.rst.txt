@@ -418,8 +418,8 @@ Soluzioni
     print(len(dna) == 0)                      # False
     print(len(dna))                          # 61
     print("\n" in dna)                       # True
-    # rimuovo gli 'a capo'
-    dna = dna.strip()
+    dna = dna.replace("\n", "")              # rimuovo gli 'a capo'
+    dna = dna.strip()                        # tolgo anche eventuali spazi a dx e sx
 
 
     print(dna[:3])                           # "CAT"
