@@ -41,7 +41,8 @@
   <link rel="stylesheet" href="_static/css/jupman.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/jupman-web.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Module 1, Practical 8" href="M1_practical8.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,7 +90,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">Scientific Programming for QCB</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html#General-Info">General Info</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#Timetable-and-lecture-rooms">Timetable and lecture rooms</a></li>
@@ -215,6 +216,44 @@
 <li class="toctree-l2"><a class="reference internal" href="M1_practical7.html#Exercises">Exercises</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="M1_practical8.html">Module 1, Practical 8</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Libraries-installation">Libraries installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Pandas">Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Series">Series</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical8.html#How-to-define-and-access-a-Series">How to define and access a Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical8.html#Operator-broadcasting">Operator broadcasting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical8.html#Filtering">Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical8.html#Missing-data">Missing data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical8.html#Computing-stats">Computing stats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Plotting-data">Plotting data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Pandas-DataFrames">Pandas DataFrames</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical8.html#Define-a-DataFrame">Define a DataFrame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical8.html#Loading-data-from-external-files">Loading data from external files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical8.html#Extract-values-by-row-and-column">Extract values by row and column</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical8.html#Broadcasting,-filtering-and-computing-stats">Broadcasting, filtering and computing stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical8.html#Merging-DataFrames">Merging DataFrames</a></li>
+<li class="toctree-l3"><a class="reference internal" href="M1_practical8.html#Grouping">Grouping</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="M1_practical8.html#Exercises">Exercises</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Module 1, Practical 9</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Numpy">Numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Numpy-ndarray">Numpy ndarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Random-arrays">Random arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Numpy-to-and-from-pandas">Numpy to and from pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Reshaping">Reshaping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Iterating-over-arrays-and-Indexing">Iterating over arrays and Indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Broadcasting-and-arithmetic-functions">Broadcasting and arithmetic functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Filtering">Filtering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Linear-algebra">Linear algebra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Matplotlib">Matplotlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Exercises">Exercises</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="toc.html"> </a></li>
 </ul>
 
@@ -268,6 +307,8 @@
     <!-- Commented because doesn't work with sections,
          see https://github.com/DavidLeoni/jupman/issues/39
     <li><a href="toc-page.html">Docs</a> &raquo;</li>
+    
+        <li><a href="toc.html"> </a> &raquo;</li>
     
     <li>Module 1, Practical 9</li>
     -->
@@ -1924,11 +1965,7 @@ Ax:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="o">%</span><span class="k">reset</span> -s -f
-<span class="o">%</span><span class="k">matplotlib</span> inline
-
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 
@@ -2077,9 +2114,7 @@ Identities are OK!
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="o">%</span><span class="k">reset</span> -s -f
-
-<span class="kn">import</span> <span class="nn">random</span>
+<span></span><span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
@@ -2464,7 +2499,6 @@ pyrVol(a,b,c)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
 <span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">linalg</span>
 
@@ -2548,7 +2582,6 @@ FROM linalg: (43.144457622432796+0j)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-
 <span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -2637,6 +2670,13 @@ FROM linalg: (43.144457622432796+0j)
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="M1_practical8.html" class="btn btn-neutral float-left" title="Module 1, Practical 8" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
