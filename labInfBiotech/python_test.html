@@ -34,7 +34,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lezione 6 - Python: Liste, concetti avanzati" href="python_lists_adv.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,7 +83,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
@@ -96,6 +97,12 @@
 <li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Esercitazione aggiuntiva</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#esercizio">Esercizio</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -163,6 +170,13 @@
   <div class="section" id="esercitazione-aggiuntiva">
 <h1>Esercitazione aggiuntiva<a class="headerlink" href="#esercitazione-aggiuntiva" title="Permalink to this headline">¶</a></h1>
 <p>Giunti a questo punto, dovreste essere capaci di fare il seguente esercizio:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Il testo dell’esercizio che segue utilizza il concetto di array, che deriva da altri
+linguaggi di programmazione. Nel nostro caso possiamo pensare che array e liste siano
+sinonimi.</p>
+</div>
+<hr class="docutils" />
 <div class="section" id="esercizio">
 <h2>Esercizio<a class="headerlink" href="#esercizio" title="Permalink to this headline">¶</a></h2>
 <p>Scrivete un <strong>modulo</strong> python che data in input la sequente seq di DNA:</p>
@@ -172,8 +186,8 @@
 <ol class="arabic simple">
 <li><p>conti le frequenze di a,c,g,t normalizzate (numero di occorrenze di a diviso lunghezza della stringa. Es: se ci sono 30 “a” e la stringa è lunga 60, la frequenaza normalizzata di “a” è uguale a 30/60 = 0.5)</p></li>
 <li><p>stampi il DNA ordinato (es “aaaaaaaaaccccccccgggggggttttt”)</p></li>
-<li><p>create un array chiamato <strong>array_DNA</strong>, contenente la frequenza del aminoacido corrisponedete. Es se le frequnze sono a=0.20,c=0.30,g=0.10,t=0.40, e il DNA è del tipo “atgc…”, dovete creare l’array [0.2,0.4,0.1,0.3,…]</p></li>
-<li><p>Create un array con la media mobile del array chiamato <strong>array_DNA</strong>. La media mobile è un array dove l’elemento in posizione i rappresenta la media degli elementi in posizione 0,1,2,..,i-1,i. Es se l’array in input è [1,1,4,5], l’array contenente le medie mobile è il seguente: [1,1,2,2.75] perche [1/1 = 1, (1+1)/2 = 1, (1+1+4)/3 = 2, (1+1+4+5)/4 = 2.75]</p></li>
+<li><p>crei un array chiamato <strong>array_DNA</strong>, contenente la frequenza del aminoacido corrisponedete. Es se le frequnze sono a=0.20,c=0.30,g=0.10,t=0.40, e il DNA è del tipo “atgc…”, dovete creare l’array [0.2,0.4,0.1,0.3,…]</p></li>
+<li><p>crei un array con la media mobile del array chiamato <strong>array_DNA</strong>. La media mobile è un array dove l’elemento in posizione i rappresenta la media degli elementi in posizione 0,1,2,..,i-1,i. Es se l’array in input è [1,1,4,5], l’array contenente le medie mobile è il seguente: [1,1,2,2.75] perche [1/1 = 1, (1+1)/2 = 1, (1+1+4)/3 = 2, (1+1+4+5)/4 = 2.75]</p></li>
 </ol>
 <p>In fine stampate i 4 risultati, un esempio di output del programma è il seguente:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">res1</span> <span class="n">freq</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">0.28</span> <span class="n">freq</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.27</span> <span class="n">freq</span> <span class="n">g</span> <span class="o">=</span> <span class="mf">0.22</span> <span class="n">freq</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.23</span>
@@ -191,6 +205,13 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="python_lists_adv.html" class="btn btn-neutral float-left" title="Lezione 6 - Python: Liste, concetti avanzati" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

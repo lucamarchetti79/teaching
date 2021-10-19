@@ -96,6 +96,9 @@
 <li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
 </ul>
 
             
@@ -163,6 +166,13 @@
   <div class="section" id="esercitazione-aggiuntiva-soluzioni">
 <h1>Esercitazione aggiuntiva - Soluzioni<a class="headerlink" href="#esercitazione-aggiuntiva-soluzioni" title="Permalink to this headline">¶</a></h1>
 <p>Giunti a questo punto, dovreste essere capaci di fare il seguente esercizio:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Il testo dell’esercizio che segue utilizza il concetto di array, che deriva da altri
+linguaggi di programmazione. Nel nostro caso possiamo pensare che array e liste siano
+sinonimi.</p>
+</div>
+<hr class="docutils" />
 <div class="section" id="esercizio">
 <h2>Esercizio<a class="headerlink" href="#esercizio" title="Permalink to this headline">¶</a></h2>
 <p>Scrivete un <strong>modulo</strong> python che data in input la sequente seq di DNA:</p>
@@ -172,8 +182,8 @@
 <ol class="arabic simple">
 <li><p>conti le frequenze di a,c,g,t normalizzate (numero di occorrenze di a diviso lunghezza della stringa. Es: se ci sono 30 “a” e la stringa è lunga 60, la frequenaza normalizzata di “a” è uguale a 30/60 = 0.5)</p></li>
 <li><p>stampi il DNA ordinato (es “aaaaaaaaaccccccccgggggggttttt”)</p></li>
-<li><p>create un array chiamato <strong>array_DNA</strong>, contenente la frequenza del aminoacido corrisponedete. Es se le frequnze sono a=0.20,c=0.30,g=0.10,t=0.40, e il DNA è del tipo “atgc…”, dovete creare l’array [0.2,0.4,0.1,0.3,…]</p></li>
-<li><p>Create un array con la media mobile del array chiamato <strong>array_DNA</strong>. La media mobile è un array dove l’elemento in posizione i rappresenta la media degli elementi in posizione 0,1,2,..,i-1,i. Es se l’array in input è [1,1,4,5], l’array contenente le medie mobile è il seguente: [1,1,2,2.75] perche [1/1 = 1, (1+1)/2 = 1, (1+1+4)/3 = 2, (1+1+4+5)/4 = 2.75]</p></li>
+<li><p>crei un array chiamato <strong>array_DNA</strong>, contenente la frequenza del aminoacido corrisponedete. Es se le frequnze sono a=0.20,c=0.30,g=0.10,t=0.40, e il DNA è del tipo “atgc…”, dovete creare l’array [0.2,0.4,0.1,0.3,…]</p></li>
+<li><p>crei un array con la media mobile del array chiamato <strong>array_DNA</strong>. La media mobile è un array dove l’elemento in posizione i rappresenta la media degli elementi in posizione 0,1,2,..,i-1,i. Es se l’array in input è [1,1,4,5], l’array contenente le medie mobile è il seguente: [1,1,2,2.75] perche [1/1 = 1, (1+1)/2 = 1, (1+1+4)/3 = 2, (1+1+4+5)/4 = 2.75]</p></li>
 </ol>
 <p>In fine stampate i 4 risultati, un esempio di output del programma è il seguente:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">res1</span> <span class="n">freq</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">0.28</span> <span class="n">freq</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.27</span> <span class="n">freq</span> <span class="n">g</span> <span class="o">=</span> <span class="mf">0.22</span> <span class="n">freq</span> <span class="n">t</span> <span class="o">=</span> <span class="mf">0.23</span>
@@ -221,7 +231,7 @@ con le loro frequnze, io per semplicità ci ho aggiunto pure uno spazio vuoto (c
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;res3: &quot;</span><span class="p">,</span><span class="n">array_DNA</span><span class="p">)</span>                         <span class="c1"># stampo il risultato</span>
 </pre></div>
 </div>
-<p>In fine, per poter calcolare la media mobile, posso calcolare prima la somma degli elementi precedenti:</p>
+<p>Infine, per poter calcolare la media mobile, posso calcolare prima la somma degli elementi precedenti:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sum_array_DNA</span> <span class="o">=</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">array_DNA</span><span class="p">[:</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">array_DNA</span><span class="p">))]</span>
 </pre></div>
 </div>

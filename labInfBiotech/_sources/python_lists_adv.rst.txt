@@ -424,6 +424,10 @@ Esercizi
 
     Assicuratevi di adattare il percorso in base alla directory nella quale vi
     trovate.
+    
+    **Importante:** i file da aprire necessari per risolvere gli esercizi sono tutti 
+    contenuti in un archivio zip disponibile sul sito moodle del corso, appena sotto il 
+    link per accedere al sito delle esercitazioni.
 
 #. Data la lista::
 
