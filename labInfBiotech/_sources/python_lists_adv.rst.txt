@@ -525,7 +525,7 @@ Esercizi
    #. ::
 
         lista_1 = ["ACTC", "TTTGGG", "CT"]
-        lista_2 = [["actc", 4], ["tttgggcc", 6], ["ct", 2]]
+        lista_2 = [["actc", 4], ["tttggg", 6], ["ct", 2]]
 
 #. Data la lista::
 

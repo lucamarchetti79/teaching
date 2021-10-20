@@ -193,7 +193,7 @@ Soluzioni List Comprehension
         lista_2 = [[x.lower(), len(x)] for x in lista_1]
 
         # ritorno
-        lista_2 = [["actc", 4], ["tttgggcc", 6], ["ct", 2]]
+        lista_2 = [["actc", 4], ["tttggg", 6], ["ct", 2]]
         lista_1 = [l[0].upper() for l in lista_2]
 
 #. Soluzione:
