@@ -61,22 +61,22 @@ per concludere stampo il res 1::
     print("res1: ",f_a,f_c,f_g,f_t)
 
 
-Per quanto riguarda il punto 2, devo poter ordianre la stringa. Per l'ordinamento noi abbiamo visto il sort un metodo degli array.
+Per quanto riguarda il punto 2, devo poter ordinare la stringa. Per l'ordinamento noi abbiamo visto il sort un metodo degli array (liste).
 Quindi converto in array (con il list comprehension), ordino(con il metodo sort), e per finire ricreo la stringa (metodo join)::
 
-    DNA_sort = [x for x in DNA]          # converto la lista in stringa
+    DNA_sort = [x for x in DNA]          # converto la stringa in lista
     DNA_sort.sort()                      # ordino la lista
     string_dna_sort = "".join(DNA_sort)  # riunisco la lista ordinata in una stringa
     print("res2: ",string_dna_sort)      # stampo la stringa
 
 
-Il punto 3 sembra essere un pò più complesso, ma in realtà è molto semplice. Posso usare il replace per sostituire gli aminoacidi
+Il punto 3 sembra essere un po' più complesso, ma in realtà è molto semplice. Posso usare il replace per sostituire gli aminoacidi
 con le loro frequnze, io per semplicità ci ho aggiunto pure uno spazio vuoto (che mi servirà dopo per fare lo split!)::
 
     array_DNA = DNA.replace("a",str(f_a)+" ")         # replace di a con la sua freq
-    array_DNA = array_DNA.replace("c",str(f_c)+" ")   # replace di a con la sua freq
-    array_DNA = array_DNA.replace("g",str(f_g)+" ")   # replace di a con la sua freq
-    array_DNA = array_DNA.replace("t",str(f_t)+" ")   # replace di a con la sua freq
+    array_DNA = array_DNA.replace("c",str(f_c)+" ")   # replace di c con la sua freq
+    array_DNA = array_DNA.replace("g",str(f_g)+" ")   # replace di g con la sua freq
+    array_DNA = array_DNA.replace("t",str(f_t)+" ")   # replace di t con la sua freq
     array_DNA = array_DNA.split(" ")                  # splitto la stringa e la trasformo in un array
     array_DNA = array_DNA[:-1]                        # rimuovo l'ultimo elemento (perche è vuoto)
     print("res3: ",array_DNA)                         # stampo il risultato

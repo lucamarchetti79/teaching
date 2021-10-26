@@ -537,18 +537,6 @@ Esercizi
 
       *Hint*: la vista sulle chiavi si puo' ottenere con ``keys()``.
 
-   #. Un dizionario ``info_2TMV`` che codifica informazioni strutturate sulla struttura PDB
-      `2TMV <http://www.rcsb.org/pdb/explore/explore.do?structureId=2tmv>`_
-      della capside del `Tobacco Mosaic Virus <http://www.rcsb.org/pdb/101/motm.do?momID=109>`_.
-
-      #. Alla chiave ``"pdb_id"`` associate il valore ``"2TMV"``.
-
-      #. Alla chiave ``"uniprot_id"`` associate il valore ``"P69687 (CAPSD_TMV)"``.
-
-      #. Alla chiave ``"numero_domini_scp"`` associate ``1``.
-
-      #. Alla chiave ``"numero_domini_pfam"`` associate ``1``.
-
    #. Un dizionario ``parenti_di`` che rappresenta questa rete::
 
         GIULIA ---- FRANCO ---- MATTEO

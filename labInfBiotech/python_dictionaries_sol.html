@@ -98,7 +98,10 @@
 <li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv_sol.html">Lezione 6 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Lezione 7 - Python: Dizionari</a></li>
 </ul>
 
             
@@ -193,16 +196,6 @@ di <code class="docutils literal notranslate"><span class="pre">range(2,</span> 
 il risultato.</p>
 <p>Poi fare la stessa cosa, pero’ per tutte le chiavi di <code class="docutils literal notranslate"><span class="pre">decuplo_di</span></code>.</p>
 <p><em>Hint</em>: la vista sulle chiavi si puo’ ottenere con <code class="docutils literal notranslate"><span class="pre">keys()</span></code>.</p>
-</li>
-<li><p>Un dizionario <code class="docutils literal notranslate"><span class="pre">info_2TMV</span></code> che codifica informazioni strutturate sulla struttura PDB
-<a class="reference external" href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2tmv">2TMV</a>
-della capside del <a class="reference external" href="http://www.rcsb.org/pdb/101/motm.do?momID=109">Tobacco Mosaic Virus</a>.</p>
-<ol class="arabic simple">
-<li><p>Alla chiave <code class="docutils literal notranslate"><span class="pre">&quot;pdb_id&quot;</span></code> associate il valore <code class="docutils literal notranslate"><span class="pre">&quot;2TMV&quot;</span></code>.</p></li>
-<li><p>Alla chiave <code class="docutils literal notranslate"><span class="pre">&quot;uniprot_id&quot;</span></code> associate il valore <code class="docutils literal notranslate"><span class="pre">&quot;P69687</span> <span class="pre">(CAPSD_TMV)&quot;</span></code>.</p></li>
-<li><p>Alla chiave <code class="docutils literal notranslate"><span class="pre">&quot;numero_domini_scp&quot;</span></code> associate <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-<li><p>Alla chiave <code class="docutils literal notranslate"><span class="pre">&quot;numero_domini_pfam&quot;</span></code> associate <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
-</ol>
 </li>
 <li><p>Un dizionario <code class="docutils literal notranslate"><span class="pre">parenti_di</span></code> che rappresenta questa rete:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GIULIA</span> <span class="o">----</span> <span class="n">FRANCO</span> <span class="o">----</span> <span class="n">MATTEO</span>
@@ -342,16 +335,6 @@ poi modificate il codice per tenere conto di questa idiosincrasia.</p>
 <span class="nb">print</span><span class="p">([</span><span class="n">decuplo_di</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)])</span>
 
 <span class="nb">print</span><span class="p">([</span><span class="n">decuplo_di</span><span class="p">[</span><span class="n">chiave</span><span class="p">]</span> <span class="k">for</span> <span class="n">chiave</span> <span class="ow">in</span> <span class="n">decuplo_di</span><span class="o">.</span><span class="n">keys</span><span class="p">()])</span>
-</pre></div>
-</div>
-</li>
-<li><p>Soluzione:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">info_2TMV</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;pdb_id&quot;</span><span class="p">:</span> <span class="s2">&quot;2TMV&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;uniprot_id&quot;</span><span class="p">:</span> <span class="s2">&quot;P69687 (CAPSD_TMV)&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;numero_domini_scp&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">&quot;numero_domini_pfam&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-<span class="p">}</span>
 </pre></div>
 </div>
 </li>
