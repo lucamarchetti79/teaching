@@ -2026,7 +2026,7 @@ Row ID
 </pre></div></div>
 </div>
 <p>Statistics can be computed by <strong>column</strong> (normally the default) or by <strong>row</strong> (specifying <code class="docutils literal notranslate"><span class="pre">axis=1</span></code>) or on the <strong>entire table</strong>.</p>
-<p><a class="reference external" href="http://pandas.pydata.org/pandas-docs/version/0.20/api.html#api-dataframe-stats">Here</a> you can find the complete list of methods that can be applied.</p>
+<p><a class="reference external" href="http://pandas.pydata.org/pandas-docs/version/0.20/api.html#api-dataframe-stats">Here</a> you can find the complete list of methods that can be applied. The file <code class="docutils literal notranslate"><span class="pre">random.csv</span></code> required to run the following example is provided here: <a class="reference external" href="file_samples/random.csv">random.csv</a></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
@@ -2394,10 +2394,7 @@ Outer merge (IDS from both)
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#%reset -s -f</span>
-<span class="o">%</span><span class="k">clear</span>
-
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">({</span><span class="s2">&quot;A&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;B&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">73</span><span class="p">,</span><span class="mi">13</span><span class="p">]})</span>
 <span class="n">d2</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">({</span><span class="s2">&quot;E&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">13</span><span class="p">],</span> <span class="s2">&quot;F&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">71</span><span class="p">,</span><span class="mi">1</span><span class="p">]})</span>
