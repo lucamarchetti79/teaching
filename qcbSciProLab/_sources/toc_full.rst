@@ -18,9 +18,11 @@
     Module 1, Practical 8 <M1_practical8.ipynb>
     Module 1, Practical 9 <M1_practical9.ipynb>
     Module 1, Practical 10 <M1_practical10.ipynb>
+    Module 1, Practical 10b <M1_practical10b.ipynb>
     Module 1, Practical 11 <M1_practical11.ipynb>
-    OPTIONAL Module 1, Practical 11b <M1_practical11b.ipynb>
+    
     Module 1, MidTerm Simulation <M1_midTermSimulation.ipynb>
+    Module 1, MidTerm Test <M1_midTerm.ipynb>
     
     Module 2, Practical 1 <M2_practical1.ipynb>
     Module 2, Practical 2 <M2_practical2.ipynb>
