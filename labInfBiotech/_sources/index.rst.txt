@@ -84,3 +84,10 @@ Note Introduttive
     python_test_sol.rst
     
     python_dictionaries.rst
+    python_dictionaries_sol.rst
+
+    python_sets.rst
+
+    python_tuples.rst
+
+    python_io.rst

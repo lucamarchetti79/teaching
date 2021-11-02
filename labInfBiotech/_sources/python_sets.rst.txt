@@ -30,7 +30,9 @@ La stessa funzione puo' essere utilizzata per creare un set a partire da una lis
     set_numeri = set([1, 2, 3])
     print(set_numeri)                 # {1, 2, 3}
 
+
 I set possono essere utilizzati per rimuovere le ripetizioni da una lista::
+
     lista = [0, 1, 0, 0, 2, 0]
     insieme = set(lista)
     print(insieme)                    # {0, 1, 2}    
