@@ -21,6 +21,7 @@
     Module 1, Practical 10b <M1_practical10b.ipynb>
     Module 1, Practical 11 <M1_practical11.ipynb>
     
+    Module 1, MidTerm Simulation <M1_midTermSimulation_noSol.ipynb>
     Module 1, MidTerm Simulation <M1_midTermSimulation.ipynb>
     Module 1, MidTerm Test <M1_midTerm.ipynb>
     

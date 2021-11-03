@@ -29,8 +29,7 @@ def RecursiveSum(a,b):
 def RecursiveDiff(a,b):
     """RECURSIVE function to compute a-b."""
 
-    # missing implementation!
-    return 0
+    raise Exception("TODO IMPLEMENT ME !")
     
 def RecursiveProd(a,b):
     """RECURSIVE function to compute a-b."""
@@ -46,8 +45,7 @@ def RecursiveProd(a,b):
 def RecursivePower(a,esp):
     """RECURSIVE function to compute a^esp."""
 
-    # missing implementation!
-    return 0
+    raise Exception("TODO IMPLEMENT ME !")
 
 def RecursiveMin(v):
     """RECURSIVE function to compute min(v)."""
@@ -66,24 +64,20 @@ def __RecursiveMin(v,i,min):
 def RecursiveMax(v):
     """RECURSIVE function to compute max(v)."""
 
-    # missing implementation!
-    return 0
+    raise Exception("TODO IMPLEMENT ME !")
 
 def RecursiveMaxDigit(n):
     """RECURSIVE function to find the highest digit of n."""
 
-    # missing implementation!
-    return 0
+    raise Exception("TODO IMPLEMENT ME !")
 
 def RecursiveCountDigit(c,n):
     """RECURSIVE function to compute how many times the digit c appears in n."""
 
-    # missing implementation!
-    return 0
+    raise Exception("TODO IMPLEMENT ME !")
 
 def RecursiveArraySum(v):
     """RECURSIVE function to sum all the elements of the array v."""
 
-    # missing implementation!
-    return 0
+    raise Exception("TODO IMPLEMENT ME !")
 
