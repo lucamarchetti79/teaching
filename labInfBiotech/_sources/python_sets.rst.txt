@@ -97,7 +97,8 @@ aggiungo la stringa ``"0"`` al set e controllo che sia presente::
       pasto_completo = {'antipasto', 'primo', 'secondo', 'dolce', "caffe'"}
 
       pasto_ridotto = pasto_completo
-      pasto_ridotto.remove('antipasto', 'dolce')
+      pasto_ridotto.remove('antipasto')
+      pasto_ridotto.remove('dolce')
 
       print(pasto_completo)
       {'primo', 'secondo', "caffe'"}    # Doh!

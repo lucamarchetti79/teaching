@@ -273,7 +273,7 @@ Esercizi
    scrittura. Poi scrivete nel file le stringhe in questa lista, una per riga::
 
     versi = [
-        "S'i fosse fuoco, arderei 'l mondo"
+        "S'i fosse fuoco, arderei 'l mondo",
         "s'i fosse vento, lo tempestarei"
     ]
 
