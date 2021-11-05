@@ -20,6 +20,7 @@
     Module 1, Practical 10 <M1_practical10.ipynb>
     Module 1, Practical 10b <M1_practical10b.ipynb>
     Module 1, Practical 11 <M1_practical11.ipynb>    
+    Module 1, MidTerm Simulation <M1_midTermSimulation.ipynb>
     
 
 |space|
