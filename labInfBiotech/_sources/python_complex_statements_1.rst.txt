@@ -1,5 +1,5 @@
 ===========================
-Lezione 10 - Python: Statement Complessi (1)
+Lezione 9 - Python: Statement Complessi (1)
 ===========================
 
 Codice condizionale: ``if``
@@ -266,7 +266,7 @@ per ciascun elemento di una *collezione* (stringa, lista, tupla, dizionario).
 
 La sintassi di ``for`` e'::
 
-    collezione_di_oggetti = range(10) # ad esempio
+    collezione_di_oggetti = range(10) # ad esempio (i numeri da 0 a 10 escluso)
 
     for elemento in collezione_di_oggetti:
         codice_che_fa_qualcosa_con_elemento(elemento)
@@ -286,6 +286,16 @@ Proprio come con le *list comprehension*, il nome che le diamo e' arbitrario.
 
     Occhio che l'*ordine* delle chiavi in un dizionario non e' ovvio. Si
     veda sopra la sezione sui dizionari.
+
+.. warning::
+
+    Spesso si utilizza il ciclo ``for`` accoppiato con l'istruzione ``range`` gia' vista
+    in precedenza. Ricordiamoci che l'istruzione ``range`` puo' prendere fino a tre
+    parametri::
+        range(start,end,step)
+        range(20) = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        range(5,20) = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        range(5,20,2) = [5, 7, 9, 11, 13, 15, 17, 19]
 
 ****
 
