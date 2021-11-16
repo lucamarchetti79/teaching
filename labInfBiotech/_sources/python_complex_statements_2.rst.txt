@@ -110,7 +110,7 @@ stringhe::
 
     righe = open("data/prot-fasta/3J01.fasta").readlines()
 
-Il valore di ``righe`` sara' e'::
+Il valore di ``righe`` e'::
 
     righe = [
         ">3J01:0|PDBID|CHAIN|SEQUENCE",
