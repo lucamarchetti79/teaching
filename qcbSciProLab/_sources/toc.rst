@@ -22,8 +22,12 @@
     Module 1, Practical 11 <M1_practical11.ipynb>    
 
     Module 1, MidTerm Simulation <M1_midTermSimulation.ipynb>
+    Module 1, MidTerm <M1_midTerm.ipynb>
     
     Module 2, Practical 1 <M2_practical1.ipynb>
+    Module 2, Practical 2 <M2_practical2.ipynb>
+    Module 2, Practical 3 <M2_practical3.ipynb>
+    Module 2, Practical 4 <M2_practical4.ipynb>
 
 |space|
 ==========
