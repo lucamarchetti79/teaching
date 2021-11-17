@@ -13,7 +13,7 @@ Posso combinare un numero arbitrario di statement complessi (``if``, ``for`` e
 **Esempio**. Voglio simulare un orologio che ha due lancette: ore e minuti::
 
     for ora in range(24):
-        for minuto in range(1, 60+1):
+        for minuto in range(60):
             print("ora =", ora, "minuro =", minuto)
 
 Qui all'esterno itero sulle ore, mentre all'interno itero sui minuti: ogni
@@ -26,7 +26,7 @@ ore, cosi'::
 
     for giorno in range(1, 365+1):
         for ora in range(24):
-            for minuto in range(1, 60+1):
+            for minuto in range(60):
                 print(giorno, ora, minuto)
 
 (ignorando gli anni bisestili).

@@ -733,4 +733,4 @@ Esercizi
    una stringa che contiene un carattere ``"2"``, e stampa a schermo
    *posizione* e *valore* della stringa sulla quale si e' fermato.
 
-   La soluzione e': posizione ``4``, valore ``"32"``.
+   La soluzione e': posizione ``3``, valore ``"32"``.
