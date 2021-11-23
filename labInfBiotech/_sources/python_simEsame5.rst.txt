@@ -1,0 +1,305 @@
+===========================
+Lezione 12.5 - Python: Simulazione esame 5 (11 09 2019)
+===========================
+
+TESTO
+-----
+Scrivere un programma che prenda in ingresso un file con i dati di espressione genica binarizzata (sovraespresso o meno) di pazienti affetti da leucemia di tipo AML o ALL e
+  
+
+#. Calcoli il coefficiente di correlazione tra i valori di espressione di ciascun gene ed una patologia di tipo AML
+#. Stampi la lista dei geni ordinati in base al loro coefficiente di correlazione con la patologia AML
+
+
+
+**ESMPIO File in input**
+
+gene_exp.txt::
+
+    ATP2B4,NAP1L1,MDK,PCCB,MDS1,AML
+    no,no,yes,no,no,no
+    no,no,no,yes,yes,no
+    no,no,no,yes,yes,no
+    no,no,yes,no,yes,no
+    no,no,no,no,yes,yes
+    no,yes,no,yes,yes,no
+    no,no,no,yes,yes,no
+    no,no,no,yes,yes,yes
+    yes,no,yes,yes,yes,no
+    no,no,no,yes,yes,yes
+    no,yes,no,yes,no,no
+    yes,no,no,yes,yes,yes
+    yes,no,yes,yes,yes,no
+    no,no,no,yes,yes,no
+
+**ESMPIO DI OUTPUT**
+
+python correlation2AML.py::
+
+    Inserire nome file: gene_exp.txt
+    gene    corrcoef
+    MDS1    0.26
+    ATP2B4  0.06
+    PCCB    -0.06
+    NAP1L1  -0.26
+    MDK     -0.40
+
+
+**SUGGERIMENTI**
+
+Si possono implementare 5 funzioni separate:
+
+#. una che legga il file dati e restituisca l’intestazione e una matrice di dati
+#. una che data una matrice di dati e un indice di colonna, estragga la colonna corrispondente all’indice, convertendo i valori in numerici (0 per “no”, 1 per “yes”)
+#. una che dati header e matrice di dati, per ogni gene estragga la colonna corrispondente e calcoli la sua correlazione con la patologia AML (ultima colonna della matrice). La funzione restituira’ una lista di coppie gene-correlazione.
+#. una che data la lista di correlazioni la stampi in ordine decrescente
+#. una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
+
+
+**NOTA**
+Per calcolare il coefficiente di correlazione tra due liste, si può usare la funzione **corrcoefdel** modulo **numpy**
+
+ES::
+
+    from numpy import corrcoef
+    a = [1,0,1,0,0,1]
+    b = [0,1,1,0,0,1]
+    corrcoef(a,b)[0,1]
+    # corrcoef restituisce una matrice di correlazione
+    # con [0,1] si prende la correlazione tra a e b
+
+
+
+Soluzione
+---------
+
+**LEGGETE E RI LEGGETE la consegna per capire se è chiara**
+
+iniziamo seguendo i suggerimenti:
+
+suggerimento 1
+    #. una che legga il file dati e restituisca l’intestazione e una matrice di dati
+
+
+Quindi dobbiamo ritornare un **due** liste, una lista con le intestazioni::
+
+    ['ATP2B4', 'NAP1L1', 'MDK', 'PCCB', 'MDS1', 'AML'] 
+    
+e una sconda lista, una matrice (lista di liste), tipo questa::
+
+    [   
+        ['no', 'no', 'yes', 'no', 'no', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'yes', 'no', 'yes', 'no'], 
+        ['no', 'no', 'no', 'no', 'yes', 'yes'], 
+        ['no', 'yes', 'no', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'yes'], 
+        ['yes', 'no', 'yes', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'yes'], 
+        ['no', 'yes', 'no', 'yes', 'no', 'no'], 
+        ['yes', 'no', 'no', 'yes', 'yes', 'yes'], 
+        ['yes', 'no', 'yes', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'no']
+    ]
+
+
+**Soluzione**::
+
+    def load_data(filename):
+        f = open(filename)
+
+        header = f.readline().strip().split(",")
+        data = []
+
+        for row in f:
+            data.append(row.strip().split(","))
+            
+        return (header, data)
+
+
+**E' corretto il codice che abbiamo scritto fino ad ora?**
+non lo so, ma posso verificarlo::
+
+    intest, matrice = load_data(filename)
+    print(intest)
+    print(matrice)
+
+
+si, funziona!
+
+suggerimento 2
+    #. una che data una matrice di dati e un indice di colonna, estragga la colonna corrispondente all’indice, convertendo i valori in numerici (0 per “no”, 1 per “yes”)
+
+
+mmmm, che cosa ci sta chiedendo?
+Ci sta chiedendo di scrivere una funzione che prenda in input la matrice che abbiamo caricato al punto 1, e successivamente
+di trasformare i "no" in 0 e i "si" in 1.
+
+es: data la matrice qui sotto::
+
+    [   
+        ['no', 'no', 'yes', 'no', 'no', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'yes', 'no', 'yes', 'no'], 
+        ['no', 'no', 'no', 'no', 'yes', 'yes'], 
+        ['no', 'yes', 'no', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'yes'], 
+        ['yes', 'no', 'yes', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'yes'], 
+        ['no', 'yes', 'no', 'yes', 'no', 'no'], 
+        ['yes', 'no', 'no', 'yes', 'yes', 'yes'], 
+        ['yes', 'no', 'yes', 'yes', 'yes', 'no'], 
+        ['no', 'no', 'no', 'yes', 'yes', 'no']
+    ]
+
+e l'indice = 1, il risultato è::
+
+    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0]
+
+
+**Soluzione**::
+
+    def extract_column(data, i):
+        col = []
+        for row in data:
+            if row[i] == "yes":
+                col.append(1)
+            else:
+                col.append(0)
+        return col
+
+
+**E' corretto il codice che abbiamo scritto fino ad ora?**
+non lo so, ma posso verificarlo::
+
+    
+    intest, matrice = load_data(filename)
+    a = extract_column(matrice,1)
+    print(a)
+
+
+si, funziona!
+
+
+suggerimento 3
+    #. una che dati header e matrice di dati, per ogni gene estragga la colonna corrispondente e calcoli la sua correlazione con la patologia AML (ultima colonna della matrice). La funzione restituira’ una lista di coppie gene-correlazione.
+
+
+mmmm, che cosa ci sta chiedendo? 
+
+ci chiede di scrivere una funzione che prenda in input la matrice e l'intestazione (caricati al punto 1), 
+successivamente per ogni colonna trasformare "yes" in 1 e "no" in 0 (usando il punto 2) e restituire la correlazione 
+tra la colonna corrente e la colonna AML (ultima colonna), in fine ritornare i risultati, (io ho ritornato una lista di coppie, con correlazione e intestazione)
+Esempio::
+
+    [   
+        (0.05504818825631804, 'ATP2B4'), 
+        (-0.25819888974716104, 'NAP1L1'), 
+        (-0.3999999999999999, 'MDK'), 
+        (-0.05504818825631805, 'PCCB'), 
+        (0.25819888974716104, 'MDS1')
+    ]
+
+**PS** per calclare la correlazione ricordatevi di importare il modulo e usare la funz **corrcoef**
+
+Ora che abbiamo capito la consegna, scrivere il codice è easy :) ::
+
+
+    def compute_correlations(header, data):
+
+        label = extract_column(data, -1)
+        correlations = []
+
+        for i in range(len(header)-1):
+            name = header[i]
+            column = extract_column(data, i)
+            corr = corrcoef(label, column)[0,1]
+            correlations.append((corr, name))
+
+        return correlations
+
+
+
+**E' corretto il codice che abbiamo scritto fino ad ora?**
+non lo so, ma posso verificarlo::
+
+    intest, matrice = load_data(filename)
+    a = compute_correlations(intest, matrice)
+    print(a)
+
+si, funziona!
+
+
+
+suggerimento 4
+
+#. una che data la lista di correlazioni la stampi in ordine decrescente
+
+semplice::
+
+    def print_correlations(correlations):
+
+        correlations.sort(reverse=True)
+        print("gene\tcorrcoef")
+        for (corr, name) in correlations:
+            print("%s\t%.2f" %(name,corr))
+
+
+
+suggerimento 5
+
+#. una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
+
+semplice ci chiede di mettere tutto insieme::
+
+    from numpy import corrcoef
+
+    def load_data(filename):
+        f = open(filename)
+
+        header = f.readline().strip().split(",")
+        data = []
+
+        for row in f:
+            data.append(row.strip().split(","))
+            
+        return (header, data)
+
+
+    def extract_column(data, i):
+        col = []
+        for row in data:
+            if row[i] == "yes":
+                col.append(1)
+            else:
+                col.append(0)
+        return col
+
+    def compute_correlations(header, data):
+
+        label = extract_column(data, -1)
+        correlations = []
+
+        for i in range(len(header)-1):
+            name = header[i]
+            column = extract_column(data, i)
+            corr = corrcoef(label, column)[0,1]
+            correlations.append((corr, name))
+
+        return correlations
+
+    def print_correlations(correlations):
+
+        correlations.sort(reverse=True)
+        print("gene\tcorrcoef")
+        for (corr, name) in correlations:
+            print("%s\t%.2f" %(name,corr))
+
+    filename=input("Inserire nome file: ")
+    (header, data) = load_data(filename)
+    correlations = compute_correlations(header, data)
+    print_correlations(correlations)

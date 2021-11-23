@@ -1,0 +1,192 @@
+===========================
+Lezione 12.4 - Python: Simulazione esame 4 (20 1 2020)
+===========================
+
+TESTO
+-----
+Scrivere un programma che prenda in ingresso un file con un elenco di regioni conservate in UTR e un numero n e stampi:
+  
+
+#. I primi n geni ordinati per lunghezza media delle loro regioni conservate
+#. I primi n cromosomi ordinati per lunghezza media delle regioni conservate nei loro geni
+
+
+
+
+**ESMPIO File in input**
+
+conserved_regions::
+
+    HGNC	ucsc	chr	start	end	strand	region.length	region.sequence	utr.type
+    SDF4	uc001adj.1	chr1	1159309	1159325	-	17	GAGGAACCGTGACTAGA	5UTR
+    SDF4	uc001adj.1	chr1	1159341	1159347	-	7	GTAGGTG	5UTR
+    DVL1	uc002quu.2	chr1	1275478	1275556	-	79	CTACCTCGGTTACATCTACGGCGGCAGAGGTGCCAGCAACGAGACGGGGTGCTACGACTACGGGTCTTTCACTACAGAA	5UTR
+
+
+**ESMPIO DI OUTPUT**::
+
+    python regions_stats.py
+    Inserire nome file: conserved_regions
+    Inserire numero elementi: 5
+    Genes with longest conserved on average
+    RYR1     2619
+    DDX3X    2549
+    NOVA1    2074
+    BCL11A   1718
+    TSHZ3    1599
+    Chromosomes with longest conserved on average
+    chr15    181
+    chr2     123
+    chrX     122
+    chr10    122
+    chr8     105
+
+**SUGGERIMENTI**
+
+Si possono implementare 5 funzioni separate:
+
+#. una che legga il file dati e restituisca una lista con nome gene, cromosoma e lunghezza della regione conservata
+#. una che data la lista e un’indicazione se usare gene o cromosoma, restituisca un dizionario da gene (o da cromosoma) a elenco di lunghezze di regioni conservate per quel gene (o cromosoma)
+#. una che dato un dizionario chiave → lista di valori, restituisca una lista ordinata di coppie chiave, media dei suoi valori (si può usare la funzione mean del modulo statistics per calcolare la media di una lista)
+#. una che data una lista ordinata e un numero n, stampi le prime n coppie come da esempio
+#. una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
+
+
+Soluzione
+---------
+
+**LEGGETE E RI LEGGETE la consegna per capire se è chiara**
+
+iniziamo seguendo i suggerimenti:
+
+suggerimento 1
+    #. una che legga il file dati e restituisca una lista con nome gene, cromosoma e lunghezza della regione conservata
+
+
+Quindi dobbiamo creare una lista di questo tipo::
+
+    [
+        ('SDF4', 'chr1', 17), 
+        ('SDF4', 'chr1', 7), 
+        ('DVL1', 'chr1', 79),
+        ('CCNL2', 'chr1', 324),
+        ...
+        ...
+    ]
+
+
+**Soluzione**
+
+    FATELA VOI :)
+
+
+
+**E' corretto il codice che abbiamo scritto fino ad ora?**
+non lo so, ma potete verificarlo::
+
+    :) 
+
+si, funziona!
+
+suggerimento 2
+    #. una che data la lista e un’indicazione se usare gene o cromosoma, restituisca un dizionario da gene (o da cromosoma) a elenco di lunghezze di regioni conservate per quel gene (o cromosoma)
+
+
+mmmm, che cosa ci sta chiedendo? 
+una funzione che prenda in input la lista che abbiamo caricato prima e una variabile che rappresenti gene o cromosoma. La funzione deve ritornare un diz tipo,
+se noi chiamiamo la funzione con gene::
+
+    {
+        'SDF4': [17, 7], 
+        'DVL1': [79],
+        'CCNL2': [324, 9, 28, 47], 
+        'MIB2': [55, 154, 37, 81, 45], 
+        'MMP23B': [8, 14, 5, 5, 8, 7, 14, 16, 18, 7, 8], 
+        'CDK11B': [29, 7], 
+    }
+
+se noi chiamiamo la funzione con cromosoma::
+
+    {
+        'chr1': [17, 7, 79, 324 211, 169, 18, 20, 15, 94, ....]
+        'chr12': [5, 38, 7, 14, 741, 29, 43, 245, ......]
+    }
+
+
+
+**Soluzione**
+
+    FATELA VOI :)
+
+
+
+**E' corretto il codice che abbiamo scritto fino ad ora?**
+non lo so, ma potete verificarlo::
+
+    :) 
+
+si, funziona!
+
+
+suggerimento 3
+    #. una che dato un dizionario chiave → lista di valori, restituisca una lista ordinata di coppie chiave, media dei suoi valori (si può usare la funzione mean del modulo statistics per calcolare la media di una lista)
+
+mmmm, che cosa ci sta chiedendo? 
+
+ci chiede di scrivere una funzione che prenda un diz (gene -> lista di valori oppure cromosoma -> lista di valori) e restituisca una lista **ordinata** di coppie. Dove gli elementi della coppia sono la chiave e la media dei valori.
+
+Es, se chiamo la funzione con il diz di cromosomi ottengo::
+
+    [
+        (180.72164948453607, 'chr15'), 
+        (123.26499032882012, 'chr2'), 
+        (121.99459459459459, 'chrX'), 
+        (121.76344086021506, 'chr10'),
+        ...
+    ]
+
+**Soluzione**
+
+    FATELA VOI :)
+
+
+
+**E' corretto il codice che abbiamo scritto fino ad ora?**
+non lo so, ma potete verificarlo::
+
+    :) 
+
+si, funziona!
+
+
+suggerimento 4
+
+#.  una che data una lista ordinata e un numero n, stampi le prime n coppie come da esempio
+
+
+**ESMPIO DI OUTPUT**::
+
+    python regions_stats.py
+    Inserire nome file: conserved_regions
+    Inserire numero elementi: 5
+    Genes with longest conserved on average
+    RYR1     2619
+    DDX3X    2549
+    NOVA1    2074
+    BCL11A   1718
+    TSHZ3    1599
+    Chromosomes with longest conserved on average
+    chr15    181
+    chr2     123
+    chrX     122
+    chr10    122
+    chr8     105
+
+
+
+
+suggerimento 5
+
+#. una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
+
+semplice ci chiede di mettere tutto insieme::

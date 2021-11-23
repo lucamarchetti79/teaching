@@ -1,5 +1,5 @@
 ================
-Lezione 12 - Python: Funzioni
+Lezione 11 - Python: Funzioni
 ================
 
 Le funzioni sono *blocchi di codice* a cui associamo un *nome*.
@@ -142,7 +142,7 @@ Ora tutto torna: faccio la somma e ne stampo il risultato.
 
         funzione()  # <-- qui chiamo la funzione
 
-    Quano lo eseguo::
+    Quando lo eseguo::
 
         python3 esempio.py
 

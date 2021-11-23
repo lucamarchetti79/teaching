@@ -104,3 +104,9 @@ Note Introduttive
     python_functions.rst
     python_functions_sol.rst
 
+    python_simEsame1.rst
+    python_simEsame2.rst
+    python_simEsame3.rst
+    python_simEsame4.rst
+    python_simEsame5.rst
+    

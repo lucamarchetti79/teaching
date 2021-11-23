@@ -99,3 +99,6 @@ Note Introduttive
     python_complex_statements_1_sol.rst
 
     python_complex_statements_2.rst
+    python_complex_statements_2_sol.rst
+
+    python_functions.rst
