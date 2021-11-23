@@ -28,6 +28,8 @@
     Module 2, Practical 2 <M2_practical2.ipynb>
     Module 2, Practical 3 <M2_practical3.ipynb>
     Module 2, Practical 4 <M2_practical4.ipynb>
+    Module 2, Practical 5 <M2_practical5.ipynb>
+    Module 2, Practical 6 <M2_practical6.ipynb>
 
 |space|
 ==========
