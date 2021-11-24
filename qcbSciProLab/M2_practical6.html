@@ -1088,8 +1088,8 @@ print(&quot;(S - S1) U (S1 -S): {}&quot;.format(S.difference(S1).union(S1.differ
 <p>They can be <strong>bidirectional</strong> if from one element one can move to the <strong>previous</strong> and to the <strong>next</strong> or <strong>monodirectional</strong> when it is possible only to go to the <strong>next</strong> element.</p>
 <p>Here are some of the possible types of list (from the lecture):</p>
 <img alt="_images/linked_lists.png" src="_images/linked_lists.png" />
-<p>The operations that can be performed on lists, and the associated costs, are:</p>
-<img alt="_images/list_costs.png" src="_images/list_costs.png" />
+<p>The operations that can be performed on lists are:</p>
+<img alt="_images/list_operations.png" src="_images/list_operations.png" />
 <div class="section" id="Example:-bidirectional-linked-list">
 <h3>Example: bidirectional linked list<a class="headerlink" href="#Example:-bidirectional-linked-list" title="Permalink to this headline">¶</a></h3>
 <p>Let’s implement a bidirectional linked list of objects of type “Node” (that contain attributes: <code class="docutils literal notranslate"><span class="pre">data</span></code>, <code class="docutils literal notranslate"><span class="pre">prevEl</span></code> and <code class="docutils literal notranslate"><span class="pre">nextEl</span></code>.</p>
@@ -1894,14 +1894,17 @@ On top of the stack: None
 </pre></div>
 </div>
 <p>that encodes for <code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">+</span> <span class="pre">5</span> <span class="pre">=</span> <span class="pre">15</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">10</span> <span class="pre">5</span>&#160; <span class="pre">+</span> <span class="pre">7</span> <span class="pre">*</span></code> that encodes for <code class="docutils literal notranslate"><span class="pre">(10</span> <span class="pre">+</span> <span class="pre">5)</span> <span class="pre">*</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">105</span></code></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>10 5  + 7 *
+</pre></div>
+</div>
+<p>that encodes for <code class="docutils literal notranslate"><span class="pre">(10</span> <span class="pre">+</span> <span class="pre">5)</span> <span class="pre">*</span> <span class="pre">7</span> <span class="pre">=</span> <span class="pre">105</span></code></p>
 <p>Given a postfix expression it can be evaluated in the following way:</p>
 <ol class="arabic simple">
-<li><p>start from the beginning of the string (better, convert it to a list by splitting the string by ” “), remove elements from the list and insert elements in the stack unless they are operators. If they are operators, pop two elements and apply the operation, storing it in a varible;</p></li>
+<li><p>start from the beginning of the string (better, convert it to a list by splitting the string by ” “), remove elements from the list and insert elements in the stack unless they are operators. If they are operators, pop two elements and apply the operation, storing it in a variable;</p></li>
 <li><p>If the list is empty, the result is stored in the variable, otherwise go back to point 1.</p></li>
 </ol>
 <p>Assuming only integer numbers and the 4 standard binary operators +,-,/,*: write some python code that uses the stack class seen above <code class="docutils literal notranslate"><span class="pre">MyStack</span></code> and evaluates the following postfix expressions:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>operations = [&quot;10 5  + 7 *&quot;, &quot;1 2 3 4 5 6 7 8 + + + + + + +&quot;, &quot;1 2 3 4 5 + - * /&quot;]
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>operations = [&quot;10 5 + 7 *&quot;, &quot;1 2 3 4 5 6 7 8 + + + + + + +&quot;, &quot;1 2 3 4 5 + - * /&quot;, &quot;5 4 + 8 /&quot;, &quot;3 10 2 - 5 * +&quot;]
 </pre></div>
 </div>
 <div class="tggle" onclick="toggleVisibility(&#39;Ex4&#39;);"><p>Show/Hide Solution</p>
@@ -1983,7 +1986,7 @@ On top of the stack: None
 <span class="k">for</span> <span class="n">op</span> <span class="ow">in</span> <span class="n">operations</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Operation: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">op</span><span class="p">))</span>
     <span class="n">res</span> <span class="o">=</span> <span class="n">evaluatePostfix</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">res</span><span class="p">))</span><span class="n">Download</span> <span class="n">the</span> <span class="n">complete</span> <span class="n">source</span> <span class="n">file</span><span class="p">:</span> <span class="p">[</span><span class="n">MyStack</span><span class="o">.</span><span class="n">py</span><span class="p">](</span><span class="n">data_structures</span><span class="o">/</span><span class="n">MyStack</span><span class="o">.</span><span class="n">py</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">res</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
