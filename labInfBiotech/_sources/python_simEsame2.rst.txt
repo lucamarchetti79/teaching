@@ -1,6 +1,11 @@
 =========================
-Lezione 12.2 - Python: Simulazione esame 2 (19 6 2020)
+Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)
 =========================
+
+Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.
+
+**IMPORTANTE:** il testo completo di file da processare e le relative soluzioni sono
+disponibili nel seguente archivio zip: :download:`zip <prove_esame_lab/19_06_2020.zip>`
 
 TESTO
 -----
@@ -13,18 +18,18 @@ Scrivere un programma che
 
 
 
-**ESMPIO File in input**
+**ESEMPIO File in input**
 
 video_scores.csv::
 
     Video	Score M1	Score M2	Score M3	Score M4	Score M5	Score M6
-    1	2	1	2	3	3	2	
-    2	1	2	1	1	1	2	
-    3	3	3	3	3	3	1	
-    4	3	3	3	3	3	3
+    1		2		1		2		3		3		2	
+    2		1		2		1		1		1		2	
+    3		3		3		3		3		3		1	
+    4		3		3		3		3		3		3
 
 
-**ESMPIO DI OUTPUT**
+**ESEMPIO DI OUTPUT**
 
 python majority.py::
 
@@ -52,8 +57,9 @@ Soluzione
 
 iniziamo seguendo i suggerimenti:
 
-suggerimento 1
-    #. una che legga il file dati e restituisca per ogni video la lista di score, ignorando eventuali valori ’NC’ (non classificabile)
+**suggerimento 1**
+
+    1) una che legga il file dati e restituisca per ogni video la lista di score, ignorando eventuali valori ’NC’ (non classificabile)
 
 **SEMPLICE**
 lo abbiamo sempre fatto::
@@ -85,8 +91,9 @@ non lo so, ma posso verificarlo::
 
 si, funziona!
 
-suggerimento 2
-    #. una che data una lista di score restituisca lo score più frequente
+**suggerimento 2**
+
+    2) una che data una lista di score restituisca lo score più frequente
 
 mmmm, che cosa ci sta chiedendo? 
 data una lista di scores di un determinato video, resituisce lo score piu frequente.
@@ -128,8 +135,9 @@ non lo so, ma posso verificarlo::
 
 si, funziona!
 
-suggerimento 3
-    #.  una che data le liste di score di tutti i video, calcoli per ciascuno lo score più frequente (usando la funzione precedente) e restituisca un dizionario di conteggi degli score più frequenti 
+**suggerimento 3**
+
+    3)  una che data le liste di score di tutti i video, calcoli per ciascuno lo score più frequente (usando la funzione precedente) e restituisca un dizionario di conteggi degli score più frequenti 
 
 mmmm, che cosa ci sta chiedendo? 
 ci chiede di calcolare un diz, che abbia come chiave il numero di scores piu frequente di ogni video, e come valore le volte che compare.
@@ -183,9 +191,9 @@ si, funziona!
 
 
 
-suggerimento 4
+**suggerimento 4**
 
-#. una che stampi il dizionario di score e conteggi in ordine decrescente per conteggi.
+	4) una che stampi il dizionario di score e conteggi in ordine decrescente per conteggi.
 
 
 semplice::
@@ -198,9 +206,9 @@ semplice::
 
 
 
-suggerimento 5
+**suggerimento 5**
 
-#. una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
+	5) una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
 
 semplice ci chiede di mettere tutto insieme::
 
@@ -214,10 +222,6 @@ semplice ci chiede di mettere tutto insieme::
             all_scores.append((data[0],[int(i) for i in data[1:] if i != 'NC']))
         f.close()
         return all_scores
-
-
-
-
 
     def compute_majority_score(scores):
         counts = {}

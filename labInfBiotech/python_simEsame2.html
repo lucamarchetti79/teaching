@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lezione 12.2 - Python: Simulazione esame 2 (19 6 2020) &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
+  <title>Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020) &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
   
 
   
@@ -34,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)" href="python_simEsame3.html" />
+    <link rel="prev" title="Lezione 12.1 - Python: Simulazione esame (24/7/2020)" href="python_simEsame1.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,7 +84,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
@@ -114,6 +116,16 @@
 <li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2.html">Lezione 10 - Python: Statement Complessi (2)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2_sol.html">Lezione 10 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 11 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame1.html">Lezione 12.1 - Python: Simulazione esame (24/7/2020)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#testo">TESTO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soluzione">Soluzione</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame3.html">Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame4.html">Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame5.html">Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)</a></li>
 </ul>
 
             
@@ -159,7 +171,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Lezione 12.2 - Python: Simulazione esame 2 (19 6 2020)</li>
+      <li>Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +191,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="lezione-12-2-python-simulazione-esame-2-19-6-2020">
-<h1>Lezione 12.2 - Python: Simulazione esame 2 (19 6 2020)<a class="headerlink" href="#lezione-12-2-python-simulazione-esame-2-19-6-2020" title="Permalink to this headline">¶</a></h1>
+<h1>Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)<a class="headerlink" href="#lezione-12-2-python-simulazione-esame-2-19-6-2020" title="Permalink to this headline">¶</a></h1>
+<p>Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.</p>
+<p><strong>IMPORTANTE:</strong> il testo completo di file da processare e le relative soluzioni sono
+disponibili nel seguente archivio zip: <a class="reference download internal" download="" href="_downloads/34fc2514f6f9b64e2be0fa8f713db0b5/19_06_2020.zip"><code class="xref download docutils literal notranslate"><span class="pre">zip</span></code></a></p>
 <div class="section" id="testo">
 <h2>TESTO<a class="headerlink" href="#testo" title="Permalink to this headline">¶</a></h2>
 <p>Scrivere un programma che</p>
@@ -188,16 +203,16 @@
 <li><p>calcoli per ogni video lo score con pi‘ănnotazioni (score di consenso)</p></li>
 <li><p>restituisca per ogni score il numero di video annotati con quello score di consenso</p></li>
 </ol>
-<p><strong>ESMPIO File in input</strong></p>
+<p><strong>ESEMPIO File in input</strong></p>
 <p>video_scores.csv:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Video</span>       <span class="n">Score</span> <span class="n">M1</span>        <span class="n">Score</span> <span class="n">M2</span>        <span class="n">Score</span> <span class="n">M3</span>        <span class="n">Score</span> <span class="n">M4</span>        <span class="n">Score</span> <span class="n">M5</span>        <span class="n">Score</span> <span class="n">M6</span>
-<span class="mi">1</span>   <span class="mi">2</span>       <span class="mi">1</span>       <span class="mi">2</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">2</span>
-<span class="mi">2</span>   <span class="mi">1</span>       <span class="mi">2</span>       <span class="mi">1</span>       <span class="mi">1</span>       <span class="mi">1</span>       <span class="mi">2</span>
-<span class="mi">3</span>   <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">1</span>
-<span class="mi">4</span>   <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>
+<span class="mi">1</span>           <span class="mi">2</span>               <span class="mi">1</span>               <span class="mi">2</span>               <span class="mi">3</span>               <span class="mi">3</span>               <span class="mi">2</span>
+<span class="mi">2</span>           <span class="mi">1</span>               <span class="mi">2</span>               <span class="mi">1</span>               <span class="mi">1</span>               <span class="mi">1</span>               <span class="mi">2</span>
+<span class="mi">3</span>           <span class="mi">3</span>               <span class="mi">3</span>               <span class="mi">3</span>               <span class="mi">3</span>               <span class="mi">3</span>               <span class="mi">1</span>
+<span class="mi">4</span>           <span class="mi">3</span>               <span class="mi">3</span>               <span class="mi">3</span>               <span class="mi">3</span>               <span class="mi">3</span>               <span class="mi">3</span>
 </pre></div>
 </div>
-<p><strong>ESMPIO DI OUTPUT</strong></p>
+<p><strong>ESEMPIO DI OUTPUT</strong></p>
 <p>python majority.py:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Inserire</span> <span class="n">nome</span> <span class="n">file</span><span class="p">:</span> <span class="n">video_scores</span><span class="o">.</span><span class="n">csv</span>
 <span class="n">Majority</span> <span class="n">score</span> <span class="n">counts</span>
@@ -218,12 +233,12 @@
 <h2>Soluzione<a class="headerlink" href="#soluzione" title="Permalink to this headline">¶</a></h2>
 <p><strong>LEGGETE E RI LEGGETE la consegna per capire se è chiara</strong></p>
 <p>iniziamo seguendo i suggerimenti:</p>
-<dl class="simple">
-<dt>suggerimento 1</dt><dd><ol class="arabic simple">
+<p><strong>suggerimento 1</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>una che legga il file dati e restituisca per ogni video la lista di score, ignorando eventuali valori ’NC’ (non classificabile)</p></li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 <p><strong>SEMPLICE</strong>
 lo abbiamo sempre fatto:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">load_scores</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -250,12 +265,12 @@ non lo so, ma posso verificarlo:</p>
 </pre></div>
 </div>
 <p>si, funziona!</p>
-<dl class="simple">
-<dt>suggerimento 2</dt><dd><ol class="arabic simple">
+<p><strong>suggerimento 2</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="2">
 <li><p>una che data una lista di score restituisca lo score più frequente</p></li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 <p>mmmm, che cosa ci sta chiedendo?
 data una lista di scores di un determinato video, resituisce lo score piu frequente.
 Es data la lista:</p>
@@ -291,12 +306,12 @@ non lo so, ma posso verificarlo:</p>
 </pre></div>
 </div>
 <p>si, funziona!</p>
-<dl class="simple">
-<dt>suggerimento 3</dt><dd><ol class="arabic simple">
+<p><strong>suggerimento 3</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="3">
 <li><p>una che data le liste di score di tutti i video, calcoli per ciascuno lo score più frequente (usando la funzione precedente) e restituisca un dizionario di conteggi degli score più frequenti</p></li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 <p>mmmm, che cosa ci sta chiedendo?
 ci chiede di calcolare un diz, che abbia come chiave il numero di scores piu frequente di ogni video, e come valore le volte che compare.
 Es supponiamo di avere queste liste:</p>
@@ -342,10 +357,12 @@ non lo so, ma posso verificarlo:</p>
 </pre></div>
 </div>
 <p>si, funziona!</p>
-<p>suggerimento 4</p>
-<ol class="arabic simple">
+<p><strong>suggerimento 4</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="4">
 <li><p>una che stampi il dizionario di score e conteggi in ordine decrescente per conteggi.</p></li>
 </ol>
+</div></blockquote>
 <p>semplice:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_majority_counts</span><span class="p">(</span><span class="n">majority_counts</span><span class="p">):</span>
     <span class="n">score_list</span> <span class="o">=</span> <span class="p">[(</span><span class="n">count</span><span class="p">,</span><span class="n">score</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">count</span><span class="p">)</span> <span class="ow">in</span> <span class="n">majority_counts</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
@@ -354,10 +371,12 @@ non lo so, ma posso verificarlo:</p>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> (</span><span class="si">%d</span><span class="s2">)&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="n">count</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">count</span><span class="p">,</span><span class="n">score</span><span class="p">)</span> <span class="ow">in</span> <span class="n">score_list</span><span class="p">]))</span>
 </pre></div>
 </div>
-<p>suggerimento 5</p>
-<ol class="arabic simple">
+<p><strong>suggerimento 5</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="5">
 <li><p>una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra</p></li>
 </ol>
+</div></blockquote>
 <p>semplice ci chiede di mettere tutto insieme:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">load_scores</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
     <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
@@ -368,10 +387,6 @@ non lo so, ma posso verificarlo:</p>
         <span class="n">all_scores</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="s1">&#39;NC&#39;</span><span class="p">]))</span>
     <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">all_scores</span>
-
-
-
-
 
 <span class="k">def</span> <span class="nf">compute_majority_score</span><span class="p">(</span><span class="n">scores</span><span class="p">):</span>
     <span class="n">counts</span> <span class="o">=</span> <span class="p">{}</span>
@@ -421,6 +436,15 @@ non lo so, ma posso verificarlo:</p>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_simEsame3.html" class="btn btn-neutral float-right" title="Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_simEsame1.html" class="btn btn-neutral float-left" title="Lezione 12.1 - Python: Simulazione esame (24/7/2020)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

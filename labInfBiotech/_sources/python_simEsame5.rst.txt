@@ -1,6 +1,11 @@
 ===========================
-Lezione 12.5 - Python: Simulazione esame 5 (11 09 2019)
+Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)
 ===========================
+
+Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.
+
+**IMPORTANTE:** il testo completo di file da processare e le relative soluzioni sono
+disponibili nel seguente archivio zip: :download:`zip <prove_esame_lab/11_09_2019.zip>`
 
 TESTO
 -----
@@ -11,8 +16,7 @@ Scrivere un programma che prenda in ingresso un file con i dati di espressione g
 #. Stampi la lista dei geni ordinati in base al loro coefficiente di correlazione con la patologia AML
 
 
-
-**ESMPIO File in input**
+**ESEMPIO File in input**
 
 gene_exp.txt::
 
@@ -32,7 +36,7 @@ gene_exp.txt::
     yes,no,yes,yes,yes,no
     no,no,no,yes,yes,no
 
-**ESMPIO DI OUTPUT**
+**ESEMPIO DI OUTPUT**
 
 python correlation2AML.py::
 
@@ -57,7 +61,7 @@ Si possono implementare 5 funzioni separate:
 
 
 **NOTA**
-Per calcolare il coefficiente di correlazione tra due liste, si può usare la funzione **corrcoefdel** modulo **numpy**
+Per calcolare il coefficiente di correlazione tra due liste, si può usare la funzione **corrcoef** del modulo **numpy**
 
 ES::
 
@@ -77,8 +81,9 @@ Soluzione
 
 iniziamo seguendo i suggerimenti:
 
-suggerimento 1
-    #. una che legga il file dati e restituisca l’intestazione e una matrice di dati
+**suggerimento 1**
+
+    1) una che legga il file dati e restituisca l’intestazione e una matrice di dati
 
 
 Quindi dobbiamo ritornare un **due** liste, una lista con le intestazioni::
@@ -116,6 +121,7 @@ e una sconda lista, una matrice (lista di liste), tipo questa::
         for row in f:
             data.append(row.strip().split(","))
             
+        f.close()
         return (header, data)
 
 
@@ -129,8 +135,9 @@ non lo so, ma posso verificarlo::
 
 si, funziona!
 
-suggerimento 2
-    #. una che data una matrice di dati e un indice di colonna, estragga la colonna corrispondente all’indice, convertendo i valori in numerici (0 per “no”, 1 per “yes”)
+**suggerimento 2**
+
+    2) una che data una matrice di dati e un indice di colonna, estragga la colonna corrispondente all’indice, convertendo i valori in numerici (0 per “no”, 1 per “yes”)
 
 
 mmmm, che cosa ci sta chiedendo?
@@ -184,9 +191,9 @@ non lo so, ma posso verificarlo::
 
 si, funziona!
 
+**suggerimento 3**
 
-suggerimento 3
-    #. una che dati header e matrice di dati, per ogni gene estragga la colonna corrispondente e calcoli la sua correlazione con la patologia AML (ultima colonna della matrice). La funzione restituira’ una lista di coppie gene-correlazione.
+    3) una che dati header e matrice di dati, per ogni gene estragga la colonna corrispondente e calcoli la sua correlazione con la patologia AML (ultima colonna della matrice). La funzione restituira’ una lista di coppie gene-correlazione.
 
 
 mmmm, che cosa ci sta chiedendo? 
@@ -235,9 +242,9 @@ si, funziona!
 
 
 
-suggerimento 4
+**suggerimento 4**
 
-#. una che data la lista di correlazioni la stampi in ordine decrescente
+	4) una che data la lista di correlazioni la stampi in ordine decrescente
 
 semplice::
 
@@ -250,9 +257,9 @@ semplice::
 
 
 
-suggerimento 5
+**suggerimento 5**
 
-#. una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
+	5) una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
 
 semplice ci chiede di mettere tutto insieme::
 
@@ -267,6 +274,7 @@ semplice ci chiede di mettere tutto insieme::
         for row in f:
             data.append(row.strip().split(","))
             
+        f.close()
         return (header, data)
 
 

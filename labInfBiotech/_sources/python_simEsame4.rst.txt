@@ -1,6 +1,11 @@
 ===========================
-Lezione 12.4 - Python: Simulazione esame 4 (20 1 2020)
+Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)
 ===========================
+
+Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.
+
+**IMPORTANTE:** il testo completo di file da processare e le relative soluzioni sono
+disponibili nel seguente archivio zip: :download:`zip <prove_esame_lab/20_01_2020.zip>`
 
 TESTO
 -----
@@ -13,7 +18,7 @@ Scrivere un programma che prenda in ingresso un file con un elenco di regioni co
 
 
 
-**ESMPIO File in input**
+**ESEMPIO File in input**
 
 conserved_regions::
 
@@ -23,7 +28,7 @@ conserved_regions::
     DVL1	uc002quu.2	chr1	1275478	1275556	-	79	CTACCTCGGTTACATCTACGGCGGCAGAGGTGCCAGCAACGAGACGGGGTGCTACGACTACGGGTCTTTCACTACAGAA	5UTR
 
 
-**ESMPIO DI OUTPUT**::
+**ESEMPIO DI OUTPUT**::
 
     python regions_stats.py
     Inserire nome file: conserved_regions
@@ -59,8 +64,9 @@ Soluzione
 
 iniziamo seguendo i suggerimenti:
 
-suggerimento 1
-    #. una che legga il file dati e restituisca una lista con nome gene, cromosoma e lunghezza della regione conservata
+**suggerimento 1**
+
+    1) una che legga il file dati e restituisca una lista con nome gene, cromosoma e lunghezza della regione conservata
 
 
 Quindi dobbiamo creare una lista di questo tipo::
@@ -88,8 +94,9 @@ non lo so, ma potete verificarlo::
 
 si, funziona!
 
-suggerimento 2
-    #. una che data la lista e un’indicazione se usare gene o cromosoma, restituisca un dizionario da gene (o da cromosoma) a elenco di lunghezze di regioni conservate per quel gene (o cromosoma)
+**suggerimento 2**
+
+    2) una che data la lista e un’indicazione se usare gene o cromosoma, restituisca un dizionario da gene (o da cromosoma) a elenco di lunghezze di regioni conservate per quel gene (o cromosoma)
 
 
 mmmm, che cosa ci sta chiedendo? 
@@ -128,8 +135,9 @@ non lo so, ma potete verificarlo::
 si, funziona!
 
 
-suggerimento 3
-    #. una che dato un dizionario chiave → lista di valori, restituisca una lista ordinata di coppie chiave, media dei suoi valori (si può usare la funzione mean del modulo statistics per calcolare la media di una lista)
+**suggerimento 3**
+
+    3) una che dato un dizionario chiave → lista di valori, restituisca una lista ordinata di coppie chiave, media dei suoi valori (si può usare la funzione mean del modulo statistics per calcolare la media di una lista)
 
 mmmm, che cosa ci sta chiedendo? 
 
@@ -159,9 +167,9 @@ non lo so, ma potete verificarlo::
 si, funziona!
 
 
-suggerimento 4
+**suggerimento 4**
 
-#.  una che data una lista ordinata e un numero n, stampi le prime n coppie come da esempio
+	4)  una che data una lista ordinata e un numero n, stampi le prime n coppie come da esempio
 
 
 **ESMPIO DI OUTPUT**::
@@ -185,8 +193,10 @@ suggerimento 4
 
 
 
-suggerimento 5
+**suggerimento 5**
 
-#. una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
+	5) una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
 
 semplice ci chiede di mettere tutto insieme::
+
+    :) 

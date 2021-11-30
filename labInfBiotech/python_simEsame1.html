@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lezione 12.1 - Python: Simulazione esame (24 7 2020) &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
+  <title>Lezione 12.1 - Python: Simulazione esame (24/7/2020) &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
   
 
   
@@ -34,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)" href="python_simEsame2.html" />
+    <link rel="prev" title="Lezione 11 - Soluzioni" href="python_functions_sol.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,7 +84,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
@@ -114,6 +116,16 @@
 <li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2.html">Lezione 10 - Python: Statement Complessi (2)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2_sol.html">Lezione 10 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 11 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 12.1 - Python: Simulazione esame (24/7/2020)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#testo">TESTO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soluzione">Soluzione</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame2.html">Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame3.html">Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame4.html">Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame5.html">Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)</a></li>
 </ul>
 
             
@@ -159,7 +171,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Lezione 12.1 - Python: Simulazione esame (24 7 2020)</li>
+      <li>Lezione 12.1 - Python: Simulazione esame (24/7/2020)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +191,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="lezione-12-1-python-simulazione-esame-24-7-2020">
-<h1>Lezione 12.1 - Python: Simulazione esame (24 7 2020)<a class="headerlink" href="#lezione-12-1-python-simulazione-esame-24-7-2020" title="Permalink to this headline">¶</a></h1>
+<h1>Lezione 12.1 - Python: Simulazione esame (24/7/2020)<a class="headerlink" href="#lezione-12-1-python-simulazione-esame-24-7-2020" title="Permalink to this headline">¶</a></h1>
+<p>Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.</p>
+<p><strong>IMPORTANTE:</strong> il testo completo di file da processare e le relative soluzioni sono
+disponibili nel seguente archivio zip: <a class="reference download internal" download="" href="_downloads/6838335ea64bb1d0840f89e383f75984/24_07_2020.zip"><code class="xref download docutils literal notranslate"><span class="pre">zip</span></code></a></p>
 <div class="section" id="testo">
 <h2>TESTO<a class="headerlink" href="#testo" title="Permalink to this headline">¶</a></h2>
 <p>Scrivere un programma che</p>
@@ -195,7 +210,7 @@
 <li><p>per ogni coppia di score s_i , s_j stampi il numero di volte in cui il primo medico ha annotato un’ecografica come s_i ed il secondo come s_j (anche quando s_i = s_j)</p></li>
 <li><p>stampi il numero totale di volte in cui i due medici sono stati d’accordo, ed il numero di volte in cui sono stati in disaccordo</p></li>
 </ol>
-<p><strong>ESMPIO File in input</strong></p>
+<p><strong>ESEMPIO File in input</strong></p>
 <p>video_scores.csv:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Video</span>       <span class="n">Score</span> <span class="n">M1</span>        <span class="n">Score</span> <span class="n">M2</span>        <span class="n">Score</span> <span class="n">M3</span>        <span class="n">Score</span> <span class="n">M4</span>        <span class="n">Score</span> <span class="n">M5</span>        <span class="n">Score</span> <span class="n">M6</span>
 <span class="mi">1</span>           <span class="mi">2</span>               <span class="mi">1</span>               <span class="mi">2</span>               <span class="mi">3</span>               <span class="mi">3</span>               <span class="mi">2</span>
@@ -215,6 +230,10 @@
 <span class="mi">3</span>   <span class="mi">3</span>   <span class="mi">5</span>
 <span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">11</span>
 <span class="mi">0</span>   <span class="mi">1</span>   <span class="mi">6</span>
+<span class="o">...</span>
+<span class="o">...</span>
+<span class="mi">0</span>   <span class="mi">3</span>       <span class="mi">2</span>
+<span class="mi">1</span>   <span class="mi">0</span>       <span class="mi">3</span>
 <span class="n">Totale</span> <span class="n">accordo</span><span class="p">:</span> <span class="mi">28</span>
 <span class="n">Totale</span> <span class="n">disaccordo</span><span class="p">:</span> <span class="mi">32</span>
 </pre></div>
@@ -224,7 +243,7 @@
 <ol class="arabic simple">
 <li><p>una che legga il file dati e restituisca una lista di liste di score (una per ogni video)</p></li>
 <li><p>una che data la lista di liste ed un indice, restituisca la lista di score associati al medico con quell’indice</p></li>
-<li><p>una che data la lista di liste e due indici, restituisca un dizionario che per ogni coppia di score (s i , s j ) contiene il numero di volte in cui il primo medico ha annotato con s i e il secondo con s j</p></li>
+<li><p>una che data la lista di liste e due indici, restituisca un dizionario che per ogni coppia di score (s_i , s_j ) contiene il numero di volte in cui il primo medico ha annotato con s_i e il secondo con s_j</p></li>
 <li><p>una che dato il dizonario (e gli indici dei medici per l’intestazione) stampi i conteggi delle varie coppie di score e calcoli e stampi i totali di accordo e disaccordo</p></li>
 <li><p>una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra</p></li>
 </ol>
@@ -251,6 +270,7 @@ lo abbiamo sempre fatto:</p>
                               <span class="c1"># perche è un intestazione</span>
         <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">:])</span>   <span class="c1"># splitto la riga, e prendo tutti gli elementi</span>
                                     <span class="c1"># eccetto il primo, perche è il numero del video</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>              <span class="c1"># chiudo il file</span>
     <span class="k">return</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -270,7 +290,7 @@ non lo so, ma posso verificarlo:</p>
 <p>mmmm, che cosa ci sta chiedendo?
 ci chiede di creare una funzione che prenda in input la lista di liste (il file che abbiamo appena caricato con load_file),
 e un indice (riferito ad un medico), ci restituisca una <strong>lista</strong> contenente gli score che ha dato il medico.
-Quindi, se come indice abbiamo inserito 1, allora il la nostra funzione deve restituire la lista [2,1,3,3,…]</p>
+Quindi, se come indice abbiamo inserito 1, allora la nostra funzione deve restituire la lista [2,1,3,3,…]</p>
 <p><strong>SEMPLICE</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">index</span><span class="p">):</span>
     <span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
@@ -290,7 +310,7 @@ non lo so, ma posso verificarlo:</p>
 <p><strong>suggerimento 3</strong></p>
 <blockquote>
 <div><ol class="arabic simple" start="3">
-<li><p>una che data la lista di liste e due indici, restituisca un dizionario che per ogni coppia di score (s i , s j ) contiene il numero di volte in cui il primo medico ha annotato con s i e il secondo con s j</p></li>
+<li><p>una che data la lista di liste e due indici, restituisca un dizionario che per ogni coppia di score (s_i , s_j ) contiene il numero di volte in cui il primo medico ha annotato con s_i e il secondo con s_j</p></li>
 </ol>
 </div></blockquote>
 <p>mmmm, che cosa ci sta chiedendo?
@@ -309,7 +329,7 @@ Esempio, supponiamo che le liste degli scores dei medici m1 e m2 siano le seguen
     <span class="p">}</span>
 </pre></div>
 </div>
-<p>Ora che abbiamo capito la consegna, scrivere il codice è easy :)</p>
+<p>Ora che abbiamo capito la consegna, scrivere il codice e’ easy :)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_agreement</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">):</span>
     <span class="n">score_m1</span> <span class="o">=</span> <span class="n">get_score</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">m1</span><span class="p">)</span>  <span class="c1">#uso la funzione che ho fatto prima per prendere gli score del medico m1</span>
     <span class="n">score_m2</span> <span class="o">=</span> <span class="n">get_score</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">m2</span><span class="p">)</span>  <span class="c1">#uso la funzione che ho fatto prima per prendere gli score del medico m2</span>
@@ -372,7 +392,7 @@ e ci sta anche chiedendo di calcolare il numero di volte in cui i medici sono in
     <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">righe</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
         <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">:])</span>
-
+    <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="k">return</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">index</span><span class="p">):</span>
@@ -397,8 +417,6 @@ e ci sta anche chiedendo di calcolare il numero di volte in cui i medici sono in
 
     <span class="k">return</span><span class="p">(</span><span class="n">diz</span><span class="p">)</span>
 
-
-
 <span class="k">def</span> <span class="nf">print_agreemnt</span><span class="p">(</span><span class="n">diz</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">):</span>
     <span class="n">tot_agree</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">tot_disagree</span> <span class="o">=</span> <span class="mi">0</span>
@@ -415,12 +433,9 @@ e ci sta anche chiedendo di calcolare il numero di volte in cui i medici sono in
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Totale disaccordo: &quot;</span><span class="p">,</span><span class="n">tot_disagree</span><span class="p">)</span>
 
 
-
-
 <span class="n">filename</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserire nome file&quot;</span><span class="p">)</span>
 <span class="n">m1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;indice medico 1: &quot;</span><span class="p">))</span>
 <span class="n">m2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;indice medico 2: &quot;</span><span class="p">))</span>
-
 
 <span class="n">res</span> <span class="o">=</span> <span class="n">load_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="n">agreement</span> <span class="o">=</span> <span class="n">get_agreement</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">)</span>
@@ -435,6 +450,15 @@ e ci sta anche chiedendo di calcolare il numero di volte in cui i medici sono in
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_simEsame2.html" class="btn btn-neutral float-right" title="Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_functions_sol.html" class="btn btn-neutral float-left" title="Lezione 11 - Soluzioni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

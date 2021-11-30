@@ -1,6 +1,11 @@
 =========================
-Lezione 12.1 - Python: Simulazione esame (24 7 2020)
+Lezione 12.1 - Python: Simulazione esame (24/7/2020)
 =========================
+
+Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.
+
+**IMPORTANTE:** il testo completo di file da processare e le relative soluzioni sono
+disponibili nel seguente archivio zip: :download:`zip <prove_esame_lab/24_07_2020.zip>`
 
 TESTO
 -----
@@ -15,7 +20,7 @@ Scrivere un programma che
 #. stampi il numero totale di volte in cui i due medici sono stati d’accordo, ed il numero di volte in cui sono stati in disaccordo
 
 
-**ESMPIO File in input**
+**ESEMPIO File in input**
 
 video_scores.csv::
 
@@ -39,6 +44,10 @@ python agreement.py::
     3   3   5
     0   0   11
     0   1   6
+    ...
+    ...
+    0	3	2
+    1	0	3
     Totale accordo: 28
     Totale disaccordo: 32
 
@@ -50,7 +59,7 @@ Si possono implementare 5 funzioni separate:
 
 #. una che legga il file dati e restituisca una lista di liste di score (una per ogni video)
 #. una che data la lista di liste ed un indice, restituisca la lista di score associati al medico con quell’indice
-#. una che data la lista di liste e due indici, restituisca un dizionario che per ogni coppia di score (s i , s j ) contiene il numero di volte in cui il primo medico ha annotato con s i e il secondo con s j
+#. una che data la lista di liste e due indici, restituisca un dizionario che per ogni coppia di score (s_i , s_j ) contiene il numero di volte in cui il primo medico ha annotato con s_i e il secondo con s_j
 #. una che dato il dizonario (e gli indici dei medici per l’intestazione) stampi i conteggi delle varie coppie di score e calcoli e stampi i totali di accordo e disaccordo
 #. una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
 
@@ -79,6 +88,7 @@ lo abbiamo sempre fatto::
                                   # perche è un intestazione 
             res.append(i.split()[1:])   # splitto la riga, e prendo tutti gli elementi
                                         # eccetto il primo, perche è il numero del video
+        file.close()              # chiudo il file
         return(res)
 
 **E' corretto il codice che abbiamo scritto fino ad ora?**
@@ -97,7 +107,7 @@ si, funziona!
 mmmm, che cosa ci sta chiedendo?  
 ci chiede di creare una funzione che prenda in input la lista di liste (il file che abbiamo appena caricato con load_file), 
 e un indice (riferito ad un medico), ci restituisca una **lista** contenente gli score che ha dato il medico.
-Quindi, se come indice abbiamo inserito 1, allora il la nostra funzione deve restituire la lista [2,1,3,3,...]
+Quindi, se come indice abbiamo inserito 1, allora la nostra funzione deve restituire la lista [2,1,3,3,...]
 
 **SEMPLICE**::
 
@@ -120,7 +130,7 @@ si, funziona!
 
 **suggerimento 3**
 
-    3) una che data la lista di liste e due indici, restituisca un dizionario che per ogni coppia di score (s i , s j ) contiene il numero di volte in cui il primo medico ha annotato con s i e il secondo con s j
+    3) una che data la lista di liste e due indici, restituisca un dizionario che per ogni coppia di score (s_i , s_j ) contiene il numero di volte in cui il primo medico ha annotato con s_i e il secondo con s_j
 
 mmmm, che cosa ci sta chiedendo? 
 ci chiede di creare una funzione che prenda in input la lista di liste (il file che abbiamo appena caricato con load_file), 
@@ -138,7 +148,7 @@ allora il dizionario in output è il seguente::
         (3,3): 3,
         }
 
-Ora che abbiamo capito la consegna, scrivere il codice è easy :) ::
+Ora che abbiamo capito la consegna, scrivere il codice e' easy :) ::
 
     def get_agreement(table,m1,m2):
         score_m1 = get_score(table,m1)  #uso la funzione che ho fatto prima per prendere gli score del medico m1
@@ -205,7 +215,7 @@ semplice ci chiede di mettere tutto insieme::
         res = []
         for i in righe[1:]:
             res.append(i.split()[1:])
-
+        file.close()
         return(res)
 
     def get_score(table,index):
@@ -230,8 +240,6 @@ semplice ci chiede di mettere tutto insieme::
 
         return(diz)
 
-
-
     def print_agreemnt(diz,m1,m2):
         tot_agree = 0
         tot_disagree = 0
@@ -248,12 +256,9 @@ semplice ci chiede di mettere tutto insieme::
         print("Totale disaccordo: ",tot_disagree)
 
 
-
-
     filename = input("Inserire nome file")
     m1 = int(input("indice medico 1: "))
     m2 = int(input("indice medico 2: "))
-
 
     res = load_file(filename)
     agreement = get_agreement(res,m1,m2)

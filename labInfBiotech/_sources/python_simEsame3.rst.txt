@@ -1,6 +1,11 @@
 ===========================
-Lezione 12.3 - Python: Simulazione esame 3 (13 2 2020)
+Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)
 ===========================
+
+Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.
+
+**IMPORTANTE:** il testo completo di file da processare e le relative soluzioni sono
+disponibili nel seguente archivio zip: :download:`zip <prove_esame_lab/13_02_2020.zip>`
 
 TESTO
 -----
@@ -17,7 +22,7 @@ estragga per ogni proteina la sua sottosequenza di legame più lunga, e stampi l
 
 
 
-**ESMPIO File in input**
+**ESEMPIO File in input**
 
 rbp_binding::
 
@@ -29,7 +34,7 @@ rbp_binding::
     -----+-+-++--++-++---+----------------+++++++++++-+-+---------------------+--+-+++++++++------
 
 
-**ESMPIO DI OUTPUT**
+**ESEMPIO DI OUTPUT**
 
 python rbp_binding_stats.py::
 
@@ -39,6 +44,7 @@ python rbp_binding_stats.py::
     1M90:N RKGSSRRTRFNKGRRSKRMMVNR
     1M90:2 TGAGTPSQGKKNTTTHTKCRRCG
     1M90:C KARGTKWPNVRGVAMNAVDH
+    ...
 
 
 **SUGGERIMENTI**
@@ -59,8 +65,9 @@ Soluzione
 
 iniziamo seguendo i suggerimenti:
 
-suggerimento 1
-    #. una che legga il file dati e restituisca una mappa proteina → sequenza proteica e sequenza di etichette di legame.
+**suggerimento 1**
+    
+    1) una che legga il file dati e restituisca una mappa proteina → sequenza proteica e sequenza di etichette di legame.
 
 
 Quindi dobbiamo creare un diz tipo questo::
@@ -70,7 +77,7 @@ Quindi dobbiamo creare un diz tipo questo::
 
 
 
-**Soluzione**
+Soluzione::
 
     def load_data(filename):
         f = open(filename)
@@ -94,15 +101,17 @@ non lo so, ma posso verificarlo::
 
 si, funziona!
 
-suggerimento 2
-    #. una che data una mappa proteina → sequenza proteica e sequenza di etichette ne restituisca una proteina → sottosequenza di binding più lunga in essa contenuta (usando una funzione ausiliaria, vedi sotto)
+**suggerimento 2**
+    
+    2) una che data una mappa proteina → sequenza proteica e sequenza di etichette ne restituisca una proteina → sottosequenza di binding più lunga in essa contenuta (usando una funzione ausiliaria, vedi sotto)
 
 
 mmmm, che cosa ci sta chiedendo? 
 bho, leggiamo il suggerimento 3
 
-suggerimento 3
-    #. una funzione ausiliaria che data una coppia sequenza proteica, sequenza di etichette di legame restituisca la sottosequenza di binding più lunga
+**suggerimento 3**
+
+    3) una funzione ausiliaria che data una coppia sequenza proteica, sequenza di etichette di legame restituisca la sottosequenza di binding più lunga
 
 
 mmmm, che cosa ci sta chiedendo? 
@@ -145,8 +154,9 @@ si, funziona!
 
 Perfetto, ora possiamo passare al suggerimento 2:
 
-suggerimento 2
-    #. una che data una mappa proteina → sequenza proteica e sequenza di etichette ne restituisca una proteina → sottosequenza di binding più lunga in essa contenuta (usando una funzione ausiliaria, vedi sotto)
+**suggerimento 2**
+
+    2) una che data una mappa proteina → sequenza proteica e sequenza di etichette ne restituisca una proteina → sottosequenza di binding più lunga in essa contenuta (usando una funzione ausiliaria, vedi sotto)
 
 mmmm, che cosa ci sta chiedendo? 
 
@@ -186,14 +196,12 @@ non lo so, ma posso verificarlo::
     print(diz)  
 
 
-
 si, funziona!
 
 
+**suggerimento 4**
 
-suggerimento 4
-
-#. una che data una mappa proteina → sottosequenza di binding stampi la lista di coppie proteina, sottosequenza ordinate per lunghezza della sottosequenza
+	4) una che data una mappa proteina → sottosequenza di binding stampi la lista di coppie proteina, sottosequenza ordinate per lunghezza della sottosequenza
 
 semplice::
 
@@ -205,14 +213,11 @@ semplice::
         print("\n".join(["%s\t%s" %(bind,prot) for length,bind,prot in l]))
 
 
+**suggerimento 5**
 
-
-suggerimento 5
-
-#. una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
+	5) una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra
 
 semplice ci chiede di mettere tutto insieme::
-
 
 
     def load_data(filename):
@@ -244,7 +249,6 @@ semplice ci chiede di mettere tutto insieme::
             longest = longest_binding(prots[prot][0],prots[prot][1])
             prot_longest[prot] = longest
         return prot_longest
-
 
     def print_longest(prot_longest):
 

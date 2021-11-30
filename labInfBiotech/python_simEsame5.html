@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lezione 12.5 - Python: Simulazione esame 5 (11 09 2019) &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
+  <title>Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019) &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
   
 
   
@@ -34,7 +34,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)" href="python_simEsame4.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,7 +83,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
@@ -114,6 +115,16 @@
 <li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2.html">Lezione 10 - Python: Statement Complessi (2)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2_sol.html">Lezione 10 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 11 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame1.html">Lezione 12.1 - Python: Simulazione esame (24/7/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame2.html">Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame3.html">Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame4.html">Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#testo">TESTO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soluzione">Soluzione</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -159,7 +170,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Lezione 12.5 - Python: Simulazione esame 5 (11 09 2019)</li>
+      <li>Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +190,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="lezione-12-5-python-simulazione-esame-5-11-09-2019">
-<h1>Lezione 12.5 - Python: Simulazione esame 5 (11 09 2019)<a class="headerlink" href="#lezione-12-5-python-simulazione-esame-5-11-09-2019" title="Permalink to this headline">¶</a></h1>
+<h1>Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)<a class="headerlink" href="#lezione-12-5-python-simulazione-esame-5-11-09-2019" title="Permalink to this headline">¶</a></h1>
+<p>Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.</p>
+<p><strong>IMPORTANTE:</strong> il testo completo di file da processare e le relative soluzioni sono
+disponibili nel seguente archivio zip: <a class="reference download internal" download="" href="_downloads/81e0fdcc76402d3b40ebd5748ce19c1e/11_09_2019.zip"><code class="xref download docutils literal notranslate"><span class="pre">zip</span></code></a></p>
 <div class="section" id="testo">
 <h2>TESTO<a class="headerlink" href="#testo" title="Permalink to this headline">¶</a></h2>
 <p>Scrivere un programma che prenda in ingresso un file con i dati di espressione genica binarizzata (sovraespresso o meno) di pazienti affetti da leucemia di tipo AML o ALL e</p>
@@ -187,7 +201,7 @@
 <li><p>Calcoli il coefficiente di correlazione tra i valori di espressione di ciascun gene ed una patologia di tipo AML</p></li>
 <li><p>Stampi la lista dei geni ordinati in base al loro coefficiente di correlazione con la patologia AML</p></li>
 </ol>
-<p><strong>ESMPIO File in input</strong></p>
+<p><strong>ESEMPIO File in input</strong></p>
 <p>gene_exp.txt:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ATP2B4</span><span class="p">,</span><span class="n">NAP1L1</span><span class="p">,</span><span class="n">MDK</span><span class="p">,</span><span class="n">PCCB</span><span class="p">,</span><span class="n">MDS1</span><span class="p">,</span><span class="n">AML</span>
 <span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span>
@@ -206,7 +220,7 @@
 <span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span>
 </pre></div>
 </div>
-<p><strong>ESMPIO DI OUTPUT</strong></p>
+<p><strong>ESEMPIO DI OUTPUT</strong></p>
 <p>python correlation2AML.py:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Inserire</span> <span class="n">nome</span> <span class="n">file</span><span class="p">:</span> <span class="n">gene_exp</span><span class="o">.</span><span class="n">txt</span>
 <span class="n">gene</span>    <span class="n">corrcoef</span>
@@ -227,7 +241,7 @@
 <li><p>una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra</p></li>
 </ol>
 <p><strong>NOTA</strong>
-Per calcolare il coefficiente di correlazione tra due liste, si può usare la funzione <strong>corrcoefdel</strong> modulo <strong>numpy</strong></p>
+Per calcolare il coefficiente di correlazione tra due liste, si può usare la funzione <strong>corrcoef</strong> del modulo <strong>numpy</strong></p>
 <p>ES:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">corrcoef</span>
 <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
@@ -242,12 +256,12 @@ Per calcolare il coefficiente di correlazione tra due liste, si può usare la fu
 <h2>Soluzione<a class="headerlink" href="#soluzione" title="Permalink to this headline">¶</a></h2>
 <p><strong>LEGGETE E RI LEGGETE la consegna per capire se è chiara</strong></p>
 <p>iniziamo seguendo i suggerimenti:</p>
-<dl class="simple">
-<dt>suggerimento 1</dt><dd><ol class="arabic simple">
+<p><strong>suggerimento 1</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>una che legga il file dati e restituisca l’intestazione e una matrice di dati</p></li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 <p>Quindi dobbiamo ritornare un <strong>due</strong> liste, una lista con le intestazioni:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;ATP2B4&#39;</span><span class="p">,</span> <span class="s1">&#39;NAP1L1&#39;</span><span class="p">,</span> <span class="s1">&#39;MDK&#39;</span><span class="p">,</span> <span class="s1">&#39;PCCB&#39;</span><span class="p">,</span> <span class="s1">&#39;MDS1&#39;</span><span class="p">,</span> <span class="s1">&#39;AML&#39;</span><span class="p">]</span>
 </pre></div>
@@ -281,6 +295,7 @@ Per calcolare il coefficiente di correlazione tra due liste, si può usare la fu
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">))</span>
 
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -292,12 +307,12 @@ non lo so, ma posso verificarlo:</p>
 </pre></div>
 </div>
 <p>si, funziona!</p>
-<dl class="simple">
-<dt>suggerimento 2</dt><dd><ol class="arabic simple">
+<p><strong>suggerimento 2</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="2">
 <li><p>una che data una matrice di dati e un indice di colonna, estragga la colonna corrispondente all’indice, convertendo i valori in numerici (0 per “no”, 1 per “yes”)</p></li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 <p>mmmm, che cosa ci sta chiedendo?
 Ci sta chiedendo di scrivere una funzione che prenda in input la matrice che abbiamo caricato al punto 1, e successivamente
 di trasformare i “no” in 0 e i “si” in 1.</p>
@@ -343,12 +358,12 @@ non lo so, ma posso verificarlo:</p>
 </pre></div>
 </div>
 <p>si, funziona!</p>
-<dl class="simple">
-<dt>suggerimento 3</dt><dd><ol class="arabic simple">
+<p><strong>suggerimento 3</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="3">
 <li><p>una che dati header e matrice di dati, per ogni gene estragga la colonna corrispondente e calcoli la sua correlazione con la patologia AML (ultima colonna della matrice). La funzione restituira’ una lista di coppie gene-correlazione.</p></li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 <p>mmmm, che cosa ci sta chiedendo?</p>
 <p>ci chiede di scrivere una funzione che prenda in input la matrice e l’intestazione (caricati al punto 1),
 successivamente per ogni colonna trasformare “yes” in 1 e “no” in 0 (usando il punto 2) e restituire la correlazione
@@ -387,10 +402,12 @@ non lo so, ma posso verificarlo:</p>
 </pre></div>
 </div>
 <p>si, funziona!</p>
-<p>suggerimento 4</p>
-<ol class="arabic simple">
+<p><strong>suggerimento 4</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="4">
 <li><p>una che data la lista di correlazioni la stampi in ordine decrescente</p></li>
 </ol>
+</div></blockquote>
 <p>semplice:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_correlations</span><span class="p">(</span><span class="n">correlations</span><span class="p">):</span>
 
@@ -400,10 +417,12 @@ non lo so, ma posso verificarlo:</p>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="se">\t</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">corr</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>suggerimento 5</p>
-<ol class="arabic simple">
+<p><strong>suggerimento 5</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="5">
 <li><p>una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra</p></li>
 </ol>
+</div></blockquote>
 <p>semplice ci chiede di mettere tutto insieme:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">corrcoef</span>
 
@@ -416,6 +435,7 @@ non lo so, ma posso verificarlo:</p>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">))</span>
 
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
 
 
@@ -462,6 +482,13 @@ non lo so, ma posso verificarlo:</p>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="python_simEsame4.html" class="btn btn-neutral float-left" title="Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

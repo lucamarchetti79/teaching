@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Lezione 12.4 - Python: Simulazione esame 4 (20 1 2020) &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
+  <title>Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020) &mdash; Laboratorio di Informatica a.a. 2021/2022 documentation</title>
   
 
   
@@ -34,7 +34,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)" href="python_simEsame5.html" />
+    <link rel="prev" title="Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)" href="python_simEsame3.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,7 +84,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
@@ -114,6 +116,16 @@
 <li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2.html">Lezione 10 - Python: Statement Complessi (2)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2_sol.html">Lezione 10 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 11 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame1.html">Lezione 12.1 - Python: Simulazione esame (24/7/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame2.html">Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame3.html">Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#testo">TESTO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soluzione">Soluzione</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame5.html">Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)</a></li>
 </ul>
 
             
@@ -159,7 +171,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Lezione 12.4 - Python: Simulazione esame 4 (20 1 2020)</li>
+      <li>Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +191,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="lezione-12-4-python-simulazione-esame-4-20-1-2020">
-<h1>Lezione 12.4 - Python: Simulazione esame 4 (20 1 2020)<a class="headerlink" href="#lezione-12-4-python-simulazione-esame-4-20-1-2020" title="Permalink to this headline">¶</a></h1>
+<h1>Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)<a class="headerlink" href="#lezione-12-4-python-simulazione-esame-4-20-1-2020" title="Permalink to this headline">¶</a></h1>
+<p>Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.</p>
+<p><strong>IMPORTANTE:</strong> il testo completo di file da processare e le relative soluzioni sono
+disponibili nel seguente archivio zip: <a class="reference download internal" download="" href="_downloads/bff72b70ee0acb1023d3f5e2ae1f2af3/20_01_2020.zip"><code class="xref download docutils literal notranslate"><span class="pre">zip</span></code></a></p>
 <div class="section" id="testo">
 <h2>TESTO<a class="headerlink" href="#testo" title="Permalink to this headline">¶</a></h2>
 <p>Scrivere un programma che prenda in ingresso un file con un elenco di regioni conservate in UTR e un numero n e stampi:</p>
@@ -187,7 +202,7 @@
 <li><p>I primi n geni ordinati per lunghezza media delle loro regioni conservate</p></li>
 <li><p>I primi n cromosomi ordinati per lunghezza media delle regioni conservate nei loro geni</p></li>
 </ol>
-<p><strong>ESMPIO File in input</strong></p>
+<p><strong>ESEMPIO File in input</strong></p>
 <p>conserved_regions:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HGNC</span>        <span class="n">ucsc</span>    <span class="nb">chr</span>     <span class="n">start</span>   <span class="n">end</span>     <span class="n">strand</span>  <span class="n">region</span><span class="o">.</span><span class="n">length</span>   <span class="n">region</span><span class="o">.</span><span class="n">sequence</span> <span class="n">utr</span><span class="o">.</span><span class="n">type</span>
 <span class="n">SDF4</span>        <span class="n">uc001adj</span><span class="o">.</span><span class="mi">1</span>      <span class="n">chr1</span>    <span class="mi">1159309</span> <span class="mi">1159325</span> <span class="o">-</span>       <span class="mi">17</span>      <span class="n">GAGGAACCGTGACTAGA</span>       <span class="mi">5</span><span class="n">UTR</span>
@@ -195,7 +210,7 @@
 <span class="n">DVL1</span>        <span class="n">uc002quu</span><span class="o">.</span><span class="mi">2</span>      <span class="n">chr1</span>    <span class="mi">1275478</span> <span class="mi">1275556</span> <span class="o">-</span>       <span class="mi">79</span>      <span class="n">CTACCTCGGTTACATCTACGGCGGCAGAGGTGCCAGCAACGAGACGGGGTGCTACGACTACGGGTCTTTCACTACAGAA</span> <span class="mi">5</span><span class="n">UTR</span>
 </pre></div>
 </div>
-<p><strong>ESMPIO DI OUTPUT</strong>:</p>
+<p><strong>ESEMPIO DI OUTPUT</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">regions_stats</span><span class="o">.</span><span class="n">py</span>
 <span class="n">Inserire</span> <span class="n">nome</span> <span class="n">file</span><span class="p">:</span> <span class="n">conserved_regions</span>
 <span class="n">Inserire</span> <span class="n">numero</span> <span class="n">elementi</span><span class="p">:</span> <span class="mi">5</span>
@@ -227,12 +242,12 @@
 <h2>Soluzione<a class="headerlink" href="#soluzione" title="Permalink to this headline">¶</a></h2>
 <p><strong>LEGGETE E RI LEGGETE la consegna per capire se è chiara</strong></p>
 <p>iniziamo seguendo i suggerimenti:</p>
-<dl class="simple">
-<dt>suggerimento 1</dt><dd><ol class="arabic simple">
+<p><strong>suggerimento 1</strong></p>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>una che legga il file dati e restituisca una lista con nome gene, cromosoma e lunghezza della regione conservata</p></li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 <p>Quindi dobbiamo creare una lista di questo tipo:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
     <span class="p">(</span><span class="s1">&#39;SDF4&#39;</span><span class="p">,</span> <span class="s1">&#39;chr1&#39;</span><span class="p">,</span> <span class="mi">17</span><span class="p">),</span>
@@ -254,12 +269,12 @@ non lo so, ma potete verificarlo:</p>
 </pre></div>
 </div>
 <p>si, funziona!</p>
-<dl class="simple">
-<dt>suggerimento 2</dt><dd><ol class="arabic simple">
+<p><strong>suggerimento 2</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="2">
 <li><p>una che data la lista e un’indicazione se usare gene o cromosoma, restituisca un dizionario da gene (o da cromosoma) a elenco di lunghezze di regioni conservate per quel gene (o cromosoma)</p></li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 <p>mmmm, che cosa ci sta chiedendo?
 una funzione che prenda in input la lista che abbiamo caricato prima e una variabile che rappresenti gene o cromosoma. La funzione deve ritornare un diz tipo,
 se noi chiamiamo la funzione con gene:</p>
@@ -290,12 +305,12 @@ non lo so, ma potete verificarlo:</p>
 </pre></div>
 </div>
 <p>si, funziona!</p>
-<dl class="simple">
-<dt>suggerimento 3</dt><dd><ol class="arabic simple">
+<p><strong>suggerimento 3</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="3">
 <li><p>una che dato un dizionario chiave → lista di valori, restituisca una lista ordinata di coppie chiave, media dei suoi valori (si può usare la funzione mean del modulo statistics per calcolare la media di una lista)</p></li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 <p>mmmm, che cosa ci sta chiedendo?</p>
 <p>ci chiede di scrivere una funzione che prenda un diz (gene -&gt; lista di valori oppure cromosoma -&gt; lista di valori) e restituisca una lista <strong>ordinata</strong> di coppie. Dove gli elementi della coppia sono la chiave e la media dei valori.</p>
 <p>Es, se chiamo la funzione con il diz di cromosomi ottengo:</p>
@@ -318,10 +333,12 @@ non lo so, ma potete verificarlo:</p>
 </pre></div>
 </div>
 <p>si, funziona!</p>
-<p>suggerimento 4</p>
-<ol class="arabic simple">
+<p><strong>suggerimento 4</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="4">
 <li><p>una che data una lista ordinata e un numero n, stampi le prime n coppie come da esempio</p></li>
 </ol>
+</div></blockquote>
 <p><strong>ESMPIO DI OUTPUT</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">regions_stats</span><span class="o">.</span><span class="n">py</span>
 <span class="n">Inserire</span> <span class="n">nome</span> <span class="n">file</span><span class="p">:</span> <span class="n">conserved_regions</span>
@@ -340,11 +357,16 @@ non lo so, ma potete verificarlo:</p>
 <span class="n">chr8</span>     <span class="mi">105</span>
 </pre></div>
 </div>
-<p>suggerimento 5</p>
-<ol class="arabic simple">
+<p><strong>suggerimento 5</strong></p>
+<blockquote>
+<div><ol class="arabic simple" start="5">
 <li><p>una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra</p></li>
 </ol>
+</div></blockquote>
 <p>semplice ci chiede di mettere tutto insieme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:)</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -353,6 +375,15 @@ non lo so, ma potete verificarlo:</p>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_simEsame5.html" class="btn btn-neutral float-right" title="Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_simEsame3.html" class="btn btn-neutral float-left" title="Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

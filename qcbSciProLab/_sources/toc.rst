@@ -30,6 +30,8 @@
     Module 2, Practical 4 <M2_practical4.ipynb>
     Module 2, Practical 5 <M2_practical5.ipynb>
     Module 2, Practical 6 <M2_practical6.ipynb>
+    Module 2, Practical 7 <M2_practical7.ipynb>
+    Module 2, Practical 8 <M2_practical8.ipynb>
 
 |space|
 ==========
