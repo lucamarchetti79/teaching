@@ -4,6 +4,15 @@ Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)
 
 Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.
 
+**NOTA 1:** questi esercizi sono relativi alla seconda parte dell'esame, la parte che si svolgera'
+al computer. Prima di questa ci sara' una breve parte su foglio protocollo in cui vi sara' chiesto 
+di correggere un programma python dato o di scrivere cosa stampa un programma Python fornito
+nel testo dell'esercizio.
+
+**NOTA 2:** Per domande sulle soluzioni o sui testi, per favore riferitevi al tutore del corso:
+
+**Domenico Stefani:**  domenico dot stefani at unitn dot it
+
 **IMPORTANTE:** il testo completo di file da processare e le relative soluzioni sono
 disponibili nel seguente archivio zip: :download:`zip <prove_esame_lab/19_06_2020.zip>`
 
