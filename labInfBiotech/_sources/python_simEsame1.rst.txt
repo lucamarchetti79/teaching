@@ -107,7 +107,8 @@ non lo so, ma posso verificarlo::
     print(prova)
 
 
-si, funziona!
+si, funziona! Ovviamente, in `filename` dovremo salvare il nome del file da aprire,
+che deve trovarsi nella stessa cartella del sorgente python.
 
 **suggerimento 2**
 
@@ -154,7 +155,7 @@ allora il dizionario in output è il seguente::
     diz = { 
         (2,1): 1,
         (1,2): 1,
-        (3,3): 3,
+        (3,3): 2,
         }
 
 Ora che abbiamo capito la consegna, scrivere il codice e' easy :) ::
