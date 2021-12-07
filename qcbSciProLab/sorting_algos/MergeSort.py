@@ -39,12 +39,12 @@ class MergeSort(SortingAlgorithm):
         j = mid + 1
         while i <= mid and j <= last:
             if self.data[i] < self.data[j]:
-                self.comparisons += 1
                 tmp.append(self.data[i])
                 i += 1
             else:
                 tmp.append(self.data[j])
                 j += 1
+            self.comparisons += 1
         while i <= mid:
             tmp.append(self.data[i])
             i += 1

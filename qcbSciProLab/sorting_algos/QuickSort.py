@@ -33,10 +33,11 @@ class QuickSort(SortingAlgorithm):
 
     def __swap(self, i,j):
         """swaps elements at positions i and j"""
-        self.operations += 1
-        tmp = self.data[i]
-        self.data[i] = self.data[j]
-        self.data[j] = tmp
+        if(i != j): # no point in swapping if i==j
+            self.operations += 1
+            tmp = self.data[i]
+            self.data[i] = self.data[j]
+            self.data[j] = tmp
 
     def __pivot(self, start, end):
         """gets the pivot and swaps elements in [start, end]

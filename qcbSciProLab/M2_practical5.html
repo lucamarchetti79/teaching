@@ -988,8 +988,6 @@ div.rendered_html tbody tr:hover {
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
                 <span class="n">j</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__argmin</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">__swap</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
-                <span class="c1"># keep track of what was done</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">+=</span> <span class="mi">1</span>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
@@ -1255,12 +1253,12 @@ list);</p></li>
         <span class="n">j</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
         <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">mid</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">last</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-                <span class="bp">self</span><span class="o">.</span><span class="n">comparisons</span> <span class="o">+=</span> <span class="mi">1</span>
                 <span class="n">tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
                 <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
                 <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">comparisons</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">mid</span><span class="p">:</span>
             <span class="n">tmp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
             <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -1405,10 +1403,11 @@ list);</p></li>
 
     <span class="k">def</span> <span class="nf">__swap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;swaps elements at positions i and j&quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">tmp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">):</span> <span class="c1"># no point in swapping if i==j</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp</span>
 
     <span class="k">def</span> <span class="nf">__pivot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;gets the pivot and swaps elements in [start, end]</span>

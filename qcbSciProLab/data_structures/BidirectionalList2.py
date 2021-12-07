@@ -136,8 +136,11 @@ class BiLinkList:
     
     ###################################################
     ################### NEW METHODS ###################
+    #  WARINING: these implementations do not update 
+    #          self.__minEl and self.__maxEl
     ###################################################
     def remove(self, element):
+        # WARNING: this implementation does not update self.__minEl and self.__maxEl
         if self.__head != None:
             cur_el = self.__head
             while cur_el != element and cur_el != None:

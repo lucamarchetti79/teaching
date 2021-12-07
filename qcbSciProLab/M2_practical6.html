@@ -1382,7 +1382,7 @@ Moving backwards 3 steps from 11
 <li><p>Complete the bidirectional linked list example seen above by adding the following methods:</p></li>
 </ol>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">remove(x)</span></code> method that removes the fist occurence of element x from the list if present</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remove(x)</span></code> method that removes the element x from the list if present</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">slice(x,y)</span></code> where <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are integers. The slice method should return another bidirectionaly linked list with elements from <code class="docutils literal notranslate"><span class="pre">x</span></code> (included) to <code class="docutils literal notranslate"><span class="pre">y</span></code> (excluded).</p></li>
 </ul>
 <div class="tggle" onclick="toggleVisibility(&#39;Ex2&#39;);"><p>Show/Hide Solution</p>
@@ -1529,6 +1529,8 @@ Moving backwards 3 steps from 11
 
     <span class="c1">###################################################</span>
     <span class="c1">################### NEW METHODS ###################</span>
+    <span class="c1">#  WARINING: these implementations do not update</span>
+    <span class="c1">#          self.__minEl and self.__maxEl</span>
     <span class="c1">###################################################</span>
     <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">element</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__head</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
@@ -1654,7 +1656,7 @@ Moving backwards 3 steps from 11
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">append(element)</span></code> : adds at the end of the list;</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">extend(list_of_elements)</span></code> : adds all the elements in the list</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">get(index)</span></code> : reads the node at position index (if index is lower than length else return None);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get(index)</span></code> : reads the node at position index;</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">removeAt(index)</span></code> : removes the element at position index if it exists;</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">removeEl(el)</span></code> : removes the element el, if present.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">head()</span></code> : gets the first element of the list;</p></li>

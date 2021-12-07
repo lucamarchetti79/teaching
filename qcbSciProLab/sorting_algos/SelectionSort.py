@@ -57,8 +57,6 @@ class SelectionSort(SortingAlgorithm):
         for i in range(len(self.data) - 1):
                 j = self.__argmin(i)
                 self.__swap(i, j) 
-                # keep track of what was done
-                self.operations += 1
 
 
 if __name__ == "__main__":
