@@ -32,6 +32,10 @@
     Module 2, Practical 6 <M2_practical6.ipynb>
     Module 2, Practical 7 <M2_practical7.ipynb>
     Module 2, Practical 8 <M2_practical8.ipynb>
+    Module 2, Practical 9 <M2_practical9.ipynb>
+    Module 2, Practical 10 <M2_practical10.ipynb>
+
+    Module 2, MidTerm Simulation <M2_midTermSimulation.ipynb>
 
 |space|
 ==========
