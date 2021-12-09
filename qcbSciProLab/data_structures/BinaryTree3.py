@@ -89,7 +89,7 @@ def getMinHeight(tree):
     return res
 
 def nodesAtLevel(tree,k):
-    """returns the number of nodes at level k"""
+    """returns the nodes at level k"""
     if tree == None:
         return 0
 

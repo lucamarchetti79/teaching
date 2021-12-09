@@ -76,11 +76,8 @@ class DiGraphAsAdjacencyMatrix:
         ret = []
         if node in self.__nodes:
             i = self.__nodes.index(node)
-            #get both incoming and outgoing edges to return nodes
             for j in range(len(self.__nodes)):
                 nodeJ = self.__nodes[j]
-                
-                #incoming edges
                 if self.__matrix[i][j] != 0:
                     ret.append(nodeJ)
 

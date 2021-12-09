@@ -1524,8 +1524,8 @@ Root
 <p>Given the BinaryTree defined above:</p>
 <ol class="loweralpha simple">
 <li><p>Write a function <code class="docutils literal notranslate"><span class="pre">getWidth(T)</span></code> that given a tree T, returns the width of T. Hint: <em>get all nodes at each level and count them</em>.</p></li>
-<li><p>Write a function <code class="docutils literal notranslate"><span class="pre">getMinHeight(T)</span></code> that given a tree T, returns the minimal height of T. Hint: <em>stop at first level with a leaf (similar to previous function)</em>.</p></li>
-<li><p>Write a function <code class="docutils literal notranslate"><span class="pre">nodesAtLevel(T,k)</span></code> that given a binary tree T and an integer k, returns the number of nodes at level k.</p></li>
+<li><p>Write a function <code class="docutils literal notranslate"><span class="pre">getMinHeight(T)</span></code> that given a tree T, returns the minimal height of T (in number of nodes). Hint: <em>stop at first level with a leaf (similar to previous function)</em>.</p></li>
+<li><p>Write a function <code class="docutils literal notranslate"><span class="pre">nodesAtLevel(T,k)</span></code> that given a binary tree T and an integer k, returns the nodes at level k.</p></li>
 </ol>
 <p>Test the functions with the following binary graph:</p>
 <img alt="_images/bintree_2tris.png" src="_images/bintree_2tris.png" />
@@ -1656,7 +1656,7 @@ bt6.insertLeft(bt9)
     <span class="k">return</span> <span class="n">res</span>
 
 <span class="k">def</span> <span class="nf">nodesAtLevel</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;returns the number of nodes at level k&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;returns the nodes at level k&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">tree</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
 

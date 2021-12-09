@@ -1021,9 +1021,9 @@ Node_6  0       0       0       0       0       1
 <li><p>Consider the <code class="docutils literal notranslate"><span class="pre">DiGraphAsAdjacencyMatrix</span></code> graph class. Add the following methods:</p></li>
 </ol>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">adjacent(self,</span> <span class="pre">node)</span></code> : given a node returns all the nodes connected to it (both incoming and outgoing);</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">adjacentEdge(self,</span> <span class="pre">node,</span> <span class="pre">incoming=True)</span></code> : given a node, returns all the nodes close to it (incoming if “incoming=True” or outgoing if “incoming = False”) as a list of pairs (node, other, weight);</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">edges(self)</span></code> : returns all the edges in the graph as pairs (i,j, weight);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adjacent(self,</span> <span class="pre">node)</span></code> : given a node returns all the nodes connected to it;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">adjacentEdge(self,</span> <span class="pre">node,</span> <span class="pre">incoming=True)</span></code> : given a node, returns all the nodes close to it (incoming if “incoming=True” or outgoing if “incoming = False”) as a list of triplets (source_node, dest_node, weight);</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">edges(self)</span></code> : returns all the edges in the graph as triplets (i,j, weight);</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">edgeIn(self,</span> <span class="pre">node1,</span> <span class="pre">node2)</span></code> : check if the edge node1 –&gt; node2 is in the graph;</p></li>
 </ul>
 <p>Test the code with:</p>
@@ -1165,11 +1165,8 @@ print(&quot;Is (Node_6,Node_6) there? {}&quot;.format( G.edgeIn(&quot;Node_6&quo
         <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__nodes</span><span class="p">:</span>
             <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__nodes</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-            <span class="c1">#get both incoming and outgoing edges to return nodes</span>
             <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__nodes</span><span class="p">)):</span>
                 <span class="n">nodeJ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__nodes</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-
-                <span class="c1">#incoming edges</span>
                 <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nodeJ</span><span class="p">)</span>
 
