@@ -33,14 +33,14 @@ scrivere il codice python e salvarlo::
 
 Per **eseguire** un modulo, diciamo il file ``eseguibile.py``, scrivo dalla shell::
 
-    python eseguibile.py
+    python3 eseguibile.py
 
 
 **PROVATE VOI**
 
 #. Create un file prova.py
 #. Scrivete un semplice programma che fa la somma di 2 numeri e stampate il risultato.
-#. Lanciate il programa apppena scritto.
+#. Lanciate il programa appena scritto.
 
 
 Per utilizzare le funzioni definite in un modulo all'interno di un altro, uso

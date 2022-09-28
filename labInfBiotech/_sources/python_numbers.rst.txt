@@ -75,7 +75,7 @@ La scala di complessita' dei tipi numerici e'::
 ``float``::
 
     risultato = 1.2 + 1             # float + int
-    print(risultato)                # 1.2
+    print(risultato)                # 2.2
     print(type(risultato))          # float
 
 Questo perche' e' necessario un ``float`` per rappresentare il valore ``1.2``:
@@ -245,7 +245,7 @@ controllo", ma nell'esempio sotto fisso per convenienza) cada nell'intervallo A
 
     x = 17 # ad esempio
 
-    minimo_a, massimo_a, x = 10, 50
+    minimo_a, massimo_a = 10, 50
 
     dentro_a = (minimo_a <= x <= massimo_a)
     print(dentro_a)
