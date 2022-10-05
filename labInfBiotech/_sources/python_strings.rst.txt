@@ -248,9 +248,9 @@ Ritorna  Metodo                      Significato
 ======== =========================== ===================================================
 ``str``  ``str.upper()``             Restituisce la stringa in maiuscolo
 ``str``  ``str.lower()``             Restituisce la stringa in minuscolo
-``str``  ``str.strip(str)``          Rimuove stringhe ai lati
-``str``  ``str.lstrip(str)``         Rimuove stringhe a sinistra
-``str``  ``str.rstrip(str)``         Rimuove stringhe a destra
+``str``  ``str.strip(str)``          Rimuove stringhe ai lati formate dai caratteri contenuti nella stringa passata come parametro
+``str``  ``str.lstrip(str)``         Come sopra, ma rimuove solo a sinistra
+``str``  ``str.rstrip(str)``         Come sopra, ma rimuove solo a destra
 ``bool`` ``str.startswith(str)``     Controlla se la stringa comincia per un'altra
 ``bool`` ``str.endswith(str)``       Controlla se la stringa finisce per un'altra
 ``int``  ``str.find(str)``           Restituisce la posizione di una sotto-stringa
@@ -380,7 +380,7 @@ delle stringhe.
 #. Considerando la seguente stringa in input: DNA = "ttggtatcggtctacgcctcgcatcgattaggtgattgtgga"
 #. Convertiamo la stringa in maiuscolo.
 #. Contiamo le occorrenze di timina, guanina, citosina e adenina, salvandole in variabili con nomi opportuni.
-#. Stampiamo la media delle loro frequnze
+#. Stampiamo la media del numero delle loro occorrenze.
 #. Quante volte compare il codone "ttg"?
 #. Convertiamo la sequenza del DNA in forma estesa. cioè: t diventa timina, g diventa guanina etc etc etc
 
