@@ -21,9 +21,9 @@ Scrivete un **modulo** python che data in input la seguente seq di DNA::
 
 
 
-#. conti le frequenze di a,c,g,t normalizzate (numero di occorrenze di a diviso lunghezza della stringa. Es: se ci sono 30 "a" e la stringa è lunga 60, la frequenaza normalizzata di "a" è uguale a 30/60 = 0.5)
+#. conti le frequenze di a,c,g,t normalizzate (numero di occorrenze di a diviso lunghezza della stringa. Es: se ci sono 30 "a" e la stringa è lunga 60, la frequenza normalizzata di "a" è uguale a 30/60 = 0.5)
 #. stampi il DNA ordinato (es "aaaaaaaaaccccccccgggggggttttt")
-#. crei un array chiamato **array_DNA**, contenente la frequenza dell'aminoacido corrispondente. Es. se le frequnze sono a=0.20,c=0.30,g=0.10,t=0.40, e il DNA è del tipo "atgc...", dovete creare l'array [0.2,0.4,0.1,0.3,...]
+#. crei un array chiamato **array_DNA**, contenente la frequenza dell'aminoacido corrispondente. Es. se le frequenze sono a=0.20,c=0.30,g=0.10,t=0.40, e il DNA è del tipo "atgc...", dovete creare l'array [0.2,0.4,0.1,0.3,...]
 #. crei un array con la media mobile dell'array chiamato **array_DNA**. La media mobile è un array dove l'elemento in posizione i rappresenta la media degli elementi in posizione 0,1,2,..,i-1,i. Es se l'array in input è [1,1,4,5], l'array contenente le medie mobili è il seguente: [1,1,2,2.75] perche' [1/1 = 1, (1+1)/2 = 1, (1+1+4)/3 = 2, (1+1+4+5)/4 = 2.75]
 
 
@@ -35,7 +35,7 @@ Infine stampate i 4 risultati, un esempio di output del programma è il seguente
     res4 [0.23, 0.255, 0.24666666666666667, 0.2525, 0.248 ....
 
 
-**L'esercizio è interamente risolvibile con quello cha abbiamo fatto fino a qui**
+**L'esercizio è interamente risolvibile con quello che abbiamo fatto fino a qui**
 
 
 
