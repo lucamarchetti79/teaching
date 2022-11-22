@@ -90,5 +90,9 @@ Note Introduttive
     python_dictionaries_sol.rst
 
     python_sets.rst
+    python_sets_sol.rst
 
     python_io.rst
+    python_io_sol.rst
+
+    python_complex_statements_1.rst
