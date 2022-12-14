@@ -367,6 +367,7 @@ Esercizi
     3 7
     2 8
     9 1
+    ...
 
    *Hint*. C'e' un esempio che mostra come iterare sulle coppie di elementi
    di una lista. E' sufficiente adattarlo.
@@ -377,7 +378,7 @@ Esercizi
    Il risultato dovra' essere::
 
     >>> lista_delle_coppie
-    [(8, 2), (3, 7), (2, 8), 9, 1)]
+    [(8, 2), (3, 7), (2, 8), (9, 1), ...]
 
 #. Date le liste::
 
