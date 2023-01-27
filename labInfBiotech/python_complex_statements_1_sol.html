@@ -554,7 +554,7 @@ che sono le posizioni di inizio delle varie triplette.</p>
     <span class="k">if</span> <span class="n">riga</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">:</span>
         <span class="c1"># se la riga e&#39; un&#39;intestazione, estraggo il nome</span>
         <span class="c1"># della sequenza</span>
-        <span class="n">nome</span> <span class="o">=</span> <span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">nome</span> <span class="o">=</span> <span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">lstrip</span><span class="p">(</span><span class="s2">&quot;&gt;&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="c1"># altrimenti, e&#39; la sequenza vera a propria. il</span>
         <span class="c1"># nome l&#39;ho ricavato nell&#39;iterazione precedente</span>

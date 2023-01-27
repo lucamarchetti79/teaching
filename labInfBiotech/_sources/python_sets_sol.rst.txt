@@ -41,7 +41,7 @@ Soluzioni
 
    #. Soluzione::
 
-        set_vuoto = {}
+        set_vuoto = set()
         print(set_vuoto)
         print(len(set_vuoto))                        # 0
 

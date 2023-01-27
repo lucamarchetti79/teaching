@@ -363,7 +363,7 @@ For e While
             if riga[0] == ">":
                 # se la riga e' un'intestazione, estraggo il nome
                 # della sequenza
-                nome = riga.split("|")[0]
+                nome = riga.split("|")[0].lstrip(">")
             else:
                 # altrimenti, e' la sequenza vera a propria. il
                 # nome l'ho ricavato nell'iterazione precedente

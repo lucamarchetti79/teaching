@@ -262,7 +262,7 @@ Soluzioni List Comprehension
     0 >YBR208C at 100.00%
     """
 
-    righe = risultato_cdhit.split("\n")
+    righe = risultato_cdhit.strip().split("\n")
 
    Per ottenere i nomi dei cluster, devo tenere solo le righe che cominciano
    per ``">"``, e per ciascuna di queste fare lo ``split()`` in modo da poter
