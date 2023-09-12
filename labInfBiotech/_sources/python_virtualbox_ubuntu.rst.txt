@@ -31,8 +31,11 @@ Installazione:
 Installazione di Ubuntu su VirtualBox
 ------
 
-Per poter installare Ubutnu in VirtualBox, vi consiglio di seguire il seguente tutorial 
+Per poter installare Ubutnu in VirtualBox, sono disponibili diversi tutorial su youtube. Copio qui un paio di video utili, in inglese ed in italiano:
+
 https://www.youtube.com/watch?v=x3Zpe1rIPFE 
+
+https://www.youtube.com/watch?v=1pQz7FE1mnc
 
 |
 

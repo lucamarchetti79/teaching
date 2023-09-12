@@ -27,7 +27,7 @@ Laboratorio di Informatica
 
 Bibliografia
 ------------
-**Tutorial ufficiale del linguaggio Python:** `<https://pytutorial-it.readthedocs.io/it/python3.8>`_
+**Tutorial ufficiale del linguaggio Python:** `<https://pytutorial-it.readthedocs.io/it/python3.11/>`_
 
 **Allen Downey, Pensare in Python — Come pensare da Informatico, Green Tea Press**
 `<https://github.com/AllenDowney/ThinkPythonItalian/raw/master/thinkpython_italian.pdf>`_
@@ -83,14 +83,14 @@ Note Introduttive
     python_test.rst
     python_test_sol.rst
     
+    python_tuples.rst
+    python_tuples_sol.rst
+
     python_dictionaries.rst
     python_dictionaries_sol.rst
 
     python_sets.rst
     python_sets_sol.rst
-
-    python_tuples.rst
-    python_tuples_sol.rst
 
     python_io.rst
     python_io_sol.rst
@@ -109,4 +109,3 @@ Note Introduttive
     python_simEsame3.rst
     python_simEsame4.rst
     python_simEsame5.rst
-    
