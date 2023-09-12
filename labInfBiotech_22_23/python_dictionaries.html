@@ -1,0 +1,922 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lezione 7.2 - Python: Dizionari &mdash; Laboratorio di Informatica a.a. 2022/2023 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 7.2 - Soluzioni" href="python_dictionaries_sol.html" />
+    <link rel="prev" title="Lezione 7.1 - Soluzioni" href="python_tuples_sol.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Laboratorio di Informatica
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a.a. 2022/2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv_sol.html">Lezione 6 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples.html">Lezione 7.1 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples_sol.html">Lezione 7.1 - Soluzioni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 7.2 - Python: Dizionari</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#operazioni">Operazioni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodi">Metodi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esercizi">Esercizi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries_sol.html">Lezione 7.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Lezione 8.1 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets_sol.html">Lezione 8.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Lezione 8.2 - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io_sol.html">Lezione 8.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1.html">Lezione 9 - Python: Statement Complessi (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1_sol.html">Lezione 9 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2.html">Lezione 10 - Python: Statement Complessi (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2_sol.html">Lezione 10 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 11 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame1.html">Lezione 12.1 - Python: Simulazione esame (24/7/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame2.html">Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame3.html">Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame4.html">Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame5.html">Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Lezione 7.2 - Python: Dizionari</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/python_dictionaries.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lezione-7-2-python-dizionari">
+<h1>Lezione 7.2 - Python: Dizionari<a class="headerlink" href="#lezione-7-2-python-dizionari" title="Permalink to this headline">¶</a></h1>
+<p>I dizionari rappresentano <em>mappe</em> tra oggetti: mappano una <em>chiave</em> nel
+valore corrispondente.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>I dizionari sono <strong>mutabili</strong>!</p>
+</div>
+<p>Per definire un dizionario scrivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">codice</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;UUU&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>     <span class="c1"># fenilalanina</span>
+    <span class="s2">&quot;UCU&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>     <span class="c1"># serina</span>
+    <span class="s2">&quot;UAU&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span>     <span class="c1"># tirosina</span>
+    <span class="s2">&quot;UGU&quot;</span><span class="p">:</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span>     <span class="c1"># cisteina</span>
+    <span class="s2">&quot;UUC&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>     <span class="c1"># fenilalanina</span>
+    <span class="s2">&quot;UCC&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>     <span class="c1"># serina</span>
+    <span class="s2">&quot;UAC&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span>     <span class="c1"># tirosina</span>
+    <span class="c1"># ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Qui <code class="docutils literal notranslate"><span class="pre">codice</span></code> implementa il codice genetico, che mappa da stringhe di tre
+lettere (le <em>chiavi</em>) al nome dell’aminoacido corrispondente (i <em>valori</em>).</p>
+<p>La sintassi e’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="n">chiave1</span><span class="p">:</span> <span class="n">valore1</span><span class="p">,</span> <span class="n">chiave2</span><span class="p">:</span> <span class="n">valore2</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Uso un dizionario in questo modo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aa_di_uuu</span> <span class="o">=</span> <span class="n">codice</span><span class="p">[</span><span class="s2">&quot;UUU&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aa_di_uuu</span><span class="p">)</span>             <span class="c1"># &quot;phenylalanine&quot;</span>
+
+<span class="n">aa_di_ucu</span> <span class="o">=</span> <span class="n">codice</span><span class="p">[</span><span class="s2">&quot;UCU&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aa_di_ucu</span><span class="p">)</span>             <span class="c1"># &quot;serine&quot;</span>
+</pre></div>
+</div>
+<p><strong>PROVIAMO INSIEME</strong></p>
+<p>Posso usare questo dizionario per “simulare” il processo della traduzione. Ad
+esempio, partendo da una sequenza di mRNA:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rna</span> <span class="o">=</span> <span class="s2">&quot;UUUUCUUAUUGUUUCUCC&quot;</span>
+</pre></div>
+</div>
+<p>la spezzo in triplette:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">triplette</span> <span class="o">=</span> <span class="p">[</span><span class="n">rna</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rna</span><span class="p">),</span> <span class="mi">3</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>ottenendo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">triplette</span><span class="p">)</span>
+<span class="go">[&#39;UUU&#39;, &#39;UCU&#39;, &#39;UAU&#39;, &#39;UGU&#39;, &#39;UUC&#39;, &#39;UCC&#39;]</span>
+</pre></div>
+</div>
+<p>ed a questo punto posso fare:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">proteina</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">codice</span><span class="p">[</span><span class="n">tripletta</span><span class="p">]</span> <span class="k">for</span> <span class="n">tripletta</span> <span class="ow">in</span> <span class="n">triplette</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>ottenendo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">proteina</span><span class="p">)</span>
+<span class="go">&quot;FSYCFS&quot;</span>
+</pre></div>
+</div>
+<p>La differenza piu’ notevole rispetto alla vera traduzione e’ che il nostro
+codice non rispetta i codoni di terminazione, ma e’ un difetto correggibile.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Le chiavi non possono essere ripetute, i valori si’!</p>
+<p>Nell’esempio sopra, ogni chiave e’ una tripletta ed e’ associata ad un
+unico valore, ma lo stesso valore puo’ essere associato a piu’ chiavi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">codice</span><span class="p">[</span><span class="s2">&quot;UCU&quot;</span><span class="p">])</span>            <span class="c1"># &quot;S&quot;, serina</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">codice</span><span class="p">[</span><span class="s2">&quot;UCC&quot;</span><span class="p">])</span>            <span class="c1"># &quot;S&quot;, serina</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>PROVATE VOI</strong></p>
+<p><strong>Esempio</strong>. Creo un dizionario che mappa ogni aminoacido nel suo volume
+(approssimato, in Amstrong cubici):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">volume_di</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span>  <span class="mf">67.0</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span>  <span class="mf">86.0</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span>  <span class="mf">91.0</span><span class="p">,</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="mf">109.0</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="mf">135.0</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">:</span>  <span class="mf">48.0</span><span class="p">,</span>
+    <span class="s2">&quot;H&quot;</span><span class="p">:</span> <span class="mf">118.0</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">:</span> <span class="mf">124.0</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">:</span> <span class="mf">135.0</span><span class="p">,</span>
+    <span class="s2">&quot;L&quot;</span><span class="p">:</span> <span class="mf">124.0</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="mf">124.0</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">:</span>  <span class="mf">96.0</span><span class="p">,</span>
+    <span class="s2">&quot;P&quot;</span><span class="p">:</span>  <span class="mf">90.0</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">:</span> <span class="mf">114.0</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">:</span> <span class="mf">148.0</span><span class="p">,</span>
+    <span class="s2">&quot;S&quot;</span><span class="p">:</span>  <span class="mf">73.0</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">:</span>  <span class="mf">93.0</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">:</span> <span class="mf">105.0</span><span class="p">,</span>
+    <span class="s2">&quot;W&quot;</span><span class="p">:</span> <span class="mf">163.0</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="mf">141.0</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># Stampo il volume della citosina</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">volume_di</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">])</span>                    <span class="c1"># 86.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">volume_di</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">]))</span>              <span class="c1"># float</span>
+</pre></div>
+</div>
+<p>Qui le chiavi sono di tipo <code class="docutils literal notranslate"><span class="pre">str</span></code> (immutabili) ed i valori sono dei <code class="docutils literal notranslate"><span class="pre">float</span></code>
+(sempre immutabili).</p>
+<hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Non ci sono restrizioni sul tipo degli oggetti che si possono usare
+come <em>valori</em>. Come <em>chiavi</em> invece si possono usare solo oggetti
+immutabili!</p>
+<p>Riassumo in che modo possono essere usati i vari tipi:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 41%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo</p></th>
+<th class="head"><p>Come chiavi</p></th>
+<th class="head"><p>Come valori</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>bool</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>int</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>float</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>str</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>list</p></td>
+<td><p><strong>NO</strong></p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>tuple</p></td>
+<td><p>✓</p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-even"><td><p>dict</p></td>
+<td><p><strong>NO</strong></p></td>
+<td><p>✓</p></td>
+</tr>
+<tr class="row-odd"><td><p>set</p></td>
+<td><p><strong>NO</strong></p></td>
+<td><p>✓</p></td>
+</tr>
+</tbody>
+</table>
+<p>Si veda l’esempio seguente.</p>
+</div>
+<p><strong>Esempio</strong>. Creo un dizionario che mappa da ogni aminoacido ad una lista
+di due proprieta’: massa e volume:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">proprieta_di</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="mf">89.09</span><span class="p">,</span>  <span class="mf">67.0</span><span class="p">],</span>
+    <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">121.15</span><span class="p">,</span>  <span class="mf">86.0</span><span class="p">],</span>
+    <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">133.10</span><span class="p">,</span>  <span class="mf">91.0</span><span class="p">],</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">147.13</span><span class="p">,</span> <span class="mf">109.0</span><span class="p">],</span>
+    <span class="c1"># ...</span>
+<span class="p">}</span>
+
+<span class="c1"># Stampo massa e volume dell&#39;alanina</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">proprieta_di</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">])</span>                 <span class="c1"># [89.09, 67.0]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">proprieta_di</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">]))</span>           <span class="c1"># list</span>
+</pre></div>
+</div>
+<p>Qui le chiavi sono <code class="docutils literal notranslate"><span class="pre">str</span></code> (immutabili) ed i valori sono <code class="docutils literal notranslate"><span class="pre">list</span></code> (mutabili).</p>
+<p><strong>Le liste non possono essere chiavi, infatti</strong></p>
+<p>Provo a creare il dizionario inverso (limitandomi al primo elemento per
+semplicita’):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">da_proprieta_ad_aa</span> <span class="o">=</span> <span class="p">{</span> <span class="p">[</span><span class="mf">89.09</span><span class="p">,</span> <span class="mf">67.0</span><span class="p">]:</span> <span class="s2">&quot;A&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Mi aspetto che questo dizionario mappi dalla lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">89.09</span><span class="p">,</span> <span class="mf">67.0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>ad <code class="docutils literal notranslate"><span class="pre">&quot;A&quot;</span></code>. Pero’ quando provo a crearlo Python da’ errore:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">unhashable</span> <span class="nb">type</span><span class="p">:</span> <span class="s1">&#39;list&#39;</span>
+<span class="c1">#          ^^^^^^^^^^^^^^^^^^^^^^^</span>
+<span class="c1">#             list e&#39; mutabile!</span>
+</pre></div>
+</div>
+<p>Questo succede perche’ le chiavi hanno tipo <code class="docutils literal notranslate"><span class="pre">list</span></code>, che  non e’ immutabile!</p>
+<p>Per risolvere il problema posso usare, al posto di liste, delle tuple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">da_proprieta_ad_aa</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span> <span class="mf">89.09</span><span class="p">,</span>  <span class="mf">67.0</span><span class="p">):</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="p">(</span><span class="mf">121.15</span><span class="p">,</span>  <span class="mf">86.0</span><span class="p">):</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span>
+    <span class="p">(</span><span class="mf">133.10</span><span class="p">,</span>  <span class="mf">91.0</span><span class="p">):</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span>
+    <span class="p">(</span><span class="mf">147.13</span><span class="p">,</span> <span class="mf">109.0</span><span class="p">):</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span>
+    <span class="c1"># ...</span>
+<span class="p">}</span>
+
+<span class="n">aa</span> <span class="o">=</span> <span class="n">da_proprieta_ad_aa</span><span class="p">[(</span><span class="mf">133.10</span><span class="p">,</span>  <span class="mf">91.0</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aa</span><span class="p">)</span>                                <span class="c1"># &quot;D&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">aa</span><span class="p">))</span>                          <span class="c1"># str</span>
+</pre></div>
+</div>
+<p>Ora le chiavi sono <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, immutabili, e va tutto bene.</p>
+<p><strong>PROVATE VOI</strong></p>
+<ol class="arabic">
+<li><p>Scrivete un dizionario con 4 chiavi (da 0 a 4), dove il valore rappresenta il quadrato della chiave</p></li>
+<li><p>iterate sulla seguente lista</p>
+<blockquote>
+<div><p>lista = [1,3,1,1,0,2]</p>
+</div></blockquote>
+</li>
+<li><p>e stampate a video il valore del dizionario usando le chiavi che incontrate nella lista</p></li>
+<li><p>output 1,9,1,1,0,4</p></li>
+</ol>
+<hr class="docutils" />
+<div class="section" id="operazioni">
+<h2>Operazioni<a class="headerlink" href="#operazioni" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 28%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ritorna</p></th>
+<th class="head"><p>Operatore</p></th>
+<th class="head"><p>Significato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">len(dict)</span></code></p></td>
+<td><p>Restituisce il numero di coppie chiave-valore</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dict[object]</span></code></p></td>
+<td><p>Restituisce il valore associato ad una chiave</p></td>
+</tr>
+<tr class="row-even"><td><p>–</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dict[object]=object</span></code></p></td>
+<td><p>Inserisce o sostituisce una coppia chiave-valore</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Partendo dal dizionario vuoto:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">codice</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">codice</span><span class="p">)</span>                        <span class="c1"># {}</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">codice</span><span class="p">))</span>                   <span class="c1"># 0</span>
+</pre></div>
+</div>
+<p>ricreo il dizionario del primo esempio inserendo a mano tutte le coppie
+chiave-valore:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">codice</span><span class="p">[</span><span class="s2">&quot;UUU&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;F&quot;</span>                 <span class="c1"># fenilalanina</span>
+<span class="n">codice</span><span class="p">[</span><span class="s2">&quot;UCU&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;M&quot;</span>                 <span class="c1"># metionina</span>
+<span class="n">codice</span><span class="p">[</span><span class="s2">&quot;UAU&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Y&quot;</span>                 <span class="c1"># tirosina</span>
+<span class="c1"># ...</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">codice</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">codice</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Mi accorgo di avere fatto un errore qui sopra: <code class="docutils literal notranslate"><span class="pre">&quot;UCU&quot;</span></code> dovrebbe corrispondere
+a <code class="docutils literal notranslate"><span class="pre">&quot;S&quot;</span></code> (serina), non a <code class="docutils literal notranslate"><span class="pre">&quot;M&quot;</span></code> (metionina). Come faccio a correggere l’errore?</p>
+<p>Risposta: sostituendo il valore corrispondente alla chiave <code class="docutils literal notranslate"><span class="pre">&quot;UCU&quot;</span></code> con quello
+corretto:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">codice</span><span class="p">[</span><span class="s2">&quot;UCU&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;S&quot;</span>                 <span class="c1"># serina</span>
+</pre></div>
+</div>
+<p>Qui alla chiave <code class="docutils literal notranslate"><span class="pre">&quot;UCU&quot;</span></code>, che gia’ era nel dizionario, associo un nuovo valore
+<code class="docutils literal notranslate"><span class="pre">&quot;S&quot;</span></code> (serina).</p>
+<hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Se provo ad ottenere il valore di una chiave non presente nel dizionario:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">codice</span><span class="p">[</span><span class="s2">&quot;:-(&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Python da’ errore:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">KeyError</span><span class="p">:</span> <span class="s2">&quot;:-(&quot;</span>
+<span class="c1">#         ^^^^^</span>
+<span class="c1">#          questa e&#39; la chiave che non esiste</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="metodi">
+<h2>Metodi<a class="headerlink" href="#metodi" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 28%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ritorna</p></th>
+<th class="head"><p>Metodo</p></th>
+<th class="head"><p>Significato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">object</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dict.get(k,</span> <span class="pre">[default])</span></code></p></td>
+<td><p>Resituisce il valore della chiave, oppure il default</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">in</span> <span class="pre">dict</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code> se la chiave e’ nel dizionario</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">dict_keys</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dict.keys()</span></code></p></td>
+<td><p>Restituisce una <strong>vista</strong> sulle chiavi</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dict_values</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dict.values()</span></code></p></td>
+<td><p>Restituisce una <strong>vista</strong> sui valori</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">dict_items</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dict.items()</span></code></p></td>
+<td><p>Restituisce una <strong>vista</strong> sulle coppie chiave-valore</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Partendo dal dizionario <code class="docutils literal notranslate"><span class="pre">codice</span></code> definito nel primo esercizio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">codice</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;UUU&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>     <span class="c1"># fenilalanina</span>
+    <span class="s2">&quot;UCU&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>     <span class="c1"># serina</span>
+    <span class="s2">&quot;UAU&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span>     <span class="c1"># tirosina</span>
+    <span class="s2">&quot;UGU&quot;</span><span class="p">:</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span>     <span class="c1"># cisteina</span>
+    <span class="s2">&quot;UUC&quot;</span><span class="p">:</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span>     <span class="c1"># fenilalanina</span>
+    <span class="s2">&quot;UCC&quot;</span><span class="p">:</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span>     <span class="c1"># serina</span>
+    <span class="s2">&quot;UAC&quot;</span><span class="p">:</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span>     <span class="c1"># tirosina</span>
+    <span class="c1"># ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>posso ottenere le chiavi cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">chiavi</span> <span class="o">=</span> <span class="n">codice</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">chiavi</span><span class="p">)</span>
+<span class="go">dict_keys([&quot;UUU&quot;, &quot;UCU&quot;, &quot;UAU&quot;, ...])</span>
+</pre></div>
+</div>
+<p>ed i valori cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">valori</span> <span class="o">=</span> <span class="n">codice</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">valori</span><span class="p">)</span>
+<span class="go">dict_values([&quot;F&quot;, &quot;S&quot;, Y&quot;, &quot;C&quot;, ...])</span>
+</pre></div>
+</div>
+<p>oppure sia chiavi che valori cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">coppie_chiave_valore</span> <span class="o">=</span> <span class="n">codice</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">coppie_chiave_valore</span><span class="p">)</span>
+<span class="go">dict_items([(&quot;UUU&quot;, &quot;F&quot;), (&quot;UCU&quot;, &quot;S&quot;), ...])</span>
+</pre></div>
+</div>
+<p>Infine posso controllare se una certa chiave sta nel dizionario:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;UUU&quot;</span> <span class="ow">in</span> <span class="n">codice</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;:-(&quot;</span> <span class="ow">in</span> <span class="n">codice</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Non c’e’ <em>alcuna garanzia</em> che un dizionario preservi l’ordine in cui
+vengono inseriti gli elementi.</p>
+<p>Ad esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;z&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;zeta&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d</span>
+<span class="go">{&#39;a&#39;: &#39;a&#39;, &#39;z&#39;: &#39;zeta&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="go">[&#39;a&#39;, &#39;z&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="go">[&#39;a&#39;, &#39;zeta&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+<span class="go">[(&#39;a&#39;, &#39;a&#39;), (&#39;z&#39;, &#39;zeta&#39;)]</span>
+</pre></div>
+</div>
+<p>Qui ho inserito prima <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;</span></code> e poi <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code>, ma quando estraggo dal
+dizionario <code class="docutils literal notranslate"><span class="pre">d</span></code> le chiavi, i valori e le coppie chiave-valore,
+l’ordine in cui mi restituisce <code class="docutils literal notranslate"><span class="pre">&quot;z&quot;</span></code> ed <code class="docutils literal notranslate"><span class="pre">&quot;a&quot;</span></code> e’ invertito!</p>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Posso usare un dizionario per rappresentare un oggetto
+strutturato, ad esempio le proprieta’ di una catena proteica:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chain</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;1A3A&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;chain&quot;</span><span class="p">:</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sequence&quot;</span><span class="p">:</span> <span class="s2">&quot;MANLFKLGAENIFLGRKAATK...&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;num_scop_domains&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;num_pfam_domains&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">chain</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chain</span><span class="p">[</span><span class="s2">&quot;sequence&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">chain</span><span class="p">[</span><span class="s2">&quot;num_scop_domains&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Scrivere <em>a mano</em> dizionari come questo e’ sconveniente, ma quando leggeremo
+informazioni da file (possibilmente da interi database biologici), avere sotto
+mano dizionari fatti cosi’ puo’ essere molto comodo.</p>
+<p>(Soprattutto se sopra ci costruiamo algoritmi per analizzare in modo automatico
+i dati!)</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Dato il sequente testo in FASTA (accorciato per motivi di spazio)
+che descrive la sequenza primaria della retrotranscriptasi del virus HIV-1:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="mi">2</span><span class="n">HMI</span><span class="p">:</span><span class="n">A</span><span class="o">|</span><span class="n">PDBID</span><span class="o">|</span><span class="n">CHAIN</span><span class="o">|</span><span class="n">SEQUENCE</span>
+<span class="n">PISPIETVPVKLKPGMDGPKVKQWPLTEEKIKALVEICTEMEKEGKISKI</span>
+<span class="n">NKRTQDFWEVQLGIPHPAGLKKKKSVTVLDVGDAYFSVPLDEDFRKYTAF</span>
+<span class="n">QSSMTKILEPFKKQNPDIVIYQYMDDLYVGSDLEIGQHRTKIEELRQHLL</span>
+<span class="n">VQPIVLPEKDSWTVNDIQKLVGKLNWASQIYPGIKVRQLSKLLRGTKALT</span>
+<span class="n">PSKDLIAEIQKQGQGQWTYQIYQEPFKNLKTGKYARMRGAHTNDVKQLTE</span>
+<span class="n">WWTEYWQATWIPEWEFVNTPPLVKLWYQLEKEPIVGAETFYVDGAANRET</span>
+<span class="n">AIYLALQDSGLEVNIVTDSQYALGIIQAQPDKSESELVNQIIEQLIKKEK</span>
+<span class="o">&gt;</span><span class="mi">2</span><span class="n">HMI</span><span class="p">:</span><span class="n">B</span><span class="o">|</span><span class="n">PDBID</span><span class="o">|</span><span class="n">CHAIN</span><span class="o">|</span><span class="n">SEQUENCE</span>
+<span class="n">PISPIETVPVKLKPGMDGPKVKQWPLTEEKIKALVEICTEMEKEGKISKI</span>
+<span class="n">NKRTQDFWEVQLGIPHPAGLKKKKSVTVLDVGDAYFSVPLDEDFRKYTAF</span>
+<span class="n">QSSMTKILEPFKKQNPDIVIYQYMDDLYVGSDLEIGQHRTKIEELRQHLL</span>
+<span class="n">VQPIVLPEKDSWTVNDIQKLVGKLNWASQIYPGIKVRQLSKLLRGTKALT</span>
+<span class="n">PSKDLIAEIQKQGQGQWTYQIYQEPFKNLKTGKYARMRGAHTNDVKQLTE</span>
+<span class="n">WWTEYWQATWIPEWEFVNTPPLVKLWYQLE</span>
+<span class="o">&gt;</span><span class="mi">2</span><span class="n">HMI</span><span class="p">:</span><span class="n">C</span><span class="o">|</span><span class="n">PDBID</span><span class="o">|</span><span class="n">CHAIN</span><span class="o">|</span><span class="n">SEQUENCE</span>
+<span class="n">DIQMTQTTSSLSASLGDRVTISCSASQDISSYLNWYQQKPEGTVKLLIYY</span>
+<span class="n">EDFATYYCQQYSKFPWTFGGGTKLEIKRADAAPTVSIFPPSSEQLTSGGA</span>
+<span class="n">NSWTDQDSKDSTYSMSSTLTLTADEYEAANSYTCAATHKTSTSPIVKSFN</span>
+<span class="o">&gt;</span><span class="mi">2</span><span class="n">HMI</span><span class="p">:</span><span class="n">D</span><span class="o">|</span><span class="n">PDBID</span><span class="o">|</span><span class="n">CHAIN</span><span class="o">|</span><span class="n">SEQUENCE</span>
+<span class="n">QITLKESGPGIVQPSQPFRLTCTFSGFSLSTSGIGVTWIRQPSGKGLEWL</span>
+<span class="n">FLNMMTVETADTAIYYCAQSAITSVTDSAMDHWGQGTSVTVSSAATTPPS</span>
+<span class="n">TVTWNSGSLSSGVHTFPAVLQSDLYTLSSSVTVPSSTWPSETVTCNVAHP</span>
+<span class="o">&gt;</span><span class="mi">2</span><span class="n">HMI</span><span class="p">:</span><span class="n">E</span><span class="o">|</span><span class="n">PDBID</span><span class="o">|</span><span class="n">CHAIN</span><span class="o">|</span><span class="n">SEQUENCE</span>
+<span class="n">ATGGCGCCCGAACAGGGAC</span>
+<span class="o">&gt;</span><span class="mi">2</span><span class="n">HMI</span><span class="p">:</span><span class="n">F</span><span class="o">|</span><span class="n">PDBID</span><span class="o">|</span><span class="n">CHAIN</span><span class="o">|</span><span class="n">SEQUENCE</span>
+<span class="n">GTCCCTGTTCGGGCGCCA</span>
+</pre></div>
+</div>
+<p>Le sequenza e’ presa dalla Protein Data Bank, struttura <a class="reference external" href="http://www.rcsb.org/pdb/explore/explore.do?structureId=2hmi">2HMI</a>.</p>
+<p><strong>PROVATE VOI</strong>
+Trasformate il testo sopra in un dizionario come quello seguente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sequenze_2HMI</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="s2">&quot;PISPIETVPVKLKPGMDGPKVKQWPLTEEKI...&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="s2">&quot;PISPIETVPVKLKPGMDGPKVKQWPLTEEKI...&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;DIQMTQTTSSLSASLGDRVTISCSASQDISS...&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="s2">&quot;QITLKESGPGIVQPSQPFRLTCTFSGFSLST...&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="s2">&quot;ATGGCGCCCGAACAGGGAC&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="s2">&quot;GTCCCTGTTCGGGCGCCA&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Dato questo dizionario posso estrarre facilmente la sequenza di ogni
+singola catena della struttura 2HMI:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">sequenze_2HMI</span><span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">])</span>
+<span class="go">&quot;GTCCCTGTTCGGGCGCCA&quot;</span>
+</pre></div>
+</div>
+<p>calcolare di quante catene e’ composta la struttura:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">num_catene</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequenze_2HMI</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>calcolare statistiche sulla co-occorrenza di aminoacidi, provare a
+predire le strutture secondarie, allineare le sequenze contro qualche
+database…</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. I dizionari sono utili anche per descrivere <em>istogrammi</em>. Ad
+esempio, supponiamo di avere una sequenza:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">seq</span> <span class="o">=</span> <span class="s2">&quot;GTCCCTGTTCGGGCGCCA&quot;</span>
+</pre></div>
+</div>
+<p>Calcolo le proporzioni dei vari nucleotidi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">num_A</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>                          <span class="c1"># 1</span>
+<span class="n">num_T</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">)</span>                          <span class="c1"># 4</span>
+<span class="n">num_C</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">)</span>                          <span class="c1"># 7</span>
+<span class="n">num_G</span> <span class="o">=</span> <span class="n">seq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;G&quot;</span><span class="p">)</span>                          <span class="c1"># 6</span>
+</pre></div>
+</div>
+<p>Voglio catturare questa informazione statistica in un <em>istogramma</em>. Lo
+implemento cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">istogramma</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="n">num_A</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">),</span>               <span class="c1"># 1 / 18 ~ 0.06</span>
+    <span class="s2">&quot;T&quot;</span><span class="p">:</span> <span class="n">num_T</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">),</span>               <span class="c1"># 4 / 18 ~ 0.22</span>
+    <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="n">num_C</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">),</span>               <span class="c1"># 7 / 18 ~ 0.38</span>
+    <span class="s2">&quot;G&quot;</span><span class="p">:</span> <span class="n">num_G</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">seq</span><span class="p">),</span>               <span class="c1"># 6 / 18 ~ 0.33</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A questo punto posso recuperare la proporzione dei vari nucelotidi
+dall’istogramma:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prop_A</span> <span class="o">=</span> <span class="n">istogramma</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prop_A</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Posso anche verificare che l’istogramma definisca una distribuzione di
+probabilita’ (approssimata), cioe’ che la somma delle proporzioni dia 1:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">istogramma</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">istogramma</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Possiamo codificare una rete (in questo esempio fittizia) di
+interazioni fisiche o funzionali tra proteine cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">partners_di</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;2JWD&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;1A3A&quot;</span><span class="p">,),</span>
+    <span class="s2">&quot;1A3A&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;2JWD&quot;</span><span class="p">,</span> <span class="s2">&quot;2ZTI&quot;</span><span class="p">,</span> <span class="s2">&quot;3BLU&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;2ZTI&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;1A3A&quot;</span><span class="p">,</span> <span class="s2">&quot;3BLF&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;3BLU&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;1A3A&quot;</span><span class="p">,</span> <span class="s2">&quot;3BLF&quot;</span><span class="p">),</span>
+    <span class="s2">&quot;3BLF&quot;</span><span class="p">:</span> <span class="p">(</span><span class="s2">&quot;3BLU&quot;</span><span class="p">,</span> <span class="s2">&quot;2ZTI&quot;</span><span class="p">),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>che rappresenta la rete:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="n">JWD</span> <span class="o">----------</span> <span class="mi">1</span><span class="n">A3A</span> <span class="o">----------</span> <span class="mi">2</span><span class="n">ZTI</span>
+                 <span class="o">|</span>               <span class="o">|</span>
+                 <span class="o">|</span>               <span class="o">|</span>
+                <span class="mi">3</span><span class="n">BLU</span> <span class="o">----------</span> <span class="mi">3</span><span class="n">BLF</span>
+</pre></div>
+</div>
+<p>Qui <code class="docutils literal notranslate"><span class="pre">partners_di[&quot;1A3A&quot;]</span></code>, ad esempio, e’ una tupla dove abbiamo messo tutti
+i binding partners della proteina 1A3A.</p>
+<p>Possiamo usare questo dizionario per trovare tutti i binding partners dei
+binding partners di 1A3A, e oltre:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Estraggo i partner di 1A3A</span>
+<span class="n">partners</span> <span class="o">=</span> <span class="n">partners_di</span><span class="p">[</span><span class="s2">&quot;1A3A&quot;</span><span class="p">]</span>
+
+<span class="c1"># Estraggo i partner dei partner di 1A3A</span>
+<span class="n">partners_2_step</span> <span class="o">=</span> <span class="n">partners_di</span><span class="p">[</span><span class="n">partners</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> \
+                  <span class="n">partners_di</span><span class="p">[</span><span class="n">partners</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+</span> \
+                  <span class="o">...</span>
+                  <span class="n">partners_di</span><span class="p">[</span><span class="n">partners</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+
+<span class="c1"># Estraggo i parner dei partner dei partner di 1A3A</span>
+<span class="n">partners_3_step</span> <span class="o">=</span> <span class="n">partners_di</span><span class="p">[</span><span class="n">partners_2_step</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+</span> \
+                  <span class="n">partners_di</span><span class="p">[</span><span class="n">partners_2_step</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+</span> \
+                  <span class="o">...</span>
+                  <span class="n">partners_di</span><span class="p">[</span><span class="n">partners_2_step</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>La stessa struttura si puo’ usare per codificare reti sociali (Facebook,
+Twitter, Google+, <em>etc.</em>) e trovare chi e’ amico (o segue) chi, o per
+individuare comunita’ di persone che si conoscono tra loro.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ci sono molti altri modi di codificare reti. Un’alternativa al dizionario
+di cui sopra, e’ la <a class="reference external" href="https://en.wikipedia.org/wiki/Adjacency_matrix">matrice di adiacenza</a>,
+che si puo’ implementare come una lista di liste.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="esercizi">
+<h2>Esercizi<a class="headerlink" href="#esercizi" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Creare <em>a mano</em>:</p>
+<ol class="arabic">
+<li><p>Un dizionario vuoto. Controllare che sia vuoto con <code class="docutils literal notranslate"><span class="pre">len()</span></code>.</p></li>
+<li><p>Un dizionario <code class="docutils literal notranslate"><span class="pre">pronomi</span></code> che rappresenta queste corrispondenze:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">-&gt;</span> <span class="s2">&quot;io&quot;</span>
+<span class="mi">2</span> <span class="o">-&gt;</span> <span class="s2">&quot;tu&quot;</span>
+<span class="mi">3</span> <span class="o">-&gt;</span> <span class="s2">&quot;egli&quot;</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Crearlo in due modi:</p>
+<ol class="arabic simple">
+<li><p>In una sola riga di codice.</p></li>
+<li><p>Partendo da un dizionario vuoto ed aggiungendo passo passo
+tutte le coppie chiave valore.</p></li>
+</ol>
+</li>
+<li><p>Un dizionario <code class="docutils literal notranslate"><span class="pre">decuplo_di</span></code> che implementa la funzione <img class="math" src="_images/math/9314b32fd32c7d0a9f494a7305de76abb6865e4a.png" alt="f(n) = 10 n"/>, che
+associa ogni chiave (un intero) al suo decuplo.</p>
+<p>Le chiavi devono essere gli interi da 1 a 5.</p>
+<p>Una volta costruito il dizionario, applicarlo a tutti gli elementi
+di <code class="docutils literal notranslate"><span class="pre">range(2,</span> <span class="pre">5)</span></code> con una <em>list comprehension</em> e stampare a schermo
+il risultato.</p>
+<p>Poi fare la stessa cosa, pero’ per tutte le chiavi di <code class="docutils literal notranslate"><span class="pre">decuplo_di</span></code>.</p>
+<p><em>Hint</em>: la vista sulle chiavi si puo’ ottenere con <code class="docutils literal notranslate"><span class="pre">keys()</span></code>.</p>
+</li>
+<li><p>Un dizionario <code class="docutils literal notranslate"><span class="pre">parenti_di</span></code> che rappresenta questa rete:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GIULIA</span> <span class="o">----</span> <span class="n">FRANCO</span> <span class="o">----</span> <span class="n">MATTEO</span>
+  <span class="o">|</span>                       <span class="o">|</span>
+  <span class="o">+</span> <span class="o">-----</span> <span class="n">BENEDETTA</span> <span class="o">------+</span>
+</pre></div>
+</div>
+<p>come nell’esempio visto in precedenza.</p>
+<p>Una volta costruito il dizionario, stampare a schermo il numero
+di parenti di <code class="docutils literal notranslate"><span class="pre">&quot;GIULIA&quot;</span></code>.</p>
+</li>
+<li><p>Un dizionario <code class="docutils literal notranslate"><span class="pre">da_2_bit_a_intero</span></code> che rappresenta la mappa dalle
+seguenti coppie di interi ad intero:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="o">-&gt;</span> <span class="mi">0</span>                           <span class="c1"># 0*2**1 + 0*2**0 = 0</span>
+<span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">1</span>                           <span class="c1"># 0*2**1 + 1*2**0 = 1</span>
+<span class="mi">1</span><span class="p">,</span> <span class="mi">0</span> <span class="o">-&gt;</span> <span class="mi">2</span>                           <span class="c1"># 1*2**1 + 0*2**0 = 2</span>
+<span class="mi">1</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-&gt;</span> <span class="mi">3</span>                           <span class="c1"># 1*2**1 + 1*2**0 = 3</span>
+<span class="o">^^^^</span>    <span class="o">^</span>                             <span class="o">^^^^^^^^^^^^^^^^^^^</span>
+<span class="n">chiave</span>  <span class="n">valore</span>                            <span class="n">spiegazione</span>
+</pre></div>
+</div>
+<p>Una volta creato il dizionario, stampare a schermo il valore
+corrispondente ad una delle quattro chiavi date (a scelta).</p>
+</li>
+</ol>
+</li>
+<li><p>Dato:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rapporti</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">):</span> <span class="mf">10.0</span> <span class="o">/</span> <span class="mf">5.0</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">):</span> <span class="mf">10.0</span> <span class="o">/</span> <span class="mf">7.0</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">):</span> <span class="mf">10.0</span> <span class="o">/</span> <span class="mf">6.0</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">):</span> <span class="mf">5.0</span> <span class="o">/</span> <span class="mf">7.0</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">):</span> <span class="mf">5.0</span> <span class="o">/</span> <span class="mf">6.0</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">):</span> <span class="mf">7.0</span> <span class="o">/</span> <span class="mf">6.0</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>che rappresenta rapporti tra il numero di A, T, C, e G in una
+sequenza:</p>
+<ol class="arabic">
+<li><p>Che differenza c’e’ tra <code class="docutils literal notranslate"><span class="pre">len(rapporti)</span></code>, <code class="docutils literal notranslate"><span class="pre">len(rapporti.keys())</span></code>,
+<code class="docutils literal notranslate"><span class="pre">len(rapporti.values())</span></code> e <code class="docutils literal notranslate"><span class="pre">len(rapporti.items())</span></code>?</p></li>
+<li><p>Controllare se <code class="docutils literal notranslate"><span class="pre">rapporti</span></code> contiene la chiave <code class="docutils literal notranslate"><span class="pre">(&quot;T&quot;,</span> <span class="pre">&quot;A&quot;)</span></code>. E la
+chiave <code class="docutils literal notranslate"><span class="pre">(&quot;C&quot;,</span> <span class="pre">&quot;G&quot;)</span></code>?</p>
+<p><em>Hint</em>: posso usare <code class="docutils literal notranslate"><span class="pre">keys()</span></code>? Posso usare un altro metodo?</p>
+</li>
+<li><p>Controllare se contiene il valore 2. E il valore 3?</p>
+<p><em>Hint</em>: posso usare <code class="docutils literal notranslate"><span class="pre">values()</span></code>?</p>
+</li>
+<li><p>Controllare se contiene la coppia chiave-valore <code class="docutils literal notranslate"><span class="pre">((&quot;A&quot;,</span> <span class="pre">&quot;T&quot;),</span> <span class="pre">2)</span></code>.
+E la coppia chiave-valore <code class="docutils literal notranslate"><span class="pre">((&quot;C&quot;,</span> <span class="pre">&quot;G&quot;),</span> <span class="pre">1000)</span></code>?</p>
+<p><em>Hint</em>: posso usare <code class="docutils literal notranslate"><span class="pre">items()</span></code>?</p>
+</li>
+<li><p>Usare una <em>list comprehension</em> per estrarre le chiavi dal risultato
+di <code class="docutils literal notranslate"><span class="pre">items()</span></code>. Poi fare la stessa cosa con le chiavi.</p></li>
+</ol>
+</li>
+<li><p>Dato:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mappa</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;zero&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;uno&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;due&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;tre&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s2">&quot;quattro&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="s2">&quot;cinque&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p>Concatenare tutte le chiavi di <code class="docutils literal notranslate"><span class="pre">mappa</span></code>, separate da spazi, in una
+sola stringa <code class="docutils literal notranslate"><span class="pre">stringa_delle_chiavi</span></code>.</p></li>
+<li><p>Concatenare tutti i valori di <code class="docutils literal notranslate"><span class="pre">mappa</span></code> come stringhe, separate da
+spazi, in una sola stringa <code class="docutils literal notranslate"><span class="pre">stringa_dei_valori</span></code>.</p>
+<p><em>Hint</em>: occhio che i valori di <code class="docutils literal notranslate"><span class="pre">mappa</span></code> non sono stringhe!</p>
+</li>
+<li><p>Mettere in una lista tutte le chiavi di <code class="docutils literal notranslate"><span class="pre">mappa</span></code>.</p></li>
+<li><p>Mettere in una lista tutte le chiavi di <code class="docutils literal notranslate"><span class="pre">mappa</span></code>, ordinate alfanumericamente.</p>
+<p><em>Hint</em>: la vista restituita da <code class="docutils literal notranslate"><span class="pre">keys()</span></code> e’ ordinata?</p>
+</li>
+<li><p>Mettere in una lista tutti i valori di <code class="docutils literal notranslate"><span class="pre">mappa</span></code>, ordinati in base
+all’ordine delle chiavi corrispondenti.</p>
+<p><em>Hint</em>: come faccio ad ordinare una lista in base all’ordine di un’altra lista?</p>
+</li>
+</ol>
+</li>
+<li><p>Dato:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">traduzione_di</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;ade&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="s2">&quot;cyt&quot;</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">:</span> <span class="s2">&quot;gua&quot;</span><span class="p">,</span> <span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="s2">&quot;tym&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>tradurre la lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>nella stringa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;ade tym tym ade gua tym cyt&quot;</span>
+</pre></div>
+</div>
+<p><em>Hint</em>: occhio che le chiavi del dizionario sono minuscole, mentre gli
+elementi di <code class="docutils literal notranslate"><span class="pre">lista</span></code> sono maiuscoli! Partite assumendo che non lo siano,
+poi modificate il codice per tenere conto di questa idiosincrasia.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_dictionaries_sol.html" class="btn btn-neutral float-right" title="Lezione 7.2 - Soluzioni" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_tuples_sol.html" class="btn btn-neutral float-left" title="Lezione 7.1 - Soluzioni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

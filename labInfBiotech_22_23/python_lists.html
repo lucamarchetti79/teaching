@@ -1,0 +1,752 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lezione 5 - Python: Liste &mdash; Laboratorio di Informatica a.a. 2022/2023 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 5 - Soluzioni" href="python_lists_sol.html" />
+    <link rel="prev" title="Lezione 4 - Soluzioni" href="python_strings_sol.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Laboratorio di Informatica
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a.a. 2022/2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 5 - Python: Liste</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#operazioni">Operazioni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esercizi">Esercizi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#metodi">Metodi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Esercizi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv_sol.html">Lezione 6 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples.html">Lezione 7.1 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples_sol.html">Lezione 7.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Lezione 7.2 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries_sol.html">Lezione 7.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Lezione 8.1 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets_sol.html">Lezione 8.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Lezione 8.2 - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io_sol.html">Lezione 8.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1.html">Lezione 9 - Python: Statement Complessi (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1_sol.html">Lezione 9 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2.html">Lezione 10 - Python: Statement Complessi (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2_sol.html">Lezione 10 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 11 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame1.html">Lezione 12.1 - Python: Simulazione esame (24/7/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame2.html">Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame3.html">Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame4.html">Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame5.html">Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Lezione 5 - Python: Liste</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/python_lists.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lezione-5-python-liste">
+<h1>Lezione 5 - Python: Liste<a class="headerlink" href="#lezione-5-python-liste" title="Permalink to this headline">¶</a></h1>
+<p>Le liste rappresentano sequenze ordinate di oggetti arbitrari.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Le liste sono <strong>mutabili</strong>!</p>
+</div>
+<p>Per definire una lista uso le parentesi quadre:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Una lista di interi (anche ripetuti)</span>
+<span class="n">alcuni_interi</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+<span class="c1"># Una lista di stringhe</span>
+<span class="n">proteine_uniprot</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Y08501&quot;</span><span class="p">,</span> <span class="s2">&quot;Q95747&quot;</span><span class="p">]</span>
+
+<span class="c1"># Una lista mista</span>
+<span class="n">cose</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Y08501&quot;</span><span class="p">,</span> <span class="mf">0.13</span><span class="p">,</span> <span class="s2">&quot;Q95747&quot;</span><span class="p">,</span> <span class="mf">0.96</span><span class="p">]</span>
+
+<span class="c1"># Una lista di liste</span>
+<span class="n">lista_di_liste</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Y08501&quot;</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="mi">520</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Q95747&quot;</span><span class="p">,</span> <span class="mi">550</span><span class="p">,</span> <span class="mi">920</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="c1"># La lista vuota</span>
+<span class="n">una_lista_vuota</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Le liste possono contenere elementi ripetuti:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>e l’ordine degli elementi conta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">!=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="operazioni">
+<h2>Operazioni<a class="headerlink" href="#operazioni" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 32%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ritorna</p></th>
+<th class="head"><p>Operatore</p></th>
+<th class="head"><p>Significato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">range</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">range(int,</span> <span class="pre">[int,</span> <span class="pre">[int]])</span></code></p></td>
+<td><p>Restituisce un intervallo di interi</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">len(list)</span></code></p></td>
+<td><p>Restituisce la lunghezza della lista</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">+</span> <span class="pre">list</span></code></p></td>
+<td><p>Concatena le due liste</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">*</span> <span class="pre">int</span></code></p></td>
+<td><p>Replica la lista</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">in</span> <span class="pre">list</span></code></p></td>
+<td><p>Controlla se un oggetto arbitrario appare nella lista</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list[int:int]</span></code></p></td>
+<td><p>Estrae una sotto-lista</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list[int]</span> <span class="pre">=</span> <span class="pre">object</span></code></p></td>
+<td><p>Sostituisce un elemento della lista</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Uso <code class="docutils literal notranslate"><span class="pre">range()</span></code> per costruire una lista di interi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">intervallo</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">intervallo</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="go">[0, 1, 2, 3, 4]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">range(5)</span></code> fa la stessa cosa. Anche la chiamata <code class="docutils literal notranslate"><span class="pre">range(0,5,1)</span></code> sarebbe stata equivalente.</p>
+<p><strong>Esempio</strong>.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inizio</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fine</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">passo</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">intervallo</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">inizio</span><span class="p">,</span> <span class="n">fine</span><span class="p">,</span> <span class="n">passo</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">intervallo</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="go">[0, 2, 4, 6, 8]</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>.  La sostituzione di un elemento funziona solo se l’indice
+corrisponde ad un elemento gia’ esistente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;primo&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># [&quot;primo&quot;, 1, 2, 3, 4]</span>
+
+<span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ultimo&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># [&quot;primo&quot;, 1, 2, 3, &quot;ultimo&quot;]</span>
+
+<span class="n">lista</span><span class="p">[</span><span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;oltre l&#39;ultimo&quot;</span>        <span class="c1"># Errore!</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="esercizi">
+<h2>Esercizi<a class="headerlink" href="#esercizi" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Creare una lista vuota. Controllare che sia vuota con <code class="docutils literal notranslate"><span class="pre">len()</span></code>.</p></li>
+<li><p>Creare una lista con i primi cinque interi non-negativi: <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <em>etc.</em> usando <code class="docutils literal notranslate"><span class="pre">range()</span></code>.</p></li>
+<li><p>Creare una lista con cento elementi <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
+<p><em>Hint</em>: replicate una lista con un solo elemento.</p>
+</li>
+<li><p>Date:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">lista_2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>concatenare le due liste e mettere il risultato in una nuova lista
+<code class="docutils literal notranslate"><span class="pre">lista_completa</span></code>. Quanto vale? E’ uguale al risultato di <code class="docutils literal notranslate"><span class="pre">list(range(20))</span></code>?</p>
+</li>
+<li><p>Creare una lista con tre stringhe: <code class="docutils literal notranslate"><span class="pre">&quot;sono&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;una&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;lista&quot;</span></code>. Poi
+stampare a schermo tipo e lunghezza dei tre elementi, uno per uno.</p></li>
+<li><p>Data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
+</pre></div>
+</div>
+<ol class="arabic">
+<li><p>Quanto e’ lunga <code class="docutils literal notranslate"><span class="pre">lista</span></code>?</p></li>
+<li><p>Di che tipo e’ il primo elemento di <code class="docutils literal notranslate"><span class="pre">lista</span></code>?</p></li>
+<li><p>Quanto e’ lungo il secondo elemento di <code class="docutils literal notranslate"><span class="pre">lista</span></code>?</p></li>
+<li><p>Quanto e’ lungo il terzo elemento di <code class="docutils literal notranslate"><span class="pre">lista</span></code>?</p></li>
+<li><p>Quanto vale l’ultimo elemento di <code class="docutils literal notranslate"><span class="pre">lista</span></code>? Quanto e’ lungo?</p></li>
+<li><p>La lista ha un elemento di valore <code class="docutils literal notranslate"><span class="pre">&quot;b&quot;</span></code>?</p></li>
+<li><p>La lista ha un elemento di valore <code class="docutils literal notranslate"><span class="pre">4</span></code>?</p>
+<p><em>Hint</em>: usate <code class="docutils literal notranslate"><span class="pre">in</span></code> per controllare.</p>
+</li>
+</ol>
+</li>
+<li><p>Che differenza c’e’ tra le seguenti “liste”?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">lista_2</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">]</span>
+<span class="n">lista_3</span> <span class="o">=</span> <span class="s2">&quot;[1, 2, 3]&quot;</span>
+</pre></div>
+</div>
+<p><em>Hint</em>: la terza e’ una lista?</p>
+</li>
+<li><p>Quali dei seguenti frammenti sono validi/errati?</p>
+<p>(Dopo ogni punto, cancellate la lista <code class="docutils literal notranslate"><span class="pre">lista</span></code> con <code class="docutils literal notranslate"><span class="pre">del</span></code>, per evitare
+problemi con i punti successivi)</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">[]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">[}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">[[]]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista.append(0)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">[];</span> <span class="pre">lista.append(0)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">[1</span> <span class="pre">2</span> <span class="pre">3]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">list(range(3))</span></code>, <code class="docutils literal notranslate"><span class="pre">elemento</span> <span class="pre">=</span> <span class="pre">lista[3]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">list(range(3))</span></code>, <code class="docutils literal notranslate"><span class="pre">elemento</span> <span class="pre">=</span> <span class="pre">lista[-1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">list(range(3))</span></code>, <code class="docutils literal notranslate"><span class="pre">sottolista</span> <span class="pre">=</span> <span class="pre">lista[0:2]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">list(range(3))</span></code>, <code class="docutils literal notranslate"><span class="pre">sottolista</span> <span class="pre">=</span> <span class="pre">lista[0:3]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">list(range(3))</span></code>, <code class="docutils literal notranslate"><span class="pre">sottolista</span> <span class="pre">=</span> <span class="pre">lista[0:-1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">list(range(3))</span></code>, <code class="docutils literal notranslate"><span class="pre">lista[2]</span> <span class="pre">=</span> <span class="pre">&quot;due&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">list(range(3))</span></code>, <code class="docutils literal notranslate"><span class="pre">lista[3]</span> <span class="pre">=</span> <span class="pre">&quot;tre&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">list(range(3))</span></code>, <code class="docutils literal notranslate"><span class="pre">lista[-1]</span> <span class="pre">=</span> <span class="pre">&quot;tre&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">list(range(3))</span></code>, <code class="docutils literal notranslate"><span class="pre">lista[1.2]</span> <span class="pre">=</span> <span class="pre">&quot;uno</span> <span class="pre">virgola</span> <span class="pre">due&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">list(range(3))</span></code>, <code class="docutils literal notranslate"><span class="pre">lista[1]</span> <span class="pre">=</span> <span class="pre">[&quot;testo-1&quot;,</span> <span class="pre">&quot;testo-2&quot;]</span></code></p></li>
+</ol>
+</li>
+<li><p>Data la lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matrice</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>          <span class="c1"># &lt;-- prima riga</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>          <span class="c1"># &lt;-- seconda riga</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>          <span class="c1"># &lt;-- terza riga</span>
+<span class="p">]</span>
+<span class="c1">#    ^  ^  ^</span>
+<span class="c1">#    |  |  |</span>
+<span class="c1">#    |  |  +-- terza colonna</span>
+<span class="c1">#    |  |</span>
+<span class="c1">#    |  +----- seconda colonna</span>
+<span class="c1">#    |</span>
+<span class="c1">#    +-------- prima colonna</span>
+</pre></div>
+</div>
+<p>Come faccio a:</p>
+<ol class="arabic simple">
+<li><p>Estrarre la prima riga?</p></li>
+<li><p>Estrarre il secondo elemento della prima riga?</p></li>
+<li><p>Sommare gli elementi della prima riga?</p></li>
+<li><p>Creare una nuova lista con gli elementi della la seconda colonna?</p></li>
+<li><p>Creare una nuova lista con gli elementi la diagonale maggiore?</p></li>
+<li><p>Creare una lista concatenando la prima, seconda, e terza riga?</p></li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="metodi">
+<h2>Metodi<a class="headerlink" href="#metodi" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 32%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Ritorna</p></th>
+<th class="head"><p>Metodo</p></th>
+<th class="head"><p>Significato</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list.append(object)</span></code></p></td>
+<td><p>Aggiunge un elemento alla fine della lista</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list.extend(list)</span></code></p></td>
+<td><p>Estende una lista con un’altra lista</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list.insert(int,object)</span></code></p></td>
+<td><p>Inserisce un elemento in una posizione arbitraria</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list.remove(object)</span></code></p></td>
+<td><p>Rimuove la prima ripetizione di un valore</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list.reverse()</span></code></p></td>
+<td><p>Inverte la lista</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list.sort()</span></code></p></td>
+<td><p>Ordina la lista</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">list.count(object)</span></code></p></td>
+<td><p>Conta il numero di ripetizioni di un valore</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Tutti i metodi delle liste (escluso <code class="docutils literal notranslate"><span class="pre">count()</span></code>):</p>
+<ul class="simple">
+<li><p>Modificano la lista stessa.</p></li>
+<li><p>Restituiscono <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+</ul>
+<p>Questo comportamento e’ l’esatto <em>opposto</em> di cio’ che accade con i
+metodi delle stringhe!</p>
+<p>Una conseguenza e’ che fare qualcosa come:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>non ha senso, perche’ <code class="docutils literal notranslate"><span class="pre">print</span></code> stampa il <em>risultato</em> di <code class="docutils literal notranslate"><span class="pre">append()</span></code>,
+che e’ sempre <code class="docutils literal notranslate"><span class="pre">None</span></code>!</p>
+<p>Per lo stesso motivo <em>non</em> possiamo fare:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>perche’ il primo <code class="docutils literal notranslate"><span class="pre">append()</span></code> restituisce <code class="docutils literal notranslate"><span class="pre">None</span></code> – che non e’ una
+lista, e non possiamo farci <code class="docutils literal notranslate"><span class="pre">append()</span></code>!</p>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. <code class="docutils literal notranslate"><span class="pre">append()</span></code> aggiunge in <em>coda</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># [0, 1, 2, ..., 9]</span>
+
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># [0, 1, 2, ..., 9, 10]</span>
+</pre></div>
+</div>
+<p>Notate come <code class="docutils literal notranslate"><span class="pre">lista</span></code> sia stata modificata! Se invece faccio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">risultato</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>                     <span class="c1"># None</span>
+</pre></div>
+</div>
+<p>Come ci aspettavamo, <code class="docutils literal notranslate"><span class="pre">append()</span></code> restituisce <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<p>Lo stesso vale per <code class="docutils literal notranslate"><span class="pre">extend()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">risultato</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># [0, 1, 2, ..., 19]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>                     <span class="c1"># None</span>
+</pre></div>
+</div>
+<p>Per inserire elementi in una posizione arbitraria, uso <code class="docutils literal notranslate"><span class="pre">insert()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">risultato</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;un altro valore&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># [0, 1, &quot;un altro valore&quot;, 3, ...]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>                     <span class="c1"># None</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">remove()</span></code> invece prende un valore, non una posizione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;una&quot;</span><span class="p">,</span> <span class="s2">&quot;lista&quot;</span><span class="p">,</span> <span class="s2">&quot;non&quot;</span><span class="p">,</span> <span class="s2">&quot;una&quot;</span><span class="p">,</span> <span class="s2">&quot;stringa&quot;</span><span class="p">]</span>
+<span class="n">risultato</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;una&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># [&quot;lista&quot;, &quot;non&quot;, &quot;una&quot;, &quot;stringa&quot;]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>                     <span class="c1"># None</span>
+</pre></div>
+</div>
+<p>Anche <code class="docutils literal notranslate"><span class="pre">sort()</span></code> e <code class="docutils literal notranslate"><span class="pre">reverse()</span></code> modificano la lista stessa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">risultato</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># [4, 5, 1, 2, 3]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>                     <span class="c1"># None</span>
+
+<span class="n">risultato</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># [1, 2, 3, 4, 5]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>                     <span class="c1"># None</span>
+</pre></div>
+</div>
+<p>Invece <code class="docutils literal notranslate"><span class="pre">count()</span></code> non modifica affatto la lista, e restituisce un <code class="docutils literal notranslate"><span class="pre">int</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">]</span>
+<span class="n">risultato_a</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>      <span class="c1"># 3</span>
+<span class="n">risultato_b</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>      <span class="c1"># 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ci sono&quot;</span><span class="p">,</span> <span class="n">risultato_a</span><span class="p">,</span> <span class="s2">&quot;a, e&quot;</span><span class="p">,</span> <span class="n">risultato_b</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Contrariamente ad <code class="docutils literal notranslate"><span class="pre">append()</span></code> e soci, la concatenazione non
+modifica la lista originale:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">lista_2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+
+<span class="c1"># usando la concatenazione +</span>
+<span class="n">lista_completa</span> <span class="o">=</span> <span class="n">lista_1</span> <span class="o">+</span> <span class="n">lista_2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_1</span><span class="p">,</span> <span class="s2">&quot;+&quot;</span><span class="p">,</span> <span class="n">lista_2</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">lista_completa</span><span class="p">)</span>
+
+<span class="c1"># usando extend()</span>
+<span class="n">lista_completa</span> <span class="o">=</span> <span class="n">lista_1</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">lista_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_1</span><span class="p">,</span> <span class="s2">&quot;estesa con&quot;</span><span class="p">,</span> <span class="n">lista_2</span><span class="p">,</span> <span class="s2">&quot;-&gt;&quot;</span><span class="p">,</span> <span class="n">lista_completa</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Nel primo caso tutto funziona come vorrei; nel secondo <code class="docutils literal notranslate"><span class="pre">lista_1</span></code> e’ estesa
+con <code class="docutils literal notranslate"><span class="pre">lista_2</span></code> (che resta invariata), mentre <code class="docutils literal notranslate"><span class="pre">lista_completa</span></code> vale <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Le liste sono <em>mutabili</em>, e contengono <em>riferimenti</em> ad oggetti.</p>
+</div>
+<p>Questi due fatti possono dare luogo ad effetti complicati – che
+esploriamo nei prossimi esercizi.</p>
+<p><strong>Esempio</strong>. Questo codice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sottolista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="n">sottolista</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>crea una lista <code class="docutils literal notranslate"><span class="pre">lista</span></code> che contiene una lista <code class="docutils literal notranslate"><span class="pre">sottolista</span></code> come elemento.
+Quando modifico <code class="docutils literal notranslate"><span class="pre">sottolista</span></code>, che e’ una lista e quindi e’ mutabile, finisco
+inavvertitamente per modificare anche <code class="docutils literal notranslate"><span class="pre">lista</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sottolista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sottolista</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Esempio</strong>. Questo codice mostra un’altra anomalia:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+
+<span class="n">finta_copia</span> <span class="o">=</span> <span class="n">lista</span>         <span class="c1"># copio solo il *riferimento* a lista!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">finta_copia</span><span class="p">)</span>
+
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">finta_copia</span><span class="p">)</span>           <span class="c1"># Ooops!</span>
+</pre></div>
+</div>
+<p>Questo accade perche’ le due liste si riferiscono allo stesso
+oggetto <code class="docutils literal notranslate"><span class="pre">lista</span></code>. Se voglio creare una <em>copia</em> reale della lista <code class="docutils literal notranslate"><span class="pre">lista</span></code>,
+scrivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+
+<span class="n">copia_vera</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="c1"># oppure</span>
+<span class="c1"># copia_vera = [elem for elem in lista]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">copia_vera</span><span class="p">)</span>
+
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">copia_vera</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Esercizi<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Inserire nella lista <code class="docutils literal notranslate"><span class="pre">lista</span></code> prima un intero, poi una stringa, poi
+una lista.</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>La lista deve <em>esistere gia’</em> prima di poterci fare <code class="docutils literal notranslate"><span class="pre">append()</span></code>,
+<code class="docutils literal notranslate"><span class="pre">extend()</span></code>, <code class="docutils literal notranslate"><span class="pre">insert()</span></code>, <em>etc.</em>. Ad esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">una_lista_che_non_ho_mai_definito</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>da’ errore:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;una_lista_che_non_ho_mai_definito&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+</pre></div>
+</div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Partendo (per ogni punto) da:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>cosa fanno i seguenti frammenti di codice? (Ripartite ogni volta da
+<code class="docutils literal notranslate"><span class="pre">lista</span> <span class="pre">=</span> <span class="pre">list(range(3))</span></code>.)</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lista.append(3)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista.append([3])</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista.extend([3])</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista.extend(3)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista.insert(0,</span> <span class="pre">3)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista.insert(3,</span> <span class="pre">3)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista.insert(3,</span> <span class="pre">[3])</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lista.insert([3],</span> <span class="pre">3)</span></code></p></li>
+</ol>
+</li>
+<li><p>Che differenza c’e’ tra:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>e:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)))</span>
+</pre></div>
+</div>
+<p>Di che lunghezza e’ <code class="docutils literal notranslate"><span class="pre">lista</span></code> nei due casi?</p>
+</li>
+<li><p>Che cosa fa questo codice?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Che cosa fa questo codice?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Posso riscriverlo cosi’?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>Data la lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>mettere in <code class="docutils literal notranslate"><span class="pre">lista_inversa</span></code> gli elementi di <code class="docutils literal notranslate"><span class="pre">lista</span></code> in ordine inverso
+(dall’ultimo al primo) usando <code class="docutils literal notranslate"><span class="pre">reverse()</span></code>. <code class="docutils literal notranslate"><span class="pre">lista</span></code> non deve essere
+alterata.</p>
+</li>
+<li><p>Data la lista:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">frammenti</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;KSYK&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SVALVV&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GVTGI&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;VGSSLAEVLKLPD&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>mettere in <code class="docutils literal notranslate"><span class="pre">frammenti_ordinati</span></code> gli elementi di <code class="docutils literal notranslate"><span class="pre">frammenti</span></code> ordinati
+alfanumericamente con <code class="docutils literal notranslate"><span class="pre">sort()</span></code>. <code class="docutils literal notranslate"><span class="pre">frammenti</span></code> non deve essere alterata.</p>
+</li>
+<li><p>(Una Curiosita’ Inutile). Che “struttura” ha questa lista?:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_lists_sol.html" class="btn btn-neutral float-right" title="Lezione 5 - Soluzioni" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_strings_sol.html" class="btn btn-neutral float-left" title="Lezione 4 - Soluzioni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

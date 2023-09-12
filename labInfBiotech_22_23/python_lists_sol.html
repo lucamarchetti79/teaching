@@ -1,0 +1,665 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lezione 5 - Soluzioni &mdash; Laboratorio di Informatica a.a. 2022/2023 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 6 - Python: Liste, concetti avanzati" href="python_lists_adv.html" />
+    <link rel="prev" title="Lezione 5 - Python: Liste" href="python_lists.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Laboratorio di Informatica
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a.a. 2022/2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 5 - Soluzioni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#soluzioni-operazioni">Soluzioni Operazioni</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soluzioni-metodi">Soluzioni Metodi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv_sol.html">Lezione 6 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples.html">Lezione 7.1 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples_sol.html">Lezione 7.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Lezione 7.2 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries_sol.html">Lezione 7.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Lezione 8.1 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets_sol.html">Lezione 8.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Lezione 8.2 - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io_sol.html">Lezione 8.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1.html">Lezione 9 - Python: Statement Complessi (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1_sol.html">Lezione 9 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2.html">Lezione 10 - Python: Statement Complessi (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_2_sol.html">Lezione 10 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 11 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame1.html">Lezione 12.1 - Python: Simulazione esame (24/7/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame2.html">Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame3.html">Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame4.html">Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_simEsame5.html">Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Lezione 5 - Soluzioni</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/python_lists_sol.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="lezione-5-soluzioni">
+<h1>Lezione 5 - Soluzioni<a class="headerlink" href="#lezione-5-soluzioni" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In alcune soluzioni uso il carattere <code class="docutils literal notranslate"><span class="pre">\</span></code> alla fine di una riga di codice.</p>
+<p>Usato in questo modo, <code class="docutils literal notranslate"><span class="pre">\</span></code> spiega a Python che il comando continua alla
+riga successiva. Se non usassi <code class="docutils literal notranslate"><span class="pre">\</span></code>, Python potrebbe pensare che il
+comando finisca li’ e quindi che sia sintatticamente sbagliato – dando
+errore.</p>
+<p>Potete tranquillamente ignorare questi <code class="docutils literal notranslate"><span class="pre">\</span></code>.</p>
+</div>
+<div class="section" id="soluzioni-operazioni">
+<h2>Soluzioni Operazioni<a class="headerlink" href="#soluzioni-operazioni" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>         <span class="c1"># controllo</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>         <span class="c1"># controllo</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>         <span class="c1"># controllo</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">lista_2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+
+<span class="n">lista_completa</span> <span class="o">=</span> <span class="n">lista_1</span> <span class="o">+</span> <span class="n">lista_2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_completa</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_completa</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>   <span class="c1"># Ture</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sono&quot;</span><span class="p">,</span> <span class="s2">&quot;una&quot;</span><span class="p">,</span> <span class="s2">&quot;lista&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>         <span class="c1"># controllo</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>                <span class="c1"># 4</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>            <span class="c1"># float</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>   <span class="c1"># &quot;b&quot;, 1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>   <span class="c1"># [3], 1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span> <span class="c1"># [4, 5], 2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b&quot;</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">)</span>              <span class="c1"># True</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="mi">4</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">)</span>                <span class="c1"># False</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">4</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>            <span class="c1"># True</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione: la prima e’ una lista di interi, la seconda una lista
+di stringhe, mentre la terza e’ una <em>stringa</em>!:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">lista_1</span><span class="p">))</span>             <span class="c1"># list</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">lista_2</span><span class="p">))</span>             <span class="c1"># list</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">lista_3</span><span class="p">))</span>            <span class="c1"># str</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzioni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># una lista vuota</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>                <span class="c1"># 0</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+
+<span class="c1"># sintassi non valida, Python da&#39; errore</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[}</span>
+
+
+<span class="c1"># una lista che contiene una lista vuota</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[[]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>                <span class="c1"># 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>             <span class="c1"># 0</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+
+<span class="c1"># non funziona perche&#39; lista non e&#39; definita!</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+
+<span class="c1"># questa invece funziona</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                     <span class="c1"># [0]</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+
+<span class="c1"># non funziona perche&#39; mancano le virgole!</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+
+
+<span class="c1"># da&#39; errore perche&#39; la lista ha solo 3 elementi!</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+
+<span class="c1"># estrae l&#39;ultimo elemento</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+
+<span class="c1"># estrae i primi due elementi (lista[2], il terzo,</span>
+<span class="c1"># e&#39; escluso)</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">sottolista</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+
+<span class="c1"># estrare tutti gli elementi (lista[3], che &#39;non</span>
+<span class="c1"># esiste&#39;, e&#39; escluso)</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">sottolista</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+
+<span class="c1"># estrae i primi due elementi (lista[-1], il terzo,</span>
+<span class="c1"># e&#39; escluso)</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">sottolista</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+
+<span class="c1"># inserisce in terza posizione la stringa &quot;due&quot;</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;due&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+
+<span class="c1"># non funziona: la lista contiene solo tre elementi,</span>
+<span class="c1"># quindi non ha una quarta posizione, e Python da&#39;</span>
+<span class="c1"># errore</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;tre&quot;</span>
+
+
+<span class="c1"># inserisce in terza posizione la stringa &quot;tre&quot;</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;tre&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+
+<span class="c1"># l&#39;indice deve essere un intero, Python da&#39; errore</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="p">[</span><span class="mf">1.2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;uno virgola due&quot;</span>
+
+
+<span class="c1"># sostituisce il secondo elemento di lista (cioe&#39; 1)</span>
+<span class="c1"># con una lista di due stringhe; e&#39; perfettamente</span>
+<span class="c1"># legale: le liste *possono* contenere altre stringhe</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;testo-1&quot;</span><span class="p">,</span> <span class="s2">&quot;testo-2&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matrice</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="n">prima_riga</span> <span class="o">=</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prima_riga</span><span class="p">)</span>
+
+<span class="n">secondo_elemento_prima_riga</span> <span class="o">=</span> <span class="n">prima_riga</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1"># oppure</span>
+<span class="n">secondo_elemento_prima_riga</span> <span class="o">=</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">secondo_elemento_prima_riga</span><span class="p">)</span>
+
+<span class="n">somma_prima_riga</span> <span class="o">=</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">somma_prima_riga</span><span class="p">)</span>
+
+<span class="n">seconda_colonna</span> <span class="o">=</span> <span class="p">[</span><span class="n">matrice</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">seconda_colonna</span><span class="p">)</span>
+
+<span class="n">diagonale</span> <span class="o">=</span> <span class="p">[</span><span class="n">matrice</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">2</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">diagonale</span><span class="p">)</span>
+
+<span class="n">tre_righe_assieme</span> <span class="o">=</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tre_righe_assieme</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="soluzioni-metodi">
+<h2>Soluzioni Metodi<a class="headerlink" href="#soluzioni-metodi" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Prima dichiaro una lista qualunque, ad esempio quella vuota:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+<p>poi aggiungo i vari elementi richiesti con <code class="docutils literal notranslate"><span class="pre">append()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;testo&quot;</span><span class="p">)</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># aggiunge un 3 alla fine della lista</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+<span class="c1"># aggiunge una lista con un 3 dentro alla fine della lista</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+<span class="c1"># aggiunge un 3 (il solo elemento contenuto nella lista [3]) alla</span>
+<span class="c1"># fine della lista</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+<span class="c1"># non funziona: extend() estende una lista con i contenuti</span>
+<span class="c1"># di un&#39;altra lista, ma qui 3 *non* e&#39; una lista! Python da&#39;</span>
+<span class="c1"># errore</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># sostituisce l&#39;elemento in posizione 0, il primo, con il</span>
+<span class="c1"># valore 3</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+<span class="c1"># inserisce un 3 alla fine di lista</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+<span class="c1"># inserisce la lista [3] alla fine di lista</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="k">del</span> <span class="n">lista</span>
+
+<span class="c1"># non funziona: il primo argomento di insert() deve essere</span>
+<span class="c1"># un intero, qui gli stiamo dando una lista! Python da&#39; errore</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">insert</span><span class="p">([</span><span class="mi">3</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Qui uso <code class="docutils literal notranslate"><span class="pre">append()</span></code>, che inserisce un <em>elemento</em> alla fine di <code class="docutils literal notranslate"><span class="pre">lista</span></code>.
+In questo caso inserisco due liste, cioe’ i risultati di <code class="docutils literal notranslate"><span class="pre">range(10)</span></code> e
+<code class="docutils literal notranslate"><span class="pre">range(10,</span> <span class="pre">20)</span></code>.</p>
+<p>E’ chiaro che <code class="docutils literal notranslate"><span class="pre">len(lista)</span></code> e’ <code class="docutils literal notranslate"><span class="pre">2</span></code>, visto che ho inserito solo due elementi.</p>
+<p>Invece:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>fa uso di <code class="docutils literal notranslate"><span class="pre">extend()</span></code>, che “estende” una lista con un’altra lista. Qui
+la lista finale ha <code class="docutils literal notranslate"><span class="pre">20</span></code> elementi, come si evince con:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lista</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>solo la prima ripetizione di <code class="docutils literal notranslate"><span class="pre">0</span></code> viene rimossa!</p>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># inverte l&#39;ordine degli elementi di lista</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+
+<span class="c1"># ordina gli elementi di lista</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Il risultato e’ che dopo le due operazioni <code class="docutils literal notranslate"><span class="pre">lista</span></code> torna al suo
+valore iniziale.</p>
+<p>Invece questo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><em>non</em> si puo’ fare. Il risultato di <code class="docutils literal notranslate"><span class="pre">lista.reverse()</span></code> e’ <code class="docutils literal notranslate"><span class="pre">None</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">risultato</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>che certamente non e’ una lista, e quindi non ci posso fare sopra <code class="docutils literal notranslate"><span class="pre">sort()</span></code>.
+Python dara’ errore.</p>
+</li>
+<li><p>Sono tentato di scrivere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">lista_inversa</span> <span class="o">=</span> <span class="n">lista</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># modificata!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_inversa</span><span class="p">)</span>                 <span class="c1"># None!</span>
+</pre></div>
+</div>
+<p>ma questa cosa non funziona: <code class="docutils literal notranslate"><span class="pre">reverse()</span></code> modifica <code class="docutils literal notranslate"><span class="pre">lista</span></code> e restituisce
+<code class="docutils literal notranslate"><span class="pre">None</span></code>! Perdipiu’ questo codice modifica <code class="docutils literal notranslate"><span class="pre">lista</span></code> direttamente, ed io
+non voglio.</p>
+<p>Quindi prima faccio una copia di <code class="docutils literal notranslate"><span class="pre">lista</span></code>, e poi ordino quella:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">lista_inversa</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[:]</span>            <span class="c1"># *non* lista_inversa = lista</span>
+<span class="n">lista_inversa</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># invariata</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_inversa</span><span class="p">)</span>                 <span class="c1"># invertita</span>
+</pre></div>
+</div>
+<p>Invece questo codice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">lista_inversa</span> <span class="o">=</span> <span class="n">lista</span>
+<span class="n">lista_inversa</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>                         <span class="c1"># modificata!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_inversa</span><span class="p">)</span>                 <span class="c1"># invertita</span>
+</pre></div>
+</div>
+<p>non funziona come vorrei: quello che succede e’ che <code class="docutils literal notranslate"><span class="pre">lista_inversa</span></code>
+contiene non una copia di <code class="docutils literal notranslate"><span class="pre">lista</span></code>, ma un riferimento allo stesso
+oggetto riferito da <code class="docutils literal notranslate"><span class="pre">lista</span></code>.</p>
+<p>Quindi quando inverto <code class="docutils literal notranslate"><span class="pre">lista_inversa</span></code> finisco per invertire anche <code class="docutils literal notranslate"><span class="pre">lista</span></code>.</p>
+</li>
+<li><p>Come sopra:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">frammenti</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;KSYK&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SVALVV&quot;</span>
+    <span class="s2">&quot;GVTGI&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;VGSSLAEVLKLPD&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">frammenti_ordinati</span> <span class="o">=</span> <span class="n">frammenti</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>non funziona: <code class="docutils literal notranslate"><span class="pre">sort()</span></code> ordina <code class="docutils literal notranslate"><span class="pre">lista</span></code> e restituisce <code class="docutils literal notranslate"><span class="pre">None</span></code>! Quindi
+sono costretto a fare prima una copia di <code class="docutils literal notranslate"><span class="pre">frammenti</span></code>, e poi ad ordinare
+quella:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">frammenti_ordinati</span> <span class="o">=</span> <span class="n">frammenti</span><span class="p">[:]</span>
+<span class="n">frammenti_ordinati</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">frammenti</span><span class="p">)</span>                     <span class="c1"># invariata</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">frammenti_ordinati</span><span class="p">)</span>            <span class="c1"># ordinata</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">lista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>crea una lista che contiene se’ stessa; <code class="docutils literal notranslate"><span class="pre">lista</span></code> e’ una struttura che
+in gergo viene detta <em>ricorsiva</em>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">lista</span></code> e’ chiaramente <em>infinita</em> (in termini di annidamento), visto che
+posso farci cose come queste:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>Visto che <code class="docutils literal notranslate"><span class="pre">lista</span></code> ha profondita’ infinita, Python quando la stampa
+usa un’ellissi <code class="docutils literal notranslate"><span class="pre">...</span></code> per indicare che c’e’ una quantita’ infinita di liste
+dentro a <code class="docutils literal notranslate"><span class="pre">lista</span></code> (ed ovviamente non puo’ stamparle tutte).</p>
+<p><strong>Non</strong> vedremo altre strutture ricorsive nel corso.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_lists_adv.html" class="btn btn-neutral float-right" title="Lezione 6 - Python: Liste, concetti avanzati" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_lists.html" class="btn btn-neutral float-left" title="Lezione 5 - Python: Liste" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

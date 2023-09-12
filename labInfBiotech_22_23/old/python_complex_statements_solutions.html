@@ -1,0 +1,1101 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python: Statement Complessi (Soluzioni) &mdash; Laboratorio di Informatica a.a. 2022/2023 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Laboratorio di Informatica
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a.a. 2022/2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_adv.html">Lezione 6 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_adv_sol.html">Lezione 6 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_tuples.html">Lezione 7.1 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_tuples_sol.html">Lezione 7.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_dictionaries.html">Lezione 7.2 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_dictionaries_sol.html">Lezione 7.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_sets.html">Lezione 8.1 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_sets_sol.html">Lezione 8.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_io.html">Lezione 8.2 - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_io_sol.html">Lezione 8.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_complex_statements_1.html">Lezione 9 - Python: Statement Complessi (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_complex_statements_1_sol.html">Lezione 9 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_complex_statements_2.html">Lezione 10 - Python: Statement Complessi (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_complex_statements_2_sol.html">Lezione 10 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_functions.html">Lezione 11 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_functions_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_simEsame1.html">Lezione 12.1 - Python: Simulazione esame (24/7/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_simEsame2.html">Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_simEsame3.html">Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_simEsame4.html">Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_simEsame5.html">Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Laboratorio di Informatica</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Python: Statement Complessi (Soluzioni)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/old/python_complex_statements_solutions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-statement-complessi-soluzioni">
+<h1>Python: Statement Complessi (Soluzioni)<a class="headerlink" href="#python-statement-complessi-soluzioni" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="codice-condizionale-if">
+<h2>Codice condizionale: <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#codice-condizionale-if" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi un numero: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pari&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dispari&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Uso <code class="docutils literal notranslate"><span class="pre">else</span></code> perche’ pari e dispari sono le uniche due possibilita’.</p>
+<p>Volendo, posso esplicitare la terza possibilita’, cioe’ il caso in cui
+<code class="docutils literal notranslate"><span class="pre">numero</span></code> non e’ ne’ pari ne’ dispari, cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pari&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dispari&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;impossibile!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ma il codice nell’<code class="docutils literal notranslate"><span class="pre">else</span></code> non verra’ eseguito per nessun valore di <code class="docutils literal notranslate"><span class="pre">numero</span></code>!</p>
+<p>Visto che le due possibilita’ (<code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ pari, <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ dispari)
+sono mutualmente esclusive, posso anche permettermi di scrivere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pari&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dispari&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>perche’ anche in assenza dell’<code class="docutils literal notranslate"><span class="pre">else</span></code>, uno e solo uno dei due
+<code class="docutils literal notranslate"><span class="pre">if</span></code> puo’ essere eseguito.</p>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi un razionale: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">numero</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">numero</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;okay&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Non servono ne’<code class="docutils literal notranslate"><span class="pre">elif</span></code> (c’e’ una sola condizione) ne’ <code class="docutils literal notranslate"><span class="pre">else</span></code> (se la
+condizione e’ falsa, non devo fare niente).</p>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi due numeri separati da spazio: &quot;</span><span class="p">)</span>
+
+<span class="n">parole</span> <span class="o">=</span> <span class="n">risposta</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">parole</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">parole</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="n">numero1</span> <span class="o">&gt;</span> <span class="n">numero2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;primo&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">numero2</span> <span class="o">&gt;</span> <span class="n">numero1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;secondo&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nessuno dei due&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In alternativa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi due numeri separati da spazio: &quot;</span><span class="p">)</span>
+
+<span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">parola</span><span class="p">)</span> <span class="k">for</span> <span class="n">parola</span> <span class="ow">in</span> <span class="n">risposta</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+
+<span class="k">if</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;primo&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;secondo&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nessuno dei due&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">oroscopo_di</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;gennaio&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna estrema&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;febbraio&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna galattica&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;marzo&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna incredibile&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;aprile&quot;</span><span class="p">:</span> <span class="s2">&quot;ultra-fortuna&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">mese</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;dimmi il tuo mese di nascita: &quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">mese</span> <span class="ow">in</span> <span class="n">oroscopo_di</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">oroscopo_di</span><span class="p">[</span><span class="n">mese</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;non disponibile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">percorso</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi il percorso: &quot;</span><span class="p">)</span>
+
+<span class="n">righe</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">percorso</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;vuoto&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;piccolo&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>
+<span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;medio&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;grande&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Si noti che non e’ necessario specificare per intero le condizioni: nel
+codice abbrevio <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">&lt;</span> <span class="pre">len(righe)</span> <span class="pre">&lt;</span> <span class="pre">1000</span></code> con <code class="docutils literal notranslate"><span class="pre">len(righe)</span> <span class="pre">&lt;</span> <span class="pre">1000</span></code>. Me
+lo posso permettere perche’ quando <code class="docutils literal notranslate"><span class="pre">len(righe)</span></code> e’ minore di <code class="docutils literal notranslate"><span class="pre">100</span></code>
+eseguo il primo <code class="docutils literal notranslate"><span class="pre">elif</span></code>: il secondo <code class="docutils literal notranslate"><span class="pre">elif</span></code> non viene neanche considerato.</p>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">punto1</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">parola</span><span class="p">)</span> <span class="k">for</span> <span class="n">parola</span>
+          <span class="ow">in</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi tre coordinate: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+
+<span class="n">punto2</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">parola</span><span class="p">)</span> <span class="k">for</span> <span class="n">parola</span>
+          <span class="ow">in</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi tre coordinate: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+
+<span class="k">if</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> \
+   <span class="n">punto2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">diff_x</span> <span class="o">=</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">diff_y</span> <span class="o">=</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">diff_z</span> <span class="o">=</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la distanza e&#39;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">diff_x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">diff_y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span>  <span class="n">diff_z</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Si noti che il <code class="docutils literal notranslate"><span class="pre">print</span></code> e’ <em>dentro</em> l’<code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
+</li>
+<li><p>Soluzione: sappiamo che <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ un intero arbitrario (puo’ essere
+qualunque intero deciso dall’utente). Il codice che ci interessa e’ questo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 3!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;non divide 3!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;boh&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>L’<code class="docutils literal notranslate"><span class="pre">if</span></code>, l’<code class="docutils literal notranslate"><span class="pre">elif</span></code> e l’<code class="docutils literal notranslate"><span class="pre">else</span></code> formano una catena: solo uno tra loro
+viene eseguito.</p>
+<ol class="arabic simple">
+<li><p>L’<code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ divisibile per tre.</p></li>
+<li><p>L’<code class="docutils literal notranslate"><span class="pre">elif</span></code> viene eseguito se e solo se l’<code class="docutils literal notranslate"><span class="pre">if</span></code> precedente non viene
+eseguito e se <code class="docutils literal notranslate"><span class="pre">numero</span></code> <em>non</em> e’ divisibile per tre.</p></li>
+<li><p>L’<code class="docutils literal notranslate"><span class="pre">else</span></code> viene eseguito quando ne’ l’<code class="docutils literal notranslate"><span class="pre">if</span></code> ne’ l’<code class="docutils literal notranslate"><span class="pre">elif</span></code> vengono
+eseguito.</p></li>
+</ol>
+<p>Visto che non ci sono numeri che non siano ne’ divisibili ne’ non-divisibili
+per <code class="docutils literal notranslate"><span class="pre">3</span></code>, non resta alcuna altra possibilita’. O viene eseguito l’<code class="docutils literal notranslate"><span class="pre">if</span></code>,
+o viene eseguito l’<code class="docutils literal notranslate"><span class="pre">elif</span></code>: l’<code class="docutils literal notranslate"><span class="pre">else</span></code> non viene <em>mai</em> eseguito.</p>
+<p>Quindi la risposta e’ no.</p>
+</li>
+<li><p>Soluzione: come sopra, <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ un intero arbitrario. Il codice e’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi un numero: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 2!&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 3!&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;boh&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Qui non ci sono “catene” di <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> ed <code class="docutils literal notranslate"><span class="pre">else</span></code>: ci sono tre <code class="docutils literal notranslate"><span class="pre">if</span></code>
+indipendenti.</p>
+<ol class="arabic simple">
+<li><p>Il primo <code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ divisibile per
+due.</p></li>
+<li><p>Il secondo <code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ divisibile
+per tre.</p></li>
+<li><p>Il terzo <code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> <em>non</em> e’ divisibile
+ne’ per due, ne’ per tre.</p></li>
+</ol>
+<p>Se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ es. 6, che e’ divisibile sia per due che per tre, allora i
+primi due <code class="docutils literal notranslate"><span class="pre">if</span></code> vengono entrambi eseguiti, mentre il terzo non viene
+eseguito.</p>
+<p>Se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ es. 5, che non e’ divisibile ne’ per due ne’ per tre, allora
+i primi due <code class="docutils literal notranslate"><span class="pre">if</span></code> <em>non</em> vengono eseguiti; in compenso viene eseguito il
+terzo.</p>
+<p>Quindi la risposta e’ si’.</p>
+<p>(Altri esempi: per <code class="docutils literal notranslate"><span class="pre">numero</span> <span class="pre">=</span> <span class="pre">2</span></code> viene eseguito solo il primo <code class="docutils literal notranslate"><span class="pre">if</span></code>, per
+<code class="docutils literal notranslate"><span class="pre">numero</span> <span class="pre">=</span> <span class="pre">3</span></code> solo il secondo. Si noti pero’ che non c’e’ verso di <em>non</em>
+eseguire nessuno uno dei tre <code class="docutils literal notranslate"><span class="pre">if</span></code>.)</p>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;somma o prodotto?: &quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;somma&quot;</span><span class="p">:</span>
+    <span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 1: &quot;</span><span class="p">))</span>
+    <span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 2: &quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la somma e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;prodotto&quot;</span><span class="p">:</span>
+    <span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 1: &quot;</span><span class="p">))</span>
+    <span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 2: &quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il prodotto e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">*</span> <span class="n">numero2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Usare un <code class="docutils literal notranslate"><span class="pre">if</span></code> o un <code class="docutils literal notranslate"><span class="pre">elif</span></code> non altera l’esecuzione del programma.</p>
+<p>Posso semplificare cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;somma o prodotto?: &quot;</span><span class="p">)</span>
+<span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 1: &quot;</span><span class="p">))</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 2: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;somma&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la somma e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;prodotto&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il prodotto e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">*</span> <span class="n">numero2</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="codice-iterativo">
+<h2>Codice iterativo<a class="headerlink" href="#codice-iterativo" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Soluzioni:</p>
+<ol class="arabic">
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">numero</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">somma_quadrati</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">somma_quadrati</span> <span class="o">=</span> <span class="n">somma_quadrati</span> <span class="o">+</span> <span class="n">numero</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">somma_quadrati</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prodotto</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># occhio che qui parto da 1!</span>
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">prodotto</span> <span class="o">=</span> <span class="n">prodotto</span> <span class="o">*</span> <span class="n">numero</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prodotto</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">volume_di</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span>  <span class="mf">67.0</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span>  <span class="mf">86.0</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span>  <span class="mf">91.0</span><span class="p">,</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="mf">109.0</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="mf">135.0</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">:</span>  <span class="mf">48.0</span><span class="p">,</span>
+    <span class="s2">&quot;H&quot;</span><span class="p">:</span> <span class="mf">118.0</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">:</span> <span class="mf">124.0</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">:</span> <span class="mf">135.0</span><span class="p">,</span>
+    <span class="s2">&quot;L&quot;</span><span class="p">:</span> <span class="mf">124.0</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="mf">124.0</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">:</span>  <span class="mf">96.0</span><span class="p">,</span>
+    <span class="s2">&quot;P&quot;</span><span class="p">:</span>  <span class="mf">90.0</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">:</span> <span class="mf">114.0</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">:</span> <span class="mf">148.0</span><span class="p">,</span>
+    <span class="s2">&quot;S&quot;</span><span class="p">:</span>  <span class="mf">73.0</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">:</span>  <span class="mf">93.0</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">:</span> <span class="mf">105.0</span><span class="p">,</span>
+    <span class="s2">&quot;W&quot;</span><span class="p">:</span> <span class="mf">163.0</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="mf">141.0</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">somma_volumi</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">volume</span> <span class="ow">in</span> <span class="n">volume_di</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="n">somma_volumi</span> <span class="o">=</span> <span class="n">somma_volumi</span> <span class="o">+</span> <span class="n">volume</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">somma_volumi</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">volume_di</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span>  <span class="mf">67.0</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span>  <span class="mf">86.0</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span>  <span class="mf">91.0</span><span class="p">,</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="mf">109.0</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="mf">135.0</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">:</span>  <span class="mf">48.0</span><span class="p">,</span>
+    <span class="s2">&quot;H&quot;</span><span class="p">:</span> <span class="mf">118.0</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">:</span> <span class="mf">124.0</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">:</span> <span class="mf">135.0</span><span class="p">,</span>
+    <span class="s2">&quot;L&quot;</span><span class="p">:</span> <span class="mf">124.0</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="mf">124.0</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">:</span>  <span class="mf">96.0</span><span class="p">,</span>
+    <span class="s2">&quot;P&quot;</span><span class="p">:</span>  <span class="mf">90.0</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">:</span> <span class="mf">114.0</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">:</span> <span class="mf">148.0</span><span class="p">,</span>
+    <span class="s2">&quot;S&quot;</span><span class="p">:</span>  <span class="mf">73.0</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">:</span>  <span class="mf">93.0</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">:</span> <span class="mf">105.0</span><span class="p">,</span>
+    <span class="s2">&quot;W&quot;</span><span class="p">:</span> <span class="mf">163.0</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">:</span> <span class="mf">141.0</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">fasta</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;&gt;1BA4:A|PDBID|CHAIN|SEQUENCE</span>
+<span class="s2">DAEFRHDSGYEVHHQKLVFFAEDVGSNKGAIIGLMVGGVV&quot;&quot;&quot;</span>
+
+<span class="c1"># estraggo la sequenza</span>
+<span class="n">sequenza</span> <span class="o">=</span> <span class="n">fasta</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">somma_volumi</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># per ciascun carattere nella sequenza...</span>
+<span class="k">for</span> <span class="n">aa</span> <span class="ow">in</span> <span class="n">sequenza</span><span class="p">:</span>
+    <span class="n">volume_di_aa</span> <span class="o">=</span> <span class="n">volume_di</span><span class="p">[</span><span class="n">aa</span><span class="p">]</span>
+    <span class="n">somma_volumi</span> <span class="o">=</span> <span class="n">somma_volumi</span> <span class="o">+</span> <span class="n">volume_di_aa</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">somma_volumi</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione: adatto il codice dell’esempio sopra:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+
+<span class="n">minimo_fino_ad_ora</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="k">if</span> <span class="n">numero</span> <span class="o">&lt;</span> <span class="n">minimo_fino_ad_ora</span><span class="p">:</span>
+        <span class="n">minimo_fino_ad_ora</span> <span class="o">=</span> <span class="n">numero</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il minimo e&#39;:&quot;</span><span class="p">,</span> <span class="n">minimo_fino_ad_ora</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione: combino l’esempio e l’esercizio sopra:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+
+<span class="n">massimo</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">minimo</span> <span class="o">=</span> <span class="n">lista</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="k">if</span> <span class="n">numero</span> <span class="o">&gt;</span> <span class="n">massimo</span><span class="p">:</span>
+        <span class="n">massimo</span> <span class="o">=</span> <span class="n">numero</span>
+    <span class="k">if</span> <span class="n">numero</span> <span class="o">&lt;</span> <span class="n">minimo</span><span class="p">:</span>
+        <span class="n">minimo</span> <span class="o">=</span> <span class="n">numero</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;minimo =&quot;</span><span class="p">,</span> <span class="n">minimo</span><span class="p">,</span> <span class="s2">&quot;massimo =&quot;</span><span class="p">,</span> <span class="n">massimo</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione: <code class="docutils literal notranslate"><span class="pre">range(0,</span> <span class="pre">len(sequenza),</span> <span class="pre">3)</span></code> restituisce <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">3,</span> <span class="pre">6,</span> <span class="pre">9,</span> <span class="pre">...]</span></code>,
+che sono le posizioni di inizio delle varie triplette.</p>
+<p>E’ sufficiente scrivere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sequenza</span> <span class="o">=</span> <span class="s2">&quot;ATGGCGCCCGAACAGGGA&quot;</span>
+
+<span class="c1"># parto da una lista vuota</span>
+<span class="n">triplette</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">pos_inizio</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequenza</span><span class="p">),</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="n">tripletta</span> <span class="o">=</span> <span class="n">sequenza</span><span class="p">[</span><span class="n">pos_inizio</span><span class="p">:</span><span class="n">pos_inizio</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">triplette</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tripletta</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">triplette</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">testo</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;&gt;2HMI:A|PDBID|CHAIN|SEQUENCE</span>
+<span class="s2">PISPIETVPVKLKPGMDGPKVKQWPLTEEKIKALVEICTEMEKEGKISKI</span>
+<span class="s2">&gt;2HMI:B|PDBID|CHAIN|SEQUENCE</span>
+<span class="s2">PISPIETVPVKLKPGMDGPKVKQWPLTEEKIKALVEICTEMEKEGKISKI</span>
+<span class="s2">&gt;2HMI:C|PDBID|CHAIN|SEQUENCE</span>
+<span class="s2">DIQMTQTTSSLSASLGDRVTISCSASQDISSYLNWYQQKPEGTVKLLIYY</span>
+<span class="s2">&gt;2HMI:D|PDBID|CHAIN|SEQUENCE</span>
+<span class="s2">QITLKESGPGIVQPSQPFRLTCTFSGFSLSTSGIGVTWIRQPSGKGLEWL</span>
+<span class="s2">&gt;2HMI:E|PDBID|CHAIN|SEQUENCE</span>
+<span class="s2">ATGGCGCCCGAACAGGGAC</span>
+<span class="s2">&gt;2HMI:F|PDBID|CHAIN|SEQUENCE</span>
+<span class="s2">GTCCCTGTTCGGGCGCCA&quot;&quot;&quot;</span>
+
+<span class="c1"># prima di tutto rompo il testo in righe</span>
+<span class="n">righe</span> <span class="o">=</span> <span class="n">testo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># creo il dizionario dove metto il risultato voluto</span>
+<span class="n">sequenza_di</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># ora posso iterare sulle varie righe</span>
+<span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">righe</span><span class="p">:</span>
+
+    <span class="k">if</span> <span class="n">riga</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">:</span>
+        <span class="c1"># se la riga e&#39; un&#39;intestazione, estraggo il nome</span>
+        <span class="c1"># della sequenza</span>
+        <span class="n">nome</span> <span class="o">=</span> <span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># altrimenti, e&#39; la sequenza vera a propria. il</span>
+        <span class="c1"># nome l&#39;ho ricavato nell&#39;iterazione precedente</span>
+        <span class="c1"># (che corrisponde alla riga sopra nel file FASTA)</span>
+        <span class="c1"># quindi lo posso usare per aggiornare il dizionario</span>
+        <span class="n">sequenza_di</span><span class="p">[</span><span class="n">nome</span><span class="p">]</span> <span class="o">=</span> <span class="n">riga</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sequenza_di</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Soluzioni:</p>
+<ol class="arabic">
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi &#39;STOP&#39;: &quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;STOP&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;devi scrivere &#39;STOP&#39;...&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi stop: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">!=</span> <span class="s2">&quot;stop&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;devi scrivere stop...&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Soluzioni:</p>
+<ol class="arabic simple">
+<li><p>Soluzione: tutti i numeri in <code class="docutils literal notranslate"><span class="pre">range(10)</span></code>.</p></li>
+<li><p>Soluzione: il numero <code class="docutils literal notranslate"><span class="pre">0</span></code>. Il <code class="docutils literal notranslate"><span class="pre">break</span></code> interrompe immediatamente il <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p></li>
+<li><p>Soluzione: tutti i numeri in <code class="docutils literal notranslate"><span class="pre">range(10)</span></code>. Il <code class="docutils literal notranslate"><span class="pre">continue</span></code> salta all’iterazione successiva, cosa che Python fa automaticamente quando finisce il corpo del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>. Visto che <code class="docutils literal notranslate"><span class="pre">continue</span></code> in questo caso si trova proprio alla fine del corpo del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>, e come se non ci fosse.</p></li>
+<li><p>Soluzione: il numero <code class="docutils literal notranslate"><span class="pre">0</span></code>. Nella primissima iterazione, quando <code class="docutils literal notranslate"><span class="pre">numero</span></code> vale <code class="docutils literal notranslate"><span class="pre">0</span></code>, prima Python esegue <code class="docutils literal notranslate"><span class="pre">print(numero)</span></code>, che stampa appunto <code class="docutils literal notranslate"><span class="pre">0</span></code>; poi l’<code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito, e cosi’ il <code class="docutils literal notranslate"><span class="pre">break</span></code> che contiene, che fa interrompere immediatamente il <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p></li>
+<li><p>Soluzione: niente. Nella primissima iterazione, quando <code class="docutils literal notranslate"><span class="pre">numero</span></code> vale <code class="docutils literal notranslate"><span class="pre">0</span></code>, l’<code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito e cosi’ il <code class="docutils literal notranslate"><span class="pre">break</span></code> che contiene, che fa interrompere immediatamente il <code class="docutils literal notranslate"><span class="pre">for</span></code>. Il <code class="docutils literal notranslate"><span class="pre">print</span></code> non viene mai eseguito.</p></li>
+<li><p>Soluzione: niente. Il corpo del <code class="docutils literal notranslate"><span class="pre">while</span></code> non viene mai eseguito, la condizione e’ <code class="docutils literal notranslate"><span class="pre">False</span></code>!</p></li>
+<li><p>Soluzione: niente. Visto che il corpo del <code class="docutils literal notranslate"><span class="pre">while</span></code> non viene mai eseguito (la condizione e’ <code class="docutils literal notranslate"><span class="pre">False</span></code>!), la riga <code class="docutils literal notranslate"><span class="pre">condizione</span> <span class="pre">=</span> <span class="pre">True</span></code> non viene mai eseguita.</p></li>
+<li><p>Soluzione: <code class="docutils literal notranslate"><span class="pre">&quot;la</span> <span class="pre">condizione</span> <span class="pre">e'</span> <span class="pre">vera&quot;</span></code> un numero indefinito di volte. Visto che la condizione e’ sempre <code class="docutils literal notranslate"><span class="pre">True</span></code>, il <code class="docutils literal notranslate"><span class="pre">while</span></code> non finisce mai di iterare!</p></li>
+<li><p>Soluzione: dieci stringhe della forma <code class="docutils literal notranslate"><span class="pre">&quot;all'indice</span> <span class="pre">0</span> <span class="pre">c'e'</span> <span class="pre">l'elemento</span> <span class="pre">0&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;all'indice</span> <span class="pre">1</span> <span class="pre">c'e'</span> <span class="pre">l'elemento</span> <span class="pre">1&quot;</span></code>, <em>etc.</em></p></li>
+<li><p>Soluzione: tutti gli elementi di <code class="docutils literal notranslate"><span class="pre">righe</span></code> (processati da <code class="docutils literal notranslate"><span class="pre">strip()</span></code>) che vengono prima della prima riga vuota, vale a dire <code class="docutils literal notranslate"><span class="pre">&quot;riga</span> <span class="pre">1&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;riga</span> <span class="pre">2&quot;</span></code> e <code class="docutils literal notranslate"><span class="pre">&quot;riga</span> <span class="pre">3&quot;</span></code>. Appena <code class="docutils literal notranslate"><span class="pre">riga</span></code> vale <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> (il quarto elemento di <code class="docutils literal notranslate"><span class="pre">righe</span></code>) l’<code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito, e con esso il <code class="docutils literal notranslate"><span class="pre">break</span></code>, che interrompe il ciclo. Si noti che la quarta riga <em>non</em> viene stampata.</p></li>
+</ol>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numeri</span><span class="p">)):</span>
+    <span class="n">numero_in_pos_i</span> <span class="o">=</span> <span class="n">numeri</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">numero_in_pos_i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la posizione e&#39;&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stringhe</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;000&quot;</span><span class="p">,</span> <span class="s2">&quot;51&quot;</span><span class="p">,</span> <span class="s2">&quot;51&quot;</span><span class="p">,</span> <span class="s2">&quot;32&quot;</span><span class="p">,</span> <span class="s2">&quot;57&quot;</span><span class="p">,</span> <span class="s2">&quot;26&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">stringhe</span><span class="p">)):</span>
+    <span class="n">stringa_in_pos_i</span> <span class="o">=</span> <span class="n">stringhe</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="s2">&quot;2&quot;</span> <span class="ow">in</span> <span class="n">stringa_in_pos_i</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;posizione =&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;valore =&quot;</span><span class="p">,</span> <span class="n">stringa_in_pos_i</span><span class="p">)</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="codice-annidato">
+<h2>Codice annidato<a class="headerlink" href="#codice-annidato" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">matrice</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+
+<span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">matrice</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">riga</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">elemento</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<ol class="arabic simple">
+<li><p>Tutti gli elementi della matrice.</p></li>
+<li><p>La <em>somma</em> di tutti gli elementi della matrice.</p></li>
+<li><p>Di nuovo tutti gli elementi della matrice.</p></li>
+<li><p>Di nuovo tutti gli elementi della matrice.</p></li>
+<li><p>La lista degli elementi sulla diagonale.</p></li>
+</ol>
+</li>
+<li><p>Uso due cicli <code class="docutils literal notranslate"><span class="pre">for</span></code> per iterare sulle coppie di elementi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">numero_1</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">numero_2</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">numero_1</span><span class="p">,</span> <span class="n">numero_2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>E’ molto simile all’esempio dell’orologio!</p>
+</li>
+<li><p>Scrivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="n">coppie_gia_stampate</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numeri</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numeri</span><span class="p">)):</span>
+
+        <span class="n">coppia</span> <span class="o">=</span> <span class="p">(</span><span class="n">numeri</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">numeri</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+
+        <span class="c1"># controllo se ho gia&#39; stampato la coppia simmetrica</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">coppia</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">coppia</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">in</span> <span class="n">coppie_gia_stampate</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="c1"># se arrivo qui vuol dire che non ho gia&#39; stampato la coppia</span>
+        <span class="c1"># simmetrica (altrimenti avrei fatto `continue`), quindi stampo</span>
+        <span class="c1"># la coppia; poi aggiorno coppie_gia_stampate</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">coppia</span><span class="p">)</span>
+
+        <span class="n">coppie_gia_stampate</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">coppia</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Come sopra.</p></li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">elemento_1</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">elemento_2</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+        <span class="k">if</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">elemento_1</span> <span class="o">==</span> <span class="n">elemento_2</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">elemento_1</span><span class="p">,</span> <span class="n">elemento_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">elemento_1</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">elemento_2</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">elemento_1</span> <span class="o">+</span> <span class="n">elemento_2</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">elemento_1</span><span class="p">,</span> <span class="n">elemento_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+
+<span class="c1"># parto da una lista vuota</span>
+<span class="n">lista_delle_coppie</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">elemento_1</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">elemento_2</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">elemento_1</span> <span class="o">+</span> <span class="n">elemento_2</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+            <span class="c1"># aggiorno la lista con append()</span>
+            <span class="n">lista_delle_coppie</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">elemento_1</span><span class="p">,</span> <span class="n">elemento_2</span><span class="p">))</span>
+
+<span class="c1"># stampo la lista che ho appena costruito</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_delle_coppie</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">numeri_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="c1"># qui itero sulla *prima* lista</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numeri_1</span><span class="p">)):</span>
+    <span class="n">numero_in_pos_i</span> <span class="o">=</span> <span class="n">numeri_1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="c1"># qui itero sulla *seconda* lista</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numeri_2</span><span class="p">)):</span>
+        <span class="n">numero_in_pos_j</span> <span class="o">=</span> <span class="n">numeri_2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">numero_in_pos_i</span> <span class="o">==</span> <span class="n">numero_in_pos_j</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;posizioni:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="s2">&quot;; valore ripetuto:&quot;</span><span class="p">,</span> <span class="n">numero_in_pos_i</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">numeri_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="c1"># parto da una lista vuota</span>
+<span class="n">lista_delle_triplette</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># qui itero sulla *prima* lista</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numeri_1</span><span class="p">)):</span>
+    <span class="n">numero_in_pos_i</span> <span class="o">=</span> <span class="n">numeri_1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="c1"># qui itero sulla *seconda* lista</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">numeri_2</span><span class="p">)):</span>
+        <span class="n">numero_in_pos_j</span> <span class="o">=</span> <span class="n">numeri_2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">numero_in_pos_i</span> <span class="o">==</span> <span class="n">numero_in_pos_j</span><span class="p">:</span>
+            <span class="c1"># al posto di stampare, aggiorno la lista</span>
+            <span class="n">lista_delle_triplette</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">numero_in_pos_i</span><span class="p">))</span>
+
+<span class="c1"># stampo la lista che ho appena costruito</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_delle_triplette</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">matrice</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+
+<span class="c1"># inizializzo con il primo elemento (un qualunque altro elemento</span>
+<span class="c1"># andrebbe comunque bene)</span>
+<span class="n">max_elemento_fino_ad_ora</span> <span class="o">=</span> <span class="n">matrice</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># itero...</span>
+<span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">matrice</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">elemento</span> <span class="ow">in</span> <span class="n">riga</span><span class="p">:</span>
+        <span class="c1"># se trovo un elemento piu&#39; grande di max_elemento_fino_ad_ora,</span>
+        <span class="c1"># aggiorno quest&#39;ultimo</span>
+        <span class="k">if</span> <span class="n">elemento</span> <span class="o">&gt;</span> <span class="n">max_elemento_fino_ad_ora</span><span class="p">:</span>
+            <span class="n">max_elemento_fino_ad_ora</span> <span class="o">=</span> <span class="n">elemento</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">max_elemento_fino_ad_ora</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sequenze</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;ATGGCGCCCGAACAGGGA&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;GTCCCTGTTCGGGCGCCA&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># parto da una lista vuota</span>
+<span class="n">risultato</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># itero...</span>
+<span class="k">for</span> <span class="n">sequenza</span> <span class="ow">in</span> <span class="n">sequenze</span><span class="p">:</span>
+    <span class="c1"># spezzo la sequenza corrente in triplette</span>
+    <span class="n">triplette</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sequenza</span><span class="p">),</span> <span class="mi">3</span><span class="p">):</span>
+        <span class="n">triplette</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sequenza</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">])</span>
+
+    <span class="c1"># appendo (*non* extend()!!!) le triplette</span>
+    <span class="c1"># ottenute alla lista risultato</span>
+    <span class="n">risultato</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">triplette</span><span class="p">)</span>
+
+<span class="c1"># stampo la lista che ho appena costruito</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">num_ripetizioni</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">num_ripetizioni</span><span class="p">:</span>
+        <span class="n">num_ripetizioni</span><span class="p">[</span><span class="n">numero</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">num_ripetizioni</span><span class="p">[</span><span class="n">numero</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>o in alternativa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">num_ripetizioni</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">num_ripetizioni</span><span class="p">:</span>
+        <span class="n">num_ripetizioni</span><span class="p">[</span><span class="n">numero</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">num_ripetizioni</span><span class="p">[</span><span class="n">numero</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>oppure, sfruttando <code class="docutils literal notranslate"><span class="pre">count()</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">num_ripetizioni</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">num_ripetizioni</span><span class="p">:</span>
+        <span class="n">num_ripetizioni</span><span class="p">[</span><span class="n">numero</span><span class="p">]</span> <span class="o">=</span> <span class="n">numeri</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Si noti che in quest’ultima variante, l’<code class="docutils literal notranslate"><span class="pre">if</span></code> (ma non il suo “contenuto”!)
+e’ opzionale.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Nella formulazione originale, l’esercizio richiedeva di usare due cicli
+<code class="docutils literal notranslate"><span class="pre">for</span></code> innestati. Una possibile soluzione a questa versione dell’esercizio
+e’ la seguente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">num_ripetizioni</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">num_ripetizioni</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">num_ripetizioni</span><span class="p">[</span><span class="n">numero</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">numero_2</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">numero</span> <span class="o">==</span> <span class="n">numero_2</span><span class="p">:</span>
+                <span class="n">num_ripetizioni</span><span class="p">[</span><span class="n">numero</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Una versione meno “ottimizzata”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">num_ripetizioni</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+    <span class="n">num_ripetizioni</span><span class="p">[</span><span class="n">numero</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">numero_2</span> <span class="ow">in</span> <span class="n">numeri</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">numero</span> <span class="o">==</span> <span class="n">numero_2</span><span class="p">:</span>
+            <span class="n">num_ripetizioni</span><span class="p">[</span><span class="n">numero</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gruppi</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;gene1&quot;</span><span class="p">,</span> <span class="s2">&quot;gene2&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;gene3&quot;</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[</span><span class="s2">&quot;gene4&quot;</span><span class="p">,</span> <span class="s2">&quot;gene5&quot;</span><span class="p">]]</span>
+
+<span class="c1"># inizializzo con il primo gruppo</span>
+<span class="n">gruppo_piu_grande_fino_ad_ora</span> <span class="o">=</span> <span class="n">gruppi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># itero...</span>
+<span class="k">for</span> <span class="n">gruppo</span> <span class="ow">in</span> <span class="n">gruppi</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">gruppo</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">gruppo_piu_grande_fino_ad_ora</span><span class="p">):</span>
+        <span class="n">gruppo_piu_grande_fino_ad_ora</span> <span class="o">=</span> <span class="n">gruppo</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">gruppo_piu_grande_fino_ad_ora</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sequenze_2HMI</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="s2">&quot;PISPIETVPVKLKPGMDGPKVKQWPLTEEKI&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="s2">&quot;PISPIETVPVKLKPGMDGPKVKQWPLTEEKI&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="s2">&quot;DIQMTQTTSSLSASLGDRVTISCSASQDISS&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="s2">&quot;QITLKESGPGIVQPSQPFRLTCTFSGFSLST&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="s2">&quot;ATGGCGCCCGAACAGGGAC&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="s2">&quot;GTCCCTGTTCGGGCGCCA&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># parto dal dizionario vuoto</span>
+<span class="n">istogrammi</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">chiave</span><span class="p">,</span> <span class="n">sequenza</span> <span class="ow">in</span> <span class="n">sequenze_2HMI</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="c1"># associo a questa chiave un istogramma vuoto</span>
+    <span class="n">istogrammi</span><span class="p">[</span><span class="n">chiave</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">residuo</span> <span class="ow">in</span> <span class="n">sequenza</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">residuo</span> <span class="ow">in</span> <span class="n">istogrammi</span><span class="p">[</span><span class="n">chiave</span><span class="p">]:</span>
+            <span class="n">istogrammi</span><span class="p">[</span><span class="n">chiave</span><span class="p">][</span><span class="n">residuo</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">istogrammi</span><span class="p">[</span><span class="n">chiave</span><span class="p">][</span><span class="n">residuo</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># stampo il risultato</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">istogrammi</span><span class="p">)</span>
+
+<span class="c1"># stampo il risultato in modo piu&#39; leggibile</span>
+<span class="k">for</span> <span class="n">chiave</span><span class="p">,</span> <span class="n">istogramma</span> <span class="ow">in</span> <span class="n">istogrammi</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">chiave</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">istogramma</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tabella</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;protein domain start end&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;YNL275W PF00955 236 498&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;YHR065C SM00490 335 416&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;YKL053C-A PF05254 5 72&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;YOR349W PANTHER 353 414&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># come prima cosa estraggo i nomi delle colonne dalla prima riga</span>
+<span class="n">nomi_colonne</span> <span class="o">=</span> <span class="n">tabella</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+
+<span class="c1"># parto da una lista vuota</span>
+<span class="n">righe_come_dizionari</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># ora itero sulle altre righe</span>
+<span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">tabella</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+
+    <span class="c1"># compilo il dizionario per questa riga</span>
+    <span class="n">dizionario</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">parole</span> <span class="o">=</span> <span class="n">riga</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">parole</span><span class="p">)):</span>
+
+        <span class="c1"># estraggo la parola corrispondente</span>
+        <span class="n">parola</span> <span class="o">=</span> <span class="n">parole</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="c1"># estraggo il nome della colonna corrispondente</span>
+        <span class="n">nome_colonna</span> <span class="o">=</span> <span class="n">nomi_colonne</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+        <span class="c1"># aggiorno il dizionario</span>
+        <span class="n">dizionario</span><span class="p">[</span><span class="n">nome_colonna</span><span class="p">]</span> <span class="o">=</span> <span class="n">parola</span>
+
+    <span class="c1"># ho compilato il dizionario per la riga corrente,</span>
+    <span class="c1"># aggiorno la lista completa</span>
+    <span class="n">righe_come_dizionari</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dizionario</span><span class="p">)</span>
+
+<span class="c1"># ho finito! stampo il risultato (una riga per volta,</span>
+<span class="c1"># per renderlo un po&#39; piu&#39; leggibile)</span>
+<span class="k">for</span> <span class="n">riga_come_dizionario</span> <span class="ow">in</span> <span class="n">righe_come_dizionari</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">riga_come_dizionario</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alfabeto_min</span> <span class="o">=</span> <span class="s2">&quot;abcdefghijklmnopqrstuvwxyz&quot;</span>
+<span class="n">alfabeto_mai</span> <span class="o">=</span> <span class="n">alfabeto_min</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="c1"># costruisco il dizionario</span>
+<span class="n">min_to_mai</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">alfabeto_min</span><span class="p">)):</span>
+    <span class="n">min_to_mai</span><span class="p">[</span><span class="n">alfabeto_min</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">alfabeto_mai</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+
+<span class="n">stringa</span> <span class="o">=</span> <span class="s2">&quot;sono una stringa&quot;</span>
+
+<span class="c1"># converto la stringa</span>
+<span class="n">caratteri_convertiti</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">carattere</span> <span class="ow">in</span> <span class="n">stringa</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">carattere</span> <span class="ow">in</span> <span class="n">min_to_mai</span><span class="p">:</span>
+        <span class="c1"># e&#39; un carattere alfabetico, lo devo convertire</span>
+        <span class="n">caratteri_convertiti</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">min_to_mai</span><span class="p">[</span><span class="n">carattere</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># non e&#39; un carattere alfabetico, non lo converto</span>
+        <span class="n">caratteri_convertiti</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">carattere</span><span class="p">)</span>
+<span class="n">stringa_convertita</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">caratteri_convertiti</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">stringa_convertita</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">righe_1</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;percorso 1: &quot;</span><span class="p">))</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="n">righe_2</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;percoros 2: &quot;</span><span class="p">))</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+
+<span class="c1"># devo stare attento perche&#39; i due file possono essere di</span>
+<span class="c1"># lunghezza diversa!</span>
+<span class="n">max_righe</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe_1</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe_2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">max_righe</span><span class="p">:</span>
+    <span class="n">max_righe</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe_2</span><span class="p">)</span>
+
+<span class="c1"># itero sulle righe di entrambi i file</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_righe</span><span class="p">):</span>
+
+    <span class="c1"># prendo la i-esima riga del primo file,</span>
+    <span class="c1"># sempre che esista</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe_1</span><span class="p">):</span>
+        <span class="n">riga_1</span> <span class="o">=</span> <span class="n">righe_1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">riga_1</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="c1"># prendo la i-esima riga del secondo file,</span>
+    <span class="c1"># sempre che esista</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe_2</span><span class="p">):</span>
+        <span class="n">riga_2</span> <span class="o">=</span> <span class="n">righe_2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">riga_2</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">riga_1</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">riga_2</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># qui leggo il file fasta</span>
+<span class="n">fasta_come_dizionario</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data/dna-fasta/fasta.1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+
+    <span class="c1"># mi sbarazzo di eventuali a capo</span>
+    <span class="n">riga</span> <span class="o">=</span> <span class="n">riga</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">riga</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">:</span>
+        <span class="n">intestazione</span> <span class="o">=</span> <span class="n">riga</span>
+        <span class="n">fasta_come_dizionario</span><span class="p">[</span><span class="n">intestazione</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">fasta_come_dizionario</span><span class="p">[</span><span class="n">intestazione</span><span class="p">]</span> <span class="o">+=</span> <span class="n">riga</span>
+
+<span class="c1"># itero sulle coppie intestazione-sequenza</span>
+<span class="k">for</span> <span class="n">intestazione</span><span class="p">,</span> <span class="n">sequenza</span> <span class="ow">in</span> <span class="n">fasta_come_dizionario</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;processo&quot;</span><span class="p">,</span> <span class="n">intestazione</span><span class="p">)</span>
+
+    <span class="c1"># conto quante volte appare ogni nucleotide</span>
+    <span class="n">conta</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">nucleotide</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">):</span>
+        <span class="n">conta</span><span class="p">[</span><span class="n">nucleotide</span><span class="p">]</span> <span class="o">=</span> <span class="n">sequenza</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">nucleotide</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;le conte sono&quot;</span><span class="p">,</span> <span class="n">conta</span><span class="p">)</span>
+
+    <span class="c1"># calcolo il gc-content</span>
+    <span class="n">gc_content</span> <span class="o">=</span> <span class="p">(</span><span class="n">conta</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">conta</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">])</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sequenza</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il GC-content e&#39;&quot;</span><span class="p">,</span> <span class="n">gc_content</span><span class="p">)</span>
+
+    <span class="c1"># calcolo il AT/GC-ratio</span>
+    <span class="n">somma_at</span> <span class="o">=</span> <span class="n">conta</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">conta</span><span class="p">[</span><span class="s2">&quot;T&quot;</span><span class="p">]</span>
+    <span class="n">somma_cg</span> <span class="o">=</span> <span class="n">conta</span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">conta</span><span class="p">[</span><span class="s2">&quot;G&quot;</span><span class="p">]</span>
+    <span class="n">at_gc_ratio</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">somma_at</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">somma_cg</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la AT/GC-ratio e&#39;&quot;</span><span class="p">,</span> <span class="n">at_gc_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

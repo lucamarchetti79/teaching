@@ -1,0 +1,430 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python: Dizionari (Soluzioni) &mdash; Laboratorio di Informatica a.a. 2022/2023 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Laboratorio di Informatica
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                a.a. 2022/2023
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_adv.html">Lezione 6 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_adv_sol.html">Lezione 6 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_tuples.html">Lezione 7.1 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_tuples_sol.html">Lezione 7.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_dictionaries.html">Lezione 7.2 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_dictionaries_sol.html">Lezione 7.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_sets.html">Lezione 8.1 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_sets_sol.html">Lezione 8.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_io.html">Lezione 8.2 - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_io_sol.html">Lezione 8.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_complex_statements_1.html">Lezione 9 - Python: Statement Complessi (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_complex_statements_1_sol.html">Lezione 9 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_complex_statements_2.html">Lezione 10 - Python: Statement Complessi (2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_complex_statements_2_sol.html">Lezione 10 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_functions.html">Lezione 11 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_functions_sol.html">Lezione 11 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_simEsame1.html">Lezione 12.1 - Python: Simulazione esame (24/7/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_simEsame2.html">Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_simEsame3.html">Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_simEsame4.html">Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_simEsame5.html">Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Laboratorio di Informatica</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Python: Dizionari (Soluzioni)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/old/python_dictionaries_solutions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-dizionari-soluzioni">
+<h1>Python: Dizionari (Soluzioni)<a class="headerlink" href="#python-dizionari-soluzioni" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p>Soluzioni:</p>
+<ol class="arabic">
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diz_vuoto</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">diz_vuoto</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">diz_vuoto</span><span class="p">))</span>                        <span class="c1"># 0</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pronomi</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">pronomi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;io&quot;</span>
+<span class="n">pronomi</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;tu&quot;</span>
+<span class="n">pronomi</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;egli&quot;</span>
+<span class="n">pronomi</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;noi&quot;</span>
+<span class="n">pronomi</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;voi&quot;</span>
+<span class="n">pronomi</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;essi&quot;</span>
+</pre></div>
+</div>
+<p>oppure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pronomi</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;io&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;tu&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;egli&quot;</span><span class="p">,</span>
+    <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;noi&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;voi&quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">:</span> <span class="s2">&quot;essi&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">decuplo_di</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">50</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">([</span><span class="n">decuplo_di</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)])</span>
+
+<span class="nb">print</span><span class="p">([</span><span class="n">decuplo_di</span><span class="p">[</span><span class="n">chiave</span><span class="p">]</span> <span class="k">for</span> <span class="n">chiave</span> <span class="ow">in</span> <span class="n">decuplo_di</span><span class="o">.</span><span class="n">keys</span><span class="p">()])</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">info_2TMV</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;pdb_id&quot;</span><span class="p">:</span> <span class="s2">&quot;2TMV&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;uniprot_id&quot;</span><span class="p">:</span> <span class="s2">&quot;P69687 (CAPSD_TMV)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;numero_domini_scp&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;numero_domini_pfam&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parenti_di</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;GIULIA&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;FRANCO&quot;</span><span class="p">,</span> <span class="s2">&quot;BENEDETTA&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;FRANCO&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;GIULIA&quot;</span><span class="p">,</span> <span class="s2">&quot;MATTEO&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;MATTEO&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;FRANCO&quot;</span><span class="p">,</span> <span class="s2">&quot;BENEDETTA&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;BENEDETTA&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;GIULIA&quot;</span><span class="p">,</span> <span class="s2">&quot;MATTEO&quot;</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">num_parenti_di_giulia</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">parenti_di</span><span class="p">[</span><span class="s2">&quot;GIULIA&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">num_parenti_di_giulia</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">da_2_bit_a_intero</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">):</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span> <span class="mi">3</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Occhio che non posso usare delle liste come chiavi: le liste
+non sono immutabili!</p>
+<p>Scelgo di stampare il valore corrispondente a 1, 0:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">da_2_bit_a_intero</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)])</span>
+<span class="c1">#                       ^^^^^^</span>
+<span class="c1">#                        tupla</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rapporti</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">):</span> <span class="mf">10.0</span> <span class="o">/</span> <span class="mf">3.0</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">):</span> <span class="mf">10.0</span> <span class="o">/</span> <span class="mf">7.0</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">):</span> <span class="mf">10.0</span> <span class="o">/</span> <span class="mf">6.0</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">):</span> <span class="mf">3.0</span> <span class="o">/</span> <span class="mf">7.0</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">):</span> <span class="mf">3.0</span> <span class="o">/</span> <span class="mf">6.0</span><span class="p">,</span>
+    <span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">):</span> <span class="mf">7.0</span> <span class="o">/</span> <span class="mf">6.0</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rapporti</span><span class="p">))</span>                             <span class="c1"># 6</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rapporti</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>                      <span class="c1"># 6</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rapporti</span><span class="o">.</span><span class="n">values</span><span class="p">()))</span>                    <span class="c1"># 6</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rapporti</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>                     <span class="c1"># 6</span>
+<span class="c1"># tutti contano il numero di coppie chiave-valore!</span>
+
+
+<span class="c1"># stampo le chiavi del dizionario per farmi un&#39;idea</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rapporti</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>                           <span class="c1"># e&#39; una vista su tuple!</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">rapporti</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>                     <span class="c1"># dict_keys</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">rapporti</span><span class="o">.</span><span class="n">keys</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>                  <span class="c1"># tuple</span>
+
+<span class="n">contiene_T_A</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">rapporti</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">contiene_T_A</span><span class="p">)</span>                              <span class="c1"># False</span>
+
+<span class="n">contiene_C_G</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">rapporti</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">contiene_C_G</span><span class="p">)</span>                              <span class="c1"># True</span>
+
+<span class="c1"># posso fare la stessa cosa direttamente con l&#39;oggetto dizionario:</span>
+<span class="nb">print</span><span class="p">((</span><span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">rapporti</span><span class="p">)</span>                    <span class="c1"># False</span>
+<span class="nb">print</span><span class="p">((</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">)</span> <span class="ow">in</span> <span class="n">rapporti</span><span class="p">)</span>                    <span class="c1"># True</span>
+
+
+<span class="c1"># stampo i valori del dizionario per farmi un&#39;idea</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rapporti</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>                         <span class="c1"># e&#39; una vista su interi!</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">rapporti</span><span class="o">.</span><span class="n">values</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>                <span class="c1"># int</span>
+
+<span class="n">contiene_2</span> <span class="o">=</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">rapporti</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">contiene_2</span><span class="p">)</span>                                <span class="c1"># True</span>
+
+<span class="n">contiene_3</span> <span class="o">=</span> <span class="mi">3</span> <span class="ow">in</span> <span class="n">rapporti</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">contiene_3</span><span class="p">)</span>                                <span class="c1"># False</span>
+
+
+<span class="c1"># stampo le coppie chiave-valore per farmi un&#39;idea</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rapporti</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+<span class="c1"># e&#39; una vista su coppie (tuple): il primo elemento, la chiave, e&#39;</span>
+<span class="c1"># una coppia esso stesso, il secondo e&#39; un intero</span>
+
+<span class="nb">print</span><span class="p">(((</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">in</span> <span class="n">rapporti</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>       <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(((</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">),</span> <span class="mi">1000</span><span class="p">)</span> <span class="ow">in</span> <span class="n">rapport</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>     <span class="c1"># False</span>
+
+
+<span class="c1"># le list comprehension sono</span>
+<span class="n">chiavi</span> <span class="o">=</span> <span class="p">[</span><span class="n">chiave_valore</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+          <span class="k">for</span> <span class="n">chiave_valore</span> <span class="ow">in</span> <span class="n">rapporti</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+<span class="n">valori</span> <span class="o">=</span> <span class="p">[</span><span class="n">chiave_valore</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+          <span class="k">for</span> <span class="n">chiave_valore</span> <span class="ow">in</span> <span class="n">rapporti</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mappa</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;zero&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;uno&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="s2">&quot;due&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;tre&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s2">&quot;quattro&quot;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="s2">&quot;cinque&quot;</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<span class="c1"># le chiavi di mappa sono tutte stringhe, quindi keys() mi</span>
+<span class="c1"># restituisce una vista su stringhe: posso usare</span>
+<span class="c1"># direttamente join()</span>
+<span class="n">stringa_delle_chiavi</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">mappa</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+
+<span class="c1"># i valori di mappa sono interi, quindi non posso usare</span>
+<span class="c1"># join() direttamente: devo prima trasformare tutti i</span>
+<span class="c1"># valori da interi a stringhe</span>
+<span class="n">stringa_dei_valori</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">valore</span><span class="p">)</span>
+                              <span class="k">for</span> <span class="n">valore</span> <span class="ow">in</span> <span class="n">mappa</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+
+<span class="n">vista_sulle_chiavi</span> <span class="o">=</span> <span class="n">mappa</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vista_sulle_chiavi</span><span class="p">)</span>                        <span class="c1"># non e&#39; ordinata</span>
+
+
+<span class="n">lista_ordinata_delle_chiavi</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mappa</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">lista_ordinata_delle_chiavi</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lista_ordinata_delle_chiavi</span><span class="p">)</span>               <span class="c1"># ora e&#39; ordinata</span>
+
+
+<span class="n">lista_dei_valori_ordinati_per_chiavi</span> <span class="o">=</span> \
+    <span class="p">[</span><span class="n">mappa</span><span class="p">[</span><span class="n">chiave</span><span class="p">]</span> <span class="k">for</span> <span class="n">chiave</span> <span class="ow">in</span> <span class="n">lista_ordinata_delle_chiavi</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># usando una list comprehension posso applicare il dizionario</span>
+<span class="c1"># alla lista: qui e&#39; necessario usare lower() *prima* di</span>
+<span class="c1"># usare un aminoacido come chiave di traduzione_di!</span>
+<span class="n">traduzione</span> <span class="o">=</span> <span class="p">[</span><span class="n">traduzione_di</span><span class="p">[</span><span class="n">aa</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="k">for</span> <span class="n">aa</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">traduzione</span><span class="p">)</span>
+
+<span class="c1"># a questo punto posso usare join() per concatenare le varie</span>
+<span class="c1"># parti</span>
+<span class="n">risultato</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">traduzione</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>oppure, in un solo comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">traduzione_di</span><span class="p">[</span><span class="n">aa</span><span class="o">.</span><span class="n">lower</span><span class="p">()]</span> <span class="k">for</span> <span class="n">aa</span> <span class="ow">in</span> <span class="n">lista</span><span class="p">]))</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Luca Marchetti
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
