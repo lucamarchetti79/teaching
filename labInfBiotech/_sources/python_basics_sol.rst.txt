@@ -22,7 +22,7 @@ Soluzioni
     perimetro = lato1 + lato2 + lato3
     print("Il perimetro è: ",perimetro)
 
-#. Prendi tre variabili di tipo stringa e stampa la loro somma(+)::
+#. Prendi tre variabili di tipo stringa e stampa la loro somma (+)::
 
     stringa1 = "ciao "
     stringa2 = "come ti chiami"

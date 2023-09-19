@@ -241,6 +241,6 @@ Esercizi
 --------
 
 #. Calcola il perimetro di un triangolo, con i seguenti lati lato1 = 10, lato2 = 20, lato3 = 50.
-#. Prendi tre variabili di tipo stringa e stampa la loro somma(+).
+#. Prendi tre variabili di tipo stringa e stampa la loro somma (+).
 #. Riscrivi il programma per calcolare il BMI e stampa il tipo di peso, altezza e BMI.
 #. Cerca il metodo **split** nella documentazione del tipo string (str), successivamente utilizza lo split sulla variabile *prova* di tipo str contenente "Ciao Come va? Io sto bene" con separatore (*sep*) = " "
