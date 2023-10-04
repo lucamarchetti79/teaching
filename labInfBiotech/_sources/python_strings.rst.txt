@@ -350,7 +350,7 @@ voglio sbarazzarmi del carattere ``">"``, degli spazi, e poi convertire
 il tutto in maiuscolo per uniformita'::
 
     s1 = sequenza.lstrip(">")
-    s2 = s2.rstrip(" ")
+    s2 = s1.rstrip(" ")
     s3 = s2.upper()
 
     print(s3)
