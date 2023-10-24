@@ -1,5 +1,5 @@
 ====================
-Lezione 8.2 - Python: Input-Output
+Lezione 7.3 - Python: Input-Output
 ====================
 
 Interfaccia Utente

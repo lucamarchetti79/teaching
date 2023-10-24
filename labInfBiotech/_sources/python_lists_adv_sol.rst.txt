@@ -1,5 +1,5 @@
 =============
-Lezione 6 - Soluzioni
+Lezione 6.1 - Soluzioni
 =============
 
 .. note::

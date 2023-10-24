@@ -1,5 +1,5 @@
 ============
-Lezione 8.1 - Python: Sets
+Lezione 7.2 - Python: Sets
 ============
 
 I set (insiemi) sono una collezione non ordinata di elementi senza ripetizioni. 
