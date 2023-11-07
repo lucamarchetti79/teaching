@@ -107,7 +107,7 @@ Ci sono diverse modalita' di accesso usabili con ``open()``:
 
 Il primo argomento e' il percorso al file che voglio aprire (in questo caso
 un percorso relativo alla directory da cui ho fatto partire ``python``), il
-secondo ``"r""`` specifica in che modalita' aprire il file.
+secondo ``"r"`` specifica in che modalita' aprire il file.
 
 .. warning::
 
