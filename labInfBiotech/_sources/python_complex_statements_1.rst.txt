@@ -1,5 +1,5 @@
 ===========================
-Lezione 9 - Python: Statement Complessi (1)
+Lezione 8 - Python: Statement Complessi (1)
 ===========================
 
 Codice condizionale: ``if``
