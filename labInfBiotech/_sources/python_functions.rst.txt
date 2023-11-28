@@ -1,5 +1,5 @@
 ================
-Lezione 11 - Python: Funzioni
+Lezione 10 - Python: Funzioni
 ================
 
 Le funzioni sono *blocchi di codice* a cui associamo un *nome*.
