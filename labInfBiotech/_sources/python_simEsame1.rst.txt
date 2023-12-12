@@ -1,5 +1,5 @@
 =========================
-Lezione 12.1 - Python: Simulazione esame (24/7/2020)
+Lezione 11.1 - Python: Simulazione esame (24/7/2020)
 =========================
 
 Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.

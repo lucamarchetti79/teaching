@@ -1,5 +1,5 @@
 ===========================
-Lezione 12.3 - Python: Simulazione esame 3 (13/2/2020)
+Lezione 11.3 - Python: Simulazione esame 3 (13/2/2020)
 ===========================
 
 Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.

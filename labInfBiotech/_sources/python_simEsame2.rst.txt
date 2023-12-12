@@ -1,5 +1,5 @@
 =========================
-Lezione 12.2 - Python: Simulazione esame 2 (19/6/2020)
+Lezione 11.2 - Python: Simulazione esame 2 (19/6/2020)
 =========================
 
 Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.

@@ -1,5 +1,5 @@
 ===========================
-Lezione 12.5 - Python: Simulazione esame 5 (11/09/2019)
+Lezione 11.5 - Python: Simulazione esame 5 (11/09/2019)
 ===========================
 
 Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.

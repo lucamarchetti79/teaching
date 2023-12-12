@@ -1,5 +1,5 @@
 ===========================
-Lezione 12.4 - Python: Simulazione esame 4 (20/1/2020)
+Lezione 11.4 - Python: Simulazione esame 4 (20/1/2020)
 ===========================
 
 Testo e soluzioni a cura di Andrea Passerini ed Antonio Longa, riviste da Luca Marchetti.
