@@ -139,7 +139,7 @@ non lo so, ma posso verificarlo::
     file_name = "video_scores.csv"
     data = load_scores(file_name)
     print(data[0])
-    print(compute_majority_score(data[0][1]))
+    print(compute_majority_score(data[0]))
 
 
 si, funziona!
