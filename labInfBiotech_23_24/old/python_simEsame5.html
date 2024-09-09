@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python: Simulazione esame 5 &mdash; Laboratorio di Informatica a.a. 2024/2025 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6e1bffa2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Laboratorio di Informatica
+          </a>
+              <div class="version">
+                a.a. 2024/2025
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Laboratorio di Informatica</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Python: Simulazione esame 5</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/old/python_simEsame5.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-simulazione-esame-5">
+<h1>Python: Simulazione esame 5<a class="headerlink" href="#python-simulazione-esame-5" title="Link to this heading"></a></h1>
+<p>Proviamo a simulare insieme una prova d’esame! in particolare stiamo simulando l’esame del 19 09 2019</p>
+<section id="testo">
+<h2>TESTO<a class="headerlink" href="#testo" title="Link to this heading"></a></h2>
+<p>Scrivere un programma che prenda in ingresso un file con i dati di espressione genica binarizzata (sovraespresso o meno) di pazienti affetti da leucemia di tipo AML o ALL e</p>
+<ol class="arabic simple">
+<li><p>Calcoli il coefficiente di correlazione tra i valori di espressione di ciascun gene ed una patologia di tipo AML</p></li>
+<li><p>Stampi la lista dei geni ordinati in base al loro coefficiente di correlazione con la patologia AML</p></li>
+</ol>
+<p><strong>ESMPIO File in input</strong></p>
+<p>gene_exp.txt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ATP2B4</span><span class="p">,</span><span class="n">NAP1L1</span><span class="p">,</span><span class="n">MDK</span><span class="p">,</span><span class="n">PCCB</span><span class="p">,</span><span class="n">MDS1</span><span class="p">,</span><span class="n">AML</span>
+<span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span>
+<span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span>
+<span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span>
+<span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span>
+<span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span>
+<span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span>
+<span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span>
+<span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span>
+<span class="n">yes</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span>
+<span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span>
+<span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span>
+<span class="n">yes</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span>
+<span class="n">yes</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span>
+<span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">no</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">yes</span><span class="p">,</span><span class="n">no</span>
+</pre></div>
+</div>
+<p><strong>ESMPIO DI OUTPUT</strong></p>
+<p>python correlation2AML.py:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Inserire</span> <span class="n">nome</span> <span class="n">file</span><span class="p">:</span> <span class="n">gene_exp</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">gene</span>    <span class="n">corrcoef</span>
+<span class="n">MDS1</span>    <span class="mf">0.26</span>
+<span class="n">ATP2B4</span>  <span class="mf">0.06</span>
+<span class="n">PCCB</span>    <span class="o">-</span><span class="mf">0.06</span>
+<span class="n">NAP1L1</span>  <span class="o">-</span><span class="mf">0.26</span>
+<span class="n">MDK</span>     <span class="o">-</span><span class="mf">0.40</span>
+</pre></div>
+</div>
+<p><strong>SUGGERIMENTI</strong></p>
+<p>Si possono implementare 5 funzioni separate:</p>
+<ol class="arabic simple">
+<li><p>una che legga il file dati e restituisca l’intestazione e una matrice di dati</p></li>
+<li><p>una che data una matrice di dati e un indice di colonna, estragga la colonna corrispondente all’indice, convertendo i valori in numerici (0 per “no”, 1 per “yes”)</p></li>
+<li><p>una che dati header e matrice di dati, per ogni gene estragga la colonna corrispondente e calcoli la sua correlazione con la patologia AML (ultima colonna della matrice). La funzione restituira’ una lista di coppie gene-correlazione.</p></li>
+<li><p>una che data la lista di correlazioni la stampi in ordine decrescente</p></li>
+<li><p>una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra</p></li>
+</ol>
+<p><strong>NOTA</strong>
+Per calcolare il coefficiente di correlazione tra due liste, si può usare la funzione <strong>corrcoefdel</strong> modulo <strong>numpy</strong></p>
+<p>ES:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">corrcoef</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">corrcoef</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1"># corrcoef restituisce una matrice di correlazione</span>
+<span class="c1"># con [0,1] si prende la correlazione tra a e b</span>
+</pre></div>
+</div>
+</section>
+<section id="soluzione">
+<h2>Soluzione<a class="headerlink" href="#soluzione" title="Link to this heading"></a></h2>
+<p><strong>LEGGETE E RI LEGGETE la consegna per capire se è chiara</strong></p>
+<p>iniziamo seguendo i suggerimenti:</p>
+<dl class="simple">
+<dt>suggerimento 1</dt><dd><ol class="arabic simple">
+<li><p>una che legga il file dati e restituisca l’intestazione e una matrice di dati</p></li>
+</ol>
+</dd>
+</dl>
+<p>Quindi dobbiamo ritornare un <strong>due</strong> liste, una lista con le intestazioni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;ATP2B4&#39;</span><span class="p">,</span> <span class="s1">&#39;NAP1L1&#39;</span><span class="p">,</span> <span class="s1">&#39;MDK&#39;</span><span class="p">,</span> <span class="s1">&#39;PCCB&#39;</span><span class="p">,</span> <span class="s1">&#39;MDS1&#39;</span><span class="p">,</span> <span class="s1">&#39;AML&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>e una sconda lista, una matrice (lista di liste), tipo questa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Soluzione</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+    <span class="n">header</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>E’ corretto il codice che abbiamo scritto fino ad ora?</strong>
+non lo so, ma posso verificarlo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">intest</span><span class="p">,</span> <span class="n">matrice</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">intest</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">matrice</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>si, funziona!</p>
+<dl class="simple">
+<dt>suggerimento 2</dt><dd><ol class="arabic simple">
+<li><p>una che data una matrice di dati e un indice di colonna, estragga la colonna corrispondente all’indice, convertendo i valori in numerici (0 per “no”, 1 per “yes”)</p></li>
+</ol>
+</dd>
+</dl>
+<p>mmmm, che cosa ci sta chiedendo?
+Ci sta chiedendo di scrivere una funzione che prenda in input la matrice che abbiamo caricato al punto 1, e successivamente
+di trasformare i “no” in 0 e i “si” in 1.</p>
+<p>es: data la matrice qui sotto:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>e l’indice = 1, il risultato è:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Soluzione</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">extract_column</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span><span class="p">:</span>
+            <span class="n">col</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">col</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">col</span>
+</pre></div>
+</div>
+<p><strong>E’ corretto il codice che abbiamo scritto fino ad ora?</strong>
+non lo so, ma posso verificarlo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">intest</span><span class="p">,</span> <span class="n">matrice</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">extract_column</span><span class="p">(</span><span class="n">matrice</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>si, funziona!</p>
+<dl class="simple">
+<dt>suggerimento 3</dt><dd><ol class="arabic simple">
+<li><p>una che dati header e matrice di dati, per ogni gene estragga la colonna corrispondente e calcoli la sua correlazione con la patologia AML (ultima colonna della matrice). La funzione restituira’ una lista di coppie gene-correlazione.</p></li>
+</ol>
+</dd>
+</dl>
+<p>mmmm, che cosa ci sta chiedendo?</p>
+<p>ci chiede di scrivere una funzione che prenda in input la matrice e l’intestazione (caricati al punto 1),
+successivamente per ogni colonna trasformare “yes” in 1 e “no” in 0 (usando il punto 2) e restituire la correlazione
+tra la colonna corrente e la colonna AML (ultima colonna), in fine ritornare i risultati, (io ho ritornato una lista di coppie, con correlazione e intestazione)
+Esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">(</span><span class="mf">0.05504818825631804</span><span class="p">,</span> <span class="s1">&#39;ATP2B4&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="o">-</span><span class="mf">0.25819888974716104</span><span class="p">,</span> <span class="s1">&#39;NAP1L1&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="o">-</span><span class="mf">0.3999999999999999</span><span class="p">,</span> <span class="s1">&#39;MDK&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="o">-</span><span class="mf">0.05504818825631805</span><span class="p">,</span> <span class="s1">&#39;PCCB&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="mf">0.25819888974716104</span><span class="p">,</span> <span class="s1">&#39;MDS1&#39;</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>PS</strong> per calclare la correlazione ricordatevi di importare il modulo e usare la funz <strong>corrcoef</strong></p>
+<p>Ora che abbiamo capito la consegna, scrivere il codice è easy :)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_correlations</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+    <span class="n">label</span> <span class="o">=</span> <span class="n">extract_column</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">correlations</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">header</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">header</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">column</span> <span class="o">=</span> <span class="n">extract_column</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="n">corr</span> <span class="o">=</span> <span class="n">corrcoef</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">column</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">correlations</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">corr</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">correlations</span>
+</pre></div>
+</div>
+<p><strong>E’ corretto il codice che abbiamo scritto fino ad ora?</strong>
+non lo so, ma posso verificarlo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">intest</span><span class="p">,</span> <span class="n">matrice</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">compute_correlations</span><span class="p">(</span><span class="n">intest</span><span class="p">,</span> <span class="n">matrice</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>si, funziona!</p>
+<p>suggerimento 4</p>
+<ol class="arabic simple">
+<li><p>una che data la lista di correlazioni la stampi in ordine decrescente</p></li>
+</ol>
+<p>semplice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_correlations</span><span class="p">(</span><span class="n">correlations</span><span class="p">):</span>
+
+    <span class="n">correlations</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;gene</span><span class="se">\t</span><span class="s2">corrcoef&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="ow">in</span> <span class="n">correlations</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="se">\t</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">corr</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>suggerimento 5</p>
+<ol class="arabic simple">
+<li><p>una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra</p></li>
+</ol>
+<p>semplice ci chiede di mettere tutto insieme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">corrcoef</span>
+
+<span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+
+    <span class="n">header</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;,&quot;</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">extract_column</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;yes&quot;</span><span class="p">:</span>
+            <span class="n">col</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">col</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">col</span>
+
+<span class="k">def</span> <span class="nf">compute_correlations</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+    <span class="n">label</span> <span class="o">=</span> <span class="n">extract_column</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">correlations</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">header</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">header</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">column</span> <span class="o">=</span> <span class="n">extract_column</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="n">corr</span> <span class="o">=</span> <span class="n">corrcoef</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">column</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">correlations</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">corr</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">correlations</span>
+
+<span class="k">def</span> <span class="nf">print_correlations</span><span class="p">(</span><span class="n">correlations</span><span class="p">):</span>
+
+    <span class="n">correlations</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;gene</span><span class="se">\t</span><span class="s2">corrcoef&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="ow">in</span> <span class="n">correlations</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="se">\t</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">corr</span><span class="p">))</span>
+
+<span class="n">filename</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserire nome file: &quot;</span><span class="p">)</span>
+<span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">correlations</span> <span class="o">=</span> <span class="n">compute_correlations</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+<span class="n">print_correlations</span><span class="p">(</span><span class="n">correlations</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Luca Marchetti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

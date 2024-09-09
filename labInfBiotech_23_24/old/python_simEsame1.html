@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python: Simulazione esame 1 &mdash; Laboratorio di Informatica a.a. 2024/2025 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6e1bffa2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Laboratorio di Informatica
+          </a>
+              <div class="version">
+                a.a. 2024/2025
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Laboratorio di Informatica</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Python: Simulazione esame 1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/old/python_simEsame1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-simulazione-esame-1">
+<h1>Python: Simulazione esame 1<a class="headerlink" href="#python-simulazione-esame-1" title="Link to this heading"></a></h1>
+<p>Proviamo a simulare insieme una prova d’esame! in particolare stiamo simulando l’esame del 24 7 2020</p>
+<section id="testo">
+<h2>TESTO<a class="headerlink" href="#testo" title="Link to this heading"></a></h2>
+<p>Scrivere un programma che</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>prenda in ingresso:</dt><dd><ol class="arabic simple">
+<li><p>un file con annotazioni di score di artefatti in ecografie polmonari, fatte da più medici diversi.</p></li>
+<li><p>due indici di medici di cui confrontare le annotazioni</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>per ogni coppia di score s i , s j stampi il numero di volte in cui il primo medico ha annotato un’ecografica come s i ed il secondo come s j (anche quando s i = s j )</p></li>
+<li><p>stampi il numero totale di volte in cui i due medici sono stati d’accordo, ed il numero di volte in cui sono stati in disaccordo</p></li>
+</ol>
+<p><strong>ESMPIO File in input</strong></p>
+<p>video_scores.csv:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Video</span>       <span class="n">Score</span> <span class="n">M1</span>        <span class="n">Score</span> <span class="n">M2</span>        <span class="n">Score</span> <span class="n">M3</span>        <span class="n">Score</span> <span class="n">M4</span>        <span class="n">Score</span> <span class="n">M5</span>        <span class="n">Score</span> <span class="n">M6</span>
+<span class="mi">1</span>   <span class="mi">2</span>       <span class="mi">1</span>       <span class="mi">2</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">2</span>
+<span class="mi">2</span>   <span class="mi">1</span>       <span class="mi">2</span>       <span class="mi">1</span>       <span class="mi">1</span>       <span class="mi">1</span>       <span class="mi">2</span>
+<span class="mi">3</span>   <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">1</span>
+<span class="mi">4</span>   <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>       <span class="mi">3</span>
+</pre></div>
+</div>
+<p><strong>ESMPIO DI OUTPUT</strong></p>
+<p>python agreement.py:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Inserire</span> <span class="n">nome</span> <span class="n">file</span><span class="p">:</span> <span class="n">video_scores</span><span class="o">.</span><span class="n">csv</span>
+<span class="n">Indice</span> <span class="n">primo</span> <span class="n">medico</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">Indice</span> <span class="n">secondo</span> <span class="n">medico</span><span class="p">:</span> <span class="mi">4</span>
+<span class="n">M0</span>  <span class="n">M4</span>  <span class="n">Count</span>
+<span class="mi">2</span>   <span class="mi">3</span>   <span class="mi">8</span>
+<span class="mi">1</span>   <span class="mi">1</span>   <span class="mi">5</span>
+<span class="mi">3</span>   <span class="mi">3</span>   <span class="mi">5</span>
+<span class="mi">0</span>   <span class="mi">0</span>   <span class="mi">11</span>
+<span class="mi">0</span>   <span class="mi">1</span>   <span class="mi">6</span>
+<span class="n">Totale</span> <span class="n">accordo</span><span class="p">:</span> <span class="mi">28</span>
+<span class="n">Totale</span> <span class="n">disaccordo</span><span class="p">:</span> <span class="mi">32</span>
+</pre></div>
+</div>
+<p><strong>SUGGERIMENTI</strong></p>
+<p>Si possono implementare 5 funzioni separate:</p>
+<ol class="arabic simple">
+<li><p>una che legga il file dati e restituisca una lista di liste di score (una per ogni video)</p></li>
+<li><p>una che data la lista di liste ed un indice, restituisca la lista di score associati al medico con quell’indice</p></li>
+<li><p>una che data la lista di liste e due indici, restituisca un dizionario che per ogni coppia di score (s i , s j ) contiene il numero di volte in cui il primo medico ha annotato con s i e il secondo con s j</p></li>
+<li><p>una che dato il dizonario (e gli indici dei medici per l’intestazione) stampi i conteggi delle varie coppie di score e calcoli e stampi i totali di accordo e disaccordo</p></li>
+<li><p>una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra</p></li>
+</ol>
+</section>
+<section id="soluzione">
+<h2>Soluzione<a class="headerlink" href="#soluzione" title="Link to this heading"></a></h2>
+<p><strong>LEGGETE E RI LEGGETE la consegna per capire se è chiara</strong></p>
+<p>iniziamo seguendo i suggerimenti:</p>
+<dl class="simple">
+<dt>suggerimento 1</dt><dd><ol class="arabic simple">
+<li><p>una che legga il file dati e restituisca una <strong>lista di liste</strong> di score (una per ogni video)</p></li>
+</ol>
+</dd>
+</dl>
+<p><strong>SEMPLICE</strong>
+lo abbiamo sempre fatto:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">load_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>   <span class="c1">#definisco la funzione</span>
+
+    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="c1">#apro il file in modalità read</span>
+    <span class="n">righe</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>  <span class="c1">#leggo le tighe</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>                  <span class="c1">#creo una variabile contenente il risultato</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">righe</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>       <span class="c1"># itero sulle righe saltando la prima</span>
+                              <span class="c1"># perche è un intestazione</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">:])</span>   <span class="c1"># splitto la riga, e prendo tutti gli elementi</span>
+                                    <span class="c1"># eccetto il primo, perche è il numero del video</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>E’ corretto il codice che abbiamo scritto fino ad ora?</strong>
+non lo so, ma posso verificarlo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prova</span> <span class="o">=</span> <span class="n">load_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prova</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>si, funziona!</p>
+<dl class="simple">
+<dt>suggerimento 2</dt><dd><ol class="arabic simple">
+<li><p>una che data la lista di liste ed un indice, restituisca la lista di score associati al medico con quell’indice</p></li>
+</ol>
+</dd>
+</dl>
+<p>mmmm, che cosa ci sta chiedendo?
+ci chiede di creare una funzione che prenda in input la lista di liste (il file che abbiamo appena caricato con load_file),
+e un indice (riferito ad un medico), ci restituisca una <strong>lista</strong> contenente gli score che ha dato il medico.
+Quindi, se come indice abbiamo inserito 1, allora il la nostra funzione deve restituire la lista [2,1,3,3,…]</p>
+<p><strong>SEMPLICE</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">index</span><span class="p">):</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">table</span><span class="p">:</span>               <span class="c1">#itero sulla ogni riga della tabella</span>
+        <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>   <span class="c1">#mi salvo solo i valori in posizione index</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>E’ corretto il codice che abbiamo scritto fino ad ora?</strong>
+non lo so, ma posso verificarlo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prova</span> <span class="o">=</span> <span class="n">load_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">get_score</span><span class="p">(</span><span class="n">prova</span><span class="p">,</span><span class="n">index</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>si, funziona!</p>
+<dl class="simple">
+<dt>suggerimento 3</dt><dd><ol class="arabic simple">
+<li><p>una che data la lista di liste e due indici, restituisca un dizionario che per ogni coppia di score (s i , s j ) contiene il numero di volte in cui il primo medico ha annotato con s i e il secondo con s j</p></li>
+</ol>
+</dd>
+</dl>
+<p>mmmm, che cosa ci sta chiedendo?
+ci chiede di creare una funzione che prenda in input la lista di liste (il file che abbiamo appena caricato con load_file),
+e <em>due</em> indici (riferiti a due medici), ci restituisca un <strong>dizionario</strong>. Il dizionario deve aver come chiave la coppia degli score data dai medici, e come valore il totale delle volte in cui si è verificata questa situazione.
+Esempio, supponiamo che le liste degli scores dei medici m1 e m2 siano le seguenti:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Score</span> <span class="n">M1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">Score</span> <span class="n">M2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>allora il dizionario in output è il seguente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diz</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>Ora che abbiamo capito la consegna, scrivere il codice è easy :)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_agreement</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">):</span>
+    <span class="n">score_m1</span> <span class="o">=</span> <span class="n">get_score</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">m1</span><span class="p">)</span>  <span class="c1">#uso la funzione che ho fatto prima per prendere gli score del medico m1</span>
+    <span class="n">score_m2</span> <span class="o">=</span> <span class="n">get_score</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">m2</span><span class="p">)</span>  <span class="c1">#uso la funzione che ho fatto prima per prendere gli score del medico m2</span>
+
+    <span class="n">diz</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">score_m1</span><span class="p">)):</span>       <span class="c1">#itero sul range della lungheza degli score i.e il numero di video</span>
+
+        <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">score_m1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">score_m2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  <span class="c1"># creo la chiave, che è una coppia di score (score di m1, score di m2)</span>
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">diz</span><span class="p">:</span>                   <span class="c1"># se la chiave è già presente nel dizionario, allora incremento il suo valore</span>
+            <span class="n">diz</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">diz</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>                            <span class="c1"># altrimenti (se non è presente)</span>
+            <span class="n">diz</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>                 <span class="c1"># aggiungo la chiave al dizionario con valore 1</span>
+
+    <span class="k">return</span><span class="p">(</span><span class="n">diz</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>E’ corretto il codice che abbiamo scritto fino ad ora?</strong>
+non lo so, ma posso verificarlo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prova</span> <span class="o">=</span> <span class="n">load_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">dizionario</span> <span class="o">=</span> <span class="n">get_agreement</span><span class="p">(</span><span class="n">prova</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dizionario</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>si, funziona!</p>
+<p>suggerimento 4</p>
+<ol class="arabic simple">
+<li><p>una che dato il dizonario (e gli indici dei medici per l’intestazione) stampi i conteggi delle varie coppie di score e calcoli e stampi i totali di accordo e disaccordo</p></li>
+</ol>
+<p>In sostanza qui ci sta chiedendo di stampare l’output in un formato piu leggibile (come quelle del esempio del output),
+e ci sta anche chiedendo di calcolare il numero di volte in cui i medici sono in accordo e quelle in cui sono in disaccordo.</p>
+<p>semplice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_agreemnt</span><span class="p">(</span><span class="n">diz</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">):</span>
+    <span class="n">tot_agree</span> <span class="o">=</span> <span class="mi">0</span>                       <span class="c1">#inizializzo gli agree</span>
+    <span class="n">tot_disagree</span> <span class="o">=</span> <span class="mi">0</span>                    <span class="c1">#inizializzo i  disagree</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;M</span><span class="si">%d</span><span class="se">\t</span><span class="s2">M</span><span class="si">%d</span><span class="se">\t</span><span class="s2">Count&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">))</span>   <span class="c1">#stampo un intestazione</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="n">diz</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>              <span class="c1">#itero sulle chiavi del dizionario</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">diz</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)])</span> <span class="c1">#stampo score di m1, score di m2, e valore</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span><span class="p">:</span>                      <span class="c1"># se sono in accordo</span>
+            <span class="n">tot_agree</span> <span class="o">=</span> <span class="n">tot_agree</span> <span class="o">+</span> <span class="n">diz</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)]</span>  <span class="c1"># incremento il tot_agree</span>
+        <span class="k">else</span><span class="p">:</span>                                         <span class="c1"># se non sono in accordo</span>
+            <span class="n">tot_disagree</span> <span class="o">=</span> <span class="n">tot_disagree</span> <span class="o">+</span> <span class="n">diz</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)]</span>  <span class="c1"># incremento il tot_disagree</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Totale accordo: &quot;</span><span class="p">,</span><span class="n">tot_agree</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Totale disaccordo: &quot;</span><span class="p">,</span><span class="n">tot_disagree</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>suggerimento 5</p>
+<ol class="arabic simple">
+<li><p>una (o un main) che realizzi il programma richiesto usando le funzioni di cui sopra</p></li>
+</ol>
+<p>semplice ci chiede di mettere tutto insieme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">load_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+
+    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+    <span class="n">righe</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">righe</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">:])</span>
+
+    <span class="k">return</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_score</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">index</span><span class="p">):</span>
+    <span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">table</span><span class="p">:</span>
+        <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+    <span class="k">return</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_agreement</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">):</span>
+    <span class="n">score_m1</span> <span class="o">=</span> <span class="n">get_score</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">m1</span><span class="p">)</span>
+    <span class="n">score_m2</span> <span class="o">=</span> <span class="n">get_score</span><span class="p">(</span><span class="n">table</span><span class="p">,</span><span class="n">m2</span><span class="p">)</span>
+
+    <span class="n">diz</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">score_m1</span><span class="p">)):</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">score_m1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">score_m2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">diz</span><span class="p">:</span>
+            <span class="n">diz</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">diz</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">diz</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">return</span><span class="p">(</span><span class="n">diz</span><span class="p">)</span>
+
+
+
+<span class="k">def</span> <span class="nf">print_agreemnt</span><span class="p">(</span><span class="n">diz</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">):</span>
+    <span class="n">tot_agree</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">tot_disagree</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;M</span><span class="si">%d</span><span class="se">\t</span><span class="s2">M</span><span class="si">%d</span><span class="se">\t</span><span class="s2">Count&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="n">diz</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">diz</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)])</span>
+
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span><span class="p">:</span>
+            <span class="n">tot_agree</span> <span class="o">=</span> <span class="n">tot_agree</span> <span class="o">+</span> <span class="n">diz</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">tot_disagree</span> <span class="o">=</span> <span class="n">tot_disagree</span> <span class="o">+</span> <span class="n">diz</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Totale accordo: &quot;</span><span class="p">,</span><span class="n">tot_agree</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Totale disaccordo: &quot;</span><span class="p">,</span><span class="n">tot_disagree</span><span class="p">)</span>
+
+
+
+
+<span class="n">filename</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Inserire nome file&quot;</span><span class="p">)</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;indice medico 1: &quot;</span><span class="p">))</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;indice medico 2: &quot;</span><span class="p">))</span>
+
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">load_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">agreement</span> <span class="o">=</span> <span class="n">get_agreement</span><span class="p">(</span><span class="n">res</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">)</span>
+<span class="n">print_agreemnt</span><span class="p">(</span><span class="n">agreement</span><span class="p">,</span><span class="n">m1</span><span class="p">,</span><span class="n">m2</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Luca Marchetti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

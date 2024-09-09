@@ -1,0 +1,97 @@
+=================
+Esercitazione aggiuntiva - Soluzioni
+=================
+
+Giunti a questo punto, dovreste essere capaci di fare il seguente esercizio:
+
+.. warning::
+
+    Il testo dell'esercizio che segue utilizza il concetto di array, che deriva da altri 
+    linguaggi di programmazione. Nel nostro caso possiamo pensare che array e liste siano
+    sinonimi.
+
+****
+
+Esercizio
+---------
+
+Scrivete un **modulo** python che data in input la sequente seq di DNA::
+
+    DNA = "tatgtaaactgccaaggtgaacgttggaatcacctcgtatgtgactcgcgtgtgacctggatactgtcaaaccaggtcaggaaagcctatgagtacgagc"
+
+
+
+#. conti le frequenze di a,c,g,t normalizzate (numero di occorrenze di a diviso lunghezza della stringa. Es: se ci sono 30 "a" e la stringa è lunga 60, la frequenza normalizzata di "a" è uguale a 30/60 = 0.5)
+#. stampi il DNA ordinato (es "aaaaaaaaaccccccccgggggggttttt")
+#. crei un array chiamato **array_DNA**, contenente la frequenza dell'aminoacido corrispondente. Es. se le frequenze sono a=0.20,c=0.30,g=0.10,t=0.40, e il DNA è del tipo "atgc...", dovete creare l'array [0.2,0.4,0.1,0.3,...]
+#. crei un array con la media mobile dell'array chiamato **array_DNA**. La media mobile è un array dove l'elemento in posizione i rappresenta la media degli elementi in posizione 0,1,2,..,i-1,i. Es se l'array in input è [1,1,4,5], l'array contenente le medie mobili è il seguente: [1,1,2,2.75] perche' [1/1 = 1, (1+1)/2 = 1, (1+1+4)/3 = 2, (1+1+4+5)/4 = 2.75]
+
+
+Infine stampate i 4 risultati, un esempio di output del programma è il seguente::
+
+    res1 freq a = 0.28 freq c = 0.27 freq g = 0.22 freq t = 0.23
+    res2 aaaaaaaaaaaaaaaaaaaaaaaaaaaaccccccccccccccccccc....
+    res3 [0.23, 0.28, 0.23, 0.27, 0.23 ...
+    res4 [0.23, 0.255, 0.24666666666666667, 0.2525, 0.248 ....
+
+
+
+**L'esercizio è interamente risolvibile con quello che abbiamo fatto fino a qui**
+
+
+
+
+Soluzione
+---------
+
+Definisco la variabile DNA copiando e incollando la stringa sopra::
+
+    DNA = "tatgtaaactgccaaggtgaacgttggaatcacctcgtatgtgactcgcgtgtgacctggatactgtcaaaccaggtcaggaaagcctatgagtacgagc"
+
+per poter risolvere il punto 1 è sufficiente contare le sequenze con il metodo count delle stringhe,
+e dividere per la lunghezza del DNA (len(DNA))::
+
+    f_a = DNA.count("a")/len(DNA)
+    f_c = DNA.count("c")/len(DNA)
+    f_g = DNA.count("g")/len(DNA)
+    f_t = DNA.count("t")/len(DNA)
+
+per concludere stampo il res 1::
+
+    print("res1: ", f_a,f_c,f_g,f_t)
+
+
+Per quanto riguarda il punto 2, devo poter ordinare la stringa. Per l'ordinamento noi abbiamo visto il sort un metodo degli array (liste).
+Quindi converto in array (con il list comprehension), ordino (con il metodo sort), e per finire ricreo la stringa (metodo join)::
+
+    DNA_sort = [x for x in DNA]          # converto la stringa in lista
+    DNA_sort.sort()                      # ordino la lista
+    string_dna_sort = "".join(DNA_sort)  # riunisco la lista ordinata in una stringa
+    print("res2: ", string_dna_sort)      # stampo la stringa
+
+
+Il punto 3 sembra essere un po' più complesso, ma in realtà è molto semplice. Posso usare il replace per sostituire gli aminoacidi
+con le loro frequenze, io per semplicità ci ho aggiunto pure uno spazio vuoto (che mi servirà dopo per fare lo split!)::
+
+    array_DNA = DNA.replace("a",str(f_a)+" ")         # replace di a con la sua freq
+    array_DNA = array_DNA.replace("c",str(f_c)+" ")   # replace di c con la sua freq
+    array_DNA = array_DNA.replace("g",str(f_g)+" ")   # replace di g con la sua freq
+    array_DNA = array_DNA.replace("t",str(f_t)+" ")   # replace di t con la sua freq
+    array_DNA = array_DNA.split(" ")                  # splitto la stringa e la trasformo in un array
+    array_DNA = array_DNA[:-1]                        # rimuovo l'ultimo elemento (perche è vuoto)
+    array_DNA = [float(i) for i in array_DNA]         # converto le stringhe in float
+    print("res3: ", array_DNA)                        # stampo il risultato
+
+
+Infine, per poter calcolare la media mobile, posso calcolare prima la somma degli elementi precedenti::
+
+    sum_array_DNA = [sum(array_DNA[:x+1]) for x in range(len(array_DNA))]
+
+in **sum_array_DNA** l'elemento i-esimo rappresenta la somma degli elementi dalla posizione 0 alla posizione i.
+Successivamente, posso calcolare la media mobile, dividendo l' i-esimo elemento di **sum_array_DNA** per i::
+
+    media_mobile = [sum_array_DNA[x]/(x+1) for x in range(len(sum_array_DNA))]
+
+per concludere, stampo il risultato finale::
+
+    print("res4: ", media_mobile)

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shell: Parte 2 &mdash; Laboratorio di Informatica a.a. 2024/2025 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6e1bffa2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Laboratorio di Informatica
+          </a>
+              <div class="version">
+                a.a. 2024/2025
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Laboratorio di Informatica</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Shell: Parte 2</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/old/shell_commands2.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="shell-parte-2">
+<h1>Shell: Parte 2<a class="headerlink" href="#shell-parte-2" title="Link to this heading"></a></h1>
+<section id="redirezione">
+<h2>Redirezione<a class="headerlink" href="#redirezione" title="Link to this heading"></a></h2>
+<p>I comandi standard:</p>
+<ul class="simple">
+<li><p>prendono l’input da <code class="docutils literal notranslate"><span class="pre">stdin</span></code>, <em>standard input</em>; di default <code class="docutils literal notranslate"><span class="pre">stdin</span></code> e’ l’input utente dato via terminale.</p></li>
+<li><p>scrivono l’output in <code class="docutils literal notranslate"><span class="pre">stdout</span></code>, <em>standard output</em>; di default <code class="docutils literal notranslate"><span class="pre">stdout</span></code> e’ il terminale.</p></li>
+<li><p>scrivono eventuali messaggi di errore in <code class="docutils literal notranslate"><span class="pre">stderr</span></code>, <em>standard error</em>; di default <code class="docutils literal notranslate"><span class="pre">stderr</span></code> e’ il terminale.</p></li>
+</ul>
+<p>Possiamo modificare questi nomi <em>simbolici</em> usando gli operatori di redirezione:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cmd</span> <span class="pre">&lt;</span> <span class="pre">file</span></code> costringe <code class="docutils literal notranslate"><span class="pre">cmd</span></code> ad usare i contenuti di <code class="docutils literal notranslate"><span class="pre">file</span></code> come <code class="docutils literal notranslate"><span class="pre">stdin</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmd</span> <span class="pre">&gt;</span> <span class="pre">file</span></code> costringe <code class="docutils literal notranslate"><span class="pre">cmd</span></code> a scrivere l’output nel file <code class="docutils literal notranslate"><span class="pre">file</span></code>. Se <code class="docutils literal notranslate"><span class="pre">file</span></code> non esiste viene creato, se esiste viene sovrascirtto.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cmd</span> <span class="pre">&gt;&gt;</span> <span class="pre">file</span></code> costringe <code class="docutils literal notranslate"><span class="pre">cmd</span></code> a scrivere l’output nel file <code class="docutils literal notranslate"><span class="pre">file</span></code>. Se <code class="docutils literal notranslate"><span class="pre">file</span></code> non esiste viene crato, se esiste l’output viene aggiunto alla fine del file.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Non tutti i comandi permettono di redirigere lo <code class="docutils literal notranslate"><span class="pre">stdin</span></code>. Tra
+questi ci sono <code class="docutils literal notranslate"><span class="pre">ls</span></code> e <code class="docutils literal notranslate"><span class="pre">cat</span></code>.</p>
+</div>
+<p><strong>Esempio</strong>. Lo <code class="docutils literal notranslate"><span class="pre">stdout</span></code> di <code class="docutils literal notranslate"><span class="pre">ls</span></code> puo’ comunque essere rediretto verso un
+file arbitrario:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">&gt;</span> <span class="n">lista_dei_file</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p><strong>Esempio</strong>. Prendiamo il comando <code class="docutils literal notranslate"><span class="pre">echo</span></code>: di default prende l’input
+(<code class="docutils literal notranslate"><span class="pre">stdin</span></code>) dal terminale (qui indicato come “keyboard”) e scrive (<code class="docutils literal notranslate"><span class="pre">stdout</span></code>)
+su terminale. Se lanciamo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="n">foo</span>
+</pre></div>
+</div>
+<p>quello che succede e’ che <code class="docutils literal notranslate"><span class="pre">echo</span></code> replica (fa l’eco) di tutto quello che
+scriviamo su terminale e lo stampa sul terminale. In immagini:</p>
+<a class="reference internal image-reference" href="old/figures/echo_foo.png"><img alt="Redirezione." class="align-center" src="old/figures/echo_foo.png" /></a>
+<p>Redirigendo lo <code class="docutils literal notranslate"><span class="pre">stdout</span></code> di <code class="docutils literal notranslate"><span class="pre">echo</span></code> a file invece lo costringiamo a
+redirigere il proprio output nel file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="n">foo</span> <span class="o">&gt;</span> <span class="n">temp</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>In immagini:</p>
+<a class="reference internal image-reference" href="old/figures/echo_foo_redirect.png"><img alt="Redirezione." class="align-center" src="old/figures/echo_foo_redirect.png" /></a>
+<p><strong>Esempio</strong>. Redirigere l’input di un comando funziona allo stesso modo.
+Prendiamo il comando <code class="docutils literal notranslate"><span class="pre">wc</span></code>. Di default prende l’input da schermo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ wc -w
+foo
+bar
+baz
+Control-d
+</pre></div>
+</div>
+<p>qui <code class="docutils literal notranslate"><span class="pre">Control-d</span></code> dice a <code class="docutils literal notranslate"><span class="pre">wc</span></code> che l’input finisce li’. L’output sara’ <code class="docutils literal notranslate"><span class="pre">3</span></code>.
+Pero’ possiamo costringere <code class="docutils literal notranslate"><span class="pre">wc</span></code> a leggere l’input da file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wc</span> <span class="o">-</span><span class="n">w</span> <span class="o">&lt;</span> <span class="n">temp</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>In immagini:</p>
+<a class="reference internal image-reference" href="old/figures/wc_redirect.png"><img alt="Redirezione." class="align-center" src="old/figures/wc_redirect.png" /></a>
+</section>
+<section id="pipelines">
+<h2>Pipelines<a class="headerlink" href="#pipelines" title="Link to this heading"></a></h2>
+<p>Per eseguire piu’ comandi in sequenza, possiamo usare <code class="docutils literal notranslate"><span class="pre">;</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmd1</span> <span class="p">;</span> <span class="n">cmd2</span> <span class="p">;</span> <span class="o">...</span> <span class="p">;</span> <span class="n">cmdN</span>
+</pre></div>
+</div>
+<p>In questo modo la shell esegue <code class="docutils literal notranslate"><span class="pre">cmd1</span></code>, poi <code class="docutils literal notranslate"><span class="pre">cmd2</span></code>, …, ed infine <code class="docutils literal notranslate"><span class="pre">cmdN</span></code>.</p>
+<p>Si possono combinare piu’ comandi in sequenza con l’operatore di
+concatetenamento <code class="docutils literal notranslate"><span class="pre">|</span></code> (pipe). La sintassi e’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmd1</span> <span class="o">|</span> <span class="n">cmd2</span> <span class="o">|</span> <span class="o">...</span> <span class="o">|</span> <span class="n">cmdN</span>
+</pre></div>
+</div>
+<p>L’operatore <code class="docutils literal notranslate"><span class="pre">|</span></code> collega lo <code class="docutils literal notranslate"><span class="pre">stdout</span></code> di un comando allo <code class="docutils literal notranslate"><span class="pre">stdin</span></code> del
+comando che lo segue.</p>
+<a class="reference internal image-reference" href="old/figures/echo_pipe_wc.png"><img alt="Una pipeline." class="align-center" src="old/figures/echo_pipe_wc.png" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Il simbolo <code class="docutils literal notranslate"><span class="pre">|</span></code> rappresenta un tubo!</p>
+</div>
+<p><strong>Esempio</strong>. Anticipando un po’ i tempi, se lancio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">|</span> <span class="n">tac</span>
+</pre></div>
+</div>
+<p>ottengo che le righe stampata da <code class="docutils literal notranslate"><span class="pre">ls</span></code> vengano prese da <code class="docutils literal notranslate"><span class="pre">tac</span></code>, che le
+stampa sottosopra.</p>
+<p><strong>Esempio</strong>. Per stampare su <code class="docutils literal notranslate"><span class="pre">stdout</span></code> la lista dei file nella mia home
+con <code class="docutils literal notranslate"><span class="pre">ls</span></code> e poi contare le righe con <code class="docutils literal notranslate"><span class="pre">wc</span></code>, scrivo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="o">~</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
+</pre></div>
+</div>
+<p>Posso passare argomenti ai vari comandi esattamente come se la pipeline non
+ci fosse.</p>
+<p><strong>Esempio</strong>. Per navigare comodamente l’output di una pipeline complessa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmd1</span> <span class="o">|</span> <span class="o">...</span> <span class="o">|</span> <span class="n">cmdN</span> <span class="o">|</span> <span class="n">less</span>
+</pre></div>
+</div>
+<p>Il comando <code class="docutils literal notranslate"><span class="pre">less</span></code> permette di vedere l’output pagina per pagina. Potete
+spostarvi nell’output come fareste nel manuale: vi spostate con le frecce,
+potete cercare con <code class="docutils literal notranslate"><span class="pre">/</span></code>, <em>etc.</em></p>
+</section>
+<section id="modificare-files">
+<h2>Modificare Files<a class="headerlink" href="#modificare-files" title="Link to this heading"></a></h2>
+<p>I comandi di base sono:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>comando</p></th>
+<th class="head"><p>funzione</p></th>
+<th class="head"><p>opzioni principali</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">echo</span></code></p></td>
+<td><p>stampa l’eco</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-n</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cat</span></code></p></td>
+<td><p>stampa il contenuto di un file</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-n</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tac</span></code></p></td>
+<td><p>stampa il contenuto sottosopra</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">head</span></code></p></td>
+<td><p>stampa l’inzio di un file</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-n</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tail</span></code></p></td>
+<td><p>stampa la fine di un file</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-n</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Esempio</strong>. Come gia’ visto sopra, il comando <code class="docutils literal notranslate"><span class="pre">echo</span></code> puo’ essere usato per
+creare file di testo, ad esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;I am the last line *ever*!&#39;</span> <span class="o">&gt;</span> <span class="n">output</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">echo</span> <span class="s1">&#39;You are not, you /fool/!&#39;</span> <span class="o">&gt;&gt;</span> <span class="n">output</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Qui le virgolette singole <code class="docutils literal notranslate"><span class="pre">'</span></code> servono per evitare che la shell reagisca ad
+eventuali caratteri speciali, nel nostro caso gli asterischi <code class="docutils literal notranslate"><span class="pre">*</span></code> e gli
+slash <code class="docutils literal notranslate"><span class="pre">/</span></code>.</p>
+</section>
+<section id="esercizi">
+<h2>Esercizi<a class="headerlink" href="#esercizi" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><dl class="simple">
+<dt>Partendo da <code class="docutils literal notranslate"><span class="pre">~</span></code>, controllare il risultato dopo ogni passaggio:</dt><dd><ol class="arabic simple">
+<li><p>Creare una directory <code class="docutils literal notranslate"><span class="pre">informatica</span></code>. E’ vuota?</p></li>
+<li><p>Creare una directory <code class="docutils literal notranslate"><span class="pre">esercizi</span></code>.</p></li>
+<li><p>Spostarsi in <code class="docutils literal notranslate"><span class="pre">informatica</span></code>.</p></li>
+<li><p>Sempre da dentro <code class="docutils literal notranslate"><span class="pre">informatica</span></code>, rinominare <code class="docutils literal notranslate"><span class="pre">esercizi</span></code> in <code class="docutils literal notranslate"><span class="pre">esercizi-shell</span></code>.</p></li>
+<li><p>Creare una copia di <code class="docutils literal notranslate"><span class="pre">esercizi-shell</span></code> in <code class="docutils literal notranslate"><span class="pre">informatica</span></code>.</p></li>
+<li><p>Rimuovere la copia originale di <code class="docutils literal notranslate"><span class="pre">esercizi-shell</span></code>.</p></li>
+<li><p>Creare in <code class="docutils literal notranslate"><span class="pre">informatica/esercizi-shell</span></code> un file <code class="docutils literal notranslate"><span class="pre">README</span></code>, il cui testo deve leggere: “<code class="docutils literal notranslate"><span class="pre">esercitazioni</span> <span class="pre">di</span> <span class="pre">informatica</span></code>”.</p></li>
+<li><p>Aggiungere a <code class="docutils literal notranslate"><span class="pre">README</span></code> una seconda riga: “<code class="docutils literal notranslate"><span class="pre">Parte</span> <span class="pre">1,</span> <span class="pre">introduzione</span> <span class="pre">alla</span> <span class="pre">shell</span></code>”.</p></li>
+<li><p>Tornare alla propria home.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Partendo da <code class="docutils literal notranslate"><span class="pre">~</span></code>, controllare il risultato dopo ogni passaggio:</dt><dd><ol class="arabic">
+<li><p>Creare un file di testo <code class="docutils literal notranslate"><span class="pre">a</span></code> in una nuova directory <code class="docutils literal notranslate"><span class="pre">original</span></code>. Il
+file deve contenere la stringa “<code class="docutils literal notranslate"><span class="pre">*</span></code>”.</p></li>
+<li><p>Prima di ciascuno dei punti successivi, creare una copia di <code class="docutils literal notranslate"><span class="pre">original</span></code>
+chiamata <code class="docutils literal notranslate"><span class="pre">temp</span></code>.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Creare in <code class="docutils literal notranslate"><span class="pre">temp</span></code> due copie di <code class="docutils literal notranslate"><span class="pre">a</span></code>, chiamate <code class="docutils literal notranslate"><span class="pre">b</span></code> e <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p></li>
+<li><p>Che differenza c’e’ tra <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">a</span></code> e <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">a</span></code>?</p></li>
+<li><p>Che differenza c’e’ tra <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">a</span> <span class="pre">b</span></code> e <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">a</span> <span class="pre">b;</span> <span class="pre">rm</span> <span class="pre">a</span></code>?</p></li>
+<li><p>Che differenza c’e’ tra <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">a</span> <span class="pre">b;</span> <span class="pre">cp</span> <span class="pre">a</span> <span class="pre">c</span></code> e <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">a</span> <span class="pre">b;</span> <span class="pre">mv</span> <span class="pre">b</span> <span class="pre">c</span></code>?</p></li>
+<li><p>Che differenza c’e’ tra <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">a</span> <span class="pre">z</span></code> e <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">z;</span> <span class="pre">mv</span> <span class="pre">a</span> <span class="pre">z</span></code>?</p></li>
+<li><p>Che differenza c’e’ tra <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">a</span> <span class="pre">z</span></code> e <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">z;</span> <span class="pre">echo</span> <span class="pre">a</span> <span class="pre">z</span></code>?</p></li>
+<li><p>Creare dieci file <code class="docutils literal notranslate"><span class="pre">a1</span></code>, …, <code class="docutils literal notranslate"><span class="pre">a10</span></code>, poi cancellarli con una sola invocazione di <code class="docutils literal notranslate"><span class="pre">rm</span></code>.</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Cosa fa il comando (alcuni dei seguenti comandi sono errati):</dt><dd><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-e</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">-n</span> <span class="pre">+</span> <span class="pre">25</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">|</span> <span class="pre">tail</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">.</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">cat</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">a</span> <span class="pre">&gt;</span> <span class="pre">b</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">&lt;&lt;</span> <span class="pre">a</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">&gt;</span> <span class="pre">a</span> <span class="pre">|</span> <span class="pre">tail</span> <span class="pre">&gt;</span> <span class="pre">b</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">&gt;</span> <span class="pre">a;</span> <span class="pre">rm</span> <span class="pre">&lt;</span> <span class="pre">a</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">KrustyIlKlown</span> <span class="pre">&gt;</span> <span class="pre">a</span></code>?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tac</span> <span class="pre">&lt;</span> <span class="pre">FILE1</span> <span class="pre">|</span> <span class="pre">tac</span> <span class="pre">&gt;</span> <span class="pre">FILE2</span></code></p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Che differenza c’e’ tra (alcuni dei seguenti comandi sono errati):</dt><dd><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">&lt;</span> <span class="pre">a</span> <span class="pre">&gt;</span> <span class="pre">b</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">a</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">&gt;</span> <span class="pre">b</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tac</span> <span class="pre">a</span> <span class="pre">|</span> <span class="pre">tac</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">&gt;</span> <span class="pre">b</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tac</span> <span class="pre">&lt;</span> <span class="pre">a</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">|</span> <span class="pre">tac</span> <span class="pre">&gt;</span> <span class="pre">b</span></code></p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Che differenza c’e’ tra:</dt><dd><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tac</span> <span class="pre">a</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">-n</span> <span class="pre">25</span> <span class="pre">&gt;</span> <span class="pre">b</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">a</span> <span class="pre">|</span> <span class="pre">tail</span> <span class="pre">-n</span> <span class="pre">25</span> <span class="pre">&gt;</span> <span class="pre">b</span></code></p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Che differenza c’e’ tra:</dt><dd><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">a</span> <span class="pre">|</span> <span class="pre">tail</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">a</span> <span class="pre">&gt;</span> <span class="pre">temp;</span> <span class="pre">tail</span> <span class="pre">a</span></code></p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Che differenza c’e’ tra:</dt><dd><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">file</span> <span class="pre">|</span> <span class="pre">head</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">file</span></code></p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Come faccio a:</dt><dd><ol class="arabic simple">
+<li><p>stampare l’ennesima riga di un file?</p></li>
+<li><p>stampare le righe dalla <code class="docutils literal notranslate"><span class="pre">n</span></code> alla <code class="docutils literal notranslate"><span class="pre">n+m</span></code> di un file?</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Eseguire in ordine:</dt><dd><ol class="arabic simple">
+<li><p>Creare un file <code class="docutils literal notranslate"><span class="pre">data/b</span></code> che contenga le stesse righe di <code class="docutils literal notranslate"><span class="pre">data/a</span></code>, ordinate dalla 26 alla 50, dalla 1 alla 25, e dalla 51 alla 100, in quest’ordine.</p></li>
+<li><p>Creare un file <code class="docutils literal notranslate"><span class="pre">data/c</span></code> che contenga le stesse righe di <code class="docutils literal notranslate"><span class="pre">data/a</span></code>, ordinate dalla 26 alla 50, dalla 25 alla 1, e dalla 51 alla 100, in quest’ordine.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Luca Marchetti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

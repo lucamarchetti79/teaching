@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shell: Parte 2 (Soluzioni) &mdash; Laboratorio di Informatica a.a. 2024/2025 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6e1bffa2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Laboratorio di Informatica
+          </a>
+              <div class="version">
+                a.a. 2024/2025
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Laboratorio di Informatica</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Shell: Parte 2 (Soluzioni)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/old/shell_commands2_solutions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="shell-parte-2-soluzioni">
+<h1>Shell: Parte 2 (Soluzioni)<a class="headerlink" href="#shell-parte-2-soluzioni" title="Link to this heading"></a></h1>
+<ol class="arabic">
+<li><dl class="simple">
+<dt>Soluzioni:</dt><dd><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">informatica</span></code>. Verifico che sia vuota con <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">informatica</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">esercizi</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">informatica</span></code>. Verifico con <code class="docutils literal notranslate"><span class="pre">pwd</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">../esercizi</span> <span class="pre">../esercizi-shell</span></code>. Verifico con <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">..</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-r</span> <span class="pre">../esercizi-shell</span> <span class="pre">.</span></code>. Verifico con <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">../esercizi-shell</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">'esercitazioni</span> <span class="pre">di</span> <span class="pre">informatica'</span> <span class="pre">&gt;</span> <span class="pre">esercizi-shell/README</span></code>. Verifico con <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">esercizi-shell/README</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">'Parte</span> <span class="pre">1,</span> <span class="pre">introduzione</span> <span class="pre">alla</span> <span class="pre">shell'</span> <span class="pre">&gt;&gt;</span> <span class="pre">esercizi-shell/README</span></code>. Idem.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span></code>.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Soluzioni:</dt><dd><ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">original</span></code>, seguito da <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">'*'</span> <span class="pre">&gt;</span> <span class="pre">original/a</span></code>.</p></li>
+<li><p>Per comodita’, entro in <code class="docutils literal notranslate"><span class="pre">temp</span></code> con <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">temp</span></code>. Dopo ogni passaggio, faccio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
+<span class="n">rm</span> <span class="o">-</span><span class="n">r</span> <span class="n">temp</span>
+<span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="n">original</span> <span class="n">temp</span>
+<span class="n">cd</span> <span class="n">temp</span>
+</pre></div>
+</div>
+<p>Soluzioni:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">a</span> <span class="pre">b;</span> <span class="pre">cp</span> <span class="pre">a</span> <span class="pre">c</span></code>. Verifico con <code class="docutils literal notranslate"><span class="pre">ls;</span> <span class="pre">cat</span> <span class="pre">b;</span> <span class="pre">cat</span> <span class="pre">c</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">a</span></code> stampa la stringa “<code class="docutils literal notranslate"><span class="pre">a</span></code>” a schermo; <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">a</span></code> stampa il
+nome del file <code class="docutils literal notranslate"><span class="pre">a</span></code> (che e’ <code class="docutils literal notranslate"><span class="pre">a</span></code>…); <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">a</span></code> stampa il contenuto
+del file <code class="docutils literal notranslate"><span class="pre">a</span></code>, cioe’ le due righe che abbiamo scritto prima.</p></li>
+<li><p>Nessuna. <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">a</span> <span class="pre">b</span></code> rinomina <code class="docutils literal notranslate"><span class="pre">a</span></code> in <code class="docutils literal notranslate"><span class="pre">b</span></code>. <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">a</span> <span class="pre">b;</span> <span class="pre">rm</span> <span class="pre">aa</span></code> prima
+fa prima una copia di <code class="docutils literal notranslate"><span class="pre">a</span></code> chiamata <code class="docutils literal notranslate"><span class="pre">b</span></code>, poi rimuove <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li>
+<li><p>Nel primo caso mi ritrovo con tre copie di <code class="docutils literal notranslate"><span class="pre">a</span></code>, nel second con un
+solo file: <code class="docutils literal notranslate"><span class="pre">c</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">a</span> <span class="pre">z</span></code> rinomina <code class="docutils literal notranslate"><span class="pre">a</span></code> in <code class="docutils literal notranslate"><span class="pre">z</span></code>; quindi <code class="docutils literal notranslate"><span class="pre">z</span></code> e’ un file.
+<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">z;</span> <span class="pre">mv</span> <span class="pre">a</span> <span class="pre">z</span></code> prima crea una directory <code class="docutils literal notranslate"><span class="pre">z</span></code>, poi ci mette dentro <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">a</span> <span class="pre">z</span></code> stampa a schermo la stringa <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">z</span></code>.
+<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">z;</span> <span class="pre">echo</span> <span class="pre">a</span> <span class="pre">z</span></code> fa la stessa cosa, ma crea anche una directory di nome <code class="docutils literal notranslate"><span class="pre">z</span></code>.</p></li>
+<li><p>Cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="n">qualcosa</span> <span class="o">&gt;</span> <span class="n">a1</span>
+<span class="o">...</span>
+<span class="n">echo</span> <span class="n">qualcosa</span> <span class="o">&gt;</span> <span class="n">a10</span>
+<span class="n">rm</span> <span class="n">a</span><span class="o">*</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Soluzioni:</dt><dd><ol class="arabic simple">
+<li><p>Da’ errore. <code class="docutils literal notranslate"><span class="pre">-e</span></code> non e’ un’opzione valida per <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p></li>
+<li><p>Si pianta. <code class="docutils literal notranslate"><span class="pre">cat</span></code> si aspetta un file di input: noi non glielo diamo,
+e lui resta in attesa. Dato che <code class="docutils literal notranslate"><span class="pre">cat</span></code> e’ fermo, il resto della pipeline
+resta in attesa. Siamo costretti ad uccidere la pipeline con <code class="docutils literal notranslate"><span class="pre">Control-c</span></code>.</p></li>
+<li><p>Da’ errore. <code class="docutils literal notranslate"><span class="pre">.</span></code> e’ una directory, <code class="docutils literal notranslate"><span class="pre">cat</span></code> si aspetta un file.</p></li>
+<li><p>Stampa la stringa “<code class="docutils literal notranslate"><span class="pre">cat</span></code>” a schermo. (Non esegue il comando <code class="docutils literal notranslate"><span class="pre">cat</span></code>…)</p></li>
+<li><p>Stampa il contenuto del file <code class="docutils literal notranslate"><span class="pre">a</span></code> (se esiste), ma visto che lo <code class="docutils literal notranslate"><span class="pre">stdout</span></code>
+e’ rediretto, mette l’output di <code class="docutils literal notranslate"><span class="pre">cat</span></code> nel file <code class="docutils literal notranslate"><span class="pre">b</span></code>. E’ equivalente
+a <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">a</span> <span class="pre">b</span></code>.</p></li>
+<li><p>Da’ errore: <code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code> non e’ un operatore di redirezione valido.</p></li>
+<li><p>Non ha senso: stiamo cercando di redirigere lo <code class="docutils literal notranslate"><span class="pre">stdout</span></code> di <code class="docutils literal notranslate"><span class="pre">head</span></code> sia
+verso il file <code class="docutils literal notranslate"><span class="pre">a</span></code> che, con la pipe <code class="docutils literal notranslate"><span class="pre">|</span></code>, verso lo <code class="docutils literal notranslate"><span class="pre">stdin</span></code> di <code class="docutils literal notranslate"><span class="pre">tail</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code> mette in <code class="docutils literal notranslate"><span class="pre">a</span></code> la lista dei file nella directory corrente; fin
+qui tutto ok. Mai <code class="docutils literal notranslate"><span class="pre">rm</span></code> non supporta la redirezione, si aspetta invece
+il nome di un file! Quindi finisce per dare errore.</p></li>
+<li><p>Scrive il testo “<code class="docutils literal notranslate"><span class="pre">KrustyIlKlown</span></code>” nel file <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li>
+<li><p>Il primo <code class="docutils literal notranslate"><span class="pre">tac</span></code> legge <code class="docutils literal notranslate"><span class="pre">FILE1</span></code> lo stampa a schermo rovesciato; pero’
+la pipe ne redirige lo <code class="docutils literal notranslate"><span class="pre">stdout</span></code> al secondo <code class="docutils literal notranslate"><span class="pre">tac</span></code>: l’effetto
+complessivo e’ che <code class="docutils literal notranslate"><span class="pre">FILE1</span></code> viene stampato a schermo nel verso giusto.
+Infine, l’ultimo <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> mette il contenuto di <code class="docutils literal notranslate"><span class="pre">FILE1</span></code> in <code class="docutils literal notranslate"><span class="pre">FILE2</span></code>.
+Il tutto e’ equivalente a <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">FILE1</span> <span class="pre">FILE2</span></code>.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Soluzioni:</dt><dd><ol class="arabic simple">
+<li><p>Stampa le <em>prime</em> dieci righe di <code class="docutils literal notranslate"><span class="pre">a</span></code> in <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
+<li><p>Idem.</p></li>
+<li><p>Idem.</p></li>
+<li><p>Stampa le <em>ultime</em> dieci righe di <code class="docutils literal notranslate"><span class="pre">a</span></code> in <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Soluzioni:</dt><dd><ol class="arabic simple">
+<li><p>Stampa <code class="docutils literal notranslate"><span class="pre">a</span></code> sottosopra, prende le prime venticinque righe, le mette in <code class="docutils literal notranslate"><span class="pre">b</span></code>. Quindi <code class="docutils literal notranslate"><span class="pre">b</span></code> contiene le ultime venticinque righe di <code class="docutils literal notranslate"><span class="pre">a</span></code> sottosopra.</p></li>
+<li><p>Stampa <code class="docutils literal notranslate"><span class="pre">a</span></code>, prende le ultime venticinque righe, le mette in <code class="docutils literal notranslate"><span class="pre">b</span></code>. Quindi <code class="docutils literal notranslate"><span class="pre">b</span></code> contiene ultime venticinque righe di <code class="docutils literal notranslate"><span class="pre">a</span></code> ma <em>non</em> sottosopra.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Soluzioni:</dt><dd><ol class="arabic simple">
+<li><p>Stampa le prime dieci righe di <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li>
+<li><p>Mette le prime dieci righe di <code class="docutils literal notranslate"><span class="pre">a</span></code> nel file <code class="docutils literal notranslate"><span class="pre">temp</span></code>, poi stampa le ultime dieci righe di <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Soluzioni:</dt><dd><ol class="arabic simple">
+<li><p>Stampa <code class="docutils literal notranslate"><span class="pre">file</span></code> e ne tiene solo le prime dieci righe.</p></li>
+<li><p>Si pianta. Come sopra, <code class="docutils literal notranslate"><span class="pre">cat</span></code> si aspetta un file in input; non non glielo diamo
+e lui resta in attesa.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Soluzioni:</dt><dd><ol class="arabic simple">
+<li><p>Stampo le prime n del file, di queste tengo solo l’ultima: <code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">-n</span> <span class="pre">n</span> <span class="pre">file</span> <span class="pre">|</span> <span class="pre">tail</span> <span class="pre">-n</span> <span class="pre">1</span></code>.</p></li>
+<li><p>Assumiamo che tot=n+m. Stampo le ultime tot righe del file, di queste tengo solo le ultime m: <code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">-n</span> <span class="pre">tot</span> <span class="pre">file</span> <span class="pre">|</span> <span class="pre">tail</span> <span class="pre">-n</span> <span class="pre">m</span></code>.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Soluzioni:</dt><dd><ol class="arabic">
+<li><p>Eseguo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">50</span> <span class="n">data</span><span class="o">/</span><span class="n">a</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">25</span> <span class="o">&gt;</span> <span class="n">data</span><span class="o">/</span><span class="n">b</span>
+<span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">25</span> <span class="n">data</span><span class="o">/</span><span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">data</span><span class="o">/</span><span class="n">b</span>
+<span class="n">tail</span> <span class="o">-</span><span class="n">n</span> <span class="mi">50</span> <span class="n">data</span><span class="o">/</span><span class="n">a</span> <span class="o">&gt;&gt;</span> <span class="n">data</span><span class="o">/</span><span class="n">b</span>
+</pre></div>
+</div>
+</li>
+<li><p>Come sopra, ma il secondo comando diventa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">head</span> <span class="o">-</span><span class="n">n</span> <span class="mi">25</span> <span class="n">data</span><span class="o">/</span><span class="n">a</span> <span class="o">|</span> <span class="n">tac</span> <span class="o">&gt;&gt;</span> <span class="n">data</span><span class="o">/</span><span class="n">b</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Luca Marchetti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

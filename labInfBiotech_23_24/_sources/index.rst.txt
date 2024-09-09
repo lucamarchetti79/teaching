@@ -1,0 +1,62 @@
+==========================
+Laboratorio di Informatica
+==========================
+
+
+|
+    Il seguente materiale didattico è stato inizialmente scritto e curato  dal Dr. Stefano
+    Teso, dal Dr. Paolo Morettin e da Antonio Longa, che mi hanno gentilmente concesso di utilizzarlo per questa
+    edizione del corso.
+|
+    
+ 
+|
+
+.. hint::
+   Se avete dubbi o domande potete rivolgervi al tutore del corso:
+
+   * **Stefano Giampiccolo:**  giampiccolo at cosbi dot eu
+   
+   oppure direttamente a me:
+   
+   * **Luca Marchetti:**  luca dot marchetti at unitn dot it
+   
+|   
+ 
+
+
+Bibliografia
+------------
+**Tutorial ufficiale del linguaggio Python:** `<https://pytutorial-it.readthedocs.io/it/python3.12/>`_
+
+**Allen Downey, Pensare in Python — Come pensare da Informatico, Green Tea Press**
+`<https://github.com/AllenDowney/ThinkPythonItalian/raw/master/thinkpython_italian.pdf>`_
+	
+
+|
+
+
+Note Introduttive
+-----------------
+
+* Assumeremo di lavorare *esclusivamente* con file di testo, indipendentemente
+  dall'estensione dei file.
+* La shell e Python non capiscono le lettere accentate, non usatele.
+* Il comportamento di alcuni comandi puo' variare tra varianti diverse di Unix,
+  ad esempio GNU/Linux e MacOS X.
+
+
+|
+.. highlight:: Virtualbox e Ubuntu
+
+.. include:: python_virtualbox_ubuntu.rst
+|
+
+
+.. toctree::
+    :maxdepth: 2
+
+    shell_basics.rst
+
+    shell_commands1.rst	      
+
