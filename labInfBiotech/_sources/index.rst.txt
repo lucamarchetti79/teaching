@@ -60,3 +60,4 @@ Note Introduttive
 
     shell_commands1.rst	      
 
+    python_basics.rst
