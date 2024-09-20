@@ -57,7 +57,12 @@ Note Introduttive
     :maxdepth: 2
 
     shell_basics.rst
+    shell_basics_sol.rst
 
     shell_commands1.rst	      
 
     python_basics.rst
+
+    python_moduli.rst
+
+    python_numbers.rst
