@@ -63,6 +63,7 @@ Note Introduttive
     shell_commands1_sol.rst	      
 
     python_basics.rst
+    python_basics_sol.rst
 
     python_moduli.rst
 
