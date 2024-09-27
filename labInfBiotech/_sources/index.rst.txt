@@ -66,5 +66,7 @@ Note Introduttive
     python_basics_sol.rst
 
     python_moduli.rst
+    python_moduli_sol.rst
 
     python_numbers.rst
+    python_numbers_sol.rst
