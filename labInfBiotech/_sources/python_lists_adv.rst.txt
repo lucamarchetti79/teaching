@@ -373,12 +373,12 @@ condizione, ma trasformati in qualche modo::
 **Esempio**. Dati gli interi da 0 a 10, voglio tenere solo quelli pari e
 dividerli per 3::
 
-    pari_diviso_3 = [float(numero) / 3
+    pari_diviso_3 = [numero / 3
                      for numero in range(10)
                      if numero % 2 == 0]
 
 Notate che la condizione opera su ``numero`` (l'elemento originale della lista
-oridinale, non trasformato), non su ``float(numero) / 3``.
+oridinale, non trasformato), non su ``numero / 3``.
 
 ****
 
