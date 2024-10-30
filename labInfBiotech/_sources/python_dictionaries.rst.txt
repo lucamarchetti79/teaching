@@ -595,7 +595,7 @@ Esercizi
       *Hint*: posso usare ``items()``?
 
    #. Usare una *list comprehension* per estrarre le chiavi dal risultato
-      di ``items()``. Poi fare la stessa cosa con le chiavi.
+      di ``items()``. Poi fare la stessa cosa con i valori.
 
 #. Dato::
 
