@@ -263,6 +263,8 @@ Ritorna             Metodo                      Significato
 ``dict_keys``       ``dict.keys()``             Restituisce una **vista** sulle chiavi
 ``dict_values``     ``dict.values()``           Restituisce una **vista** sui valori
 ``dict_items``      ``dict.items()``            Restituisce una **vista** sulle coppie chiave-valore
+``object``          ``dict.pop(k)``             Resituisce il valore della chiave e RIMUOVE l'elemento dal dizionario
+``None``            ``dict.clear()``            Svuota il dizionario
 =================== =========================== ====================================================
 
 ****
