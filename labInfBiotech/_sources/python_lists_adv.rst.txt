@@ -2,9 +2,29 @@
 Lezione 6.1 - Python: Liste, concetti avanzati
 =============
 
-
 Metodi Stringhe-Liste
 ---------------------
+
+Essendo la stringa una sorta di sequenza ordinata di caratteri, non e' difficile passare
+da una stringa ad una lista. Questa operazione potrebbe essere svolta direttamente invocando 
+i costruttori ``str`` e ``list``. Tuttavia questa operazione non genera sempre i risultati
+attesi. Infatti, convertire in lista una stringa consente di ottenere una lista di testi
+separando i caratteri::
+
+    >>> testo = "ciao"
+    >>> lista_testo = list(testo)
+    >>> lista_testo
+        ['c', 'i', 'a', 'o']
+        
+ma convertire direttamente una lista di testi in una stringa non genera la lista di
+partenza come ci si aspetterebbe::
+    
+    >>> stringa_lista_testo = str(lista_testo)
+    >>> stringa_lista_testo
+        "['c', 'i', 'a', 'o']"
+        
+Per risolvere il problema, il linguaggio mette a disposizione alcuni metodi per facilitare
+le operazioni.
 
 =============== =========================== =================================================
 Ritorna         Metodo                      Significato
