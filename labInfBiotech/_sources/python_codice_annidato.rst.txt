@@ -1,9 +1,6 @@
 ===========================
-Lezione 9 - Python: Statement Complessi (2)
+Lezione 9b - Python: Codice annidato
 ===========================
-
-Codice annidato
----------------
 
 Posso combinare un numero arbitrario di statement complessi (``if``, ``for`` e
 ``while``) usando l'indentazione, inclusi cicli innestati.

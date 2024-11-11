@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lezione 8 - Soluzioni &mdash; Laboratorio di Informatica a.a. 2024/2025 documentation</title>
+  <title>Lezione 9a - Soluzioni &mdash; Laboratorio di Informatica a.a. 2024/2025 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -68,8 +68,11 @@
 <li class="toctree-l1"><a class="reference internal" href="python_dictionaries_sol.html">Lezione 7.1 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_sets.html">Lezione 7.2 - Python: Sets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_sets_sol.html">Lezione 7.2 - Soluzioni</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python_io.html">Lezione 7.3 - Python: Input-Output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python_complex_statements_1.html">Lezione 8 - Python: Statement Complessi (1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Lezione 8a - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io_sol.html">Lezione 8a - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_if.html">Lezione 8b - Python: Codice condizionale: <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_for_while.html">Lezione 9a - Python: Codici iterativi (cicli)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_codice_annidato.html">Lezione 9b - Python: Codice annidato</a></li>
 </ul>
 
         </div>
@@ -86,9 +89,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Lezione 8 - Soluzioni</li>
+      <li class="breadcrumb-item active">Lezione 9a - Soluzioni</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/python_complex_statements_1_sol.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/python_for_while_sol.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -96,221 +99,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="lezione-8-soluzioni">
-<h1>Lezione 8 - Soluzioni<a class="headerlink" href="#lezione-8-soluzioni" title="Link to this heading"></a></h1>
-<section id="if">
-<h2>If<a class="headerlink" href="#if" title="Link to this heading"></a></h2>
-<ol class="arabic">
-<li><p>Soluzione:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi un numero: &quot;</span><span class="p">))</span>
-
-<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pari&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dispari&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Uso <code class="docutils literal notranslate"><span class="pre">else</span></code> perche’ pari e dispari sono le uniche due possibilita’.</p>
-<p>Volendo, posso esplicitare la terza possibilita’, cioe’ il caso in cui
-<code class="docutils literal notranslate"><span class="pre">numero</span></code> non e’ ne’ pari ne’ dispari, cosi’:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pari&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dispari&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;impossibile!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>ma il codice nell’<code class="docutils literal notranslate"><span class="pre">else</span></code> non verra’ eseguito per nessun valore di <code class="docutils literal notranslate"><span class="pre">numero</span></code>!</p>
-<p>Visto che le due possibilita’ (<code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ pari, <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ dispari)
-sono mutualmente esclusive, posso anche permettermi di scrivere:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pari&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dispari&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>perche’ anche in assenza dell’<code class="docutils literal notranslate"><span class="pre">else</span></code>, uno e solo uno dei due
-<code class="docutils literal notranslate"><span class="pre">if</span></code> puo’ essere eseguito.</p>
-</li>
-<li><p>Soluzione:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi un razionale: &quot;</span><span class="p">))</span>
-
-<span class="k">if</span> <span class="n">numero</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">numero</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;okay&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Non servono ne’<code class="docutils literal notranslate"><span class="pre">elif</span></code> (c’e’ una sola condizione) ne’ <code class="docutils literal notranslate"><span class="pre">else</span></code> (se la
-condizione e’ falsa, non devo fare niente).</p>
-</li>
-<li><p>Soluzione:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi due numeri separati da spazio: &quot;</span><span class="p">)</span>
-
-<span class="n">parole</span> <span class="o">=</span> <span class="n">risposta</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-<span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">parole</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">parole</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="k">if</span> <span class="n">numero1</span> <span class="o">&gt;</span> <span class="n">numero2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;primo&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">numero2</span> <span class="o">&gt;</span> <span class="n">numero1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;secondo&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nessuno dei due&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>In alternativa:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi due numeri separati da spazio: &quot;</span><span class="p">)</span>
-
-<span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">parola</span><span class="p">)</span> <span class="k">for</span> <span class="n">parola</span> <span class="ow">in</span> <span class="n">risposta</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
-
-<span class="k">if</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;primo&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;secondo&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nessuno dei due&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-<li><p>Soluzione:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">oroscopo_di</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;gennaio&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna estrema&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;febbraio&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna galattica&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;marzo&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna incredibile&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;aprile&quot;</span><span class="p">:</span> <span class="s2">&quot;ultra-fortuna&quot;</span><span class="p">,</span>
-<span class="p">}</span>
-
-<span class="n">mese</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;dimmi il tuo mese di nascita: &quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">mese</span> <span class="ow">in</span> <span class="n">oroscopo_di</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">oroscopo_di</span><span class="p">[</span><span class="n">mese</span><span class="p">])</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;non disponibile&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-<li><p>Soluzione:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">percorso</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi il percorso: &quot;</span><span class="p">)</span>
-
-<span class="n">righe</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">percorso</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;vuoto&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;piccolo&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>
-<span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;medio&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;grande&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>
-</pre></div>
-</div>
-<p>Si noti che non e’ necessario specificare per intero le condizioni: nel
-codice abbrevio <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">&lt;</span> <span class="pre">len(righe)</span> <span class="pre">&lt;</span> <span class="pre">1000</span></code> con <code class="docutils literal notranslate"><span class="pre">len(righe)</span> <span class="pre">&lt;</span> <span class="pre">1000</span></code>. Me
-lo posso permettere perche’ quando <code class="docutils literal notranslate"><span class="pre">len(righe)</span></code> e’ minore di <code class="docutils literal notranslate"><span class="pre">100</span></code>
-eseguo il primo <code class="docutils literal notranslate"><span class="pre">elif</span></code>: il secondo <code class="docutils literal notranslate"><span class="pre">elif</span></code> non viene neanche considerato.</p>
-</li>
-<li><p>Soluzione:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">punto1</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">parola</span><span class="p">)</span> <span class="k">for</span> <span class="n">parola</span>
-          <span class="ow">in</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi tre coordinate: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
-
-<span class="n">punto2</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">parola</span><span class="p">)</span> <span class="k">for</span> <span class="n">parola</span>
-          <span class="ow">in</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi tre coordinate: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
-
-<span class="k">if</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> \
-   <span class="n">punto2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">diff_x</span> <span class="o">=</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">diff_y</span> <span class="o">=</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">diff_z</span> <span class="o">=</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la distanza e&#39;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">diff_x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">diff_y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span>  <span class="n">diff_z</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Si noti che il <code class="docutils literal notranslate"><span class="pre">print</span></code> e’ <em>dentro</em> l’<code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
-</li>
-<li><p>Soluzione: sappiamo che <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ un intero arbitrario (puo’ essere
-qualunque intero deciso dall’utente). Il codice che ci interessa e’ questo:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 3!&quot;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;non divide 3!&quot;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;boh&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>L’<code class="docutils literal notranslate"><span class="pre">if</span></code>, l’<code class="docutils literal notranslate"><span class="pre">elif</span></code> e l’<code class="docutils literal notranslate"><span class="pre">else</span></code> formano una catena: solo uno tra loro
-viene eseguito.</p>
-<ol class="arabic simple">
-<li><p>L’<code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ divisibile per tre.</p></li>
-<li><p>L’<code class="docutils literal notranslate"><span class="pre">elif</span></code> viene eseguito se e solo se l’<code class="docutils literal notranslate"><span class="pre">if</span></code> precedente non viene
-eseguito e se <code class="docutils literal notranslate"><span class="pre">numero</span></code> <em>non</em> e’ divisibile per tre.</p></li>
-<li><p>L’<code class="docutils literal notranslate"><span class="pre">else</span></code> viene eseguito quando ne’ l’<code class="docutils literal notranslate"><span class="pre">if</span></code> ne’ l’<code class="docutils literal notranslate"><span class="pre">elif</span></code> vengono
-eseguito.</p></li>
-</ol>
-<p>Visto che non ci sono numeri che non siano ne’ divisibili ne’ non-divisibili
-per <code class="docutils literal notranslate"><span class="pre">3</span></code>, non resta alcuna altra possibilita’. O viene eseguito l’<code class="docutils literal notranslate"><span class="pre">if</span></code>,
-o viene eseguito l’<code class="docutils literal notranslate"><span class="pre">elif</span></code>: l’<code class="docutils literal notranslate"><span class="pre">else</span></code> non viene <em>mai</em> eseguito.</p>
-<p>Quindi la risposta e’ no.</p>
-</li>
-<li><p>Soluzione: come sopra, <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ un intero arbitrario. Il codice e’:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi un numero: &quot;</span><span class="p">))</span>
-<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 2!&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 3!&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;boh&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Qui non ci sono “catene” di <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> ed <code class="docutils literal notranslate"><span class="pre">else</span></code>: ci sono tre <code class="docutils literal notranslate"><span class="pre">if</span></code>
-indipendenti.</p>
-<ol class="arabic simple">
-<li><p>Il primo <code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ divisibile per
-due.</p></li>
-<li><p>Il secondo <code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ divisibile
-per tre.</p></li>
-<li><p>Il terzo <code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> <em>non</em> e’ divisibile
-ne’ per due, ne’ per tre.</p></li>
-</ol>
-<p>Se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ es. 6, che e’ divisibile sia per due che per tre, allora i
-primi due <code class="docutils literal notranslate"><span class="pre">if</span></code> vengono entrambi eseguiti, mentre il terzo non viene
-eseguito.</p>
-<p>Se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ es. 5, che non e’ divisibile ne’ per due ne’ per tre, allora
-i primi due <code class="docutils literal notranslate"><span class="pre">if</span></code> <em>non</em> vengono eseguiti; in compenso viene eseguito il
-terzo.</p>
-<p>Quindi la risposta e’ si’.</p>
-<p>(Altri esempi: per <code class="docutils literal notranslate"><span class="pre">numero</span> <span class="pre">=</span> <span class="pre">2</span></code> viene eseguito solo il primo <code class="docutils literal notranslate"><span class="pre">if</span></code>, per
-<code class="docutils literal notranslate"><span class="pre">numero</span> <span class="pre">=</span> <span class="pre">3</span></code> solo il secondo. Si noti pero’ che non c’e’ verso di <em>non</em>
-eseguire nessuno uno dei tre <code class="docutils literal notranslate"><span class="pre">if</span></code>.)</p>
-</li>
-<li><p>Soluzione:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;somma o prodotto?: &quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;somma&quot;</span><span class="p">:</span>
-    <span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 1: &quot;</span><span class="p">))</span>
-    <span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 2: &quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la somma e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span><span class="p">)</span>
-
-<span class="k">elif</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;prodotto&quot;</span><span class="p">:</span>
-    <span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 1: &quot;</span><span class="p">))</span>
-    <span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 2: &quot;</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il prodotto e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">*</span> <span class="n">numero2</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Usare un <code class="docutils literal notranslate"><span class="pre">if</span></code> o un <code class="docutils literal notranslate"><span class="pre">elif</span></code> non altera l’esecuzione del programma.</p>
-<p>Posso semplificare cosi’:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;somma o prodotto?: &quot;</span><span class="p">)</span>
-<span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 1: &quot;</span><span class="p">))</span>
-<span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 2: &quot;</span><span class="p">))</span>
-
-<span class="k">if</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;somma&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la somma e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span><span class="p">)</span>
-
-<span class="k">elif</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;prodotto&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il prodotto e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">*</span> <span class="n">numero2</span><span class="p">)</span>
-</pre></div>
-</div>
-</li>
-</ol>
-</section>
+  <section id="lezione-9a-soluzioni">
+<h1>Lezione 9a - Soluzioni<a class="headerlink" href="#lezione-9a-soluzioni" title="Link to this heading"></a></h1>
 <section id="for-e-while">
 <h2>For e While<a class="headerlink" href="#for-e-while" title="Link to this heading"></a></h2>
 <ol class="arabic">
