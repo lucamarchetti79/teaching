@@ -96,7 +96,12 @@ Note Introduttive
     python_io_sol.rst
 
     python_if.rst
+    python_if_sol.rst
     
     python_for_while.rst
+    python_for_while_sol.rst
 
     python_codice_annidato.rst
+    python_codice_annidato_sol.rst
+
+    python_functions.rst
