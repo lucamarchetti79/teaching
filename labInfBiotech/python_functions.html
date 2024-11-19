@@ -221,6 +221,73 @@ questo codice e’ equivalente a:</p>
 </pre></div>
 </div>
 <p>Ora tutto torna: faccio la somma e ne stampo il risultato.</p>
+<p>Ovviamente il codice sopra restituisce errore se un programmatore poco attento inserisce
+come argomenti delle variabili non numeriche. Una cosa addirittura peggiore potrebbe
+capitare se l’utente passasse per errore delle variabili non numeriche per cui e’ comunque
+definita la somma. Ad esempio, cosa capiterebbe se lanciassimo la funzione
+<a href="#id1"><span class="problematic" id="id2">``</span></a>stampa_somma()``passando due stringhe come argomento? Vediamolo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># lancio la funzione per errore su due testi</span>
+<span class="n">risultato</span> <span class="o">=</span> <span class="n">calcola_somma</span><span class="p">(</span><span class="s2">&quot;Luca&quot;</span><span class="p">,</span> <span class="s2">&quot;Marchetti&quot;</span><span class="p">)</span>
+
+<span class="c1"># stampa la concatenazione dei due testi invece che la somma numerica!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">risultato</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Per risolvere il problema, dovremmo verificare che gli argomenti siano del tipo giusto
+all’interno della funzione. Questa funzionalita’ si puo’ ottenere usando la funzione
+<code class="docutils literal notranslate"><span class="pre">isinstance(nome_variabile,tipo)</span></code> che restituisce <code class="docutils literal notranslate"><span class="pre">True</span></code> quando la variabile indicata
+ha il tipo richiesto. Per esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># creo una variabile numerica</span>
+<span class="n">numero1</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">numero1</span><span class="p">,</span><span class="nb">int</span><span class="p">))</span> <span class="c1"># stampa True</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">numero1</span><span class="p">,</span><span class="nb">float</span><span class="p">))</span> <span class="c1"># stampa False</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">numero1</span><span class="p">,</span><span class="nb">str</span><span class="p">))</span> <span class="c1"># stampa False</span>
+</pre></div>
+</div>
+<p>La funzione <code class="docutils literal notranslate"><span class="pre">stampa_somma()</span></code> potrebbe allora essere rivista nel seguente modo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stampa_somma_interi</span><span class="p">(</span><span class="n">numero1</span><span class="p">,</span> <span class="n">numero2</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">numero1</span><span class="p">,</span><span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">numero2</span><span class="p">,</span><span class="nb">int</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span>
+
+    <span class="c1"># questo codice verra&#39; eseguito solo quando non posso ritornare la somma corretta</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Errore: la somma e&#39; definita solo per argomenti interi, ritorno zero!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Quando si creano funzioni, appare critico poter spiegare per bene come tali funzioni
+possano essere riutilizzate in altri programmi od anche all’interno del programma
+stesso. Per farlo e’ sempre bene commentare dettagliatamente il codice.</p>
+<p>Esiste un commento particolarmente importante che puo’ essere aggiunto
+come prima linea subito dopo la definizione di funzione, utilizzando le triple
+virgolette:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">stampa_somma_interi</span><span class="p">(</span><span class="n">numero1</span><span class="p">,</span> <span class="n">numero2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;stampa_somma_interi(numero1, numero2)</span>
+<span class="sd">    Funzione che stampa la somme di due numeri interi</span>
+<span class="sd">    Prima di essere esguita, la funzione verifica che i numeri passati come argomento</span>
+<span class="sd">    siano di tipo intero ed in caso di problemi stampa un messaggio di errore</span>
+<span class="sd">    ritornando il valore di deafault zero.&quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">numero1</span><span class="p">,</span><span class="nb">int</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">numero2</span><span class="p">,</span><span class="nb">int</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span>
+
+    <span class="c1"># questo codice verra&#39; eseguito solo quando non posso ritornare la somma corretta</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Errore: la somma e&#39; definita solo per argomenti interi, ritorno zero!&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Questo commento, oltre che essere incredibilmente utile, viene utilizzato direttamente
+da Python per ritornare il manuale della funzione. Se infatti definissimo la funzione
+sopra all’interno di un interprete Python e poi digitassimo il comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="n">stampa_somma_interi</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Python ci aprirebbe un ambiente di documentazione in cui viene visualizzato proprio
+questo commento.</p>
+</div>
 <hr class="docutils" />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -267,7 +334,7 @@ Scrivo:</p>
 </div>
 <p>Bene. Come faccio a convertire questo codice in una funzione? Semplice:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcola_fattoriale</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="c1"># n contiene il valore di cui voglio calcolare il fattoriale</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Funzione che calcola il fattoriale di un numero n. &quot;&quot;&quot;</span>
 
     <span class="c1"># qui inserisco il codice sopra</span>
     <span class="n">fattoriale</span> <span class="o">=</span> <span class="mi">1</span>
@@ -290,6 +357,26 @@ Scrivo:</p>
 <p>o anche in modi piu’ complessi:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="n">calcola_fattoriale</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 </pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Sempre restando sul fattoriale, esiste anche un’altra implementazione molto famosa,
+che usa una definizione <strong>ricorsiva</strong>. L’idea e’ di definire il conto in termini di
+un caso base semplice, come <code class="docutils literal notranslate"><span class="pre">0!</span> <span class="pre">=</span> <span class="pre">1</span></code> e poi di ricondurre tutti i casi piu’ complessi
+a casi piu’ semplici di chiamate della funzione stessa, fino a giungere al caso base:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcola_fattoriale</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Funzione che calcola il fattoriale di un numero n in modo ricorsivo. &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span> <span class="c1"># caso base</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">calcola_fattoriale</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># passo ricorsivo</span>
+</pre></div>
+</div>
+<p>E’ interessante vedere che questa implementazione del fattoriale funziona perfettamente
+come la precedente basata su ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>. Dato che pero’ una chiamata di funzione
+richiede piu’ passaggi che una iterazione di un ciclo, l’implementazione qui fornita,
+sebbene molto elegante, sara’ piu’ lenta della sua versione iterativa.</p>
 </div>
 <hr class="docutils" />
 <div class="admonition warning">

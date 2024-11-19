@@ -118,6 +118,75 @@ questo codice e' equivalente a::
 
 Ora tutto torna: faccio la somma e ne stampo il risultato.
 
+Ovviamente il codice sopra restituisce errore se un programmatore poco attento inserisce 
+come argomenti delle variabili non numeriche. Una cosa addirittura peggiore potrebbe
+capitare se l'utente passasse per errore delle variabili non numeriche per cui e' comunque
+definita la somma. Ad esempio, cosa capiterebbe se lanciassimo la funzione 
+``stampa_somma()``passando due stringhe come argomento? Vediamolo::
+
+    # lancio la funzione per errore su due testi
+    risultato = calcola_somma("Luca", "Marchetti")
+
+    # stampa la concatenazione dei due testi invece che la somma numerica!
+    print(risultato)
+
+Per risolvere il problema, dovremmo verificare che gli argomenti siano del tipo giusto
+all'interno della funzione. Questa funzionalita' si puo' ottenere usando la funzione 
+``isinstance(nome_variabile,tipo)`` che restituisce ``True`` quando la variabile indicata
+ha il tipo richiesto. Per esempio::
+
+    # creo una variabile numerica
+    numero1 = 5
+
+    print(isinstance(numero1,int)) # stampa True
+    print(isinstance(numero1,float)) # stampa False
+    print(isinstance(numero1,str)) # stampa False
+
+La funzione ``stampa_somma()`` potrebbe allora essere rivista nel seguente modo::
+
+    def stampa_somma_interi(numero1, numero2):
+        if isinstance(numero1,int) and isinstance(numero2,int):
+            return numero1 + numero2
+        
+        # questo codice verra' eseguito solo quando non posso ritornare la somma corretta
+        print("Errore: la somma e' definita solo per argomenti interi, ritorno zero!")
+        return 0
+
+****
+
+.. warning::
+
+    Quando si creano funzioni, appare critico poter spiegare per bene come tali funzioni
+    possano essere riutilizzate in altri programmi od anche all'interno del programma
+    stesso. Per farlo e' sempre bene commentare dettagliatamente il codice.
+    
+    Esiste un commento particolarmente importante che puo' essere aggiunto
+    come prima linea subito dopo la definizione di funzione, utilizzando le triple
+    virgolette::
+
+        def stampa_somma_interi(numero1, numero2):
+            """stampa_somma_interi(numero1, numero2)
+            Funzione che stampa la somme di due numeri interi
+            Prima di essere esguita, la funzione verifica che i numeri passati come argomento
+            siano di tipo intero ed in caso di problemi stampa un messaggio di errore
+            ritornando il valore di deafault zero."""
+            
+            if isinstance(numero1,int) and isinstance(numero2,int):
+                return numero1 + numero2
+            
+            # questo codice verra' eseguito solo quando non posso ritornare la somma corretta
+            print("Errore: la somma e' definita solo per argomenti interi, ritorno zero!")
+            return 0
+    
+    Questo commento, oltre che essere incredibilmente utile, viene utilizzato direttamente
+    da Python per ritornare il manuale della funzione. Se infatti definissimo la funzione
+    sopra all'interno di un interprete Python e poi digitassimo il comando::
+    
+        >>> help(stampa_somma_interi)
+    
+    Python ci aprirebbe un ambiente di documentazione in cui viene visualizzato proprio
+    questo commento.
+
 ****
 
 .. warning::
@@ -170,7 +239,7 @@ Scrivo::
 Bene. Come faccio a convertire questo codice in una funzione? Semplice::
 
     def calcola_fattoriale(n):
-        # n contiene il valore di cui voglio calcolare il fattoriale
+        """Funzione che calcola il fattoriale di un numero n. """
 
         # qui inserisco il codice sopra
         fattoriale = 1
@@ -192,6 +261,25 @@ Ora sono libero di chiamare la funzione quante volte mi pare::
 o anche in modi piu' complessi::
 
     lista = [calcola_fattoriale(n) for n in range(10)]
+
+.. warning::
+    Sempre restando sul fattoriale, esiste anche un'altra implementazione molto famosa, 
+    che usa una definizione **ricorsiva**. L'idea e' di definire il conto in termini di 
+    un caso base semplice, come ``0! = 1`` e poi di ricondurre tutti i casi piu' complessi
+    a casi piu' semplici di chiamate della funzione stessa, fino a giungere al caso base::
+    
+        def calcola_fattoriale(n):
+            """Funzione che calcola il fattoriale di un numero n in modo ricorsivo. """
+            
+            if n == 0:
+                return 1 # caso base
+            else:
+                return n * calcola_fattoriale(n-1) # passo ricorsivo
+        
+    E' interessante vedere che questa implementazione del fattoriale funziona perfettamente
+    come la precedente basata su ciclo ``for``. Dato che pero' una chiamata di funzione 
+    richiede piu' passaggi che una iterazione di un ciclo, l'implementazione qui fornita,
+    sebbene molto elegante, sara' piu' lenta della sua versione iterativa.    
 
 ****
 
