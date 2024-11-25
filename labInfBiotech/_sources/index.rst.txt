@@ -105,3 +105,4 @@ Note Introduttive
     python_codice_annidato_sol.rst
 
     python_functions.rst
+    python_functions_sol.rst
