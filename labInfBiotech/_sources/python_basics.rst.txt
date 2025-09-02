@@ -50,7 +50,7 @@ I tipi fondamentali sono:
 Tipo        Significato Valori                                
 =========== =========== ===================================== 
 ``bool``    Condizioni  ``True``, ``False``                  
-``int``     Interi      :math:`\{-2^{31}+1,\ldots,2^{31}-1\}` 
+``int``     Interi      Interi positivi e negativi "illimitati" (il limite e' la memoria del computer!)
 ``float``   Razionali   :math:`\mathbb{Q}`                   
 ``str``     Testo       Testo                                
 ``list``    Sequenze    Li vedremo più avanti nel corso      

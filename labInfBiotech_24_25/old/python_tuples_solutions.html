@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python: Tuple (Soluzioni) &mdash; Laboratorio di Informatica a.a. 2024/2025 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6e1bffa2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Laboratorio di Informatica
+          </a>
+              <div class="version">
+                a.a. 2024/2025
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_adv.html">Lezione 6.1 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_adv_sol.html">Lezione 6.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_tuples.html">Lezione 6.2 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_tuples_sol.html">Lezione 6.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_dictionaries.html">Lezione 7.1 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_dictionaries_sol.html">Lezione 7.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_sets.html">Lezione 7.2 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_sets_sol.html">Lezione 7.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_io.html">Lezione 8a - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_io_sol.html">Lezione 8a - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_if.html">Lezione 8b - Python: Codice condizionale: <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_if_sol.html">Lezione 8b - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_for_while.html">Lezione 9a - Python: Codici iterativi (cicli)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_for_while_sol.html">Lezione 9a - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_codice_annidato.html">Lezione 9b - Python: Codice annidato</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_codice_annidato_sol.html">Lezione 9b - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_functions.html">Lezione 10 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_functions_sol.html">Lezione 10 - Soluzioni</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Laboratorio di Informatica</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Python: Tuple (Soluzioni)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/old/python_tuples_solutions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-tuple-soluzioni">
+<h1>Python: Tuple (Soluzioni)<a class="headerlink" href="#python-tuple-soluzioni" title="Link to this heading"></a></h1>
+<ol class="arabic">
+<li><p>Soluzioni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">coppia_di_interi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_interi</span><span class="p">))</span>            <span class="c1"># tuple</span>
+
+
+<span class="n">coppia_di_stringhe</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;una&quot;</span><span class="p">,</span> <span class="s2">&quot;tupla&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_stringhe</span><span class="p">))</span>          <span class="c1"># tuple</span>
+
+
+<span class="n">un_solo_elemento</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">un_solo_elemento</span><span class="p">))</span>            <span class="c1"># tuple</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">un_solo_elemento</span><span class="p">))</span>             <span class="c1"># 1</span>
+
+<span class="n">un_solo_elemento_alt</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">un_solo_elemento_alt</span><span class="p">))</span>        <span class="c1"># tuple</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">un_solo_elemento_alt</span><span class="p">))</span>         <span class="c1"># 1</span>
+
+<span class="n">sbagliato</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">sbagliato</span><span class="p">))</span>                   <span class="c1"># int</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sbagliato</span><span class="p">))</span>                    <span class="c1"># errore!</span>
+
+
+<span class="n">cento_elementi</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">cento_elementi</span><span class="p">))</span>              <span class="c1"># tuple</span>
+
+
+<span class="n">coppia_di_liste</span> <span class="o">=</span> <span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_liste</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_liste</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+
+<span class="n">coppia_di_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">)),</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_tuple</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">coppia_di_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzioni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># x si riferisce ad una lista, il codice sostituisce</span>
+<span class="c1"># il primo elemento con 100</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">l</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># x ora si riferisce ad una tupla, che e&#39; immutabile:</span>
+<span class="c1"># non posso sostituire i suoi elementi, Python da&#39;</span>
+<span class="c1"># errore</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">t</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>                          <span class="c1"># errore!</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzioni:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tupla</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>                      <span class="c1"># 0</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>                <span class="c1"># int</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>                      <span class="c1"># [3, 4, 5]</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>                <span class="c1"># list</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tupla</span><span class="p">))</span>                    <span class="c1"># 9</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tupla</span><span class="p">[</span><span class="mi">3</span><span class="p">]))</span>                 <span class="c1"># 3</span>
+
+<span class="n">tupla</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ultimo&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tupla</span><span class="p">)</span>
+<span class="c1"># ebbene lo posso fare! ho &quot;modificato&quot; la</span>
+<span class="c1"># tupla modificando la lista contenuta</span>
+<span class="c1"># in essa.</span>
+
+<span class="n">tupla</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ultimo&quot;</span>                <span class="c1"># errore!</span>
+<span class="c1"># non posso modificare la tupla &quot;direttamente&quot;</span>
+<span class="c1"># e&#39; un oggetto immutabile</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Luca Marchetti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

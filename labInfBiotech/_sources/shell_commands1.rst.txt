@@ -5,13 +5,23 @@ Lezione 2.1 - Shell: Avanzate
 Cosa faremo oggi?
 -----------
 
-.. image:: figures/lez2.png
-    :scale: 70 %
-    :alt: Riassunto lezione 1.
-    :align: center
+==========  ======================================================= ===================
+comando     cosa fa                                                 sintassi di esempio
+==========  ======================================================= ===================
+``nano``    Editor di testo da terminale                            ``> nano file.txt```
+``gedit``   Editor di testo in modalita' grafica                    ``> gedit file.txt &``
+``cat``     Visualizza il contenuto di un file                      ``> cat file.txt```
+Wildcards   Codici per indicare piu' testi in un colpo solo         ``> comando *``
+==========  ======================================================= ===================
+
+.. vecchia immagine
+   .. image:: figures/lez2.png
+       :scale: 70 %
+       :alt: Riassunto lezione 1.
+       :align: center
 
 
-Creare un File
+Creare un File nel terminale
 ------------------------
 
 Per poter creare un file, è necessario disporre di un editor di testo, nel nostro caso usermo
@@ -21,7 +31,7 @@ Per poter creare un file, è necessario disporre di un editor di testo, nel nost
 
     nano nome_del_file.txt
 
-Per poter salvare le mofiche appena effettuate premere ``Ctrl + S``, mentre per chiudere l'editro 
+Per poter salvare le mofiche appena effettuate premere ``Ctrl + S``, mentre per chiudere l'editor 
 premere ``Ctrl + X``
 
 **PROVATE VOI**
@@ -33,12 +43,28 @@ Create un file.txt e scriveteci un paio di righe::
     Ctrl + S
     Ctrl + X
 
-**Una alternativa grafica**::
+|
+
+Creare un File nel sistema grafico
+------------------------
+
+Durante il corso, noi utilizzeremo un editor di testo per creare i nostri programmi. In alternativa
+alle versioni da terminale, potremo utilizzare un semplice programma chiamato ``gedit``::
 
     gedit nome_del_file.txt &
 
 La ``&`` serve a "liberare" il terminale prima della chiusura della finestra dell'editor. 
+Se ve la dimenticate, niente paura! Il terminale tornera' disponibile appena chiudete il programma.
 
+**NOTA BENE**
+
+Per configurare al meglio l'editor, si consiglia di entrare nelle impostazioni ed inserire queste impostazioni:
+
+- ridurre il numero di spazi per il carattere TAB a 4 spazi (in genere sono 8)
+- inserire spazi invece che tabulazioni
+- abilitare l'indentazione automatica
+- disabilitare l'andata a capo automatica
+- abilitare l'opzione per inserire il numero di riga.
 
 |
 
@@ -225,6 +251,13 @@ e solo per le directory ``deep0``, ..., ``deep4`` ma non ``deep2``::
 
 |
 
+Per approfondire
+------------------------
+
+Se volete approfondire l'uso della shell linux con tanti altri comandi e concetti avanzati,
+potete trovare qui delle slide che potete usare come base per lo studio: :download:`IntroduzioneLinux.pdf <data/IntroduzioneLinux.pdf>`
+
+|
 
 Esercizi
 --------

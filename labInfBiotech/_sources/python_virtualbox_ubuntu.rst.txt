@@ -22,7 +22,8 @@ ed è in grado di eseguire diversi sistemi operativi guest come Windows, Linux, 
   
 Installazione:
 
-- Scaricate Virtualbox dal seguente link https://www.virtualbox.org/wiki/Downloads 
+- Scaricate Virtualbox dal seguente link https://www.oracle.com/it/virtualization/virtualbox/ 
+.. https://www.virtualbox.org/wiki/Downloads 
 
 - Lanciate l'eseguibile appena scaricato.
 
@@ -31,11 +32,14 @@ Installazione:
 Installazione di Ubuntu su VirtualBox
 ------
 
-Per poter installare Ubutnu in VirtualBox, sono disponibili diversi tutorial su youtube. Copio qui un paio di video utili, in inglese ed in italiano:
+Per poter installare Ubuntu in VirtualBox, sono disponibili diversi tutorial su youtube:
+https://www.youtube.com/results?search_query=installazione+ubuntu+su+virtualbox
 
-https://www.youtube.com/watch?v=x3Zpe1rIPFE 
+.. Copio qui un paio di video utili, in inglese ed in italiano:
 
-https://www.youtube.com/watch?v=1pQz7FE1mnc
+   https://www.youtube.com/watch?v=x3Zpe1rIPFE 
+
+   https://www.youtube.com/watch?v=1pQz7FE1mnc
 
 |
 
@@ -46,9 +50,11 @@ Gli utenti Windows possono utilizzare il Sottosistema Windows per Linux (WSL).
 
 L'installazione e' molto semplice, occupa meno spazio di una macchina VirtualBox, ma consente solo di accedere al terminale (no interfaccia grafica Linux).
 
-Guida (3 min, in inglese): https://youtu.be/wmd745x793Y
+Potete cercare guide sull'argomento su youtube: https://www.youtube.com/results?search_query=Sottosistema+Windows+per+Linux
 
-In italiano:
+.. Guida (3 min, in inglese): https://youtu.be/wmd745x793Y
+
+In breve:
 
 - Premere il tasto Start e cercare "Attiva e disattiva funzionalità di Windows". Nella finestra scorrere fino a "Sottosistema Windows per Linux" e attivare mettendo la spunta. Riavviare il computer.
 - Andare sul Windows Store, cercare una distribuzione Linux (consigliata la distribuzione piu' recente in formato LTS) e installare.

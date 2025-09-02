@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lezione 8b - Soluzioni &mdash; Laboratorio di Informatica a.a. 2024/2025 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=6e1bffa2"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 9a - Python: Codici iterativi (cicli)" href="python_for_while.html" />
+    <link rel="prev" title="Lezione 8b - Python: Codice condizionale: if" href="python_if.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Laboratorio di Informatica
+          </a>
+              <div class="version">
+                a.a. 2024/2025
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6.1 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv_sol.html">Lezione 6.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples.html">Lezione 6.2 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples_sol.html">Lezione 6.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Lezione 7.1 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries_sol.html">Lezione 7.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Lezione 7.2 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets_sol.html">Lezione 7.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Lezione 8a - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io_sol.html">Lezione 8a - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_if.html">Lezione 8b - Python: Codice condizionale: <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 8b - Soluzioni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#if">If</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_for_while.html">Lezione 9a - Python: Codici iterativi (cicli)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_for_while_sol.html">Lezione 9a - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_codice_annidato.html">Lezione 9b - Python: Codice annidato</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_codice_annidato_sol.html">Lezione 9b - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 10 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 10 - Soluzioni</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Lezione 8b - Soluzioni</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/python_if_sol.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lezione-8b-soluzioni">
+<h1>Lezione 8b - Soluzioni<a class="headerlink" href="#lezione-8b-soluzioni" title="Link to this heading"></a></h1>
+<section id="if">
+<h2>If<a class="headerlink" href="#if" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi un numero: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pari&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dispari&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Uso <code class="docutils literal notranslate"><span class="pre">else</span></code> perche’ pari e dispari sono le uniche due possibilita’.</p>
+<p>Volendo, posso esplicitare la terza possibilita’, cioe’ il caso in cui
+<code class="docutils literal notranslate"><span class="pre">numero</span></code> non e’ ne’ pari ne’ dispari, cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pari&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dispari&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;impossibile!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>ma il codice nell’<code class="docutils literal notranslate"><span class="pre">else</span></code> non verra’ eseguito per nessun valore di <code class="docutils literal notranslate"><span class="pre">numero</span></code>!</p>
+<p>Visto che le due possibilita’ (<code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ pari, <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ dispari)
+sono mutualmente esclusive, posso anche permettermi di scrivere:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pari&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;dispari&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>perche’ anche in assenza dell’<code class="docutils literal notranslate"><span class="pre">else</span></code>, uno e solo uno dei due
+<code class="docutils literal notranslate"><span class="pre">if</span></code> puo’ essere eseguito.</p>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi un razionale: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">numero</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">and</span> <span class="n">numero</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;okay&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Non servono ne’<code class="docutils literal notranslate"><span class="pre">elif</span></code> (c’e’ una sola condizione) ne’ <code class="docutils literal notranslate"><span class="pre">else</span></code> (se la
+condizione e’ falsa, non devo fare niente).</p>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi due numeri separati da spazio: &quot;</span><span class="p">)</span>
+
+<span class="n">parole</span> <span class="o">=</span> <span class="n">risposta</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">parole</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">parole</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="n">numero1</span> <span class="o">&gt;</span> <span class="n">numero2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;primo&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">numero2</span> <span class="o">&gt;</span> <span class="n">numero1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;secondo&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nessuno dei due&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In alternativa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi due numeri separati da spazio: &quot;</span><span class="p">)</span>
+
+<span class="n">numeri</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">parola</span><span class="p">)</span> <span class="k">for</span> <span class="n">parola</span> <span class="ow">in</span> <span class="n">risposta</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+
+<span class="k">if</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;primo&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">numeri</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;secondo&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nessuno dei due&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">oroscopo_di</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;gennaio&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna estrema&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;febbraio&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna galattica&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;marzo&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna incredibile&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;aprile&quot;</span><span class="p">:</span> <span class="s2">&quot;ultra-fortuna&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">mese</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;dimmi il tuo mese di nascita: &quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">mese</span> <span class="ow">in</span> <span class="n">oroscopo_di</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">oroscopo_di</span><span class="p">[</span><span class="n">mese</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;non disponibile&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">percorso</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi il percorso: &quot;</span><span class="p">)</span>
+
+<span class="n">righe</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">percorso</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;vuoto&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;piccolo&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>
+<span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;medio&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;grande&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Si noti che non e’ necessario specificare per intero le condizioni: nel
+codice abbrevio <code class="docutils literal notranslate"><span class="pre">100</span> <span class="pre">&lt;</span> <span class="pre">len(righe)</span> <span class="pre">&lt;</span> <span class="pre">1000</span></code> con <code class="docutils literal notranslate"><span class="pre">len(righe)</span> <span class="pre">&lt;</span> <span class="pre">1000</span></code>. Me
+lo posso permettere perche’ quando <code class="docutils literal notranslate"><span class="pre">len(righe)</span></code> e’ minore di <code class="docutils literal notranslate"><span class="pre">100</span></code>
+eseguo il primo <code class="docutils literal notranslate"><span class="pre">elif</span></code>: il secondo <code class="docutils literal notranslate"><span class="pre">elif</span></code> non viene neanche considerato.</p>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">punto1</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">parola</span><span class="p">)</span> <span class="k">for</span> <span class="n">parola</span>
+          <span class="ow">in</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi tre coordinate: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+
+<span class="n">punto2</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">parola</span><span class="p">)</span> <span class="k">for</span> <span class="n">parola</span>
+          <span class="ow">in</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi tre coordinate: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+
+<span class="k">if</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> \
+   <span class="n">punto2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">diff_x</span> <span class="o">=</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">diff_y</span> <span class="o">=</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">diff_z</span> <span class="o">=</span> <span class="n">punto1</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">punto2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la distanza e&#39;&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">diff_x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">diff_y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span>  <span class="n">diff_z</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Si noti che il <code class="docutils literal notranslate"><span class="pre">print</span></code> e’ <em>dentro</em> l’<code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
+</li>
+<li><p>Soluzione: sappiamo che <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ un intero arbitrario (puo’ essere
+qualunque intero deciso dall’utente). Il codice che ci interessa e’ questo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 3!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;non divide 3!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;boh&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>L’<code class="docutils literal notranslate"><span class="pre">if</span></code>, l’<code class="docutils literal notranslate"><span class="pre">elif</span></code> e l’<code class="docutils literal notranslate"><span class="pre">else</span></code> formano una catena: solo uno tra loro
+viene eseguito.</p>
+<ol class="arabic simple">
+<li><p>L’<code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ divisibile per tre.</p></li>
+<li><p>L’<code class="docutils literal notranslate"><span class="pre">elif</span></code> viene eseguito se e solo se l’<code class="docutils literal notranslate"><span class="pre">if</span></code> precedente non viene
+eseguito e se <code class="docutils literal notranslate"><span class="pre">numero</span></code> <em>non</em> e’ divisibile per tre.</p></li>
+<li><p>L’<code class="docutils literal notranslate"><span class="pre">else</span></code> viene eseguito quando ne’ l’<code class="docutils literal notranslate"><span class="pre">if</span></code> ne’ l’<code class="docutils literal notranslate"><span class="pre">elif</span></code> vengono
+eseguito.</p></li>
+</ol>
+<p>Visto che non ci sono numeri che non siano ne’ divisibili ne’ non-divisibili
+per <code class="docutils literal notranslate"><span class="pre">3</span></code>, non resta alcuna altra possibilita’. O viene eseguito l’<code class="docutils literal notranslate"><span class="pre">if</span></code>,
+o viene eseguito l’<code class="docutils literal notranslate"><span class="pre">elif</span></code>: l’<code class="docutils literal notranslate"><span class="pre">else</span></code> non viene <em>mai</em> eseguito.</p>
+<p>Quindi la risposta e’ no.</p>
+</li>
+<li><p>Soluzione: come sopra, <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ un intero arbitrario. Il codice e’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi un numero: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 2!&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 3!&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;boh&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Qui non ci sono “catene” di <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> ed <code class="docutils literal notranslate"><span class="pre">else</span></code>: ci sono tre <code class="docutils literal notranslate"><span class="pre">if</span></code>
+indipendenti.</p>
+<ol class="arabic simple">
+<li><p>Il primo <code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ divisibile per
+due.</p></li>
+<li><p>Il secondo <code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ divisibile
+per tre.</p></li>
+<li><p>Il terzo <code class="docutils literal notranslate"><span class="pre">if</span></code> viene eseguito se e solo se <code class="docutils literal notranslate"><span class="pre">numero</span></code> <em>non</em> e’ divisibile
+ne’ per due, ne’ per tre.</p></li>
+</ol>
+<p>Se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ es. 6, che e’ divisibile sia per due che per tre, allora i
+primi due <code class="docutils literal notranslate"><span class="pre">if</span></code> vengono entrambi eseguiti, mentre il terzo non viene
+eseguito.</p>
+<p>Se <code class="docutils literal notranslate"><span class="pre">numero</span></code> e’ es. 5, che non e’ divisibile ne’ per due ne’ per tre, allora
+i primi due <code class="docutils literal notranslate"><span class="pre">if</span></code> <em>non</em> vengono eseguiti; in compenso viene eseguito il
+terzo.</p>
+<p>Quindi la risposta e’ si’.</p>
+<p>(Altri esempi: per <code class="docutils literal notranslate"><span class="pre">numero</span> <span class="pre">=</span> <span class="pre">2</span></code> viene eseguito solo il primo <code class="docutils literal notranslate"><span class="pre">if</span></code>, per
+<code class="docutils literal notranslate"><span class="pre">numero</span> <span class="pre">=</span> <span class="pre">3</span></code> solo il secondo. Si noti pero’ che non c’e’ verso di <em>non</em>
+eseguire nessuno uno dei tre <code class="docutils literal notranslate"><span class="pre">if</span></code>.)</p>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;somma o prodotto?: &quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;somma&quot;</span><span class="p">:</span>
+    <span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 1: &quot;</span><span class="p">))</span>
+    <span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 2: &quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la somma e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;prodotto&quot;</span><span class="p">:</span>
+    <span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 1: &quot;</span><span class="p">))</span>
+    <span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 2: &quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il prodotto e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">*</span> <span class="n">numero2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Usare un <code class="docutils literal notranslate"><span class="pre">if</span></code> o un <code class="docutils literal notranslate"><span class="pre">elif</span></code> non altera l’esecuzione del programma.</p>
+<p>Posso semplificare cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">risposta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;somma o prodotto?: &quot;</span><span class="p">)</span>
+<span class="n">numero1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 1: &quot;</span><span class="p">))</span>
+<span class="n">numero2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;numero 2: &quot;</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;somma&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la somma e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">+</span> <span class="n">numero2</span><span class="p">)</span>
+
+<span class="k">elif</span> <span class="n">risposta</span> <span class="o">==</span> <span class="s2">&quot;prodotto&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il prodotto e&#39;&quot;</span><span class="p">,</span> <span class="n">numero1</span> <span class="o">*</span> <span class="n">numero2</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="python_if.html" class="btn btn-neutral float-left" title="Lezione 8b - Python: Codice condizionale: if" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="python_for_while.html" class="btn btn-neutral float-right" title="Lezione 9a - Python: Codici iterativi (cicli)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Luca Marchetti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

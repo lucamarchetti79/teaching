@@ -2,6 +2,26 @@
 Lezione 1 - Shell: Fondamentali
 ===================
 
+L'architettura di un computer
+------------------
+
+I computer moderni hanno tutti una architettura che possiamo schematizzare in modo semplice 
+nella seguente maniera:
+
+.. image:: figures/Computer_system_bus.svg.png
+    :width: 500
+    :alt: Architettura di Von Neumann
+    :align: center
+
+Ulteriori dettagli sono disponibili a questo link: https://it.wikipedia.org/wiki/Architettura_di_von_Neumann
+
+Si tratta quindi di macchine elettriche con una architettura semplice, ma abbastanza diversa
+dal nostro modo di pensare. Il sistema operativo non e' altro che un programma creato per 
+rendere semplice l'utilizzo di queste macchine. Nelle prossime lezioni vedremo uno dei terminali
+(o shell) piu' famosi in informatica: la shell linux.
+
+|
+
 Cosa faremo oggi?
 -----------
 
@@ -9,6 +29,8 @@ Cosa faremo oggi?
     :scale: 70 %
     :alt: Riassunto lezione 1.
     :align: center
+
+|
 
 Scorciatoie
 -----------

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lezione 2.1 - Shell: Avanzate &mdash; Laboratorio di Informatica a.a. 2024/2025 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=6e1bffa2"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 2.1 - Soluzioni" href="shell_commands1_sol.html" />
+    <link rel="prev" title="Lezione 1 - Soluzioni" href="shell_basics_sol.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Laboratorio di Informatica
+          </a>
+              <div class="version">
+                a.a. 2024/2025
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 2.1 - Shell: Avanzate</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cosa-faremo-oggi">Cosa faremo oggi?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creare-un-file">Creare un File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comando-cat">Comando cat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wildcards">Wildcards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esercizi">Esercizi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6.1 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv_sol.html">Lezione 6.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples.html">Lezione 6.2 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples_sol.html">Lezione 6.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Lezione 7.1 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries_sol.html">Lezione 7.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Lezione 7.2 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets_sol.html">Lezione 7.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Lezione 8a - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io_sol.html">Lezione 8a - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_if.html">Lezione 8b - Python: Codice condizionale: <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_if_sol.html">Lezione 8b - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_for_while.html">Lezione 9a - Python: Codici iterativi (cicli)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_for_while_sol.html">Lezione 9a - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_codice_annidato.html">Lezione 9b - Python: Codice annidato</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_codice_annidato_sol.html">Lezione 9b - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 10 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 10 - Soluzioni</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Lezione 2.1 - Shell: Avanzate</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/shell_commands1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lezione-2-1-shell-avanzate">
+<h1>Lezione 2.1 - Shell: Avanzate<a class="headerlink" href="#lezione-2-1-shell-avanzate" title="Link to this heading"></a></h1>
+<section id="cosa-faremo-oggi">
+<h2>Cosa faremo oggi?<a class="headerlink" href="#cosa-faremo-oggi" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="_images/lez2.png"><img alt="Riassunto lezione 1." class="align-center" src="_images/lez2.png" style="width: 505.4px; height: 118.99999999999999px;" /></a>
+</section>
+<section id="creare-un-file">
+<h2>Creare un File<a class="headerlink" href="#creare-un-file" title="Link to this heading"></a></h2>
+<p>Per poter creare un file, è necessario disporre di un editor di testo, nel nostro caso usermo
+<code class="docutils literal notranslate"><span class="pre">nano</span></code> un editor utilizzabile da terminale</p>
+<p><strong>CREARE/APRIRE UN FILE</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="n">nome_del_file</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Per poter salvare le mofiche appena effettuate premere <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">S</span></code>, mentre per chiudere l’editro
+premere <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">X</span></code></p>
+<p><strong>PROVATE VOI</strong></p>
+<p>Create un file.txt e scriveteci un paio di righe:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="n">file</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">Ciao</span> <span class="n">mi</span> <span class="n">chiamo</span> <span class="n">bla</span> <span class="n">bla</span> <span class="n">bla</span> <span class="o">...</span>
+<span class="n">Ctrl</span> <span class="o">+</span> <span class="n">S</span>
+<span class="n">Ctrl</span> <span class="o">+</span> <span class="n">X</span>
+</pre></div>
+</div>
+<p><strong>Una alternativa grafica</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gedit</span> <span class="n">nome_del_file</span><span class="o">.</span><span class="n">txt</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+<p>La <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> serve a “liberare” il terminale prima della chiusura della finestra dell’editor.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="comando-cat">
+<h2>Comando cat<a class="headerlink" href="#comando-cat" title="Link to this heading"></a></h2>
+<p>Il comando <code class="docutils literal notranslate"><span class="pre">cat</span></code> permette di visualizzare file testuali:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">file</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p><strong>PROVATE VOI</strong></p>
+<p>Ora provate a leggere il file che avete appena scritto.</p>
+<p>Il comando <code class="docutils literal notranslate"><span class="pre">cat</span></code> stampa a video il contenuto di un file, ma questo puo essere reindirizato su un altra sorgente
+ad esempio un file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">prova</span><span class="o">.</span><span class="n">txt</span> <span class="o">&gt;</span> <span class="n">nuova_prova</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Il comando permette anche di concatenare piu file in un unico file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="n">prova1</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">nano</span> <span class="n">prova2</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">cat</span> <span class="n">prova1</span><span class="o">.</span><span class="n">txt</span> <span class="n">prova2</span><span class="o">.</span><span class="n">txt</span> <span class="o">&gt;</span> <span class="n">concat_prova_1_2</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Ora il file concat_prova_1_2.txt contiene la concatenazione dei file prova1 e prova2.</p>
+<p>Un altro modo di concatenare l’output si ottiene col doppio maggiore:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nano</span> <span class="n">prova1</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">nano</span> <span class="n">prova2</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">cat</span> <span class="n">prova1</span><span class="o">.</span><span class="n">txt</span> <span class="o">&gt;</span> <span class="n">concat_prova_1_2</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">cat</span> <span class="n">prova2</span><span class="o">.</span><span class="n">txt</span> <span class="o">&gt;&gt;</span> <span class="n">concat_prova_1_2</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Ora il file concat_prova_1_2.txt contiene nuovamente la concatenazione dei file prova1 e prova2.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="wildcards">
+<h2>Wildcards<a class="headerlink" href="#wildcards" title="Link to this heading"></a></h2>
+<p>La shell esegue quella che si chiama <em>wildcard expansion</em>: ogni volta che
+incontra l’asterisco <code class="docutils literal notranslate"><span class="pre">*</span></code> lo sostituisce con la lista dei file/directory che
+“fanno <em>match</em>”.</p>
+<p><strong>ESEMPIO</strong>. Se eseguo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>la shell sostituisce <code class="docutils literal notranslate"><span class="pre">*</span></code> con la lista di tutti i file e le directory nella
+directory attuale (perche’ tutti fanno <em>match</em> con <code class="docutils literal notranslate"><span class="pre">*</span></code>). Invece:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">informatica</span><span class="o">/*</span>
+</pre></div>
+</div>
+<p>sostituisce <code class="docutils literal notranslate"><span class="pre">*</span></code> con la lista dei file in <code class="docutils literal notranslate"><span class="pre">informatica</span></code>.</p>
+<p>Supponendo che in <code class="docutils literal notranslate"><span class="pre">informatica</span></code> ci siano solo tre file, chiamati <code class="docutils literal notranslate"><span class="pre">test1</span></code>,
+<code class="docutils literal notranslate"><span class="pre">test2</span></code> e <code class="docutils literal notranslate"><span class="pre">results</span></code>, il comando precedente sarebbe equivalente a:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">informatica</span><span class="o">/</span><span class="n">test1</span> <span class="n">informatica</span><span class="o">/</span><span class="n">test2</span> <span class="n">informatica</span><span class="o">/</span><span class="n">results</span>
+</pre></div>
+</div>
+<p>Se avessi eseguito:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">informatica</span><span class="o">/</span><span class="n">test</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>la wildcard <code class="docutils literal notranslate"><span class="pre">test*</span></code> avrebbe fatto <em>match</em> solo con <code class="docutils literal notranslate"><span class="pre">test1</span></code> e <code class="docutils literal notranslate"><span class="pre">test2</span></code>, ed
+il comando sarebbe stato equivalente a:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">informatica</span><span class="o">/</span><span class="n">test1</span> <span class="n">informatica</span><span class="o">/</span><span class="n">test2</span>
+</pre></div>
+</div>
+<p>Qui <code class="docutils literal notranslate"><span class="pre">results</span></code> non fa <em>match</em>, quindi non viene incluso.</p>
+<p>Le wildcard piu’ importanti sono:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>wildcard</p></th>
+<th class="head"><p>fa <em>match</em> con</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">akz</span></code></p></td>
+<td><p>il testo “<code class="docutils literal notranslate"><span class="pre">akz</span></code>”</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p>una stringa qualunque (anche vuota)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
+<td><p>un carattere qualunque</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[akz]</span></code></p></td>
+<td><p>un carattere solo tra <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">k</span></code> e <code class="docutils literal notranslate"><span class="pre">z</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[a-z]</span></code></p></td>
+<td><p>un carattere alfabetico qualunque</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[0-9]</span></code></p></td>
+<td><p>una cifra qualunque</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[!1b]</span></code></p></td>
+<td><p>un carattere qualunque che non sia <code class="docutils literal notranslate"><span class="pre">1</span></code> o <code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[!a-e]</span></code></p></td>
+<td><p>un carattere qualunque che non sia <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, …, <code class="docutils literal notranslate"><span class="pre">e</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Quando la shell incontra un comando dove uno (o piu’) degli argomenti contiene
+delle wildcards, esegue la <em>wildcard expansion</em>: sostituisce all’argomento
+incriminato tutti i file che fanno <em>match</em> con la wildcard.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Le wildcards sono simili alle regex, ma non sono la stessa cosa:</p>
+<ol class="arabic simple">
+<li><p>Le wildcards sono usate dalla shell per fare il match di <strong>percorsi</strong>.</p></li>
+<li><p>Le regex sono usate da <code class="docutils literal notranslate"><span class="pre">grep</span></code> per fare il match di <strong>righe di testo</strong> contenute in un file (per approfondimenti <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">grep</span></code>).</p></li>
+<li><p>Le regole che determinano il <em>match</em> di wildcards e regex sono diverse.</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. La wildcard:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">le</span> <span class="n">rose</span> <span class="n">sono</span> <span class="o">*</span><span class="n">se</span>
+</pre></div>
+</div>
+<p>fa <em>match</em> con:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">le</span> <span class="n">rose</span> <span class="n">sono</span> <span class="n">rosse</span>
+</pre></div>
+</div>
+<p>ma anche con:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">le</span> <span class="n">rose</span> <span class="n">sono</span> <span class="n">costose</span>
+</pre></div>
+</div>
+<p>e:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">le</span> <span class="n">rose</span> <span class="n">sono</span> <span class="n">grosse</span>
+</pre></div>
+</div>
+<p>ma non con:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">le</span> <span class="n">rose</span> <span class="n">si</span> <span class="n">trovano</span> <span class="ow">in</span> <span class="n">montagna</span>
+</pre></div>
+</div>
+<p>Le wildcard possono essere combinate, ad esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>test?[a-z][!0-9]
+</pre></div>
+</div>
+<p>fa il <em>match</em> con tutti i percorsi che cominciano con <code class="docutils literal notranslate"><span class="pre">test</span></code>, proseguono con
+un carattere qualunque, poi con un carattere alfabetico ed infine con un
+carattere non numerico.</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Un esempio piu’ realistico. Il comando:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">data</span><span class="o">/</span><span class="n">dna</span><span class="o">-</span><span class="n">fasta</span><span class="o">/*.</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>fa <em>match</em> con tutti i file nella directory <code class="docutils literal notranslate"><span class="pre">data/dna-fasta</span></code> il cui filename
+e’ composto di una-stringa-qualunque, seguita da un punto, seguito da <code class="docutils literal notranslate"><span class="pre">1</span></code> o
+<code class="docutils literal notranslate"><span class="pre">2</span></code> e nient’altro. Nel nostro caso i soli file a fare <em>match</em> sono:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">/</span><span class="n">dna</span><span class="o">-</span><span class="n">fasta</span><span class="o">/</span><span class="n">fasta</span><span class="mf">.1</span>
+<span class="n">data</span><span class="o">/</span><span class="n">dna</span><span class="o">-</span><span class="n">fasta</span><span class="o">/</span><span class="n">fasta</span><span class="mf">.2</span>
+</pre></div>
+</div>
+<p>Dopo la wildcard expansion il comando precedente diventa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">data</span><span class="o">/</span><span class="n">dna</span><span class="o">-</span><span class="n">fasta</span><span class="o">/</span><span class="n">fasta</span><span class="mf">.1</span> <span class="n">data</span><span class="o">/</span><span class="n">dna</span><span class="o">-</span><span class="n">fasta</span><span class="o">/</span><span class="n">fasta</span><span class="mf">.2</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><strong>PROVATE VOI</strong> create le seguenti directory e sub-directory</p>
+<ol class="arabic simple">
+<li><p>data</p></li>
+<li><p>data/deep1</p></li>
+<li><p>data/deep1/1</p></li>
+<li><p>data/deep2</p></li>
+<li><p>data/deep2/1</p></li>
+<li><p>data/deep3</p></li>
+<li><p>data/deep3/1</p></li>
+<li><p>data/deep4</p></li>
+<li><p>data/deep4/1</p></li>
+</ol>
+<p>Stampare a schermo i contenuti della directory data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">data</span>
+</pre></div>
+</div>
+<p>Per stampare i contenuti delle <em>directory</em> che stanno in data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">data</span><span class="o">/*</span>
+</pre></div>
+</div>
+<p>Per stampare a schermo solo il contenuto delle directory <code class="docutils literal notranslate"><span class="pre">deep0</span></code>, …, <code class="docutils literal notranslate"><span class="pre">deep4</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">data</span><span class="o">/</span><span class="n">deep</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>Mentre per restringere la wildcard alle directory <code class="docutils literal notranslate"><span class="pre">deep0</span></code> e <code class="docutils literal notranslate"><span class="pre">deep3</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="n">data</span><span class="o">/</span><span class="n">deep</span><span class="p">[</span><span class="mi">03</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>e solo per le directory <code class="docutils literal notranslate"><span class="pre">deep0</span></code>, …, <code class="docutils literal notranslate"><span class="pre">deep4</span></code> ma non <code class="docutils literal notranslate"><span class="pre">deep2</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ls data/deep[!2]
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="esercizi">
+<h2>Esercizi<a class="headerlink" href="#esercizi" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Create 3 file usando l’editor <code class="docutils literal notranslate"><span class="pre">nano</span></code> o <code class="docutils literal notranslate"><span class="pre">gedit</span></code></p></li>
+<li><p>Copiate i 3 file usando <code class="docutils literal notranslate"><span class="pre">cp</span></code> nel folder “prova”</p></li>
+<li><p>Create un quarto file chiamato concat.txt contenente la concatenzione dei 3 file creati</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="shell_basics_sol.html" class="btn btn-neutral float-left" title="Lezione 1 - Soluzioni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="shell_commands1_sol.html" class="btn btn-neutral float-right" title="Lezione 2.1 - Soluzioni" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Luca Marchetti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

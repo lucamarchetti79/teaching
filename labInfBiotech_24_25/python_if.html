@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lezione 8b - Python: Codice condizionale: if &mdash; Laboratorio di Informatica a.a. 2024/2025 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=6e1bffa2"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 8b - Soluzioni" href="python_if_sol.html" />
+    <link rel="prev" title="Lezione 8a - Soluzioni" href="python_io_sol.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Laboratorio di Informatica
+          </a>
+              <div class="version">
+                a.a. 2024/2025
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv.html">Lezione 6.1 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_lists_adv_sol.html">Lezione 6.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples.html">Lezione 6.2 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_tuples_sol.html">Lezione 6.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries.html">Lezione 7.1 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_dictionaries_sol.html">Lezione 7.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets.html">Lezione 7.2 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_sets_sol.html">Lezione 7.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io.html">Lezione 8a - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_io_sol.html">Lezione 8a - Soluzioni</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 8b - Python: Codice condizionale: <code class="docutils literal notranslate"><span class="pre">if</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#esercizi">Esercizi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_if_sol.html">Lezione 8b - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_for_while.html">Lezione 9a - Python: Codici iterativi (cicli)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_for_while_sol.html">Lezione 9a - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_codice_annidato.html">Lezione 9b - Python: Codice annidato</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_codice_annidato_sol.html">Lezione 9b - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions.html">Lezione 10 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_functions_sol.html">Lezione 10 - Soluzioni</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Laboratorio di Informatica</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Lezione 8b - Python: Codice condizionale: <code class="docutils literal notranslate"><span class="pre">if</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/python_if.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lezione-8b-python-codice-condizionale-if">
+<h1>Lezione 8b - Python: Codice condizionale: <code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#lezione-8b-python-codice-condizionale-if" title="Link to this heading"></a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">if</span></code>/<code class="docutils literal notranslate"><span class="pre">elif</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code> (<em>se</em>/<em>altrimenti-se</em>/<em>altrimenti</em>) permettono di
+scrivere codice che viene eseguito <strong>solo se</strong> una condizione e’ soddisfatta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condizione</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la condizione e&#39; vera&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>oppure di gestire separatamente i due casi soddisfatta/non soddisfatta:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condizione</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la condizione e&#39; vera&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la condizione e&#39; falsa&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>oppure <em>n</em> casi diversi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">condizione_1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la prima condizione e&#39; vera&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">condizione_2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la seconda condizione e&#39; vera&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">condizione_3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la terza condizione e&#39; vera&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;nessuna condizione e&#39; vera&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>L’<code class="docutils literal notranslate"><span class="pre">if</span></code>, gli <code class="docutils literal notranslate"><span class="pre">elif</span></code> e l’<code class="docutils literal notranslate"><span class="pre">else</span></code> formano una “catena”: sono mutualmente
+esclusivi, solo <em>uno</em> tra loro viene eseguito!</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Il codice in un <code class="docutils literal notranslate"><span class="pre">elif</span></code> ed <code class="docutils literal notranslate"><span class="pre">else</span></code> e’ <strong>mutualmente
+esclusivo</strong> con quello dei vari <code class="docutils literal notranslate"><span class="pre">if</span></code> ed <code class="docutils literal notranslate"><span class="pre">elif</span></code> che lo precedono.</p>
+<p>Ad esempio, supponiamo di avere due variabili Boolean <code class="docutils literal notranslate"><span class="pre">c1</span></code> e <code class="docutils literal notranslate"><span class="pre">c2</span></code>.
+Guardiamo in dettaglio in che caso vengono eseguite le varie righe di codice
+nell’ultimo esempio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                <span class="c1"># c1   c2   | c1   c2    | c1    c2   | c1    c2</span>
+                <span class="c1"># True True | True False | False True | False False</span>
+                <span class="c1"># ----------|------------|------------|------------</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;inizio&quot;</span><span class="p">)</span> <span class="c1"># si        | si         | si         | si</span>
+<span class="k">if</span> <span class="n">c1</span><span class="p">:</span>          <span class="c1"># si        | si         | si         | si</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>  <span class="c1"># si        | si         | no         | no</span>
+<span class="k">elif</span> <span class="n">c2</span><span class="p">:</span>        <span class="c1"># no        | no         | si         | si</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>  <span class="c1"># no        | no         | si         | no</span>
+<span class="k">else</span><span class="p">:</span>           <span class="c1"># no        | no         | no         | si</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>  <span class="c1"># no        | no         | no         | si</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fine&quot;</span><span class="p">)</span>   <span class="c1"># si        | si         | si         | si</span>
+</pre></div>
+</div>
+<p>E’ chiaro che se <code class="docutils literal notranslate"><span class="pre">c1</span></code> e’ vera, il valore di <code class="docutils literal notranslate"><span class="pre">c2</span></code> (ed il corrispondente
+<code class="docutils literal notranslate"><span class="pre">elif</span> <span class="pre">c2</span></code>) non influenza il comportamento del programma: se l’<code class="docutils literal notranslate"><span class="pre">if</span></code> viene
+eseguito (cioe’ se <code class="docutils literal notranslate"><span class="pre">c1</span></code> e’ vera) gli <code class="docutils literal notranslate"><span class="pre">elif</span></code> ed <code class="docutils literal notranslate"><span class="pre">else</span></code> successivi non
+vengono neanche considerati!</p>
+<p>Supponiamo di voler stampare <code class="docutils literal notranslate"><span class="pre">&quot;1&quot;</span></code> se <code class="docutils literal notranslate"><span class="pre">c1</span></code> e’ vera, ed anche <code class="docutils literal notranslate"><span class="pre">&quot;2&quot;</span></code> se
+<code class="docutils literal notranslate"><span class="pre">c2</span></code> e’ vera – in modo del tutto indipendente. Posso fare cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;inizio&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">c1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">c2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">c1</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">c2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fine&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Qui gli <code class="docutils literal notranslate"><span class="pre">if</span></code> non formano una “catena”: sono <em>indipendenti</em> l’uno dall’altro!</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Python usa l’<em>indentazione</em> per decidere quale codice fa parte
+dell’<code class="docutils literal notranslate"><span class="pre">if</span></code> e quale no.</p>
+<p>Scrivo un programma Python per testare se l’utente e’ un telepate:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sto pensando ad un numero tra 1 e 10...&quot;</span><span class="p">)</span>
+<span class="n">telepate</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;qual&#39;e&#39;? &quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">6</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sto calcolando...&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">telepate</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DING DING DING DING!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;COMPLIMENTI!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sei un telepate certificato!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;grazie per aver giocato&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;riprova di nuovo&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fine.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Come si vede eseguendo l’esempio con l’interprete, Python considera <em>dentro</em>
+l’<code class="docutils literal notranslate"><span class="pre">if</span></code> <strong>tutti</strong> i <code class="docutils literal notranslate"><span class="pre">print()</span></code> indentati.</p>
+<hr class="docutils" />
+<p><strong>Esempio</strong>. Questo codice apre un file e controlla (i) se e’ vuoto, e (ii)
+se contiene intestazioni (righe che cominciano per <code class="docutils literal notranslate"><span class="pre">&quot;&gt;&quot;</span></code>), reagendo di
+conseguenza:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;comincio...&quot;</span><span class="p">)</span>
+
+<span class="n">righe</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data/prot-fasta/1A3A.fasta&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">righe</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il file FASTA e&#39; vuoto&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">primi_caratteri_di_ogni_riga</span> <span class="o">=</span> <span class="p">[</span><span class="n">riga</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">riga</span> <span class="ow">in</span> <span class="n">righe</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="s2">&quot;&gt;&quot;</span> <span class="ow">in</span> <span class="n">primi_caratteri_di_ogni_riga</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il file FASTA non e&#39; valido&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;il file FASTA e&#39; valido&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fatto!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Quiz</strong>:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>E’ possibile che il codice stampi sia che il file e’ vuoto, sia che
+e’ valido?</p></li>
+<li><p>E’ possibile che il codice non stampi <code class="docutils literal notranslate"><span class="pre">&quot;comincio...&quot;</span></code> o <code class="docutils literal notranslate"><span class="pre">&quot;fatto!&quot;</span></code>?</p></li>
+<li><p>Se il file e’ effettivamente vuoto, quando Python esegue la riga
+<code class="docutils literal notranslate"><span class="pre">print(&quot;fatto!&quot;)</span></code>, che valore ha la variabile <code class="docutils literal notranslate"><span class="pre">primi_caratteri_di_ogni_riga</span></code>?</p></li>
+<li><p>Posso semplificare il codice usando <code class="docutils literal notranslate"><span class="pre">elif</span></code>?</p></li>
+</ol>
+</div></blockquote>
+<hr class="docutils" />
+<section id="esercizi">
+<h2>Esercizi<a class="headerlink" href="#esercizi" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Non dimenticate i due punti!</p>
+<p>Se provo a scrivere un <code class="docutils literal notranslate"><span class="pre">if</span></code> e dimentico i due punti, es.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">condizione</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dimmi si: &quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;si&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">condizione</span>
+</pre></div>
+</div>
+<p>appena premo invio, Python mi dice che la sintassi e’ errata:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">condizione</span>
+                <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">syntax</span>
+</pre></div>
+</div>
+<p>e si <strong>rifiuta</strong> di eseguire il codice. Quindi e’ facile riconoscere
+l’errore.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>State attenti all’indentazione!</p>
+<p>Sbagliare l’indentazione modifica il comportamento del programma
+senza pero’ renderlo necessariamente invalido.</p>
+<p>In alcuni casi e’ facile capire cosa sta succedendo, es.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">condizione</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dimmi si: &quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;si&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">condizione</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hai detto:&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>       <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;si&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Python da’ errore immediatamente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">4</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;si&quot;</span><span class="p">)</span>
+        <span class="o">^</span>
+<span class="ne">IndentationError</span><span class="p">:</span> <span class="n">unexpected</span> <span class="n">indent</span>
+</pre></div>
+</div>
+<p>In altri invece l’errore e’ molto piu’ sottile. Vedi sezione su codice
+annidato.</p>
+</div>
+<ol class="arabic">
+<li><p>Chiedere all’utente un numero con <code class="docutils literal notranslate"><span class="pre">input()</span></code>. Se il numero e’ pari,
+stampare <code class="docutils literal notranslate"><span class="pre">&quot;pari&quot;</span></code> a schermo, se e’ dispari, stampare <code class="docutils literal notranslate"><span class="pre">&quot;dispari&quot;</span></code>.</p>
+<p><em>Hint</em>. <code class="docutils literal notranslate"><span class="pre">input()</span></code> restituisce sempre una stringa.</p>
+</li>
+<li><p>Chiedere all’utente un numero razionale. Se il numero e’ nell’intervallo
+<img class="math" src="_images/math/3e79b1d96f80fc611bf0f46645d37cc33614879f.png" alt="[-1,1]"/>, stampare <code class="docutils literal notranslate"><span class="pre">&quot;okay&quot;</span></code>, altrimenti non stampare niente.</p>
+<p><em>Hint</em>. E’ necessario usare <code class="docutils literal notranslate"><span class="pre">elif</span></code>/<code class="docutils literal notranslate"><span class="pre">else</span></code>?</p>
+</li>
+<li><p>Chiedere all’utente due numeri interi. Se il primo e’ maggiore del
+secondo, stampare <code class="docutils literal notranslate"><span class="pre">&quot;primo&quot;</span></code>, se il secondo e’ maggiore del primo
+stampare <code class="docutils literal notranslate"><span class="pre">&quot;secondo&quot;</span></code>, altrimenti stampare <code class="docutils literal notranslate"><span class="pre">&quot;nessuno</span> <span class="pre">dei</span> <span class="pre">due&quot;</span></code>.</p></li>
+<li><p>Dato il dizionario:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">oroscopo_di</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;gennaio&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna estrema&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;febbraio&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna galattica&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;marzo&quot;</span><span class="p">:</span> <span class="s2">&quot;fortuna incredibile&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;aprile&quot;</span><span class="p">:</span> <span class="s2">&quot;ultra-fortuna&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>chiedere all’utente il suo mese di nascita. Se il mese appare come chiave
+nel dizionario <code class="docutils literal notranslate"><span class="pre">oroscopo_di</span></code>, stampare a schermo il valore corrispondente.
+Altrimenti stampare <code class="docutils literal notranslate"><span class="pre">&quot;non</span> <span class="pre">disponibile&quot;</span></code>.</p>
+<p><em>Hint</em>. Per controllare se una chiave appare in un dizionario si puo’
+usare <code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">in</span> <span class="pre">dict</span></code>.</p>
+</li>
+<li><p>Chiedere all’utente il percorso ad un file e leggere i contenuti del file
+con il metodo <code class="docutils literal notranslate"><span class="pre">readlines()</span></code>. Poi stampare:</p>
+<ol class="arabic simple">
+<li><p>Se il file e’ vuoto, la stringa <code class="docutils literal notranslate"><span class="pre">&quot;vuoto&quot;</span></code></p></li>
+<li><p>Se il file ha meno di 100 righe, <code class="docutils literal notranslate"><span class="pre">&quot;piccolo&quot;</span></code> e il numero di righe.</p></li>
+<li><p>Se il file ha tra le 100 e le 1000 righe, <code class="docutils literal notranslate"><span class="pre">&quot;medio&quot;</span></code> e il numero di righe.</p></li>
+<li><p>Altrimenti, <code class="docutils literal notranslate"><span class="pre">&quot;grande&quot;</span></code> e il numero di righe.</p></li>
+</ol>
+<p>La risposta deve essere stampata su una sola riga.</p>
+</li>
+<li><p>Chiedere all’utente due triplette di razionali (usando due chiamate a
+<code class="docutils literal notranslate"><span class="pre">input()</span></code>). Le due triplette rappresentano due punti nello spazio
+tridimensionale (tre coordinate <img class="math" src="_images/math/d97b17954af5ee48de8cdeb8f72de347aee55057.png" alt="x,y,z"/> a testa).</p>
+<p>Se tutte le coordinate sono non-negative, stampare a schermo la distanza
+Euclidea dei due punti.</p>
+<p><em>Hint</em>: la distanza Euclidea e’ <img class="math" src="_images/math/0fae76db2412159bbf3cab1567e7f88e556f5823.png" alt="\sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + (z_1 - z_2)^2}`"/></p>
+</li>
+<li><p>E’ possibile che questo codice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi un numero: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 3!&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;non divide 3!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;boh&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>stampi <code class="docutils literal notranslate"><span class="pre">&quot;boh&quot;</span></code>?</p>
+</li>
+<li><p>E’ possibile che questo codice:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numero</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;scrivi un numero: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 2!&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;divide 3!&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;boh&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>stampi <code class="docutils literal notranslate"><span class="pre">&quot;boh&quot;</span></code>?</p>
+</li>
+<li><p>Chiedere all’utente se vuole eseguire una somma o un prodotto.</p>
+<p>Se l’utente vuole eseguire una somma, chiedere due numeri, effettuare
+la somma, e stampare il risultato.</p>
+<p>Idem se l’utente vuole eseguire un prodotto.</p>
+<p>Se l’utente non risponde ne’ <code class="docutils literal notranslate"><span class="pre">&quot;somma&quot;</span></code> ne’ <code class="docutils literal notranslate"><span class="pre">&quot;prodotto&quot;</span></code>, non fare
+niente.</p>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="python_io_sol.html" class="btn btn-neutral float-left" title="Lezione 8a - Soluzioni" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="python_if_sol.html" class="btn btn-neutral float-right" title="Lezione 8b - Soluzioni" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Luca Marchetti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

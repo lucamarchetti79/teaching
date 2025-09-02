@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python: Sets (Soluzioni) &mdash; Laboratorio di Informatica a.a. 2024/2025 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6e1bffa2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Laboratorio di Informatica
+          </a>
+              <div class="version">
+                a.a. 2024/2025
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_basics_sol.html">Lezione 1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shell_commands1_sol.html">Lezione 2.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_moduli_sol.html">Lezione 3.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_numbers_sol.html">Lezione 3.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_strings.html">Lezione 4 - Python: Stringhe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_strings_sol.html">Lezione 4 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists.html">Lezione 5 - Python: Liste</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_sol.html">Lezione 5 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_adv.html">Lezione 6.1 - Python: Liste, concetti avanzati</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_lists_adv_sol.html">Lezione 6.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_tuples.html">Lezione 6.2 - Python: Tuple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_tuples_sol.html">Lezione 6.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_test.html">Esercitazione aggiuntiva</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_test_sol.html">Esercitazione aggiuntiva - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_dictionaries.html">Lezione 7.1 - Python: Dizionari</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_dictionaries_sol.html">Lezione 7.1 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_sets.html">Lezione 7.2 - Python: Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_sets_sol.html">Lezione 7.2 - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_io.html">Lezione 8a - Python: Input-Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_io_sol.html">Lezione 8a - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_if.html">Lezione 8b - Python: Codice condizionale: <code class="docutils literal notranslate"><span class="pre">if</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_if_sol.html">Lezione 8b - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_for_while.html">Lezione 9a - Python: Codici iterativi (cicli)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_for_while_sol.html">Lezione 9a - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_codice_annidato.html">Lezione 9b - Python: Codice annidato</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_codice_annidato_sol.html">Lezione 9b - Soluzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_functions.html">Lezione 10 - Python: Funzioni</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_functions_sol.html">Lezione 10 - Soluzioni</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Laboratorio di Informatica</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Python: Sets (Soluzioni)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/old/python_sets_solutions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-sets-soluzioni">
+<h1>Python: Sets (Soluzioni)<a class="headerlink" href="#python-sets-soluzioni" title="Link to this heading"></a></h1>
+<ol class="arabic">
+<li><p>Soluzioni:</p>
+<ol class="arabic">
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_vuoto</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">set_vuoto</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">set_vuoto</span><span class="p">))</span>                        <span class="c1"># 0</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">primi10</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="ow">in</span> <span class="n">primi10</span><span class="p">)</span>                         <span class="c1"># False</span>
+<span class="n">primi10</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">10</span> <span class="ow">in</span> <span class="n">primi10</span><span class="p">)</span>                         <span class="c1"># True</span>
+<span class="n">primi10</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione, provo cosi’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">primi10no7</span> <span class="o">=</span> <span class="n">primi10</span>
+<span class="n">primi10no7</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">7</span> <span class="ow">in</span> <span class="n">primi10</span><span class="p">)</span>                          <span class="c1"># False</span>
+</pre></div>
+</div>
+<p>Ricordo che i set sono strutture <strong>mutabili</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">primi10</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>                     <span class="c1"># Ricreo il set originale</span>
+<span class="n">primi10no7</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">primi10</span><span class="p">)</span>
+<span class="n">primi10no7</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">7</span> <span class="ow">in</span> <span class="n">primi10</span><span class="p">)</span>                          <span class="c1"># True</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">7</span> <span class="ow">in</span> <span class="n">primi10no7</span><span class="p">)</span>                       <span class="c1"># False</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">primi10no7</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="mi">7</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">primi10no7</span><span class="p">)</span>                            <span class="c1"># Controllo</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</li>
+<li><p>Soluzione:</p>
+<blockquote>
+<div><blockquote>
+<div><p>Convertendo i testi in minuscolo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tA_lower</span> <span class="o">=</span> <span class="n">testo_A</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">tB_lower</span> <span class="o">=</span> <span class="n">testo_B</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">tC_lower</span> <span class="o">=</span> <span class="n">testo_C</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Creo gli insiemi delle parole contenute nei testi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">parole_in_A</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">tA_lower</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">parole_in_B</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">tB_lower</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="n">parole_in_C</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">tC_lower</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic">
+<li><p>Conto per ogni testo il numero di parole diverse:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">parole_in_A</span><span class="p">)</span>                             <span class="c1"># 10</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">parole_in_B</span><span class="p">)</span>                             <span class="c1"># 8</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">parole_in_C</span><span class="p">)</span>                             <span class="c1"># 6</span>
+</pre></div>
+</div>
+</li>
+<li><p>Ottengo le parole in comune utilizzando l’intersezione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">condivise_A_B</span> <span class="o">=</span> <span class="n">parole_in_A</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">parole_in_B</span><span class="p">)</span>
+<span class="n">condivise_A_C</span> <span class="o">=</span> <span class="n">parole_in_A</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">parole_in_C</span><span class="p">)</span>
+<span class="n">condivise_B_C</span> <span class="o">=</span> <span class="n">parole_in_B</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">parole_in_C</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Controllo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">condivise_A_B</span><span class="p">)</span>           <span class="c1"># {&#39;vita&#39;, &#39;di&#39;}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">condivise_A_C</span><span class="p">)</span>           <span class="c1"># set()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">condivise_B_C</span><span class="p">)</span>           <span class="c1"># {&#39;la&#39;, &#39;cioccolatini&#39;, &#39;come&#39;}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Soluzione:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">almeno_in_2</span> <span class="o">=</span> <span class="n">condivise_A_B</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">condivise_A_C</span><span class="p">)</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">condivise_B_C</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">almeno_in_2</span><span class="p">)</span>             <span class="c1"># {&#39;vita&#39;, &#39;di&#39;, &#39;la&#39;, &#39;cioccolatini&#39;, &#39;come&#39;}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Creo l’insieme di tutte le parole contenute nei tre testi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tutte_le_parole</span> <span class="o">=</span> <span class="n">parole_in_A</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">parole_in_B</span><span class="p">)</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">parole_in_C</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Ottengo le parole che appaiono esattamente in <a href="#id1"><span class="problematic" id="id2">**</span></a>UN* testo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">solo_in_uno</span> <span class="o">=</span> <span class="n">tutte_le_parole</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">almeno_in_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">solo_in_uno</span><span class="p">)</span>
+<span class="p">{</span><span class="s1">&#39;le&#39;</span><span class="p">,</span> <span class="s1">&#39;una&#39;</span><span class="p">,</span> <span class="s1">&#39;se&#39;</span><span class="p">,</span> <span class="s1">&#39;vostra&#39;</span><span class="p">,</span> <span class="s1">&#39;della&#39;</span><span class="p">,</span> <span class="s1">&#39;laaa&#39;</span><span class="p">,</span> <span class="s2">&quot;piu&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;ore&#39;</span><span class="p">,</span> <span class="s2">&quot;e&#39;&quot;</span><span class="p">,</span> \
+<span class="s1">&#39;piovesse&#39;</span><span class="p">,</span> <span class="s1">&#39;scatola&#39;</span><span class="p">,</span> <span class="s1">&#39;noiose&#39;</span><span class="p">,</span> <span class="s1">&#39;informatica&#39;</span><span class="p">,</span> <span class="s1">&#39;due&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>Ci sono diversi modi per farlo. Una soluzione (consideriamo solo testo_A per brevita’):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ripetute_in_A</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">parole_in_A</span> \
+                     <span class="k">if</span> <span class="n">tA_lower</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Luca Marchetti.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
