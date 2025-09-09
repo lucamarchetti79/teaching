@@ -62,3 +62,5 @@ Note Introduttive
     :maxdepth: 2
 
     shell_basics.rst
+
+    shell_commands1.rst	      
