@@ -5,26 +5,26 @@ Lezione 1 - Soluzioni
 Esercizi
 --------
 
-#. Create una catella chiamata "CIBIO"
-#. All'interno della catella "CIBIO" create una catella "INF" e una cartella "SPORT"
-#. Create una catella "MOLECOLE" dentro la cartella "INF"
+#. Create una cartella chiamata "CIBIO"
+#. All'interno della cartella "CIBIO" create una cartella "INF" e una cartella "SPORT"
+#. Create una cartella "MOLECOLE" dentro la cartella "INF"
 #. Rinominate la cartella "SPORT" in "BIOLOGIA"
-#. Spostate la catella "MOLECOLE" nella cartella "BIOLOGIA"
+#. Spostate la cartella "MOLECOLE" nella cartella "BIOLOGIA"
 
 Soluzioni
 --------
 
-#. Create una catella chiamata "CIBIO"::
+#. Create una cartella chiamata "CIBIO"::
 
     mkdir CIBIO
 
-#. All'interno della catella "CIBIO" create una catella "INF" e una cartella "SPORT"::
+#. All'interno della cartella "CIBIO" create una cartella "INF" e una cartella "SPORT"::
 
     cd CIBIO
     mkdir INF
     mkdir SPORT
     
-#. Create una catella "MOLECOLE" dentro la cartella "INF"::
+#. Create una cartella "MOLECOLE" dentro la cartella "INF"::
 
     cd INF
     mkdir MOLECOLE
@@ -34,7 +34,7 @@ Soluzioni
     cd ..
     mv SPORT BIOLOGIA
     
-#. Spostate la catella "MOLECOLE" nella cartella "BIOLOGIA"::
+#. Spostate la cartella "MOLECOLE" nella cartella "BIOLOGIA"::
 
     mv INF/MOLECOLE/ BIOLOGIA/
     

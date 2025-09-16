@@ -18,7 +18,9 @@
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lezione 2.1 - Shell: Avanzate" href="shell_commands1.html" />
+    <link rel="prev" title="Lezione 1 - Shell: Fondamentali" href="shell_basics.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,9 +45,15 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="shell_basics.html">Lezione 1 - Shell: Fondamentali</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lezione 1 - Soluzioni</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#esercizi">Esercizi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#soluzioni">Soluzioni</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="shell_commands1.html">Lezione 2.1 - Shell: Avanzate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_basics.html">Lezione 2.2 - Python: Fondamentali</a></li>
 </ul>
 
         </div>
@@ -77,29 +85,29 @@
 <section id="esercizi">
 <h2>Esercizi<a class="headerlink" href="#esercizi" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Create una catella chiamata “CIBIO”</p></li>
-<li><p>All’interno della catella “CIBIO” create una catella “INF” e una cartella “SPORT”</p></li>
-<li><p>Create una catella “MOLECOLE” dentro la cartella “INF”</p></li>
+<li><p>Create una cartella chiamata “CIBIO”</p></li>
+<li><p>All’interno della cartella “CIBIO” create una cartella “INF” e una cartella “SPORT”</p></li>
+<li><p>Create una cartella “MOLECOLE” dentro la cartella “INF”</p></li>
 <li><p>Rinominate la cartella “SPORT” in “BIOLOGIA”</p></li>
-<li><p>Spostate la catella “MOLECOLE” nella cartella “BIOLOGIA”</p></li>
+<li><p>Spostate la cartella “MOLECOLE” nella cartella “BIOLOGIA”</p></li>
 </ol>
 </section>
 <section id="soluzioni">
 <h2>Soluzioni<a class="headerlink" href="#soluzioni" title="Link to this heading"></a></h2>
 <ol class="arabic">
-<li><p>Create una catella chiamata “CIBIO”:</p>
+<li><p>Create una cartella chiamata “CIBIO”:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">CIBIO</span>
 </pre></div>
 </div>
 </li>
-<li><p>All’interno della catella “CIBIO” create una catella “INF” e una cartella “SPORT”:</p>
+<li><p>All’interno della cartella “CIBIO” create una cartella “INF” e una cartella “SPORT”:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">CIBIO</span>
 <span class="n">mkdir</span> <span class="n">INF</span>
 <span class="n">mkdir</span> <span class="n">SPORT</span>
 </pre></div>
 </div>
 </li>
-<li><p>Create una catella “MOLECOLE” dentro la cartella “INF”:</p>
+<li><p>Create una cartella “MOLECOLE” dentro la cartella “INF”:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">INF</span>
 <span class="n">mkdir</span> <span class="n">MOLECOLE</span>
 </pre></div>
@@ -111,7 +119,7 @@
 </pre></div>
 </div>
 </li>
-<li><p>Spostate la catella “MOLECOLE” nella cartella “BIOLOGIA”:</p>
+<li><p>Spostate la cartella “MOLECOLE” nella cartella “BIOLOGIA”:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">INF</span><span class="o">/</span><span class="n">MOLECOLE</span><span class="o">/</span> <span class="n">BIOLOGIA</span><span class="o">/</span>
 </pre></div>
 </div>
@@ -123,7 +131,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="shell_basics.html" class="btn btn-neutral float-left" title="Lezione 1 - Shell: Fondamentali" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="shell_commands1.html" class="btn btn-neutral float-right" title="Lezione 2.1 - Shell: Avanzate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
