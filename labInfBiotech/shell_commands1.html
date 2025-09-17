@@ -101,9 +101,9 @@
 <td><p>Editor di testo da terminale</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">nano</span> <span class="pre">file.txt`</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gedit</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">gnome-text-editor</span></code></p></td>
 <td><p>Editor di testo in modalita’ grafica</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">gedit</span> <span class="pre">file.txt</span> <span class="pre">&amp;</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">gnome-text-editor</span> <span class="pre">file.txt</span> <span class="pre">&amp;</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">cat</span></code></p></td>
 <td><p>Visualizza il contenuto di un file</p></td>
@@ -141,14 +141,17 @@ premere <code class="docutils literal notranslate"><span class="pre">Ctrl</span>
 <section id="creare-un-file-nel-sistema-grafico">
 <h2>Creare un File nel sistema grafico<a class="headerlink" href="#creare-un-file-nel-sistema-grafico" title="Link to this heading"></a></h2>
 <p>Durante il corso, noi utilizzeremo un editor di testo per creare i nostri programmi. In alternativa
-alle versioni da terminale, potremo utilizzare un semplice programma chiamato <code class="docutils literal notranslate"><span class="pre">gedit</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gedit</span> <span class="n">nome_del_file</span><span class="o">.</span><span class="n">txt</span> <span class="o">&amp;</span>
+alle versioni da terminale, potremo utilizzare un semplice programma chiamato <code class="docutils literal notranslate"><span class="pre">gnome-text-editor</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gnome</span><span class="o">-</span><span class="n">text</span><span class="o">-</span><span class="n">editor</span> <span class="n">nome_del_file</span><span class="o">.</span><span class="n">txt</span> <span class="o">&amp;</span>
 </pre></div>
 </div>
 <p>La <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> serve a “liberare” il terminale prima della chiusura della finestra dell’editor.
 Se ve la dimenticate, niente paura! Il terminale tornera’ disponibile appena chiudete il programma.</p>
 <p><strong>NOTA BENE</strong></p>
-<p>Per configurare al meglio l’editor, si consiglia di entrare nelle impostazioni ed inserire queste impostazioni:</p>
+<p>Il programma <code class="docutils literal notranslate"><span class="pre">gnome-text-editor</span></code> in alcuni sistemi linux potrebbe chiamarsi <code class="docutils literal notranslate"><span class="pre">gedit</span></code>. Se sul vostro
+computer il comando non funziona, provate con questo nome per lanciare l’applicativo.</p>
+<p><strong>NOTA BENE</strong></p>
+<p>Per configurare al meglio l’editor, si consiglia di entrare nelle impostazioni (pulsante con l’ingranaggio) ed inserire queste impostazioni:</p>
 <ul class="simple">
 <li><p>ridurre il numero di spazi per il carattere TAB a 4 spazi (in genere sono 8)</p></li>
 <li><p>inserire spazi invece che tabulazioni</p></li>
@@ -360,7 +363,7 @@ potete trovare qui delle slide che potete usare come base per lo studio: <a clas
 <section id="esercizi">
 <h2>Esercizi<a class="headerlink" href="#esercizi" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Create 3 file usando l’editor <code class="docutils literal notranslate"><span class="pre">nano</span></code> o <code class="docutils literal notranslate"><span class="pre">gedit</span></code></p></li>
+<li><p>Create 3 file usando l’editor <code class="docutils literal notranslate"><span class="pre">nano</span></code> o <code class="docutils literal notranslate"><span class="pre">gnome-text-editor</span></code></p></li>
 <li><p>Copiate i 3 file usando <code class="docutils literal notranslate"><span class="pre">cp</span></code> nel folder “prova”</p></li>
 <li><p>Create un quarto file chiamato concat.txt contenente la concatenzione dei 3 file creati</p></li>
 </ol>

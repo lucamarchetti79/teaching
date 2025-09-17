@@ -5,7 +5,7 @@ Lezione 2.1 - Soluzioni
 Esercizi
 --------
 
-#. Create 3 file usando l'editor ``nano`` o ``gedit``
+#. Create 3 file usando l'editor ``nano`` o ``gnome-text-editor``
 #. Copiate i 3 file usando ``cp`` nel folder "prova"
 #. Create un quarto file chiamato concat.txt contenente la concatenzione dei 3 file creati
 

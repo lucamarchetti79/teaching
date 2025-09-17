@@ -5,14 +5,14 @@ Lezione 2.1 - Shell: Avanzate
 Cosa faremo oggi?
 -----------
 
-==========  ======================================================= ===================
-comando     cosa fa                                                 sintassi di esempio
-==========  ======================================================= ===================
-``nano``    Editor di testo da terminale                            ``> nano file.txt```
-``gedit``   Editor di testo in modalita' grafica                    ``> gedit file.txt &``
-``cat``     Visualizza il contenuto di un file                      ``> cat file.txt```
-Wildcards   Codici per indicare piu' testi in un colpo solo         ``> comando *``
-==========  ======================================================= ===================
+======================  ======================================================= ===================
+comando                 cosa fa                                                 sintassi di esempio
+======================  ======================================================= ===================
+``nano``                Editor di testo da terminale                            ``> nano file.txt```
+``gnome-text-editor``   Editor di testo in modalita' grafica                    ``> gnome-text-editor file.txt &``
+``cat``                 Visualizza il contenuto di un file                      ``> cat file.txt```
+Wildcards               Codici per indicare piu' testi in un colpo solo         ``> comando *``
+======================  ======================================================= ===================
 
 .. vecchia immagine
    .. image:: figures/lez2.png
@@ -49,16 +49,21 @@ Creare un File nel sistema grafico
 ------------------------
 
 Durante il corso, noi utilizzeremo un editor di testo per creare i nostri programmi. In alternativa
-alle versioni da terminale, potremo utilizzare un semplice programma chiamato ``gedit``::
+alle versioni da terminale, potremo utilizzare un semplice programma chiamato ``gnome-text-editor``::
 
-    gedit nome_del_file.txt &
+    gnome-text-editor nome_del_file.txt &
 
 La ``&`` serve a "liberare" il terminale prima della chiusura della finestra dell'editor. 
 Se ve la dimenticate, niente paura! Il terminale tornera' disponibile appena chiudete il programma.
 
 **NOTA BENE**
 
-Per configurare al meglio l'editor, si consiglia di entrare nelle impostazioni ed inserire queste impostazioni:
+Il programma ``gnome-text-editor`` in alcuni sistemi linux potrebbe chiamarsi ``gedit``. Se sul vostro
+computer il comando non funziona, provate con questo nome per lanciare l'applicativo.
+
+**NOTA BENE**
+
+Per configurare al meglio l'editor, si consiglia di entrare nelle impostazioni (pulsante con l'ingranaggio) ed inserire queste impostazioni:
 
 - ridurre il numero di spazi per il carattere TAB a 4 spazi (in genere sono 8)
 - inserire spazi invece che tabulazioni
@@ -262,7 +267,7 @@ potete trovare qui delle slide che potete usare come base per lo studio: :downlo
 Esercizi
 --------
 
-#. Create 3 file usando l'editor ``nano`` o ``gedit``
+#. Create 3 file usando l'editor ``nano`` o ``gnome-text-editor``
 #. Copiate i 3 file usando ``cp`` nel folder "prova"
 #. Create un quarto file chiamato concat.txt contenente la concatenzione dei 3 file creati
 
