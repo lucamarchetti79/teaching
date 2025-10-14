@@ -303,12 +303,22 @@ con ``lista_2`` (che resta invariata), mentre ``lista_completa`` vale ``None``.
 
 ****
 
+Come gestire la copia di una lista
+----------------------------------
+
 .. warning::
 
-    Le liste sono *mutabili*, e contengono *riferimenti* ad oggetti.
+    Le liste sono strutture dati *mutabili* ed una variabile lista contiene solo un
+    *riferimento* a tale oggetto.
 
-Questi due fatti possono dare luogo ad effetti complicati -- che
-esploriamo nei prossimi esercizi.
+Questi due fatti possono dare luogo ad effetti complicati, che
+esploriamo nei prossimi esercizi e che sono esemplificati dalla seguente figura:
+
+.. image:: figures/array_dict.png
+    :scale: 70 %
+    :alt: Copia di liste.
+    :align: center
+
 
 **Esempio**. Questo codice::
 
