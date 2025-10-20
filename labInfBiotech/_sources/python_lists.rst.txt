@@ -319,7 +319,6 @@ esploriamo nei prossimi esercizi e che sono esemplificati dalla seguente figura:
     :alt: Copia di liste.
     :align: center
 
-
 **Esempio**. Questo codice::
 
     sottolista = list(range(5))

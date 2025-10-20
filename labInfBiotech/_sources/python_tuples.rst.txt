@@ -8,19 +8,24 @@ Per definire una tupla uso le parentesi tonde::
 
     partners = ("BIOGRID:112315", "BIOGRID:108607")
 
-**Esempio**. Se voglio creare una tupla con un solo elemento (puo' capitare...)
-devo ricordarmi di usare la virgola, oltre alle parentesi tonde::
+.. warning::
 
-    tupla = (0,)
-    print(tupla)
-    print(type(tupla))
-    print(len(tupla))
+    Se voglio creare una tupla con un solo elemento (puo' capitare...)
+    devo ricordarmi di usare la virgola, oltre alle parentesi tonde::
 
-    non_tupla = (0)
-    print(non_tupla)
-    print(type(non_tupla))
+        tupla = (0,)
+        print(tupla)
+        print(type(tupla))
+        print(len(tupla))
+    
+        non_tupla = (0)
+        print(non_tupla)
+        print(type(non_tupla))
 
-Come si vede, ``non_tupla`` e' un intero, ``0``.
+    Come si vede, ``non_tupla`` e' un intero, ``0``.
+
+****
+
 
 Operazioni
 ----------

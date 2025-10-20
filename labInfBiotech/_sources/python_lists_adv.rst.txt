@@ -26,12 +26,13 @@ partenza come ci si aspetterebbe::
 Per risolvere il problema, il linguaggio mette a disposizione alcuni metodi per facilitare
 le operazioni.
 
-=============== =========================== =================================================
-Ritorna         Metodo                      Significato
-=============== =========================== =================================================
-``list-of-str`` ``str.split(str)``          Rompe una stringa in una lista di stringhe
-``str``         ``str.join(list-of-str)``   Ricompone una lista di stringhe in una stringa
-=============== =========================== =================================================
+=============== =============================== =================================================
+Ritorna         Metodo                          Significato
+=============== =============================== =================================================
+``list-of-str`` ``str.split()``                 Divide ``str`` usando gli spazi come delimitatori
+``list-of-str`` ``str.split(str_del)``          Divide ``str`` usando ``str_del`` come delimitatore
+``str``         ``str_del.join(list-of-str)``   Ricompone una lista di stringhe in una stringa
+=============== =============================== =================================================
 
 ****
 

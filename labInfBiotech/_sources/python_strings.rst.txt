@@ -482,8 +482,8 @@ Esercizi
       sono corrette.
    #. Quante cisteine ``"C"`` ci sono nella sequenza? Quante istidine ``"H"``?
    #. La catena contiene la sotto-sequenza ``"NLRVEYLDDRN"``? In che posizione?
-   #. Come posso usare ``find()`` e l'estrazione ``[i:j]`` per estrarre la
-      prima riga della stringa ``chain_a``?
+   #. Come posso usare ``find()`` e l'estrazione ``[indice_inizio:indice_fine]`` 
+      per estrarre la prima riga della stringa ``chain_a``?
 
 #. Data (una piccola parte) della sequenza terziaria della catena A di TP53::
 
