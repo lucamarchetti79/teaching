@@ -80,6 +80,7 @@ Note Introduttive
     python_strings_sol.rst
 
     python_lists.rst
+    python_lists_sol.rst
     
     python_lists_adv.rst
 
