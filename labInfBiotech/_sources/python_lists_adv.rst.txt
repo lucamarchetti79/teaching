@@ -132,6 +132,13 @@ Esercizi
    #. ``"parola_1 e parola_2 e parola_3"``
    #. ``"parola_1parola_2parola3"``
    #. ``r"parola_1\parola_2\parola_3"``
+   
+   La notazione che inizia con la ``r`` nell'ultimo punto indica che la stringa e'
+   rappresentata in modalita' grezza (raw), questo significa che vedete esattamente i
+   caratteri che sono salvati nella stringa. Questo aspetto e' importante per il carattere
+   ``\`` che in modalita' normale si associa al carattere successivo per indicare un
+   carattere speciale, mentre qui indica semplicemente tale carattere (allo stesso modo
+   in cui nelle stringhe in modalita' normale indichiamo ``\\``).
 
 #. Data la lista di stringhe::
 
