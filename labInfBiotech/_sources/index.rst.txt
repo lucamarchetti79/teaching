@@ -87,3 +87,7 @@ Note Introduttive
     python_tuples.rst
 
     python_test.rst
+
+    python_dictionaries.rst
+
+    python_sets.rst
