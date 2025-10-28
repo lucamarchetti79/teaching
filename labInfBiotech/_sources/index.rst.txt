@@ -83,8 +83,10 @@ Note Introduttive
     python_lists_sol.rst
     
     python_lists_adv.rst
+    python_lists_adv_sol.rst
 
     python_tuples.rst
+    python_tuples_sol.rst
 
     python_test.rst
 
