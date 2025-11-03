@@ -93,3 +93,7 @@ Note Introduttive
     python_dictionaries.rst
 
     python_sets.rst
+
+    python_io.rst
+
+    python_if.rst
