@@ -100,3 +100,7 @@ Note Introduttive
     python_io.rst
 
     python_if.rst
+
+    python_for_while.rst
+
+    python_codice_annidato.rst
