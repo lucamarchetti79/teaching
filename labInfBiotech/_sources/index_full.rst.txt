@@ -21,10 +21,10 @@ Laboratorio di Informatica
    
    * **Luca Marchetti:**  luca dot marchetti at unitn dot it
    
-   Inoltre quest'anno avremo anche un docente di supporto che ci aiutera' durante alcuni 
-   laboratori del corso:
+   Inoltre quest'anno avremo anche un docente di supporto che ci aiutera' durante i 
+   laboratori:
    
-   * **Erik Dassi:** erik dot dassi at unitn dot it
+   * **Alessandro Romanel:** alessandro dot romanel at unitn dot it
    
 |   
  
@@ -32,7 +32,7 @@ Laboratorio di Informatica
 
 Bibliografia
 ------------
-**Tutorial ufficiale del linguaggio Python:** `<https://pytutorial-it.readthedocs.io/it/python3.12/>`_
+**Tutorial ufficiale del linguaggio Python:** `<https://pytutorial-it.readthedocs.io/it/python3.13/>`_
 
 **Allen Downey, Pensare in Python — Come pensare da Informatico, Green Tea Press**
 `<https://github.com/AllenDowney/ThinkPythonItalian/raw/master/thinkpython_italian.pdf>`_

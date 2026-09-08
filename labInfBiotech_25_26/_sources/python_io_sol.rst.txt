@@ -1,0 +1,210 @@
+================================
+Lezione 8a - Soluzioni
+================================
+
+Interfaccia Utente
+------------------
+
+#. Usando ``input()``, chiedere all'utente il suo piatto preferito, mettere
+   il risultato in una variabile ``cibo``, poi stampare a schermo:
+   ``anche a me piace`` ed il piatto preferito.
+
+#. Chiedere all'utente due interi, diciamo ``a`` e ``b``, poi un terzo
+   intero, diciamo ``risultato``.
+
+   Controllare se la somma di ``a`` e ``b`` e' uguale a ``risultato``: in
+   tale caso stampare a schermo ``True``, altrimenti ``False``.
+
+#. Chiedere all'utente una chiave ed un valore, e costruire un dizionario
+   che include (solo) quella coppia chiave-valore. Stampare a schermo il
+   risultato.
+
+#. Chiedere all'utente il suo nome, metterlo nella variabile ``nome``, poi
+   stampare a schermo il nome assicurandosi che le prime lettere di tutte
+   le parole del nome siano maiuscole e le altre minuscole.
+
+   Infine stampare a schermo il risultato.
+
+**Soluzioni**
+
+#. Soluzione::
+
+    risposta = input("qual'e' il tuo piatto preferito? ")
+
+    print("anche a me piace il/la/lo", risposta)
+
+#. Soluzione::
+
+    risposta = input("scrivi due interi: ")
+    parole = risposta.split()
+    a = int(parole[0])
+    b = int(parole[1])
+
+    risposta = input("quanto fa " + str(a) + " " + str(b) " ? ")
+    risultato = int(risposta)
+
+    print(a + b == risultato)
+
+#. Soluzione::
+
+    chiave = input("dammi una chiave: ")
+    valore = input("dammi un valore: ")
+
+    dizionario = {chiave: valore}
+    # oppure
+    dizionario = {}
+    dizionario[chiave] = valore
+
+    print("dizionario =", dizionario)
+
+#. Soluzione::
+
+    nome = input("dimmi il tuo nome per intero: ")
+
+    parole_aggiustate = [parola[0].upper() + parola[1:].lower()
+                         for parola in nome.split()]
+    print("il tuo nome e':", " ".join(parole_aggiustate))
+
+
+Interfaccia Filesystem
+----------------------
+
+.. warning::
+
+    Se ``open()`` vi da' errore, puo' darsi che vi troviate nella directory
+    sbagliata. Aggiustate il percorso di conseguenza.
+
+#. Usate ``open()`` per aprire il file ``"data/aatable"`` in modalita' di sola
+   lettura, mettendo il risultato di ``open()`` nella variabile ``f``.
+
+   Poi usate ``readlines()`` per leggere il contenuto del file, mettendo il
+   risultato in ``righe``.
+
+   Di che tipo e' ``righe``? Di che tipo e' il primo elemento di ``righe``?
+   Quante righe ci sono nel file?
+
+#. Usate ``open()`` per aprire il file ``"data/aatable"`` in modalita' di sola
+   lettura, mettendo il risultato di ``open()`` nella variabile ``f``.
+
+   Poi usate ``readline()`` (non ``readlines()``!) per leggere la prima riga
+   del file, mettendo il risultato in ``prima_riga``.
+
+   Quante righe sono rimaste da leggere? Controllate usando ``readlines()``.
+
+   A questo punto, quante altre righe sono rimaste da leggere?
+
+#. Usate ``open()`` per aprire il file ``"output.txt"`` in modalita' di sola
+   scrittura ``"w"``, mettendo il risultato di ``open()`` nella variabile ``f``.
+
+   Poi scrivete la stringa ``"prova prova uno due tre prova"`` nel file.
+
+   Chiudete il file usando il metodo ``close()``.
+
+   Ora invece aprite ``"output.txt"`` in modalita' di sola lettura e stampate
+   a schermo i suoi contenuti.
+
+#. usate ``open()`` per aprire il file ``"poesia.txt"`` in modalita' di sola
+   scrittura. Poi scrivete nel file le stringhe in questa lista, una per riga::
+
+    versi = [
+        "S'i fosse fuoco, arderei 'l mondo",
+        "s'i fosse vento, lo tempestarei"
+    ]
+
+   Ora fare la stessa cosa aprendo due volte il file ``"poesia2.txt"`` in
+   modalita' di sola scrittura (appendendo), ed ogni volta scrivendoci uno
+   dei due versi.
+
+   Cosa succede se riapro ``"poesia2.txt"`` in modalita' ``"w"`` e lo richiudo
+   subito?
+
+#. Scrivere un modulo ``trucco.py`` che stampa il codice del modulo stesso
+   a schermo.
+
+   *Curiosita'*: abbiamo appena scritto (barando!) un `programma di Quine <http://it.wikipedia.org/wiki/Quine>`_.
+
+**Soluzioni**
+
+
+#. Soluzione::
+
+    f = open("data/aatable", "r")
+    # oppure
+    f = open("data/aatable")
+
+    righe = f.readlines()
+    print(type(righe))                           # list
+    print(type(righe[0]))                        # str
+    print(len(righe))
+
+    f.close()
+
+#. Soluzione::
+
+    f = open("data/aatable")
+
+    prima_riga = f.readline()
+    print("la prima riga e': ", prima_riga)
+
+    righe_restanti = f.readlines()
+    print("restavano", len(righe_restanti), "righe")
+
+    righe_restanti_bis = f.readlines()
+    print("poi restavano", len(righe_restanti), "righe")
+
+    # Nell'ultimo caso, restavano 0 righe: il primo
+    # readlines() aveva gia' letto tutte le righe
+    # di f
+
+    f.close()
+
+#. Soluzione::
+
+    f = open("output.txt", "w")
+    f.write("prova prova uno due tre prova")
+    f.close()
+
+    g = open("output.txt", "r")
+    print(g.readlines())
+    g.close()
+
+#. Soluzione::
+
+    versi = [
+        "S'i fosse fuoco, arderei 'l mondo"
+        "s'i fosse vento, lo tempestarei"
+    ]
+
+    f = open("poesia.txt", "w")
+    f.write("\n".join(versi))
+    f.close()
+
+   Ora ci riprovo con ``"a"``::
+
+    f2 = open("poesia2.txt", "a")
+    f2.write(versi[0] + "\n")
+    f2.close()
+
+    f2 = open("poesia2.txt", "a")
+    f2.write(versi[1] + "\n")
+    f2.close()
+
+   E se uso ``"w"`` su ``"poesia2.txtx"``::
+
+    f = open("prova2.txt", "w")
+    # QUI NON FACCIO ASSOLUTAMENTE NIENTE AD f, LO CHIUDO E BASTA
+    f.close()
+
+   mi accorgo che ``"poesia2.txt"`` e' vuoto! Questo succede
+   perche' ho usato ``"w"`` al posto di ``"a"``.
+
+#. Scrivo nel file ``trucco.py``::
+
+    me_stesso = open("trucco.py")
+    print(me_stesso.read())
+    me_stesso.close()
+
+   Eseguo il file per verificare che faccia cio' che voglio: da una shell
+   scrivo::
+
+    python3 trucco.py
