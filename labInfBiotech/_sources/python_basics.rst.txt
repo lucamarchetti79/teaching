@@ -164,7 +164,7 @@ che il tipo di ``pi`` e' ``float``.
 
 Per stampare il *valore* di una variabile, uso la funzione ``print``::
 
-    variabile = "sono una esempio"
+    variabile = "sono un esempio"
     print(variabile)
 
 Per stampare il *tipo* di una variabile, uso la funzione ``type``::
