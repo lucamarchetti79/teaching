@@ -1,0 +1,195 @@
+==========================
+Laboratorio di Informatica
+==========================
+
+
+|
+    Il seguente materiale didattico è stato scritto dal Dr. Stefano
+    Teso `<http://disi.unitn.it/~teso/>`_ e dal Dr. Paolo Morettin `<http://paolomorettin.github.io/>`_, che mi hanno gentilmente concesso di utilizzarlo per questa
+    edizione del corso (**grazie!**).
+|
+    
+
+La pagina del corso si trova qui:
+
+    `<http://disi.unitn.it/~passerini/teaching/2020-2021/informatica/>`_
+
+mentre quella delle esercitazioni si trova qui:
+
+    `<https://antoniolonga.github.io/>`_
+ 
+|
+
+.. hint::
+   Se avete dubbi o domande potete rivolgervi a me:
+
+   * **Antonio Longa:**  antonio dot longa at  unitn dot it
+
+   Siete pregati di usare il tag *[INF CIBIO]* **come oggetto della mail**.
+   Es: **[INF CIBIO] Errore installazione Virtualbox**
+   
+|   
+ 
+
+
+Bibliografia
+------------
+- Allen Downey, *Think python — How to think like a Computer Scientist*, Green Tea Press
+     `<https://github.com/AllenDowney/ThinkPythonItalian/raw/master/thinkpython_italian.pdf>`_
+	
+- M. Lutz, *Learning Python* (5th edition), O'REILLY, 2013.
+
+|
+
+Dati
+----
+
+I dati usati nelle esercitazioni sono disponibili qui:
+
+    http://disi.unitn.it/~teso/courses/informatica/data.tgz
+
+|
+
+Note Introduttive
+-----------------
+
+* Assumeremo di lavorare *esclusivamente* con file di testo, indipendentemente
+  dall'estensione dei file.
+* La shell e Python non capiscono le lettere accentate, non usatele.
+* Il comportamento di alcuni comandi puo' variare tra varianti diverse di Unix,
+  ad esempio GNU/Linux e MacOS X.
+
+|
+  
+Soluzioni esami precedenti
+--------------------------
+Soluzione python (04/06/2016) https://drive.google.com/open?id=1WEpKspCTr3K6xqTwGjmf19-wXdd_CTyQ
+
+Soluzione python (09/05/2016) https://drive.google.com/file/d/1jGorJWu1KLpKVbaMzvxEy_yVBoWBEZj0/view?usp=sharing
+
+
+
+|
+
+.. highlight:: Virtualbox e Ubuntu
+
+.. include:: python_virtualbox_ubuntu.rst
+|
+|
+
+.. highlight:: python
+
+.. include:: python_basics.rst
+
+|
+
+.. include:: python_basics_solutions.rst
+
+|
+|
+
+.. include:: python_numbers.rst
+
+|
+
+.. include:: python_numbers_solutions.rst
+
+|
+|
+
+.. include:: python_strings.rst
+
+|
+
+.. include:: python_strings_solutions.rst
+
+|
+|
+
+.. include:: python_lists.rst
+
+|
+
+.. include:: python_lists_solutions.rst
+
+|
+|
+
+.. include:: python_tuples.rst
+
+|
+
+.. include:: python_tuples_solutions.rst
+
+|
+|
+
+.. include:: python_dictionaries.rst
+
+|
+
+.. include:: python_dictionaries_solutions.rst
+
+|
+|
+
+.. include:: python_sets.rst
+
+|
+
+.. include:: python_sets_solutions.rst
+
+|
+|
+
+.. include:: python_io.rst
+
+|
+
+.. include:: python_io_solutions.rst
+
+|
+|
+
+.. include:: python_complex_statements.rst
+
+|
+
+.. include:: python_complex_statements_solutions.rst
+
+|
+|
+
+.. include:: python_functions.rst
+
+|
+
+.. include:: python_functions_solutions.rst
+
+|
+
+.. toctree::
+    :maxdepth: 2
+	       
+
+    virtualbox_ubuntu.rst	       
+    python_basics    
+    python_basics_solutions
+    python_numbers
+    python_numbers_solutions
+    python_strings
+    python_strings_solutions
+    python_lists
+    python_lists_solutions
+    python_tuples
+    python_tuples_solutions
+    python_dictionaries
+    python_dictionaries_solutions
+    python_sets
+    python_sets_solutions
+    python_io
+    python_io_solutions
+    python_complex_statements
+    python_complex_statements_solutions
+    python_functions
+    python_functions_solutions
