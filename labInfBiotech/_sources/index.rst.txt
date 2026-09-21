@@ -67,3 +67,7 @@ Note Introduttive
     shell_commands1.rst	      
 
     python_basics.rst
+
+    python_moduli.rst
+
+    python_numbers.rst
