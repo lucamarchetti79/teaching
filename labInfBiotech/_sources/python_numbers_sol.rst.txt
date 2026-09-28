@@ -241,25 +241,27 @@ Soluzioni
 
 
     # due alternative
-    condizione_1 = (10 <= pos <= 20)
-    condizione_1 = (pos >= 10 and pos <= 20)
-
-
-    condizione_2 = (30 <= pos <= 40)
-
-
-    condizione_3 = (10 <= pos <= 40)
+    condizione_1 = (gene1_inizio <= pos <= gene1_fine)
+    condizione_1 = (pos >= gene1_inizio and pos <= gene1_fine)
 
 
     # due alternative
+    condizione_2 = (gene2_inizio <= pos <= gene2_fine)
+    condizione_2 = (pos >= gene2_inizio and pos <= gene2_fine)
+
+
+    # due alternative
+    condizione_3 = (gene1_inizio <= pos <= gene2_fine)
+    condizione_1 = (pos >= gene1_inizio and pos <= gene2_fine)
+
+
     condizione_4 = condizione_3 and not (condizione_1 or condizione_2)
-    condizione_4 = (20 <= pos <= 40)
 
 
-    condizione_5 = pos < 10 or pos > 40
+    condizione_5 = pos < gene1_inizio or pos > gene2_fine
     # occhio che:
     #
-    #   pos < 10 and pos > 40
+    #   pos < gene1_inizio and pos > gene2_fine
     #
     # non ha senso: e' sempre False!
 
@@ -267,7 +269,7 @@ Soluzioni
     condizione_6 = condizione_1 or condizione_2
 
 
-    condizione_7 = (0 <= pos <= 20)
+    condizione_7 = (pos >= gene1_inizio-10 and pos <= gene1_inizio+10)
 
    Il codice va testato con diversi valori di ``posizione``, in modo da
    controllare che le condizioni si comportino come vogliamo: che siano

@@ -52,6 +52,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python_basics_sol.html">Lezione 2.2 - Soluzioni</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_moduli.html">Lezione 3.1 - Python: Moduli</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_numbers.html">Lezione 3.2 - Python: Numeri</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_strings.html">Lezione 4 - Python: Stringhe</a></li>
 </ul>
 
         </div>
@@ -328,25 +329,27 @@ tipo.</p>
 
 
 <span class="c1"># due alternative</span>
-<span class="n">condizione_1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">condizione_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">)</span>
-
-
-<span class="n">condizione_2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="mi">40</span><span class="p">)</span>
-
-
-<span class="n">condizione_3</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">condizione_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">gene1_inizio</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="n">gene1_fine</span><span class="p">)</span>
+<span class="n">condizione_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&gt;=</span> <span class="n">gene1_inizio</span> <span class="ow">and</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="n">gene1_fine</span><span class="p">)</span>
 
 
 <span class="c1"># due alternative</span>
+<span class="n">condizione_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">gene2_inizio</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="n">gene2_fine</span><span class="p">)</span>
+<span class="n">condizione_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&gt;=</span> <span class="n">gene2_inizio</span> <span class="ow">and</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="n">gene2_fine</span><span class="p">)</span>
+
+
+<span class="c1"># due alternative</span>
+<span class="n">condizione_3</span> <span class="o">=</span> <span class="p">(</span><span class="n">gene1_inizio</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="n">gene2_fine</span><span class="p">)</span>
+<span class="n">condizione_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&gt;=</span> <span class="n">gene1_inizio</span> <span class="ow">and</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="n">gene2_fine</span><span class="p">)</span>
+
+
 <span class="n">condizione_4</span> <span class="o">=</span> <span class="n">condizione_3</span> <span class="ow">and</span> <span class="ow">not</span> <span class="p">(</span><span class="n">condizione_1</span> <span class="ow">or</span> <span class="n">condizione_2</span><span class="p">)</span>
-<span class="n">condizione_4</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="mi">40</span><span class="p">)</span>
 
 
-<span class="n">condizione_5</span> <span class="o">=</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="ow">or</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="mi">40</span>
+<span class="n">condizione_5</span> <span class="o">=</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="n">gene1_inizio</span> <span class="ow">or</span> <span class="n">pos</span> <span class="o">&gt;</span> <span class="n">gene2_fine</span>
 <span class="c1"># occhio che:</span>
 <span class="c1">#</span>
-<span class="c1">#   pos &lt; 10 and pos &gt; 40</span>
+<span class="c1">#   pos &lt; gene1_inizio and pos &gt; gene2_fine</span>
 <span class="c1">#</span>
 <span class="c1"># non ha senso: e&#39; sempre False!</span>
 
@@ -354,7 +357,7 @@ tipo.</p>
 <span class="n">condizione_6</span> <span class="o">=</span> <span class="n">condizione_1</span> <span class="ow">or</span> <span class="n">condizione_2</span>
 
 
-<span class="n">condizione_7</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">condizione_7</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos</span> <span class="o">&gt;=</span> <span class="n">gene1_inizio</span><span class="o">-</span><span class="mi">10</span> <span class="ow">and</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="n">gene1_inizio</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Il codice va testato con diversi valori di <code class="docutils literal notranslate"><span class="pre">posizione</span></code>, in modo da
