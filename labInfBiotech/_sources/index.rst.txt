@@ -77,3 +77,5 @@ Note Introduttive
     python_numbers_sol.rst
 
     python_strings.rst
+
+    python_lists.rst
