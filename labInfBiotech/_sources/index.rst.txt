@@ -107,3 +107,5 @@ Note Introduttive
 
     python_codice_annidato.rst
 
+    python_functions.rst
+
